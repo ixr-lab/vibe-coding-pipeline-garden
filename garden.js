@@ -8,7 +8,7 @@
   const state={seed:(query.get('seed')||'271828').slice(0,80),wind:number('wind',35,0,100),density:Math.round(number('density',7,2,12)),time:fixed??0,paused:false,reduced:media.matches,plants:[],next:0};
   state.flower=FlowerArt.kinds.includes(query.get("flower"))?query.get("flower"):"cosmos";
   state.mode=query.get('mode')==='ink'?'ink':'tint';
-  const defaults={cosmos:'#9b6773',daisy:'#9e8c64',poppy:'#a05e50'};
+  const defaults=InkPalette.defaults;
   state.color=/^[0-9a-f]{6}$/i.test(query.get('color')||'')?'#'+query.get('color'):defaults[state.flower];
   state.brush=BrushArt.kinds.includes(query.get("brush"))?query.get("brush"):"ink";
   state.petalStrength=number('petals',65,0,100);
@@ -31,7 +31,7 @@
   function restart(){
     state.seed=$('seed').value.trim().slice(0,80)||'271828';$('seed').value=state.seed;
     state.next=0;state.time=fixed??0;state.plants=[];
-    [[.20,.90,.85],[.29,.86,1.06],[.50,.91,1.20],[.57,.87,.84],[.78,.90,.74]].forEach(([x,y,size])=>plant(x,y,true,size));
+    [[.17,.91,.80],[.25,.88,.94],[.44,.92,1.16],[.50,.86,.76],[.75,.91,.60]].forEach(([x,y,size])=>plant(x,y,true,size));
     sync();update();
   }
   function makeBackground(){
@@ -108,8 +108,9 @@
     $('color-help').textContent=state.mode==='ink'?'수묵은 색을 보관하고 먹의 농담으로 그립니다.':'고른 색을 꽃잎에 옅게 물들입니다.';
   }
   $('painting-mode').addEventListener('change',e=>{state.mode=e.target.value;syncColor();PlantRenderer.clear();update();announce(state.mode==='ink'?'수묵으로 그렸어요.':'선택한 색의 담채로 그렸어요.');});
-  $('flower-color').addEventListener('input',e=>{state.color=e.target.value;syncColor();PlantRenderer.clear();update();});
-  $('restore-color').addEventListener('click',()=>{state.color=defaults[state.flower];syncColor();PlantRenderer.clear();update();announce('선택한 꽃의 기본 담채색을 복원했어요.');});
+  function recolor(){syncColor();if(state.mode==='tint'){PlantRenderer.clear();update();}}
+  $('flower-color').addEventListener('input',e=>{state.color=e.target.value;recolor();});
+  $('restore-color').addEventListener('click',()=>{state.color=defaults[state.flower];recolor();announce('선택한 꽃의 기본 담채색을 복원했어요.');});
   syncColor();
   for(const [id,key,output] of [['flower','flower'],['brush','brush'],['stroke-width','width','width-value'],['texture','texture','texture-value'],['opacity','opacity','opacity-value'],['petal-strength','petalStrength','petal-value']]){
     $(id).value=state[key];if(output)$(output).value=state[key];

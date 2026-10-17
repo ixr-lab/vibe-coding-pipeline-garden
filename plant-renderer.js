@@ -60,17 +60,32 @@
     c.beginPath();c.moveTo(length*.055,0);c.quadraticCurveTo(length*.43,-width*.04,length*.81,bend*.72);c.stroke();
     c.restore();
   }
+  function dividedLeaf(c,length,width,bend,ink,s,seed){
+    const r=GardenEngine.random(seed+'|divided'),weight=Math.max(.48,Math.min(1.35,length*.016))*s.width;
+    const material={texture:s.texture/100,opacity:s.opacity/100*ink*.90,color:'#596255'};
+    const axis={x1:0,y1:0,cx:length*.49,cy:bend*.17,x2:length*.97,y2:bend};
+    const stroke=(path,width,id)=>BrushArt.draw(c,s.brush,path,{...material,width,seed:seed+'|division|'+id});
+    stroke(axis,weight,'axis');
+    const count=5+Math.floor(r()*2);
+    for(let i=0;i<count;i++){
+      // Alternating unequal lobes grow along a curve. A few fine forks provide
+      // divided foliage without a repeated paired feather or a bamboo blade.
+      const t=(i+.35+r()*.35)/count,p=GardenEngine.pointOnCurve(axis,t),side=i%2?1:-1;
+      const span=width*(.55+r()*.38)*(1-t*.35),reach=length*(.11+(1-t)*.14)*(.75+r()*.40);
+      const path={x1:p.x,y1:p.y,cx:p.x+reach*.48,cy:p.y+side*span*.28,x2:Math.min(length*1.05,p.x+reach),y2:p.y+side*span};
+      stroke(path,weight*(.66+r()*.28),i);
+      if(i===1||i===count-2){
+        const node=GardenEngine.pointOnCurve(path,.64);
+        stroke({x1:node.x,y1:node.y,cx:node.x+reach*.19,cy:node.y+side*span*.04,x2:node.x+reach*.39,y2:node.y+side*span*.18},weight*.53,i+'-fork');
+      }
+    }
+  }
   function leaf(c,kind,model,g,scale,ox,oy,s,seed){
-    const length=model.length*scale*g,width=model.width*scale*g,bend=model.bend*scale*g;
+    const length=model.length*scale*g*(kind==='daisy'?1.04:kind==='poppy'?.82:1),width=model.width*scale*g*(kind==='daisy'?.78:kind==='poppy'?1.18:1),bend=model.bend*scale*g;
     if(length<.1)return;
     c.save();c.translate(ox+model.x*scale,oy+model.y*scale);c.rotate(model.angle);
-    if(kind==='cosmos'){
-      // Unequal brushlets share a single mass instead of repeating endpoint feathers.
-      [-.24,.20,0].forEach((angle,i)=>{
-        c.save();c.translate(length*i*.07,0);c.rotate(angle);
-        pigmentBlade(c,'cosmos',length*(i===2?.86:.75),width*(i===2?.57:.48),bend*.45,model.ink,s,seed+'|'+i);c.restore();
-      });
-    }else pigmentBlade(c,kind,length,width,bend,model.ink,s,seed);
+    if(kind==='cosmos')dividedLeaf(c,length,width,bend,model.ink,s,seed);
+    else pigmentBlade(c,kind,length,width,bend,model.ink,s,seed);
     c.restore();
   }
   function mark(c,b,g,scale,ox,oy,s,seed,small=false){
@@ -92,7 +107,7 @@
   }
   function sprite(p,s,scale){
     const age=s.reduced?6:clamp(Math.floor((s.time-p.born)*8)/8,0,6);
-    const key=[p.model,s.seed,p.id,s.density,s.flower,s.brush,s.mode,s.color,s.width,s.texture,s.opacity,s.petalStrength,scale.toFixed(4),age].join('|');
+    const key=[p.model,s.seed,p.id,s.density,s.flower,s.brush,s.mode,s.mode==='ink'?'':s.color,s.width,s.texture,s.opacity,s.petalStrength,scale.toFixed(4),age].join('|');
     if(cache.has(key)){const hit=cache.get(key);cache.delete(key);cache.set(key,hit);return hit;}
     const bounds=GardenEngine.plantBounds(p),pad=18+Math.ceil(3.6*s.width*Math.max(.55,scale/1050)*1.6),ox=-bounds.minX*scale+pad,oy=-bounds.minY*scale+pad;
     const canvas=document.createElement('canvas');canvas.width=Math.max(1,Math.ceil((bounds.maxX-bounds.minX)*scale+pad*2));canvas.height=Math.max(1,Math.ceil((bounds.maxY-bounds.minY)*scale+pad*2));

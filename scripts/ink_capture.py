@@ -5,7 +5,8 @@ from PIL import Image,ImageDraw,ImageFont
 from playwright.sync_api import sync_playwright
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'evidence/ink';OUT.mkdir(exist_ok=True)
 LABEL=sys.argv[1] if len(sys.argv)>1 else 'v12'
-BASE=(ROOT/'index.html').as_uri()+'?seed=271828&density=7&wind=35&frame=360&mode=tint&color=9b6773'
+RUNTIME=Path(sys.argv[2]).resolve() if len(sys.argv)>2 else ROOT
+BASE=(RUNTIME/'index.html').as_uri()+'?seed=271828&density=7&wind=35&frame=360&mode=tint&color=9b6773'
 font=ImageFont.truetype('C:/Windows/Fonts/malgun.ttf',15)
 checks=[];hashes={};errors=[]
 with sync_playwright() as p:
@@ -27,7 +28,7 @@ with sync_playwright() as p:
           const c=document.createElement('canvas');c.width=420;c.height=700;
           const x=c.getContext('2d');x.fillStyle='#f6f3ea';x.fillRect(0,0,420,700);
           const p={...GardenEngine.createInkPlant('271828',2,.52,.91,7),id:2,size:1.2,born:0};
-          PlantRenderer.clear();PlantRenderer.draw(x,p,{time:6,reduced:false,wind:35,density:7,flower,brush:'ink',width:1,texture:60,opacity:85,petalStrength:65,mode:'tint',color:{cosmos:'#9b6773',daisy:'#9e8c64',poppy:'#a05e50'}[flower]},420,700);
+          PlantRenderer.clear();PlantRenderer.draw(x,p,{seed:'271828',time:6,reduced:false,wind:35,density:7,flower,brush:'ink',width:1,texture:60,opacity:85,petalStrength:65,mode:'tint',color:{cosmos:'#9b6773',daisy:'#9e8c64',poppy:'#a05e50'}[flower]},420,700);
           return c.toDataURL();
         }''',flower)
         raw=base64.b64decode(data.split(',')[1]);(OUT/(LABEL+'-plant-'+flower+'.png')).write_bytes(raw)
@@ -40,7 +41,7 @@ with sync_playwright() as p:
           const c=document.createElement('canvas');c.width=300;c.height=580;
           const x=c.getContext('2d');x.fillStyle='#f6f3ea';x.fillRect(0,0,300,580);
           const p={...GardenEngine.createInkPlant('271828',2,.52,.91,7),id:2,size:1.2,born:0};
-          PlantRenderer.clear();PlantRenderer.draw(x,p,{time:6,reduced:false,wind:35,density:7,flower:'cosmos',brush,width:1,texture:60,opacity:85,petalStrength:65,mode:'ink',color:'#9b6773'},300,580);
+          PlantRenderer.clear();PlantRenderer.draw(x,p,{seed:'271828',time:6,reduced:false,wind:35,density:7,flower:'cosmos',brush,width:1,texture:60,opacity:85,petalStrength:65,mode:'ink',color:'#9b6773'},300,580);
           return c.toDataURL();
         }''',brush)
         raw=base64.b64decode(data.split(',')[1]);(OUT/(LABEL+'-brush-'+brush+'.png')).write_bytes(raw)
@@ -50,6 +51,6 @@ with sync_playwright() as p:
     mobile.on('pageerror',lambda e:errors.append(str(e)));mobile.goto(BASE);mobile.locator('#garden').screenshot()
     mobile.screenshot(path=str(OUT/(LABEL+'-mobile.png')),full_page=True)
     checks=[{'name':'mode and chosen color produce distinct garden screens','pass':len(set(hashes.values()))==3},{'name':'mobile no horizontal overflow','pass':mobile.evaluate('document.documentElement.scrollWidth<=innerWidth')},{'name':'no JavaScript errors','pass':not errors}]
-    result={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'label':LABEL,'browser':b.version,'viewport':[1440,1000],'DPR':1,'seed':'271828','frame':360,'density':7,'wind':35,'brush':'ink','width':1,'texture':60,'opacity':85,'petalStrength':65,'mode':'tint','color':'#9b6773','single_plant':{'index':2,'size':1.2,'viewport':[420,700]},'hashes':hashes,'checks':checks,'errors':errors}
+    result={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'label':LABEL,'browser':b.version,'viewport':[1440,1000],'DPR':1,'seed':'271828','frame':360,'density':7,'wind':35,'brush':'ink','width':1,'texture':60,'opacity':85,'petalStrength':65,'mode':'tint','color':'#9b6773','single_plant':{'index':2,'size':1.2,'viewport':[420,700],'material_seed':'271828'},'hashes':hashes,'checks':checks,'errors':errors}
     (OUT/(LABEL+'-capture.json')).write_text(json.dumps(result,ensure_ascii=False,indent=2),encoding='utf8');print(json.dumps(result,ensure_ascii=False));b.close()
     assert all(c['pass'] for c in checks)

@@ -35,17 +35,18 @@
   }
   function createInkPlant(seed,index,x,y,density){
     const r=random(String(seed)+'|ink-plant|'+index),branches=[],leafGroups=[],blooms=[];
-    const height=.30+r()*.09,lean=(r()-.5)*.46,side=lean<0?-1:1,hue=Math.floor(r()*3);
+    const height=.30+r()*.09,gesture=Math.abs(index)%5,lean=(r()-.5)*.46+(gesture===0?-.055:gesture===3?.08:0),side=lean<0?-1:1,hue=Math.floor(r()*3);
     const d=Math.round(clamp(density,2,12));
     function segment(role,x1,y1,cx,cy,x2,y2,width,start){
       const b={x1,y1,cx,cy,x2,y2,width,start,leaf:false,role};branches.push(b);return b;
     }
     const main=[];
-    main.push(segment('main',0,0,height*(-lean*.4+side*.025),-height*.20,height*lean*.36,-height*.40,3.6,0));
+    const sweep=gesture===2;
+    main.push(segment('main',0,0,sweep?-height*(.065+r()*.035):height*(-lean*.4+side*.025),-height*.20,sweep?height*(.015+r()*.04):height*lean*.36,-height*.40,3.6,0));
     let previous=main[0];
-    main.push(segment('main',previous.x2,previous.y2,previous.x2+(previous.x2-previous.cx)*.62,previous.y2+(previous.y2-previous.cy)*.62,height*(lean*.74+side*.035),-height*.74,2.85,.26));
+    main.push(segment('main',previous.x2,previous.y2,previous.x2+(previous.x2-previous.cx)*.62,previous.y2+(previous.y2-previous.cy)*.62,sweep?-height*(.015+r()*.035):height*(lean*.74+side*.035),-height*.74,2.85,.26));
     previous=main[1];
-    main.push(segment('main',previous.x2,previous.y2,previous.x2+(previous.x2-previous.cx)*.62,previous.y2+(previous.y2-previous.cy)*.62,height*(lean+side*.035),-height,1.9,.52));
+    main.push(segment('main',previous.x2,previous.y2,previous.x2+(previous.x2-previous.cx)*.62,previous.y2+(previous.y2-previous.cy)*.62,sweep?height*(.02+r()*.055):height*(lean+side*.035),-height,1.9,.52));
     function along(path,t){
       const at=clamp(t,0,.999999)*path.length,i=Math.floor(at),local=at-i;
       return {...pointOnCurve(path[i],local),start:path[i].start+local*.26};
@@ -70,25 +71,28 @@
     }
     // Independent random streams keep the scaffold and flower poses invariant
     // while density reveals further, bounded foliage groups.
-    function foliage(path,position,groupSide,role,id,atTip=false){
+    function foliage(path,position,groupSide,role,id,size=1){
       const q=random(String(seed)+'|ink-leaves|'+index+'|'+id),node=along(path,position),lower=1-position;
-      const angle=-Math.PI/2+groupSide*(.98+q()*.36),length=height*(.083+lower*.055),endX=node.x+Math.cos(angle)*length,endY=node.y+Math.sin(angle)*length;
+      const angle=-Math.PI/2+groupSide*(.84+q()*.67),length=height*(.078+lower*.066)*(.82+q()*.30)*size,endX=node.x+Math.cos(angle)*length,endY=node.y+Math.sin(angle)*length;
       const petiole={x1:node.x,y1:node.y,cx:node.x+Math.cos(angle-.16*groupSide)*length*.54,cy:node.y+Math.sin(angle-.16*groupSide)*length*.54,x2:endX,y2:endY};
-      const group={id,role,position,side:groupSide,start:node.start+.12,petiole,leaves:[]};
-      for(let j=0;j<3;j++){
-        const terminal=j===2,at=terminal?1:.27+j*.36,p=pointOnCurve(petiole,at);
-        const spread=terminal?0:(j?1:-1)*groupSide*(.61+q()*.23);
-        const leafLength=height*(.105+lower*.105)*(terminal?1.05:.83+q()*.15)*(atTip?.85:1);
+      const count=role==='terminal'?1:position>.67?1:position>.5?1+Math.floor(q()*2):2+Math.floor(q()*2);
+      const group={id,role,stemRole:path[0].role,position,side:groupSide,start:node.start+.12,petiole,leaves:[]};
+      for(let j=0;j<count;j++){
+        const at=count===1?.65+q()*.22:j===0?.13+q()*.12:j===count-1?.86+q()*.13:.49+q()*.16,p=pointOnCurve(petiole,at);
+        const spread=count===1?(q()-.5)*.24:j===0?-groupSide*(.28+q()*.30):j===count-1?groupSide*(.22+q()*.25):-groupSide*(.57+q()*.22);
+        const dominance=j===0?1.02:j===1?.57+q()*.14:.36+q()*.12;
+        const leafLength=height*(.11+lower*.115)*dominance*(.93+q()*.15)*size;
         group.leaves.push({x:p.x,y:p.y,angle:angle+spread+(q()-.5)*.17,length:leafLength,width:leafLength*(.27+q()*.105),bend:(q()-.5)*leafLength*.22,ink:.58+q()*.35,start:group.start+j*.045});
       }
       leafGroups.push(group);
     }
     [.24,.42,.60,.73].forEach((t,i)=>foliage(main,t+(r()-.5)*.018,i%2?-side:side,'body','body-'+i));
-    foliage(secondary,.44,side,'secondary','secondary');
-    const extra=Math.floor(d/2)-1;
+    // The unused response stem finishes in a small sprig instead of a bare spear.
+    if(Math.abs(index)%2===0)foliage(secondary,.95,-side,'terminal','secondary-tip',.43);
+    const extra=Math.max(0,Math.floor((d-4)/2));
     for(let i=0;i<extra;i++){
       const path=i%3===1?secondary:main,position=.19+i*.105;
-      foliage(path,position,i%2?side:-side,'density','extra-'+i,true);
+      foliage(path,position,i%2?side:-side,'density','extra-'+i,.76);
     }
     for(let i=0;i<Math.floor((d-2)/4);i++){
       const node=along(main,.35+i*.19),twigSide=i%2?-side:side;

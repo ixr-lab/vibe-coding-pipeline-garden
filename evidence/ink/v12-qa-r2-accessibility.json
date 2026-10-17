@@ -1,0 +1,228 @@
+{
+  "recorded_at": "2026-10-17T03:53:06.108547+00:00",
+  "label": "v12-qa-r2",
+  "runtime": ".",
+  "checks": [
+    {
+      "name": "Canvas arrow/Enter keyboard planting",
+      "pass": true
+    },
+    {
+      "name": "Canvas has keyboard instructions and accessible name",
+      "pass": true
+    },
+    {
+      "name": "planting feedback is a polite status region",
+      "pass": true
+    },
+    {
+      "name": "all new controls have nonempty accessible labels",
+      "pass": true,
+      "detail": [
+        {
+          "id": "painting-mode",
+          "tag": "SELECT",
+          "disabled": false,
+          "label": "화면의 색수묵담채수묵 · 먹의 농담"
+        },
+        {
+          "id": "flower-color",
+          "tag": "INPUT",
+          "disabled": false,
+          "label": "꽃잎 색 #9B6773"
+        },
+        {
+          "id": "restore-color",
+          "tag": "BUTTON",
+          "disabled": false,
+          "label": "꽃의 기본색 복원 ↺"
+        }
+      ]
+    },
+    {
+      "name": "mode select supports keyboard selection",
+      "pass": true
+    },
+    {
+      "name": "mode select returns to tint with keyboard",
+      "pass": true
+    },
+    {
+      "name": "default restore works with keyboard",
+      "pass": true
+    },
+    {
+      "name": "live garden schedules animation",
+      "pass": true
+    },
+    {
+      "name": "pause stops requesting RAF and freezes pixels",
+      "pass": true,
+      "detail": {
+        "raf_requests": 0
+      }
+    },
+    {
+      "name": "system reduced motion stops RAF and freezes pixels",
+      "pass": true,
+      "detail": {
+        "raf_requests": 0
+      }
+    },
+    {
+      "name": "manual reduced motion stops RAF and freezes pixels",
+      "pass": true,
+      "detail": {
+        "raf_requests": 0
+      }
+    },
+    {
+      "name": "fixed frame schedules no RAF",
+      "pass": true
+    },
+    {
+      "name": "mobile material drawer initially collapsed",
+      "pass": true
+    },
+    {
+      "name": "mobile controls and drawer targets at least 44px tall",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "new mobile controls at least 44px wide",
+      "pass": true
+    },
+    {
+      "name": "390px material controls have no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "320px material controls have no horizontal overflow",
+      "pass": true
+    }
+  ],
+  "details": {
+    "browser": "155.0.8059.84",
+    "new_control_names": [
+      {
+        "id": "painting-mode",
+        "tag": "SELECT",
+        "disabled": false,
+        "label": "화면의 색수묵담채수묵 · 먹의 농담"
+      },
+      {
+        "id": "flower-color",
+        "tag": "INPUT",
+        "disabled": false,
+        "label": "꽃잎 색 #9B6773"
+      },
+      {
+        "id": "restore-color",
+        "tag": "BUTTON",
+        "disabled": false,
+        "label": "꽃의 기본색 복원 ↺"
+      }
+    ],
+    "mobile_targets": [
+      {
+        "id": "SUMMARY",
+        "width": 350,
+        "height": 44
+      },
+      {
+        "id": "flower",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "painting-mode",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "flower-color",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "restore-color",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "brush",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "stroke-width",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "texture",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "opacity",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "petal-strength",
+        "width": 167,
+        "height": 44
+      },
+      {
+        "id": "seed",
+        "width": 350,
+        "height": 44
+      },
+      {
+        "id": "regenerate",
+        "width": 350,
+        "height": 44
+      },
+      {
+        "id": "wind",
+        "width": 169,
+        "height": 44
+      },
+      {
+        "id": "density",
+        "width": 169,
+        "height": 44
+      },
+      {
+        "id": "pause",
+        "width": 171,
+        "height": 44
+      },
+      {
+        "id": "reset",
+        "width": 171,
+        "height": 44
+      },
+      {
+        "id": "save",
+        "width": 350,
+        "height": 44
+      },
+      {
+        "id": "plant-center",
+        "width": 350,
+        "height": 44
+      },
+      {
+        "id": "motion-field",
+        "width": 350,
+        "height": 44
+      }
+    ]
+  },
+  "scope": "Focused automated keyboard, naming, touch target, overflow and RAF checks; not a complete WCAG assessment.",
+  "passed": 17,
+  "total": 17
+}

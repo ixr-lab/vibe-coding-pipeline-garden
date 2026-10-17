@@ -92,3 +92,30 @@ test('ink planting normalizes invalid coordinates and density without nonfinite 
   assert.ok(Object.values(bounds).every(Number.isFinite));
   assert.ok(p.branches.length<14&&p.leafGroups.length<=12);
 });
+
+test('foliage groups vary their leaf count, node spacing and dominant leaf size',()=>{
+  const groups=Array.from({length:5},(_,i)=>E.createInkPlant('271828',i,.5,.9,7).leafGroups).flat();
+  assert.deepEqual([...new Set(groups.map(g=>g.leaves.length))].sort(),[1,2,3]);
+  for(const g of groups.filter(g=>g.leaves.length>1)){
+    const lengths=g.leaves.map(l=>l.length);
+    assert.ok(Math.max(...lengths)>Math.min(...lengths)*1.25,'an equal-sized rigid fan must not return');
+    assert.ok(new Set(g.leaves.map(l=>l.x.toFixed(6)+'/'+l.y.toFixed(6))).size===g.leaves.length);
+  }
+});
+
+test('secondary stems without a flower finish with small terminal foliage',()=>{
+  for(let i=0;i<8;i++){
+    const p=E.createInkPlant('271828',i,.5,.9,7),tip=p.branches.filter(b=>b.role==='secondary').at(-1),idx=p.branches.indexOf(tip);
+    if(p.blooms.some(b=>b.branchIndex===idx))continue;
+    const terminal=p.leafGroups.find(g=>g.stemRole==='secondary'&&g.position>.88);
+    assert.ok(terminal&&terminal.leaves.length>0,'an unused secondary must not remain a naked spike');
+    assert.ok(Math.hypot(terminal.petiole.x1-tip.x2,terminal.petiole.y1-tip.y2)<p.height*.055);
+  }
+});
+
+test('the hero stem changes its sweep through the body rather than remaining a single leaning rod',()=>{
+  const main=E.createInkPlant('271828',2,.5,.9,7).branches.filter(b=>b.role==='main');
+  const turns=main.map(b=>Math.sign((b.cx-b.x1)*(b.y2-b.y1)-(b.cy-b.y1)*(b.x2-b.x1)));
+  assert.ok(turns.includes(-1)&&turns.includes(1));
+  assert.ok(main.some(b=>Math.abs(b.cx-b.x1)>Math.abs(b.y2-b.y1)*.18));
+});
