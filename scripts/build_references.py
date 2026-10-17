@@ -15,6 +15,7 @@ from urllib.parse import quote, urlsplit
 CATEGORIES = (
     ("flowers.json", "flower", "꽃"),
     ("brushes.json", "brush", "브러시"),
+    ("petals.json", "petal", "꽃잎"),
 )
 ARRAY_FIELDS = ("observations", "avoid", "targets", "implementation", "gaps")
 SECTION_LABELS = (
@@ -48,7 +49,7 @@ def validate_url(value, location):
 
 
 def load_references(root):
-    """Validate the two JSON arrays and add only derived browser fields."""
+    """Validate the reference JSON arrays and add derived browser fields."""
     items = []
     identifiers = set()
     for filename, category, label in CATEGORIES:
@@ -96,7 +97,7 @@ def load_references(root):
                 **entry,
                 "category": category,
                 "categoryLabel": label,
-                "currentImage": f"evidence/extension/current-{identifier}.png",
+                "currentImage": f"evidence/{'petals' if category == 'petal' else 'extension'}/current-{identifier}.png",
             })
     return items
 
@@ -143,8 +144,8 @@ def render_markdown(foundation, items):
     """Keep every foundation byte, then append the extension reference board."""
     foundation.decode("utf-8-sig")
     lines = [
-        "---", "", "# 꽃·브러시 확장 레퍼런스", "",
-        "이 구역은 `reference-source/flowers.json`과 `reference-source/brushes.json`에서 생성한다. "
+        "---", "", "# 꽃·브러시·꽃잎 확장 레퍼런스", "",
+        "이 구역은 `reference-source/flowers.json`, `reference-source/brushes.json`, `reference-source/petals.json`에서 생성한다. "
         "원문·외부 이미지는 링크로만 제공하며, 직접 관찰과 기관 설명, 구현 판단, 결과 검토를 구별한다.", "",
         "현재 결과 링크는 프로젝트에서 생성한 로컬 crop이다. 외부 원본 이미지를 저장소에 복사하지 않는다.", "",
     ]

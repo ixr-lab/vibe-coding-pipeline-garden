@@ -109,7 +109,7 @@
           y: q.p.y + q.p.ny * (q.drift + side * q.radius)});
       }
     }
-    ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
+    ctx.fillStyle = color; ctx.globalAlpha = clamp(alpha, 0, 1); ctx.beginPath();
     ctx.moveTo((rim[rim.length - 1].x + rim[0].x) / 2, (rim[rim.length - 1].y + rim[0].y) / 2);
     for (let i = 0; i < rim.length; i++) {
       const a = rim[i], b = rim[(i + 1) % rim.length];
@@ -214,7 +214,7 @@
       const radius = width * taper * (.15 + rand() * .38);
       points.push({p, radius, drift: (rand() - .5) * width * .26});
     }
-    ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
+    ctx.fillStyle = color; ctx.globalAlpha = clamp(alpha, 0, 1); ctx.beginPath();
     for (let side = 1; side >= -1; side -= 2) {
       for (let i = 0; i < points.length; i++) {
         const q = points[side === 1 ? i : points.length - 1 - i];
@@ -241,7 +241,9 @@
         const a = start + rand() * .12, b = end - rand() * .11;
         const gap = a + (b - a) * (.22 + rand() * .50);
         const gapEnd = Math.min(b - .015, gap + .035 + rand() * (.035 + m.texture * .14));
-        const width = Math.min(m.width * .24, Math.max(m.hair * (1.8 + rand() * 2.2), .62 / m.pixelRadius)) * Math.pow(m.widthScale, .24);
+        // At radius23 a daisy ray is only a few pixels wide. A .24*half-width
+        // cap erased the pixel floor after tapering, turning contact into scratches.
+        const width = Math.min(m.width * .66, Math.max(m.hair * (3.4 + rand() * 2.1), 1.65 / m.pixelRadius)) * Math.pow(m.widthScale, .24);
         const color = j % 4 === 0 ? c.dark : pigment;
         const alpha = m.alpha * (.45 + m.texture * .18 + rand() * .22);
         paperSkip(ctx, m, color, lane, a, gap, width, alpha, rand);
@@ -249,14 +251,14 @@
       }
     }
     // Pale fibers carry the flower's own light pigment, with soft contrast to the body.
-    const gaps = m.small ? (m.species === 'daisy' ? 2 : 5) : m.species === 'daisy' ? 8 : 12;
-    const lifted = mix(rgb(c.light, '#eaa3bf'), rgb(c.tooth, '#f0dfd9'), .14);
+    const gaps = m.small ? (m.species === 'daisy' ? 1 : 3) : m.species === 'daisy' ? 3 : 6;
+    const lifted = mix(rgb(c.light, '#eaa3bf'), rgb(c.tooth, '#f0dfd9'), .74);
     for (let i = 0; i < gaps; i++) {
-      const u = lanes[i % lanes.length] + (rand() - .5) * .20, start = .18 + rand() * .64;
-      const end = Math.min(.98, start + .035 + Math.pow(rand(), 1.4) * (.32 + m.texture * .15));
+      const u = lanes[i % lanes.length] + (rand() - .5) * .26, start = .19 + rand() * .47;
+      const end = Math.min(.98, start + .16 + Math.pow(rand(), 1.2) * (.27 + m.texture * .17));
       paperSkip(ctx, m, lifted, u, start, end,
-        Math.min(m.width * .20, Math.max(m.hair * (1.1 + rand() * 1.6), .43 / m.pixelRadius)) * Math.pow(m.widthScale, .24),
-        m.alpha * (.26 + m.texture * .23 + rand() * .20), rand);
+        Math.min(m.width * .62, Math.max(m.hair * (3.2 + rand() * 1.8), 1.35 / m.pixelRadius)) * Math.pow(m.widthScale, .24),
+        m.alpha * (.69 + m.texture * .23 + rand() * .17), rand);
     }
   }
 

@@ -23,7 +23,8 @@ with sync_playwright() as p:
             page.select_option('#brush',brush);data=page.locator('#garden').screenshot();signatures.append(hashlib.sha256(data).hexdigest())
             (OUT/(label+'-scene-'+flower+'-'+brush+'.png')).write_bytes(data)
             image=Image.open(io.BytesIO(data)).convert('RGB');x,y=round(pos['x'])+1,round(pos['y'])+1
-            crop=image.crop((x-60,y-42,x+60,y+58));sheet.paste(crop,(col*140+10,row*128+28));ImageDraw.Draw(sheet).text((col*140+8,row*128+7),flower+' / '+brush,font=font,fill='#253f35')
+            # Keep the first bloom crop inside the left canvas edge; no synthetic padding.
+            crop=image.crop((x-44,y-42,x+44,y+58));sheet.paste(crop,(col*140+26,row*128+28));ImageDraw.Draw(sheet).text((col*140+8,row*128+7),flower+' / '+brush,font=font,fill='#253f35')
     sheet.save(OUT/(label+'-in-garden.png'))
     checks=[{'name':'15 full garden selections differ','pass':len(set(signatures))==15},{'name':'no page errors','pass':not errors}]
     result={'at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'label':label,'viewport':[1440,1000],'DPR':1,'seed':'271828','fixed_frame':360,'native_crop_center':pos,'crop_resized':False,'checks':checks,'errors':errors}

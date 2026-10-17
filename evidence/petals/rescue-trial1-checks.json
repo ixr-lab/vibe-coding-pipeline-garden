@@ -1,0 +1,311 @@
+{
+  "at": "2026-10-17T03:11:47.258340+00:00",
+  "version": "rescue-trial1",
+  "browser": "155.0.8059.84",
+  "seed": "271828",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "radii": [
+    105,
+    23
+  ],
+  "checks": [
+    {
+      "name": "cosmos/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "daisy/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "poppy/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "cosmos/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "daisy/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "poppy/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "pen isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "ink isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "pencil isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "dry isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "watercolor isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "pen/23/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/23/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/23/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/23/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/23/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/23/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/23/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/23/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/23/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/23/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/23/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/23/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/23/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/23/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/23/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/23/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/23/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/23/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/23/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/23/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/105/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/105/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/105/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pen/105/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/105/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/105/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/105/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "ink/105/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/105/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/105/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/105/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "pencil/105/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/105/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/105/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/105/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "dry/105/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/105/widthScale isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/105/texture isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/105/opacity isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "watercolor/105/strength isolated effect and return",
+      "pass": true
+    },
+    {
+      "name": "stroke-width changes garden",
+      "pass": true
+    },
+    {
+      "name": "stroke-width roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "texture changes garden",
+      "pass": true
+    },
+    {
+      "name": "texture roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "opacity changes garden",
+      "pass": true
+    },
+    {
+      "name": "opacity roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "petal-strength changes garden",
+      "pass": true
+    },
+    {
+      "name": "petal-strength roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "fixed grain stable after wait",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    }
+  ],
+  "signatures": {
+    "cosmos/105": [
+      "a63dace6e0de5194bccbd368513f3df21147392734ad80acfaf0da80e1b61966",
+      "df5e7bd0ef4b07708f887afd964fec99a3d04afca64e796324823189dc7d72d0",
+      "650f4c9c3bdf7f194fa4658a142cffb10b06c7b9760310fe52cbbee137057198",
+      "51e11e872ec17ae538c59b51ad7ad17e47cf07486def28ae1ff0efc1fc2a1b55",
+      "bc6f82e9b585bdc678cd21f62acd356997f78e75fb8302730ed7fcc05adcf9c9"
+    ],
+    "daisy/105": [
+      "f6920da22bc42c4f5c702c1950bc684e9b628ae0f2471adcaff9af035945fce1",
+      "7e38c0c4619aa0e41daba1b08a18e06a8b7cc4daf2fa6f8325d0ad39faad72c8",
+      "0e13c6413f7e462726923595bb09c5e5c441cc2a9502cc71863a2abf3d95a66f",
+      "846afa167aa7139901bc8db3d8d6865b076b6415e416c013e71557d9eed8771a",
+      "56a8d7b0dbed200fadc9daa90f641a9ed179f1013ccffc251fa00e471aca9455"
+    ],
+    "poppy/105": [
+      "ffdaa157f7139e0541045ed4cfcf6f69218540284d2fd37d8a9d1d981d68bc19",
+      "203a9abc7cfebb0929a8d92e2d3b1d183e9273585552870a019a3e5fca490668",
+      "c867f0fe00934f9b77454341437ad1342cc119e6a68197c251039cde7aed79c1",
+      "aeabb646a595e8aeed1c146e943b4fb7281c5a4e51bfd48d26820980c09134a0",
+      "f7527fd1656f89d54777844a925256ea9a140bc28c38b65a356b5f4818ca7619"
+    ],
+    "cosmos/23": [
+      "07f4634e050163a78c044da5a90a622c9754664b8a86775479ce51dac28e2286",
+      "9de229d058b503316cafc382124844ae6d475a1e188d7d7a199b5afe50eaeb4e",
+      "bacb21debdb26a2dc802bdb80881ff836649dd6c8e6c47d05332a63fc5740b8f",
+      "541afaea67c8c5a5807b1f3df02764dd2f5cddbf1a3c8ba2daa9b561a8a36ea4",
+      "0b72b0f9b4896b555b81586b82023f62e28e15a1402616991bb1fe4c8e81c3e7"
+    ],
+    "daisy/23": [
+      "ccd29e54bdb87940575a5065bb2f55d96ab3dcff2802f2f7db35083b1543def6",
+      "d94994e600d68ee0b98b971663f032752ac0afa897219fc1f82a9b67328442f2",
+      "f8cef4c89dc073f92c741ca49a1d6d95f2f8ef5e96bceb65963b9c03872c9e2f",
+      "0463f2dabd8d3eb96f59c6a808f9f872272573ced34ffb4ddb9013cb513054f6",
+      "554f05e7fe2e3ca3d51af6c34d166fdb8089034fc283b66ba1847848037a0402"
+    ],
+    "poppy/23": [
+      "6fcea9efa585b077ed986573788dfdc93ab4aba97eb65d479a4b5461141de171",
+      "ddd0c16440144f3203e78d2d3cfb88fc4e239253dd711ca4af47baaab69706ca",
+      "b5edbffe51ded6ec2985459812ca0595410a3822c8a18b390369e923fae2965f",
+      "776b077cfe87bb1aa96ecdf4167891ab21b1f6a7b2ace8573c19e552f81fd9d8",
+      "331172d2fce520804ec3cdbb1aeb346a29a9e39e5738be03eec0e8d261577690"
+    ]
+  },
+  "errors": [],
+  "passed": 62,
+  "total": 62
+}

@@ -7,6 +7,8 @@
   const expand = document.getElementById('expand-all');
   const filters = [...document.querySelectorAll('[data-filter]')];
   const items = window.GARDEN_REFERENCES;
+  const categoryLabels = { all: '전체', flower: '꽃', brush: '브러시', petal: '꽃잎' };
+  const categoryKickers = { flower: '꽃 / FLOWER', brush: '브러시 / BRUSH', petal: '꽃잎 / PETAL' };
   let selected = 'all';
 
   function element(tag, className, text) {
@@ -87,7 +89,7 @@
     const pending = element('p', 'image-pending', '현재 결과 이미지를 준비하고 있습니다.');
     const caption = element('figcaption');
     caption.append(element('span', '', '현재 결과 · 직접 제작한 Canvas 출력'));
-    const expected = 'evidence/extension/current-' + item.id + '.png';
+    const expected = 'evidence/' + (item.category === 'petal' ? 'petals' : 'extension') + '/current-' + item.id + '.png';
     if (/^[a-z0-9-]+$/.test(item.id) && item.currentImage === expected) {
       const image = element('img', 'study-image');
       image.alt = item.name + '의 현재 Canvas 결과. 참고 원본은 출처 링크에서 확인할 수 있습니다.';
@@ -137,7 +139,7 @@
     article.setAttribute('aria-labelledby', 'title-' + item.id);
     const header = element('header', 'card-header');
     const kicker = element('div', 'card-kicker');
-    kicker.append(element('span', '', item.category === 'flower' ? '꽃 / FLOWER' : '브러시 / BRUSH'), element('span', '', String(index + 1).padStart(2, '0')));
+    kicker.append(element('span', '', categoryKickers[item.category] || item.categoryLabel), element('span', '', String(index + 1).padStart(2, '0')));
     const title = element('h3', 'card-title', item.name);
     title.id = 'title-' + item.id;
     header.append(kicker, title);
@@ -175,7 +177,7 @@
     cards.forEach(node => { node.hidden = category !== 'all' && node.dataset.category !== category; });
     filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
     const shown = cards.filter(node => !node.hidden).length;
-    const label = category === 'flower' ? '꽃' : category === 'brush' ? '브러시' : '전체';
+    const label = categoryLabels[category] || '전체';
     count.textContent = label + ' ' + shown + '개 표시 · 총 ' + items.length + '개';
     updateExpandLabel();
   }
