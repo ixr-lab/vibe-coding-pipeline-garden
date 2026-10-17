@@ -8,6 +8,7 @@ def api(p):return json.loads(run('gh','api',p))
 head=run('git','rev-parse','HEAD').decode().strip();meta=api('repos/'+REPO);remote=api('repos/'+REPO+'/commits/main')
 assert meta['private'] is True and remote['sha']==head
 paths=['index.html','garden.js','flower-art.js','brush-art.js','plant-renderer.js','reference.html','reference-data.js','reference-page.js','scripts/build_references.py','reference-source/flowers.json','reference-source/brushes.json','docs/references.md','README.md','docs/extension/log.md','docs/extension/comparison.md','docs/extension/tests.md','evidence/extension/v5-checks.json','evidence/extension/final-checks.json','evidence/extension/reference-checks.json','evidence/extension/stress.json','evidence/extension/v5-flowers.png','evidence/extension/v5-brushes.png','evidence/extension/v5-combinations.png']
+paths+=['docs/extension/delivery.md','evidence/extension/remote-v5.json']
 files=[]
 for path in paths:
  item=api('repos/'+REPO+'/contents/'+path+'?ref='+head);data=base64.b64decode(item['content']);local=run('git','show','HEAD:'+path)

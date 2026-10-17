@@ -19,7 +19,7 @@ Windows의 Chrome/Chromium 155.0.8059.84를 Playwright로 headless 실행했다.
 | 기존 동작 최종 회귀 | [final-checks.json](../../evidence/extension/final-checks.json), 02:33:57 UTC | 26/26, JS 오류 0. seed/설정/시점 픽셀 재현, seed·밀도·바람 변화, 성장/정지/재개, reduced motion, 32식물 제한, 입력 정규화, 키보드·터치 심기, PNG 픽셀 일치, DPR 상한, 390px 넘침, 과정 8단계, 외부 요청 없음. |
 | 접근성 보조 검사 | [v5-accessibility.json](../../evidence/extension/v5-accessibility.json), 02:34:00 UTC | 키보드 방향 이동 후 Enter로 5→6식물. 정지 중 픽셀 동일·추가 RAF 0, reduced motion 중 추가 RAF 0. 모바일에서 펼친 재료 패널을 포함해 대상 12개 높이 모두 44px. |
 | 최대 밀도 실행 | [stress.json](../../evidence/extension/stress.json), [max-density.png](../../evidence/extension/max-density.png), 02:34:12 UTC | 32식물, density 12, 15조합 실행, JS 오류 0. 선택 변경 시간과 warm RAF 간격은 아래에 분리 기록. |
-| 레퍼런스 생성·탐색 검사 | [reference-checks.json](../../evidence/extension/reference-checks.json), 02:36:12 UTC | 12/12, JS 오류 0. JSON/생성물 일치, stale 생성물 거부, 8개 현재 출력 이미지 로드, 외부 이미지 미삽입, 꽃 3/브러시 5 필터, 출처 상세 펼침·권리·관찰일, 모바일 넘침·필터 높이 44px. |
+| 레퍼런스 생성·탐색 검사 | [reference-checks.json](../../evidence/extension/reference-checks.json), 02:37:28 UTC | 12/12, JS 오류 0. JSON/생성물 일치, stale 생성물 거부, 8개 현재 출력 이미지 로드, 외부 이미지 미삽입, 꽃 3/브러시 5 필터, 출처 상세 펼침·권리·관찰일, 모바일 넘침·필터 높이 44px. |
 
 확장 26개 검사는 꽃별 5브러시 선택이 꽃 값을 보존하는지 확인하고, 15개 Canvas 서명이 서로 다른지 비교한다. 두께·질감·농도 변경은 출력이 바뀌는지, 원래 값과 선택으로 왕복했을 때 같은 픽셀로 돌아오는지 검사한다. 이 결과가 꽃의 생물학적 정확성이나 브러시의 실제 재료 유사성을 보증하지는 않는다. 시각 판정은 [comparison.md](comparison.md)와 [log.md](log.md)에 따로 남겼다.
 

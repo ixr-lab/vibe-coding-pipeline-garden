@@ -1,0 +1,154 @@
+{
+  "at": "2026-10-17T02:39:33.790081+00:00",
+  "repository_url": "https://github.com/ixr-lab/vibe-coding-pipeline-garden",
+  "private": true,
+  "commit": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+  "tags": {
+    "v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "v2": "90a835bb1499723045e55aac464965d29e19aa7a",
+    "v3": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+    "v4": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+    "v5": "6f1d1e8a468d77b74040315ff13a04873e583db4"
+  },
+  "files": [
+    {
+      "path": "index.html",
+      "blob_sha": "8bb2f53793bbb816ab8402276d84b239b552fd06",
+      "bytes": 5613,
+      "read_back_equal": true
+    },
+    {
+      "path": "garden.js",
+      "blob_sha": "7c22b6721b3aa28db760aeb8207a45b1cc4706c8",
+      "bytes": 8857,
+      "read_back_equal": true
+    },
+    {
+      "path": "flower-art.js",
+      "blob_sha": "268e14522da31ed1e394d6c8126f2a6e1a90706f",
+      "bytes": 16269,
+      "read_back_equal": true
+    },
+    {
+      "path": "brush-art.js",
+      "blob_sha": "aa1380c31936ec03b8a58bc53806a46680f2bbed",
+      "bytes": 13747,
+      "read_back_equal": true
+    },
+    {
+      "path": "plant-renderer.js",
+      "blob_sha": "67d9e18cec6580f31a7010856c26ee3192fb07a9",
+      "bytes": 3824,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference.html",
+      "blob_sha": "bebaa663eedc52fb64d0e2cee68822b8fabc2bfa",
+      "bytes": 4621,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-data.js",
+      "blob_sha": "21149c2143a96638e38324b8e26912fe96793ad7",
+      "bytes": 47655,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-page.js",
+      "blob_sha": "0d1b3893ac843a517672334b8b2f0cb60e0b9f60",
+      "bytes": 9873,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/build_references.py",
+      "blob_sha": "cfcaf0dc2c771b52e47b474790fb7ac5b91a81c3",
+      "bytes": 11323,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-source/flowers.json",
+      "blob_sha": "63f6c609ef4ec339766aea7cc0ff546b1e3624bf",
+      "bytes": 21544,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-source/brushes.json",
+      "blob_sha": "b6f111545f2ed5d5cceb0fa18510229e389fa34a",
+      "bytes": 25050,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/references.md",
+      "blob_sha": "b4336a2c6998070fa8ab8755e5b5d5b7e9f30433",
+      "bytes": 52352,
+      "read_back_equal": true
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "151d6e77bc5229abf160239ef38d3b34f8b8702e",
+      "bytes": 6522,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/extension/log.md",
+      "blob_sha": "b3da383dc420b929dac781eb60b30bf80269b9cc",
+      "bytes": 7679,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/extension/comparison.md",
+      "blob_sha": "5f3c6dd0ea68c724076f2bb28aa6ba4dff66c6c9",
+      "bytes": 10339,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/extension/tests.md",
+      "blob_sha": "4e22ffe63036175eda9cbea6d0f62dd8b77b695a",
+      "bytes": 8140,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/v5-checks.json",
+      "blob_sha": "9e3725d1af2de68aa2a93b9b13955a01b7846716",
+      "bytes": 2355,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/final-checks.json",
+      "blob_sha": "06381901c8bd4d4b8fca53fac5e084addb192f47",
+      "bytes": 2668,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/reference-checks.json",
+      "blob_sha": "ec7958a2f7eff9b67dc873c1facb5f78cac95f5d",
+      "bytes": 1072,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/stress.json",
+      "blob_sha": "4debd99f8e3649cd110d06b12406eaaf64c1586a",
+      "bytes": 2130,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/v5-flowers.png",
+      "blob_sha": "6bef682f55e27c10198b0183f9590897b6ee9d37",
+      "bytes": 158838,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/v5-brushes.png",
+      "blob_sha": "415f96a8888a0634b67687f41f3bfd339571947c",
+      "bytes": 76417,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/extension/v5-combinations.png",
+      "blob_sha": "8606476744de010d011c0f43cb8bec0ff70c7ade",
+      "bytes": 299767,
+      "read_back_equal": true
+    }
+  ]
+}

@@ -72,3 +72,6 @@ cd vibe-coding-pipeline-garden
 | [전달·증거 색인](docs/delivery.md) | 검증된 GitHub 링크, 버전 SHA와 단계별 증거 |
 
 `engine.js`는 결정론적 식물 데이터와 배치, `garden.js`는 Canvas·입력·성장 상태를 담당합니다. `scripts/`와 `tests/`는 개발용이며 `evidence/`는 실제 실행의 PNG·JSON·텍스트 기록입니다.
+
+
+확장 v3/v4/v5도 같은 private 저장소에 업로드하고 원격 소스·문서·시험·이미지23개 내용을 대조했습니다. [확장 전달·버전 증거](docs/extension/delivery.md)와 [원격 검증 JSON](evidence/extension/remote-v5.json)을 참고하세요. `reference.html`은 내려받은 폴더에서 열며 공개 호스팅은 하지 않았습니다.
