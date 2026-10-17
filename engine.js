@@ -22,7 +22,12 @@
     grow(0,0,height*.37,-Math.PI/2+(r()-.5)*.18, d>8?5:d>4?4:3,0);
     return {x:clamp(x,.04,.96),y:clamp(y,.38,.94),height,hue,branches};
   }
-  const api={random,createPlant,clamp,MAX_PLANTS:32};
+  function layout(p,w,h){
+    let min=0,max=0;for(const b of p.branches){min=Math.min(min,b.x1,b.x2);max=Math.max(max,b.x1,b.x2);}
+    const scale=Math.min(h*1.9,w*1.9,(w-40)/Math.max(.01,max-min));
+    return {scale,root:clamp(p.x*w,20-min*scale,w-20-max*scale)};
+  }
+  const api={random,createPlant,clamp,layout,MAX_PLANTS:32};
   if(typeof module!=='undefined'&&module.exports) module.exports=api;
   root.GardenEngine=api;
 })(typeof window!=='undefined'?window:globalThis);

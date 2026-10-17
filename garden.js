@@ -1,4 +1,4 @@
-/* v0: executable minimum, intentionally simple line/circle renderer. */
+/* v1: botanical renderer with isotropic branch scale and original leaf paths. */
 (function(){
   'use strict';
   const E=GardenEngine,$=id=>document.getElementById(id),canvas=$('garden'),ctx=canvas.getContext('2d');
@@ -15,17 +15,29 @@
   function restart(){state.seed=$('seed').value.trim()||'271828';$('seed').value=state.seed;state.next=0;state.time=fixed??0;state.plants=[];[[.17,.87],[.33,.79],[.51,.9],[.69,.82],[.84,.91]].forEach(([x,y])=>plant(x,y,true));sync();draw();}
   function resize(){const b=canvas.getBoundingClientRect();w=b.width;h=b.height;const d=Math.min(devicePixelRatio||1,2);canvas.width=Math.round(w*d);canvas.height=Math.round(h*d);ctx.setTransform(d,0,0,d,0,0);draw();}
   function draw(){
-    ctx.fillStyle='#e9ecdf';ctx.fillRect(0,0,w,h);
-    ctx.strokeStyle='#ced5c0';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(0,h*.94);ctx.lineTo(w,h*.94);ctx.stroke();
-    for(const p of state.plants){
-      const age=state.time-p.born, sway=Math.sin(state.time*1.2+p.x*4)*state.wind*.0002;
+    const sky=ctx.createLinearGradient(0,0,0,h);sky.addColorStop(0,'#edeedf');sky.addColorStop(.7,'#e1e6cf');sky.addColorStop(1,'#cbd7b5');ctx.fillStyle=sky;ctx.fillRect(0,0,w,h);
+    ctx.fillStyle='#f7f3dd';ctx.beginPath();ctx.arc(w*.77,h*.24,Math.min(w,h)*.10,0,Math.PI*2);ctx.fill();
+    ctx.strokeStyle='#cbd1bd';ctx.lineWidth=.6;ctx.beginPath();ctx.moveTo(0,h*.73);ctx.bezierCurveTo(w*.25,h*.65,w*.62,h*.89,w,h*.72);ctx.stroke();
+    ctx.fillStyle='#d0d9bd';ctx.beginPath();ctx.moveTo(0,h*.87);ctx.bezierCurveTo(w*.3,h*.72,w*.6,h*.92,w,h*.81);ctx.lineTo(w,h);ctx.lineTo(0,h);ctx.fill();
+    const texture=E.random('paper-2718');
+    for(let i=0;i<750;i++){ctx.fillStyle=i%3?'#526b3d12':'#faf5db50';ctx.fillRect(texture()*w,texture()*h,1,1);}
+    for(const p of [...state.plants].sort((a,b)=>a.y-b.y)){
+      const age=state.time-p.born, sway=Math.sin(state.time*1.2+p.x*4)*state.wind*.00026, l=E.layout(p,w,h), scale=l.scale, root=l.root;
+      ctx.fillStyle='#3f58331a';ctx.beginPath();ctx.ellipse(root,p.y*h+2,17,3,0,0,Math.PI*2);ctx.fill();
       for(const b of p.branches){
         const g=E.clamp((age-b.start*3)/.6,0,1);if(!g)continue;
-        const x1=(p.x+b.x1+sway*(-b.y1))*w,y1=(p.y+b.y1)*h,x2=(p.x+b.x1+(b.x2-b.x1)*g+sway*(-b.y2))*w,y2=(p.y+b.y1+(b.y2-b.y1)*g)*h;
-        ctx.strokeStyle='#5d7754';ctx.lineWidth=b.width;ctx.beginPath();ctx.moveTo(x1,y1);ctx.lineTo(x2,y2);ctx.stroke();
-        if(b.leaf&&g>.8){ctx.fillStyle='#78905d';ctx.beginPath();ctx.arc(x2,y2,3.7,0,Math.PI*2);ctx.fill();}
+        const x1=root+(b.x1+sway*(-b.y1))*scale,y1=p.y*h+b.y1*scale,x2=root+(b.x1+(b.x2-b.x1)*g+sway*(-b.y2))*scale,y2=p.y*h+(b.y1+(b.y2-b.y1)*g)*scale;
+        ctx.strokeStyle=['#526b43','#637747','#7b7048'][p.hue];ctx.lineWidth=b.width*.72;ctx.lineCap='round';ctx.beginPath();ctx.moveTo(x1,y1);ctx.quadraticCurveTo(x1+(x2-x1)*.28,y2+(y1-y2)*.3,x2,y2);ctx.stroke();
+        if(b.leaf&&g>.65){
+          const a=Math.atan2(y2-y1,x2-x1), size=(b.width+2.5)*Math.min(3.6,scale/300)*E.clamp((g-.65)/.35,0,1);
+          ctx.save();ctx.translate(x2,y2);ctx.rotate(a);ctx.fillStyle=['#537548dd','#819259dd','#b09b54dd'][p.hue];
+          ctx.beginPath();ctx.moveTo(-1,0);ctx.bezierCurveTo(size*.25,-size*.6,size*.9,-size*.4,size*1.4,0);ctx.bezierCurveTo(size*.9,size*.4,size*.25,size*.6,-1,0);ctx.fill();
+          ctx.strokeStyle='#f0eed15c';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(size*1.15,0);ctx.stroke();ctx.restore();
+        }
       }
     }
+    ctx.fillStyle='#536f4240';const grass=E.random('meadow');
+    for(let i=0;i<90;i++){const x=grass()*w,y=h*(.87+grass()*.10);ctx.fillRect(x,y,1,1+grass()*3);}
   }
   function loop(t){const dt=last?Math.min((t-last)/1000,.05):0;last=t;if(!state.paused&&fixed===null){state.time+=dt;draw();}requestAnimationFrame(loop);}
   canvas.addEventListener('pointerdown',e=>{const b=canvas.getBoundingClientRect();plant((e.clientX-b.left)/w,(e.clientY-b.top)/h);announce('씨앗을 심었어요.');draw();});

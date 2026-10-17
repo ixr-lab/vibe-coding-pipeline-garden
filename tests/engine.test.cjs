@@ -19,3 +19,12 @@ test('plant geometry is deterministic, finite, bounded at high density',()=>{
   for(const branch of b.branches) for(const k of ['x1','y1','x2','y2','width','start']) assert.ok(Number.isFinite(branch[k]));
   assert.equal(E.MAX_PLANTS,32);
 });
+test('isotropic layout preserves branch proportions and keeps canopy inside view',()=>{
+  assert.equal(typeof E.layout,'function');
+  for(const [w,h] of [[1000,630],[350,440]]){
+    const p=E.createPlant('271828',4,.96,.91,12),l=E.layout(p,w,h);
+    assert.ok(l.scale>0);
+    for(const b of p.branches){const x=l.root+b.x2*l.scale;assert.ok(x>=12&&x<=w-12);}
+    assert.ok(Math.abs(((l.root+.1*l.scale)-l.root)-.1*l.scale)<1e-9);
+  }
+});
