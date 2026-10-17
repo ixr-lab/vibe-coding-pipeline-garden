@@ -205,12 +205,14 @@
   }
 
   function paperSkip(ctx, m, color, u, start, end, width, alpha, rand) {
-    // A short, angular exposure between related bristles, with unequal broken ends.
-    const points = [], steps = 4;
+    // A narrow torn bristle deposit (or exposed fiber), never a rectangular dash.
+    const points = [], steps = 11, phase = rand() * TAU;
     for (let i = 0; i <= steps; i++) {
-      const t = start + (end - start) * i / steps, p = frame(m, u, t);
-      const radius = width * (.28 + rand() * .28);
-      points.push({p, radius, drift: (rand() - .5) * width * .20});
+      const s = i / steps, t = start + (end - start) * s;
+      const p = frame(m, u + Math.sin(s * Math.PI) * Math.sin(phase) * .018, t);
+      const taper = Math.pow(Math.sin(Math.PI * s), .58);
+      const radius = width * taper * (.15 + rand() * .38);
+      points.push({p, radius, drift: (rand() - .5) * width * .26});
     }
     ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
     for (let side = 1; side >= -1; side -= 2) {
@@ -225,77 +227,80 @@
   }
 
   function dry(ctx, shape, m, c, rand) {
-    const bundles = m.small ? 3 : (m.species === 'daisy' ? 3 : 5), hairs = m.small ? 2 : 4;
+    // A little matte body first; the pigment then catches in related, torn fibers.
+    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .74; ctx.fill(shape);
+    const bundles = m.species === 'daisy' ? 2 : (m.small ? 3 : 4), lanes = [];
+    const hairs = m.small ? 2 : 3;
+    const pigment = mix(rgb(c.middle, '#bf467c'), rgb(c.dark, '#782650'), .28);
     for (let i = 0; i < bundles; i++) {
-      const u = (i + .08 + rand() * .84) / bundles * 1.8 - .9;
-      const start = .12 + rand() * .22, end = .64 + rand() * .34;
-      const gap = start + (end - start) * (.30 + rand() * .36);
-      const gapEnd = Math.min(end - .04, gap + .025 + rand() * m.texture * .09);
+      const u = (i + .08 + rand() * .84) / bundles * 1.86 - .93;
+      lanes.push(u);
+      const start = .14 + rand() * .23, end = .71 + rand() * .27;
       for (let j = 0; j < hairs; j++) {
         const lane = u + (j - (hairs - 1) / 2) * (.025 + rand() * .045);
-        const width = Math.min(m.width * .28, Math.max(m.hair * (.90 + rand() * .75), .42 / m.pixelRadius));
-        const color = j % 3 === 0 ? c.middle : c.dark;
-        const alpha = m.alpha * (.72 + rand() * .25);
-        const sway = (rand() - .5) * .035;
-        curve(ctx, m, lane, start + rand() * .035, gap, color, width, alpha, sway);
-        curve(ctx, m, lane, gapEnd, end - rand() * .035, color, width * .78, alpha * .92, sway);
+        const a = start + rand() * .12, b = end - rand() * .11;
+        const gap = a + (b - a) * (.22 + rand() * .50);
+        const gapEnd = Math.min(b - .015, gap + .035 + rand() * (.035 + m.texture * .14));
+        const width = Math.min(m.width * .24, Math.max(m.hair * (1.8 + rand() * 2.2), .62 / m.pixelRadius)) * Math.pow(m.widthScale, .24);
+        const color = j % 4 === 0 ? c.dark : pigment;
+        const alpha = m.alpha * (.45 + m.texture * .18 + rand() * .22);
+        paperSkip(ctx, m, color, lane, a, gap, width, alpha, rand);
+        paperSkip(ctx, m, color, lane + (rand() - .5) * .016, gapEnd, b, width * (.52 + rand() * .36), alpha, rand);
       }
     }
-    // Aperiodic paper skips vary in area, location and length; none forms a full rail.
-    const gaps = m.small ? (m.species === 'daisy' ? 2 : 4) : m.species === 'daisy' ? 6 : 10;
+    // Pale fibers carry the flower's own light pigment, with soft contrast to the body.
+    const gaps = m.small ? (m.species === 'daisy' ? 2 : 5) : m.species === 'daisy' ? 8 : 12;
+    const lifted = mix(rgb(c.light, '#eaa3bf'), rgb(c.tooth, '#f0dfd9'), .14);
     for (let i = 0; i < gaps; i++) {
-      const u = rand() * 1.96 - .98, start = .20 + rand() * .62;
-      const end = Math.min(.97, start + .055 + rand() * (.10 + m.texture * .11));
-      paperSkip(ctx, m, c.tooth, u, start, end,
-        Math.min(m.width * .42, Math.max(m.width * (.045 + rand() * .075), (m.small ? .60 + rand() * .42 : .90) / m.pixelRadius)) * Math.sqrt(m.widthScale),
-        Math.min(1, m.alpha * (.82 + m.texture * .24 + rand() * .18)), rand);
+      const u = lanes[i % lanes.length] + (rand() - .5) * .20, start = .18 + rand() * .64;
+      const end = Math.min(.98, start + .035 + Math.pow(rand(), 1.4) * (.32 + m.texture * .15));
+      paperSkip(ctx, m, lifted, u, start, end,
+        Math.min(m.width * .20, Math.max(m.hair * (1.1 + rand() * 1.6), .43 / m.pixelRadius)) * Math.pow(m.widthScale, .24),
+        m.alpha * (.26 + m.texture * .23 + rand() * .20), rand);
     }
-    outline(ctx, shape, c.middle, m.hair * 1.8, m.alpha * .44,
-      [m.length * .11, m.length * .07, m.length * .025, m.length * .09]);
   }
 
   function washPatch(ctx, m, color, pass, alpha, rand) {
-    // Unequal top heights across a broad fan keep wet areas from becoming capsules.
-    const scale = Math.sqrt(m.widthScale), center = pass ? .28 : -.26;
-    const span = (pass ? .79 : .91) * scale;
-    const left = center - span, right = center + span, top = [];
-    const rootT = pass ? .22 + rand() * .13 : .035 + rand() * .10;
-    const phase = rand() * TAU, count = 6;
-    for (let i = 0; i <= count; i++) {
-      const u = left + (right - left) * i / count;
-      const t = clamp((pass ? .73 : .84) + Math.sin(i * 1.7 + phase) * (.045 + m.texture * .06) + (rand() - .5) * .13, .57, 1.045);
-      top.push(point(m, u, t));
-    }
-    const rootLeft = point(m, left + .06, rootT), rootRight = point(m, right - .09, rootT + .06 + rand() * .08);
-    const g = ctx.createLinearGradient(-m.width * .65, -m.length * .12, m.width * .55, -m.length);
-    g.addColorStop(0, color + '00'); g.addColorStop(.27, color);
-    g.addColorStop(.79, color); g.addColorStop(1, color + '40');
-    ctx.fillStyle = g; ctx.globalAlpha = alpha; ctx.beginPath();
-    ctx.moveTo(rootLeft.x, rootLeft.y);
-    const sideLeft = point(m, left - .035, (rootT + .55) / 2);
-    ctx.quadraticCurveTo(sideLeft.x, sideLeft.y, top[0].x, top[0].y);
-    for (let i = 1; i < top.length; i++) {
-      const a = top[i - 1], b = top[i];
-      ctx.lineTo((a.x + b.x) / 2, (a.y + b.y) / 2);
-      ctx.lineTo(b.x, b.y);
-    }
-    const sideRight = point(m, right + .045, (rootT + .60) / 2);
-    ctx.quadraticCurveTo(sideRight.x, sideRight.y, rootRight.x, rootRight.y);
-    const rootMiddle = point(m, center + .10, Math.max(.01, rootT - .04));
-    ctx.quadraticCurveTo(rootMiddle.x, rootMiddle.y, rootLeft.x, rootLeft.y);
-    ctx.closePath(); ctx.fill();
+    // Low concentration fields extend beyond the clip; there is no inner panel edge.
+    const u = (pass ? .44 : -.34) + (rand() - .5) * .34;
+    const t = (pass ? .68 : .39) + (rand() - .5) * .20;
+    const p = frame(m, u, t), scale = Math.pow(m.widthScale, .30);
+    ctx.save();
+    try {
+      ctx.translate(p.x, p.y); ctx.rotate(Math.atan2(p.ty, p.tx));
+      ctx.scale(m.length * (pass ? .60 : .72), m.width * (1.45 + rand() * .42) * scale);
+      const g = ctx.createRadialGradient(0, 0, 0, .12, -.08, 1);
+      g.addColorStop(0, color + 'e0'); g.addColorStop(.25, color + 'bc');
+      g.addColorStop(.53, color + '74'); g.addColorStop(.79, color + '25'); g.addColorStop(1, color + '00');
+      ctx.fillStyle = g; ctx.globalAlpha = alpha; ctx.fillRect(-1.15, -1.15, 2.4, 2.4);
+    } finally { ctx.restore(); }
   }
 
   function watercolor(ctx, shape, m, c, rand) {
     ground(ctx, shape, m, c, 'watercolor');
     const wetColor = mix(rgb(c.dark, '#90305e'), rgb(c.middle, '#d7609d'), .52);
-    washPatch(ctx, m, wetColor, 0, m.alpha * (.27 + m.texture * .11 + rand() * .05), rand);
-    washPatch(ctx, m, c.color, 1, m.alpha * (.18 + m.texture * .10 + rand() * .05), rand);
-    // Only small local pigment catches remain; there is no full perimeter stroke.
+    washPatch(ctx, m, wetColor, 0, m.alpha * (.44 + m.texture * .12 + rand() * .07), rand);
+    washPatch(ctx, m, c.color, 1, m.alpha * (.22 + m.texture * .11 + rand() * .05), rand);
+    // Tiny local deposits cluster in one drying area rather than dotting every petal.
     const side = rand() < .5 ? -1 : 1;
-    curve(ctx, m, side * .91, .46 + rand() * .08, .80 + rand() * .10,
-      wetColor, Math.max(m.hair, .40 / m.pixelRadius), m.alpha * .26, side * .025);
-    curve(ctx, m, -side * .91, .75, .89, c.middle, m.hair * .85, m.alpha * .17, 0);
+    const grains = m.small ? 3 : 18, grainU = side * (.26 + rand() * .38), grainT = .43 + rand() * .27;
+    for (let i = 0; i < grains; i++) {
+      const u = grainU + (rand() - .5) * .40, t = grainT + (rand() - .5) * .17;
+      curve(ctx, m, u, t, t + .004 + rand() * .012, wetColor,
+        Math.min(m.width * .045, .34 / m.pixelRadius) * Math.sqrt(m.widthScale),
+        m.alpha * m.texture * (.17 + rand() * .22), (rand() - .5) * .025);
+    }
+    // A fading fragment of one drying front, separate from the botanical contour.
+    const a = point(m, grainU - .34, grainT - .05), b = point(m, grainU + .20, grainT + .018);
+    const q = point(m, grainU - .02, grainT + .045 + rand() * .04);
+    const edge = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
+    edge.addColorStop(0, wetColor + '00'); edge.addColorStop(.32, wetColor + '90');
+    edge.addColorStop(.65, wetColor + '68'); edge.addColorStop(1, wetColor + '00');
+    ctx.strokeStyle = edge; ctx.lineWidth = Math.max(m.hair * .85, .48 / m.pixelRadius) * Math.pow(m.widthScale, .18);
+    ctx.globalAlpha = m.alpha * (.20 + m.texture * .12); ctx.beginPath();
+    ctx.moveTo(a.x, a.y); ctx.quadraticCurveTo(q.x, q.y, b.x, b.y); ctx.stroke();
+    curve(ctx, m, side * .93, .50 + rand() * .12, .74 + rand() * .13,
+      wetColor, Math.max(m.hair * .65, .26 / m.pixelRadius), m.alpha * (.13 + m.texture * .10), side * .025);
   }
 
   /** Paint a material over an existing petal underdrawing in flower-local units.
