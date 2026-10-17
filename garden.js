@@ -6,6 +6,9 @@
   const fixed=query.has('frame')?E.clamp(Number(query.get('frame')),0,36000)/60:null;
   const number=(key,fallback,min,max)=>query.has(key)?E.clamp(Number(query.get(key)),min,max):fallback;
   const state={seed:(query.get('seed')||'271828').slice(0,80),wind:number('wind',35,0,100),density:Math.round(number('density',7,2,12)),time:fixed??0,paused:false,reduced:media.matches,plants:[],next:0};
+  state.flower=FlowerArt.kinds.includes(query.get("flower"))?query.get("flower"):"cosmos";
+  state.brush=BrushArt.kinds.includes(query.get("brush"))?query.get("brush"):"ink";
+  state.width=number("width",1,.5,2.5);state.texture=number("texture",60,0,100);state.opacity=number("opacity",85,30,100);
   let w=1,h=1,last=null,raf=0,background=null,keyboard=false;
   const cursor={x:.5,y:.85};
   function announce(text){$('status').textContent=text;}
@@ -50,25 +53,7 @@
     // Paint an opaque base each time so repeated draws cannot accumulate alpha.
     ctx.fillStyle='#cbd7b5';ctx.fillRect(0,0,w+2,h+2);
     ctx.drawImage(background,0,0,w,h);
-    for(const p of [...state.plants].sort((a,b)=>a.y-b.y)){
-      const age=state.reduced?6:state.time-p.born;
-      const sway=state.reduced?0:Math.sin(state.time*1.2+p.x*4)*state.wind*.00026;
-      const {scale,root,baseY}=E.layout(p,w,h);
-      ctx.fillStyle='#3f58331a';ctx.beginPath();ctx.ellipse(root,baseY+2,17,3,0,0,Math.PI*2);ctx.fill();
-      for(const b of p.branches){
-        const g=E.clamp((age-b.start*3)/.6,0,1);if(!g)continue;
-        const x1=root+(b.x1+sway*(-b.y1))*scale,y1=baseY+b.y1*scale;
-        const x2=root+(b.x1+(b.x2-b.x1)*g+sway*(-b.y2))*scale,y2=baseY+(b.y1+(b.y2-b.y1)*g)*scale;
-        ctx.strokeStyle=['#526b43','#637747','#7b7048'][p.hue];ctx.lineWidth=b.width*.72;ctx.lineCap='round';
-        ctx.beginPath();ctx.moveTo(x1,y1);ctx.quadraticCurveTo(x1+(x2-x1)*.28,y2+(y1-y2)*.3,x2,y2);ctx.stroke();
-        if(b.leaf&&g>.65){
-          const a=Math.atan2(y2-y1,x2-x1),size=(b.width+2.5)*Math.min(3.6,scale/300)*E.clamp((g-.65)/.35,0,1);
-          ctx.save();ctx.translate(x2,y2);ctx.rotate(a);ctx.fillStyle=['#537548dd','#819259dd','#b09b54dd'][p.hue];
-          ctx.beginPath();ctx.moveTo(-1,0);ctx.bezierCurveTo(size*.25,-size*.6,size*.9,-size*.4,size*1.4,0);ctx.bezierCurveTo(size*.9,size*.4,size*.25,size*.6,-1,0);ctx.fill();
-          ctx.strokeStyle='#f0eed15c';ctx.lineWidth=.5;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(size*1.15,0);ctx.stroke();ctx.restore();
-        }
-      }
-    }
+    for(const p of [...state.plants].sort((a,b)=>a.y-b.y))PlantRenderer.draw(ctx,p,state,w,h);
     if(keyboard&&showCursor){
       const x=cursor.x*w,y=cursor.y*h;ctx.strokeStyle='#354e3d';ctx.lineWidth=1.3;ctx.setLineDash([3,3]);
       ctx.beginPath();ctx.arc(x,y,13,0,Math.PI*2);ctx.stroke();ctx.setLineDash([]);
@@ -119,5 +104,10 @@
   $('fixed-note').hidden=fixed===null;
   if(fixed!==null)$('fixed-note').firstChild.textContent='성장 '+fixed+'초를 고정한 기록 화면입니다. ';
   $('motion-source').textContent=media.matches?'시스템 설정':'';
+  for(const [id,key,output] of [['flower','flower'],['brush','brush'],['stroke-width','width','width-value'],['texture','texture','texture-value'],['opacity','opacity','opacity-value']]){
+    $(id).value=state[key];if(output)$(output).value=state[key];
+    $(id).addEventListener(id==='flower'||id==='brush'?'change':'input',e=>{state[key]=output?+e.target.value:e.target.value;if(output)$(output).value=state[key];PlantRenderer.clear();update();});
+  }
+  if(matchMedia('(max-width:760px)').matches)document.querySelector('.material-drawer').open=false;
   restart();new ResizeObserver(resize).observe(canvas);
 })();

@@ -1,0 +1,9 @@
+{
+  "at": "2026-10-17T02:20:37.428051+00:00",
+  "checks": [
+    {
+      "name": "independent flower and brush controls exist",
+      "pass": false
+    }
+  ]
+}

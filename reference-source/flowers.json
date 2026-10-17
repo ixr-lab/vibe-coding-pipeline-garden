@@ -1,0 +1,209 @@
+[
+  {
+    "id": "cosmos",
+    "name": "코스모스",
+    "latin": "Cosmos bipinnatus Cav.",
+    "sources": [
+      {
+        "title": "Wikimedia Commons — Cosmos bipinnatus (5).jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Cosmos_bipinnatus_(5).jpg",
+        "creator": "Kabir Bakie",
+        "rights": "CC BY-SA 2.5 — https://creativecommons.org/licenses/by-sa/2.5/ . 원본을 저장소 밖 참고 폴더에서만 관찰했으며 이 저장소에는 사진을 포함하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cosmos_bipinnatus_%285%29.jpg"
+      },
+      {
+        "title": "NC State Extension Gardener Plant Toolbox — Cosmos bipinnatus",
+        "url": "https://plants.ces.ncsu.edu/plants/cosmos-bipinnatus/",
+        "creator": "NC State Extension, North Carolina State University",
+        "rights": "공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다. 사진의 개별 라이선스는 기관 페이지에 별도 표시되어 있다.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "사진 직접 관찰: 가운데 분홍 꽃은 넓은 설상화 약 8장이 방사상으로 둘러선다. 각 조각은 중심에서 좁게 출발해 바깥쪽으로 넓어지는 부채·주걱 모양이다.",
+      "사진 직접 관찰: 바깥끝은 둥근 타원이 아니라 얕게 갈라지고 물결치는 톱니 윤곽이다. 한 조각 안에서도 끝선의 높이가 다르다.",
+      "사진 직접 관찰: 위쪽 두 조각은 길고 비교적 곧게 펼쳐지며 아래쪽 조각은 말리거나 비스듬히 꺾여 짧게 보인다. 같은 길이의 회전 복제처럼 보이지 않는다.",
+      "사진 직접 관찰: 인접 설상화는 일부 가장자리에서 겹친다. 왼쪽과 아래쪽에는 좁은 틈도 있어 외곽이 완전한 원으로 닫히지 않는다.",
+      "사진 직접 관찰: 기부에서 끝으로 가는 길고 가는 밝은 결이 보인다. 접힌 능선은 밝은 분홍, 골과 겹침 부분은 진한 자주색으로 읽힌다.",
+      "사진 직접 관찰: 중심은 단색 노란 점이 아니라 작은 노랑·주황 돌기와 어두운 틈이 모인 원반이다. 사진에서 중심의 폭은 꽃 전체 폭보다 훨씬 작다.",
+      "사진 직접 관찰: 꽃 바로 아래로 가느다란 녹색 꽃자루가 이어지고, 아래 주변에 길고 뾰족한 녹색 조각들이 보인다. 앞면 꽃잎이 기부를 가려 총포의 전체 배열은 확인하기 어렵다.",
+      "기관 설명 근거: 바깥의 꽃잎처럼 보이는 부분은 설상화, 가운데는 관상화가 모인 두상화서다. 잎은 깊게 갈라진 실 같은 질감이므로 넓은 단엽을 붙이는 표현과 구별한다."
+    ],
+    "avoid": [
+      "매끈한 물방울형 타원 8개를 정확히 같은 길이·각도로 배치하기",
+      "설상화 끝을 모두 뾰족하게 만들거나 톱니를 크고 규칙적인 지그재그로 만들기",
+      "꽃 중심을 매끈한 검정 단추 또는 과도하게 큰 노란 구로 만들기",
+      "보이지 않는 꽃받침 구조를 확인한 사실처럼 기록하거나, 녹색 다섯 갈래 별을 종의 공통 구조로 단정하기",
+      "사진의 조명·채도·한 개체의 비대칭을 종 전체의 고정된 색과 치수로 취급하기"
+    ],
+    "targets": [
+      "넓은 분홍 설상화와 얕은 끝 톱니만으로 데이지의 길고 좁은 흰 설상화와 구분된다.",
+      "실루엣을 축소해도 몇 조각의 접힘, 길이 차이, 겹침 순서가 남는다.",
+      "작은 노란 관상화 군집과 가는 꽃자루 연결이 보인다.",
+      "사진급 복제보다 꽃의 배열·윤곽·곡률을 근거 있게 단순화한 그림을 목표로 한다."
+    ],
+    "implementation": [
+      "권장 구현: 기본 8장의 개별 베지어 경로를 만들고, 기부는 좁게·끝은 넓게 구성한다. 끝선에 3개 안팎의 얕은 굴곡을 넣는다. 이 수치는 해당 사진을 읽기 위한 디자인 선택이다.",
+      "권장 구현: 씨드로 각 조각의 길이·폭·기울기를 조금씩 달리하고, 일부 아래쪽 조각은 굽은 중심선과 짧은 투영 길이를 사용한다.",
+      "권장 구현: 뒤쪽 조각부터 그리고 겹침 경계에 낮은 불투명도의 자주색 음영을 둔다. 전체 꽃을 두른 진한 외곽선은 줄인다.",
+      "권장 구현: 밝은 능선 2~3개와 옅은 방사형 결을 조각별 곡률에 따라 휘게 그린다. 결은 텍스처 장식보다 접힌 방향을 설명하도록 사용한다.",
+      "권장 구현: 중심을 작은 황색·주황 점군과 일부 갈색 틈으로 구성하고 꽃 아래의 가는 꽃자루가 기부에 닿도록 연결한다."
+    ],
+    "gaps": [
+      "직접 본 코스모스 사진은 앞면 위주 한 장이다. 총포 뒷면의 겹수·개수·꽃자루와 만나는 단면은 시각 확인하지 못했다.",
+      "기관 페이지의 품종별 사진 전체를 관찰한 것은 아니다. 겹꽃·통 모양 설상화 품종까지 이번 형태로 일반화하지 않는다.",
+      "사진은 절대 치수나 정량 색상 측정용 자료가 아니다. 구현의 비율·색은 사진 관찰을 바탕으로 한 도식화 선택이다."
+    ]
+  },
+  {
+    "id": "daisy",
+    "name": "데이지 · 옥스아이 데이지",
+    "latin": "Leucanthemum vulgare Lam.",
+    "sources": [
+      {
+        "title": "Wikimedia Commons — Ox-eye daisy 01.jpg (960px 미리보기 직접 관찰)",
+        "url": "https://commons.wikimedia.org/wiki/File:Ox-eye_daisy_01.jpg",
+        "creator": "Tony Wills",
+        "rights": "파일 페이지에 CC BY 2.5, CC BY-SA 3.0, GFDL 선택 라이선스가 명시되어 있다. 참고 기준: CC BY 2.5 — https://creativecommons.org/licenses/by/2.5/ . 관찰용 사본은 저장소 밖에만 보관한다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Ox-eye_daisy_01.jpg/960px-Ox-eye_daisy_01.jpg"
+      },
+      {
+        "title": "NC State Extension — Leucanthemum vulgare, Flower detail 사진",
+        "url": "https://plants.ces.ncsu.edu/plants/leucanthemum-vulgare/",
+        "creator": "Jason Pratt",
+        "rights": "기관 페이지 사진 표기에 CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/ . 사진은 저장소 밖에서만 관찰하며 저장소에는 이미지 링크만 수록한다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://eit-planttoolbox-prod.s3.amazonaws.com/media/images/Leucanthemum-vulgare--Jason-Pratt--cc-by-2-0.jpg"
+      },
+      {
+        "title": "NC State Extension Gardener Plant Toolbox — Leucanthemum vulgare 기관 설명",
+        "url": "https://plants.ces.ncsu.edu/plants/leucanthemum-vulgare/",
+        "creator": "NC State Extension, North Carolina State University",
+        "rights": "공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "사진 직접 관찰: 두 사진 모두 긴 흰색 설상화가 여러 장 둘러서며, 코스모스보다 각 조각의 폭이 좁고 길이 대비 폭이 작다. 기관 설명은 흰 설상화 15~35개를 제시한다.",
+      "사진 직접 관찰: 기부는 가늘고 바깥쪽 중후반에서 넓어진 뒤 둥글거나 얕게 갈라진 끝으로 마무리된다. 일부 끝은 접혀 뾰족해 보인다.",
+      "사진 직접 관찰: 전체 배열은 방사상이지만 각도와 간격이 일정하지 않다. Tony Wills 사진에서는 왼쪽 위와 아래쪽에서 설상화가 겹치고 일부 사이에 어두운 틈이 열린다.",
+      "사진 직접 관찰: 길이와 투영 폭이 다르다. Tony Wills 사진의 오른쪽 아래 일부 조각은 좁게 말리고, Jason Pratt 사진의 왼쪽 아래 조각들은 아래로 처진다.",
+      "사진 직접 관찰: 흰 표면 안에 길이 방향의 골과 능선이 이어진다. 겹침 아래와 접힌 옆면은 회청색 그늘, 위를 향한 면은 밝은 흰색이다.",
+      "사진 직접 관찰: 노란 중심은 꽃 전체에 비해 충분히 넓고 작은 입자가 촘촘하다. 안쪽은 비교적 촘촘한 점, 가장자리는 솟은 작은 노란 관상화가 불규칙한 테두리를 만든다.",
+      "사진 직접 관찰: 중심과 흰 설상화 기부의 경계에는 가늘고 어두운 녹색·회색 틈이 있다. 노란 원반을 흰 조각 위에 평평하게 덮은 스티커처럼 읽히지 않는다.",
+      "기관 설명 근거: 꽃 기부에는 녹색에 자갈색 가장자리를 가진 포엽이 있다. 앞면 사진 두 장에서는 그 뒷면 배열과 꽃자루 부착부가 가려져 직접 확인하지 못했다.",
+      "기관 설명 근거: 줄기는 녹색이며 단일 줄기 또는 위쪽 분지가 가능하다. 윗줄기의 잎은 작고 잎자루가 없으며, 아래쪽 잎은 더 넓고 톱니가 있는 형태다."
+    ],
+    "avoid": [
+      "코스모스의 넓은 꽃 조각을 흰색으로 바꾸어 데이지로 사용하기",
+      "모든 설상화를 동일한 타원·길이·간격으로 그려 톱니바퀴처럼 만들기",
+      "흰색을 전체 면적에 균일하게 칠해 접힘과 겹침을 없애기",
+      "중심을 질감 없는 노란 원 또는 구형 볼로 과장하기",
+      "총포·줄기 연결이 직접 보이지 않는 사진을 근거로 정확한 뒷면 구조를 관찰했다고 쓰기"
+    ],
+    "targets": [
+      "여러 장의 길고 좁은 흰 설상화와 넓은 노란 관상화 원반으로 코스모스와 구분된다.",
+      "조각별 미세한 처짐·비틀림·길이 차이가 종이처럼 얇은 표면을 보여 준다.",
+      "중심과 설상화 경계의 깊이, 겹친 조각의 회색 그림자가 축소 화면에서도 읽힌다.",
+      "총포와 꽃자루는 기관 설명에 근거해 절제해서 보완하고, 관찰하지 못한 뒷면은 별도로 표시한다."
+    ],
+    "implementation": [
+      "권장 구현: 24~30개의 개별 설상화를 기본 디자인 범위로 사용한다. 이는 기관의 15~35개 범위 안에서 정한 표현 선택이며 고정된 종 진단 수치가 아니다.",
+      "권장 구현: 좁은 기부와 둥근 끝을 연결하는 긴 베지어 윤곽에 작은 끝 갈라짐을 넣고, 일부 조각의 한쪽 가장자리를 안으로 말아 폭 차이를 준다.",
+      "권장 구현: 설상화의 순서를 나누어 겹쳐 그리고 회청색의 옅은 골·가장자리 그림자를 추가한다. 모든 조각에 같은 줄무늬를 찍지 않는다.",
+      "권장 구현: 노란 원반을 낮은 볼륨으로 두고 중심의 작은 점군, 바깥의 더 큰 관상화 입자, 가장자리의 짧은 그림자를 단계적으로 그린다.",
+      "권장 구현: 꽃자루는 꽃 중앙 아래 총포까지 연결한다. 녹색 총포는 정면에서 필요한 만큼만 노출하고 자갈색 가장자리는 작은 색 차이로 표현한다."
+    ],
+    "gaps": [
+      "daisy는 여러 속을 부르는 보통명이다. 이번 기준종은 Bellis perennis나 샤스타데이지가 아닌 Leucanthemum vulgare로 한정한다.",
+      "Tony Wills 사진의 전체 해상도 원본 다운로드는 HTTP 429로 실패했다. 같은 파일의 공개 960px 미리보기 다운로드와 시각 관찰은 성공했다. 전체 해상도 원본을 관찰했다고 주장하지 않는다.",
+      "직접 본 두 사진은 정면에 가까워 총포 뒷면과 꽃자루 연결부의 정확한 부피를 확인하지 못했다.",
+      "사진의 꽃 크기·원반 비율은 촬영각과 개체에 영향을 받는다. 구현 비율은 도식화 목표이지 식물학적 실측값이 아니다."
+    ]
+  },
+  {
+    "id": "poppy",
+    "name": "꽃양귀비 · 개양귀비",
+    "latin": "Papaver rhoeas L.",
+    "sources": [
+      {
+        "title": "Wikimedia Commons — Papaver rhoeas.jpg",
+        "url": "https://commons.wikimedia.org/wiki/File:Papaver_rhoeas.jpg",
+        "creator": "Pablo Alberto Salguero Quiles",
+        "rights": "CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/ ; GFDL 1.2 이상도 파일 페이지에 명시되어 있다. 원본은 저장소 밖 참고 폴더에서만 관찰했다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Papaver_rhoeas.jpg"
+      },
+      {
+        "title": "NC State Extension — Papaver rhoeas, Life stages 사진",
+        "url": "https://plants.ces.ncsu.edu/plants/papaver-rhoeas/",
+        "creator": "Alvesgaspar",
+        "rights": "기관 페이지 사진 표기에 CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/ . 관찰용 사본은 저장소 밖에만 보관하며 저장소에는 이미지 링크만 수록한다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://eit-planttoolbox-prod.s3.amazonaws.com/media/images/Poster_papaver_life__qLybDx9GFPhE.jpg"
+      },
+      {
+        "title": "NC State Extension Gardener Plant Toolbox — Papaver rhoeas 기관 설명",
+        "url": "https://plants.ces.ncsu.edu/plants/papaver-rhoeas/",
+        "creator": "NC State Extension, North Carolina State University",
+        "rights": "공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      },
+      {
+        "title": "VicFlora — Papaver rhoeas 분류기재",
+        "url": "https://vicflora.rbg.vic.gov.au/flora/taxon/1d9d59f0-bdbd-4118-9bc0-51785bd44ea4",
+        "creator": "Royal Botanic Gardens Victoria; R. W. Kiger (1996), Daniel Ohlsen (2017 갱신)",
+        "rights": "VicFlora 본문은 CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ . 권리 안내: https://vicflora.rbg.vic.gov.au/pages/copyright . 해당 기관 사진은 이번 연구에서 내려받거나 관찰하지 않았다.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "사진 직접 관찰: Salguero 사진의 앞쪽 큰 꽃은 넓고 둥근 네 꽃잎이 겹쳐 얕은 컵을 이룬다. 기관 설명도 네 장의 주름진 꽃잎을 제시한다.",
+      "사진 직접 관찰: 왼쪽 꽃잎은 위로 서고 아래 꽃잎은 앞으로 크게 펼쳐져, 꽃 둘레가 균등한 십자나 네 개 타원이 되지 않는다.",
+      "사진 직접 관찰: 꽃잎 가장자리는 물결치고 얇게 접힌다. 표면의 가는 방사 주름이 반투명한 종이 같은 질감을 만든다.",
+      "사진 직접 관찰: 조각이 겹친 안쪽은 짙은 붉은색, 빛을 향한 넓은 면은 밝은 주홍색이다. 골과 접힌 테두리에 어두운 띠가 생겨 컵의 깊이를 보여 준다.",
+      "사진 직접 관찰: 꽃잎의 기부 부근에는 불규칙한 검은 반점이 보인다. 네 개의 똑같은 검정 타원으로 분리되지 않고 일부는 수술의 그림자와 이어진다.",
+      "사진 직접 관찰: 중앙에는 회녹색·자주색의 작은 원반과 방사상 줄이 보이고, 그 둘레를 어두운 자주·검정의 짧은 수술들이 고리처럼 둘러싼다. 데이지 같은 노란 관상화 원반은 없다.",
+      "사진 직접 관찰: Alvesgaspar 몽타주의 봉오리는 녹색 달걀형이며 줄기 끝이 고리처럼 굽어 아래를 향한다. 봉오리와 꽃줄기 표면에는 가는 털이 바깥으로 돌출한다.",
+      "사진 직접 관찰: 같은 몽타주의 개화 단계는 꽃잎 기부가 줄기 끝의 중심 아래로 모인다. 개화한 꽃 둘레에 큰 녹색 별형 꽃받침은 보이지 않는다. 이 사진만으로 꽃받침의 탈락 시점이나 개수를 판정하지 않는다.",
+      "기관 설명 근거: 꽃은 긴 꽃자루 끝에 단독으로 달리고 줄기는 거친 털을 지닌다. VicFlora는 가는 자주색 수술대, 푸른빛 꽃밥, 대체로 평평한 암술머리 원반을 기재해 사진의 어두운 중심 구조 해석을 뒷받침한다."
+    ],
+    "avoid": [
+      "데이지처럼 여러 장의 가는 설상화를 빨갛게 칠하기",
+      "꽃잎 네 장을 동일한 타원으로 정확히 90도씩 회전해 평평하게 배열하기",
+      "노란 구형 중심, 매끈한 검정 단추, 규칙적인 검은 점 네 개로 중앙 구조를 대체하기",
+      "주름을 꽃 전체에 걸친 균일한 직선 줄무늬로 만들기",
+      "개화 사진에서 확인되지 않은 큰 녹색 별형 꽃받침을 꽃 둘레에 덧붙이기"
+    ],
+    "targets": [
+      "큰 네 장의 얇은 붉은 꽃잎, 비대칭 컵 실루엣, 어두운 수술 고리로 다른 두 종과 구분된다.",
+      "앞으로 펼쳐진 꽃잎과 위로 선 꽃잎의 곡률·명암 차이가 보인다.",
+      "중앙의 작은 방사상 암술머리와 주변 수술을 서로 다른 구조로 읽을 수 있다.",
+      "봉오리를 표시한다면 아래로 굽은 꽃줄기와 털 있는 녹색 외피를 개화 형태와 구별한다."
+    ],
+    "implementation": [
+      "권장 구현: 뒤의 두 꽃잎과 앞의 두 꽃잎에 서로 다른 베지어 경로를 사용한다. 폭·높이·접힘·가림을 달리해 네 조각이 보이되 균등한 클로버 실루엣은 피한다.",
+      "권장 구현: 중심에서 가장자리로 휘는 몇 개의 주름과 투명도가 낮은 붉은 음영을 추가한다. 상단 테두리는 밝게, 겹친 안쪽과 컵 바닥은 짙게 하여 얇음과 깊이를 함께 표현한다.",
+      "권장 구현: 기부 반점은 꽃잎 좌표에 붙이고 겹침으로 일부 가린다. 별도의 검은 원 네 개를 중심 주변에 떠 있게 두지 않는다.",
+      "권장 구현: 중앙에 작은 회녹색·자주색 원반과 방사선, 그 밖에 짧은 선과 어두운 꽃밥 점군으로 수술 고리를 그린다.",
+      "권장 구현: 꽃자루는 컵 아래 중앙에 연결하고 일부 짧은 털을 넣는다. 봉오리에는 아래로 굽은 끝줄기와 달걀형 녹색 윤곽을 사용한다."
+    ],
+    "gaps": [
+      "직접 관찰한 개화 원본은 512×384px이며 세부 수술 하나하나를 판독하기에는 해상도가 낮다. 더 선명한 생육단계 몽타주와 공식 분류기재로 중심 구조를 보완했다.",
+      "꽃받침의 개수·탈락 과정은 직접 확인하지 못했다. 개화 사진에 큰 녹색 별이 보이지 않는다는 관찰과 식물학적 개수 판정은 구별한다.",
+      "이번 형태는 붉은 홑꽃 Papaver rhoeas 기준이다. 겹꽃 품종이나 다른 Papaver 종의 형태까지 대표하지 않는다.",
+      "작은 털·꽃밥은 축소 화면에서 생략될 수 있다. 네 장의 컵형 배열과 중앙 구조를 우선 보존한다."
+    ]
+  }
+]

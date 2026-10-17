@@ -1,0 +1,288 @@
+[
+  {
+    "id": "uniform-pen",
+    "name": "Uniform pen · 균일 펜",
+    "sources": [
+      {
+        "title": "Krita 4 preset sample: Ink-2 Fineliner",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_d-brush-family.jpg"
+      },
+      {
+        "title": "Krita 4 preset sample: Basic-1",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_b-brush-family.jpg"
+      },
+      {
+        "title": "Pixel Brush Engine: tip, spacing, dab",
+        "url": "https://docs.krita.org/en/reference_manual/brushes/brush_engines/pixel_brush_engine.html",
+        "creator": "Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.",
+        "rights": "권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "직접 관찰: Ink-2 Fineliner의 큰 원·사각형과 Basic-1 지그재그는 폭이 거의 일정하고 내부가 고르게 채워진다.",
+      "끝은 둥글며 가장자리는 매끈하다. 연필의 점상 공백이나 드라이 브러시의 길게 갈라진 붓결은 보이지 않는다."
+    ],
+    "avoid": [
+      "압력·속도 때문에 두께가 흔들리는 효과",
+      "반투명한 점들이 반복되어 마디처럼 보이는 접합부",
+      "흐린 에어브러시 테두리와 임의의 종이 입자"
+    ],
+    "targets": [
+      "공통 비교(구현 제안): 동일한 S자 좌표·최대 지름 24px·색·이동 속도·압력열 0.15→1→0.15를 쓰고, X자 교차와 2회 재추적을 별도로 비교한다. 공식 샘플의 측정값이 아니다.",
+      "폭은 압력열과 무관하게 일정하고, 단면 농도는 평평하며 둥근 끝이 남는다.",
+      "같은 색의 교차부·재추적이 본문보다 진해지지 않는다."
+    ],
+    "implementation": [
+      "상수 반지름의 연속 경로에 round cap/join을 쓰거나, 촘촘한 원형 dab을 한 스트로크 마스크로 합친다.",
+      "스트로크 마스크에 한 번 색을 입혀 이벤트 수에 따른 농도 누적을 막는다.",
+      "포인터 간 거리에 맞춰 보간하여 빠르게 그려도 선이 끊기지 않게 한다."
+    ],
+    "gaps": [
+      "기준 이미지는 Krita 4 프리셋 예시다. 실물 펜을 직접 그리거나 측정한 데이터가 아니다.",
+      "24px 등 수치는 프로젝트의 비교 조건으로 제안한 값이다."
+    ]
+  },
+  {
+    "id": "pressure-ink",
+    "name": "Pressure ink · 필압 잉크",
+    "sources": [
+      {
+        "title": "Krita 4 preset sample: Basic-5 Size default",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_b-brush-family.jpg"
+      },
+      {
+        "title": "Krita 4 preset sample: Ink-3 Gpen",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_d-brush-family.jpg"
+      },
+      {
+        "title": "Loading and Saving Brushes: inking and sensor curves",
+        "url": "https://docs.krita.org/en/user_manual/loading_saving_brushes.html",
+        "creator": "Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.",
+        "rights": "권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "직접 관찰: Basic-5 Size default의 검은 물결은 시작이 매우 가늘고 중앙이 굵어지며 끝이 다시 뾰족해진다.",
+      "Ink-3 Gpen은 가는 세부선과 굵은 윤곽선을 함께 만든다. 선 안쪽은 대체로 단단한 잉크 면이다."
+    ],
+    "avoid": [
+      "폭은 고정한 채 불투명도만 바꾸는 필압 표현",
+      "모든 점을 같은 크기의 둥근 원으로 찍어 생기는 구슬 모양",
+      "저압 끝부분이 갑자기 끊기거나 검은 덩어리로 끝나는 현상"
+    ],
+    "targets": [
+      "공통 비교(구현 제안): 동일한 S자 좌표·최대 지름 24px·색·이동 속도·압력열 0.15→1→0.15를 쓰고, X자 교차와 2회 재추적을 별도로 비교한다. 공식 샘플의 측정값이 아니다.",
+      "저압 입출구는 중앙보다 눈에 띄게 가늘고, 굵기 변화가 연속적이다.",
+      "주요 차이는 폭이다. 중앙은 균일 펜처럼 진하고 종이 입자·마른 공백이 없다."
+    ],
+    "implementation": [
+      "입력 pressure를 완만한 비선형 곡선으로 반지름에 매핑한다. 마우스용 데모는 명시적인 고정 압력열을 쓴다.",
+      "스무딩한 중심선과 가변 반지름으로 외곽선을 만들고 접선 방향으로 가는 입출구를 연결한다.",
+      "농도는 높은 값으로 유지하고 스트로크 마스크를 합쳐 자체 겹침의 검은 혹을 방지한다."
+    ],
+    "gaps": [
+      "사진 속 필압 값은 공개되지 않았다. 실제 태블릿 입력과 감마 곡선은 별도 보정이 필요하다.",
+      "Adobe brush dynamics 페이지는 이번 접근에서 열리지 않아 근거로 사용하지 않았다."
+    ]
+  },
+  {
+    "id": "pencil",
+    "name": "Pencil · 연필",
+    "sources": [
+      {
+        "title": "Krita 4 preset sample: Pencil-3 Large 4B / Pencil-4 Soft",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_c-brush-family.jpg"
+      },
+      {
+        "title": "Pixel Brush Engine: texture",
+        "url": "https://docs.krita.org/en/reference_manual/brushes/brush_engines/pixel_brush_engine.html",
+        "creator": "Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.",
+        "rights": "권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      },
+      {
+        "title": "Opacity and Flow: stroke versus dab transparency",
+        "url": "https://docs.krita.org/en/reference_manual/brushes/brush_settings/opacity_and_flow.html",
+        "creator": "Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.",
+        "rights": "권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "직접 관찰: Large 4B의 짧은 사선과 Soft의 물결에는 작은 밝은 점들이 남고 회색 입자가 촘촘히 모인다.",
+      "Tilted의 넓은 음영은 겹친 곳이 진해지지만 종이처럼 작은 공백이 남는다. 드라이 브러시보다 공백이 작고 촘촘하다."
+    ],
+    "avoid": [
+      "완전히 매끈한 회색 선에 화면 전체 노이즈만 얹기",
+      "길게 쪼개진 붓털 자국이나 큰 페인트 조각",
+      "매 프레임 새 난수를 써서 입자가 흔들리는 효과"
+    ],
+    "targets": [
+      "공통 비교(구현 제안): 동일한 S자 좌표·최대 지름 24px·색·이동 속도·압력열 0.15→1→0.15를 쓰고, X자 교차와 2회 재추적을 별도로 비교한다. 공식 샘플의 측정값이 아니다.",
+      "압력이 커지면 흑연 입자의 밀도·농도가 주로 증가하고 종이의 미세한 밝은 점은 일부 유지된다.",
+      "교차부·재추적은 서서히 진해지며 균일 펜보다 거친 가장자리가 남는다."
+    ],
+    "implementation": [
+      "캔버스 좌표에 고정한 다중 스케일 paper-tooth noise를 만들고 압력에 따라 흑연이 닿는 임계값을 조절한다.",
+      "짧은 미세 입자와 좁은 비등방성 텍스처를 스트로크 마스크 내부에 합성한다.",
+      "낮은 알파의 흑연층을 제한적으로 누적해 반복 음영이 짙어지게 한다. 배경 전체에는 텍스처를 덧칠하지 않는다."
+    ],
+    "gaps": [
+      "샘플의 종이 텍스처·흑연 경도·개별 프리셋 파라미터를 추출하지 않았다.",
+      "제품용 입자는 원본 브러시 텍스처를 복사하지 않고 절차적으로 생성한다."
+    ]
+  },
+  {
+    "id": "dry-brush",
+    "name": "Dry brush · 마른 붓",
+    "sources": [
+      {
+        "title": "Krita 4 preset sample: Dry Brushing / Dry Bristles",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_g-brush-family.jpg"
+      },
+      {
+        "title": "Krita 4 preset sample: Bristles-2 Flat Rough",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_f-brush-family.jpg"
+      },
+      {
+        "title": "Bristle Brush Engine: scale, offset, density examples",
+        "url": "https://docs.krita.org/en/reference_manual/brushes/brush_engines/bristle_engine.html",
+        "creator": "Krita 문서 저자: Wolthera van Hövell tot Westerflier, Raghavendra Kamath, Scott Petrovic, ValerieVK. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/brushes/brush_engines/bristle_engine.rst.txt). 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita-tutorial7-B.I.2-1.png"
+      },
+      {
+        "title": "Winsor & Newton: Creating granulation with watercolour",
+        "url": "https://www.winsornewton.com/blogs/guides/granulation-techniques-watercolour",
+        "creator": "Winsor & Newton; 개별 필자 표기 없음.",
+        "rights": "© 2026 Winsor & Newton NA. All rights reserved. 링크 인용 및 설명 요약만 사용하며 이미지·영상은 복제하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "직접 관찰: Dry Brushing의 굽은 선에는 이동 방향을 따라 길게 열린 밝은 틈과 여러 가닥의 붓결이 있다.",
+      "Dry Bristles Eroded는 더 큰 불규칙 공백을 남긴다. 브리슬 엔진의 낮은 density 예시는 배경이 많이 드러나고 높은 density는 촘촘하다.",
+      "실물 화구 설명(이미지 미관찰): 제조사 Winsor & Newton은 물을 적게 쓰는 drybrush가 긁힌 듯한 안료 자국을 만든다고 설명한다."
+    ],
+    "avoid": [
+      "연필과 동일한 균일한 점상 노이즈만 사용하기",
+      "넓은 페인트 면을 투명하게 만드는 것만으로 건조함 표현하기",
+      "각 dab이 같은 얼룩 모양으로 반복되는 도장 패턴"
+    ],
+    "targets": [
+      "공통 비교(구현 제안): 동일한 S자 좌표·최대 지름 24px·색·이동 속도·압력열 0.15→1→0.15를 쓰고, X자 교차와 2회 재추적을 별도로 비교한다. 공식 샘플의 측정값이 아니다.",
+      "곡선을 따라 긴 붓결과 종이가 노출된 빈틈이 이어져야 한다.",
+      "중앙에서도 완전히 채워지지 않는 부분이 남고, 입출구는 여러 가닥으로 갈라진다. 압력 증가 시 가닥 접촉률이 커진다."
+    ],
+    "implementation": [
+      "스트로크의 접선·법선 좌표에서 지속되는 여러 bristle ribbon을 배치하고 가닥별 굵기·위치·색 농도를 시드로 고정한다.",
+      "paper noise와 가닥별 ink depletion으로 긴 빈틈과 짧은 접촉 구간을 함께 만든다.",
+      "가닥 방향을 중심선에 따라 연속 회전시키고 압력으로 닿는 가닥 수를 늘린다."
+    ],
+    "gaps": [
+      "Krita의 dry 분류는 마른 기존 색 위에 칠하는 동작도 뜻하므로, 모든 dry 프리셋이 공백 많은 실물 drybrush와 같지는 않다.",
+      "가닥·공백 비율은 시각 목표이며 실제 붓털 물리 시뮬레이션을 의미하지 않는다."
+    ]
+  },
+  {
+    "id": "watercolor",
+    "name": "Watercolor · 수채화",
+    "sources": [
+      {
+        "title": "Krita 4 preset sample: Watercolor Texture / Waterpaint Hard Edges / Soft Edges",
+        "url": "https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html",
+        "creator": "Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.",
+        "rights": "문서 원문은 GNU FDL 1.3+ (https://docs.krita.org/en/_sources/reference_manual/krita_4_preset_bundle.rst.txt). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://docs.krita.org/en/_images/Krita4_j-brush-family.jpg"
+      },
+      {
+        "title": "Opacity and Flow: wash and build-up",
+        "url": "https://docs.krita.org/en/reference_manual/brushes/brush_settings/opacity_and_flow.html",
+        "creator": "Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.",
+        "rights": "권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      },
+      {
+        "title": "Winsor & Newton: Creating granulation with watercolour",
+        "url": "https://www.winsornewton.com/blogs/guides/granulation-techniques-watercolour",
+        "creator": "Winsor & Newton; 개별 필자 표기 없음.",
+        "rights": "© 2026 Winsor & Newton NA. All rights reserved. 링크 인용 및 설명 요약만 사용하며 이미지·영상은 복제하지 않음.",
+        "accessed": "2026-10-17",
+        "visualObserved": false
+      }
+    ],
+    "observations": [
+      "직접 관찰: Watercolor Texture의 보라·빨강·노랑 영역은 밝은 바탕이 비치고 내부 농도가 구름처럼 불균일하다.",
+      "Hard Edges의 둥근 얼룩은 겹친 부분이 진하다. Soft Edges는 옅은 중심과 군데군데 진한 청색·자홍색 테두리를 보인다.",
+      "실물 화구 설명(이미지 미관찰): Winsor & Newton은 거친 종이의 홈에 안료가 모여 과립 질감이 강조된다고 설명한다."
+    ],
+    "avoid": [
+      "반투명 균일 펜을 여러 번 찍어 생기는 규칙적인 원형 마디",
+      "전체 선 둘레에 같은 두께의 검은 외곽선",
+      "연필처럼 균일한 흑색 점만 흩뿌리는 과립 표현"
+    ],
+    "targets": [
+      "공통 비교(구현 제안): 동일한 S자 좌표·최대 지름 24px·색·이동 속도·압력열 0.15→1→0.15를 쓰고, X자 교차와 2회 재추적을 별도로 비교한다. 공식 샘플의 측정값이 아니다.",
+      "밑색이 비치는 얇은 wash, 넓고 완만한 내부 농도 변화, 부분적인 안료 테두리가 함께 보인다.",
+      "X 교차와 별도 재추적은 농도가 증가하되 한 스트로크 안의 dab 경계는 두드러지지 않는다.",
+      "과립은 주로 안료가 모인 작은 농도 차이로 보이며, 드라이 브러시의 긴 빈 통로와 구별된다."
+    ],
+    "implementation": [
+      "연속 스트로크 영역을 먼저 만들고 낮은 주파수의 pigment noise와 미세한 paper grain을 다른 크기로 합성한다.",
+      "경계 거리장을 이용해 테두리 일부에 안료를 모으고 저압 끝부분은 옅게 풀어 준다.",
+      "하나의 wash 내부는 마스크 합성으로 평탄화하고 별도 스트로크끼리는 반투명 색을 누적한다.",
+      "제품 설명에서 절차적 수채화 질감 표현으로 명시한다."
+    ],
+    "gaps": [
+      "공식 문서도 이 프리셋이 완전한 안료 확산을 재현하지 않는다고 설명한다.",
+      "직접 관찰한 것은 디지털 샘플이다. 실제 습윤 확산·건조 시간·중력·색소 침전은 검증하지 않았다."
+    ]
+  }
+]
