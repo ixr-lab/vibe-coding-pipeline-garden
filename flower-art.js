@@ -186,7 +186,7 @@
     }
   }
 
-  function cosmos(ctx, rand, detailed, material) {
+  function cosmos(ctx, rand, detailed, material, structure) {
     const palettes = [
       ['#8e1a61', '#c63d8e', '#e76ab2', '#ed91c5', '#fff0fa46', '#82265f40'],
       ['#801c5e', '#b93189', '#d85cab', '#e583be', '#fff1fb45', '#70265040'],
@@ -206,7 +206,7 @@
     }
     // Alternating depth makes the long rays overlap like a single flower head.
     for (const i of [0, 2, 4, 6, 1, 3, 5, 7]) cosmosRay(ctx, rays[i], detailed, material, i);
-    yellowDisk(ctx, rand, .184 + rand() * .013, detailed, false);
+    yellowDisk(structure || ctx, rand, .184 + rand() * .013, detailed, false);
   }
 
   function daisyRay(ctx, p, detailed, material, index) {
@@ -259,7 +259,7 @@
     }
   }
 
-  function daisy(ctx, rand, detailed, material) {
+  function daisy(ctx, rand, detailed, material, structure) {
     const count = 24 + Math.floor(rand() * 6), turn = rand() * TAU, rays = [];
     for (let i = 0; i < count; i++) {
       const angle = turn + i * TAU / count + (rand() - .5) * .062;
@@ -271,7 +271,7 @@
     for (let parity = 0; parity < 2; parity++) {
       for (let i = parity; i < count; i += 2) daisyRay(ctx, rays[i], detailed, material, i);
     }
-    yellowDisk(ctx, rand, .258 + rand() * .018, detailed, true);
+    yellowDisk(structure || ctx, rand, .258 + rand() * .018, detailed, true);
   }
 
   function poppyPetal(ctx, p, detailed, material, index) {
@@ -334,7 +334,7 @@
     }
   }
 
-  function poppy(ctx, rand, detailed, material) {
+  function poppy(ctx, rand, detailed, material, structure) {
     const turn = (rand() - .5) * .42, petals = [];
     const warm = rand() > .45;
     // Two taller back petals and two shorter front petals make an uneven cup.
@@ -350,6 +350,7 @@
         veins: Array.from({length: 24}, () => rand())});
     }
     for (const i of [0, 1, 3, 2]) poppyPetal(ctx, petals[i], detailed, material, i);
+    ctx = structure || ctx;
     // Unequal basal marks merge into the loose stamen ring, rather than a black flower.
     for (const p of petals) {
       const b = p.blotch, w = p.blotchWidth;
@@ -405,6 +406,8 @@
   /** Draw one illustrated, slightly oblique bloom; tilt is a rotation in radians.
    * Radius describes the corolla, not the small stem attachment beneath it.
    * Optional brush/widthScale/texture/opacity/strength paint the existing petals.
+   * mode='ink'|'tint' and color use InkPalette without changing geometry or alpha.
+   * pose accepts front/threeQuarter/side/droop/bud or {aspect}; tilt controls lean.
    * Empty options or an unavailable PetalPaint module preserve the legacy study.
    * No timer, DOM access, global random state, or internal bitmap cache is used.
    */
@@ -413,6 +416,13 @@
     if (!Number.isFinite(radius) || radius <= 0 || !Number.isFinite(x) || !Number.isFinite(y)) return;
     const rand = random(String(seed) + '|flower|' + kind);
     const material = materialFor(kind, radius, seed, options);
+    const mode = options && options.mode;
+    const palette = root.InkPalette;
+    let structure = ctx;
+    if ((mode === 'ink' || mode === 'tint') && palette && typeof palette.wrap === 'function') {
+      structure = palette.wrap(ctx, mode, options.color, kind, 'structure');
+      ctx = palette.wrap(ctx, mode, options.color, kind, 'petal');
+    }
     ctx.save();
     try {
       ctx.translate(x, y);
@@ -420,12 +430,17 @@
       ctx.scale(radius, radius);
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
-      attachment(ctx, kind);
+      attachment(structure, kind);
       // The projection makes the bloom feel cupped while keeping species readable.
-      ctx.scale(1, .84 + rand() * .055);
-      if (kind === 'cosmos') cosmos(ctx, rand, radius >= 22, material);
-      else if (kind === 'daisy') daisy(ctx, rand, radius >= 22, material);
-      else poppy(ctx, rand, radius >= 22, material);
+      const projection = .84 + rand() * .055;
+      const pose = options && options.pose;
+      const aspect = pose && typeof pose === 'object' ? Number(pose.aspect) :
+        ({front: 1, threeQuarter: .76, side: .44, droop: .64, bud: .35})[pose];
+      // Always consume the legacy projection sample; poses never move the seed stream.
+      ctx.scale(1, Number.isFinite(aspect) ? Math.max(.26, Math.min(1.05, aspect)) * projection / .8675 : projection);
+      if (kind === 'cosmos') cosmos(ctx, rand, radius >= 22, material, structure);
+      else if (kind === 'daisy') daisy(ctx, rand, radius >= 22, material, structure);
+      else poppy(ctx, rand, radius >= 22, material, structure);
     } finally {
       ctx.restore();
     }

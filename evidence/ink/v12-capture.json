@@ -1,0 +1,49 @@
+{
+  "at": "2026-10-17T03:52:08.550898+00:00",
+  "label": "v12",
+  "browser": "155.0.8059.84",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "DPR": 1,
+  "seed": "271828",
+  "frame": 360,
+  "density": 7,
+  "wind": 35,
+  "brush": "ink",
+  "width": 1,
+  "texture": 60,
+  "opacity": 85,
+  "petalStrength": 65,
+  "mode": "tint",
+  "color": "#9b6773",
+  "single_plant": {
+    "index": 2,
+    "size": 1.2,
+    "viewport": [
+      420,
+      700
+    ]
+  },
+  "hashes": {
+    "ink": "fcc52f190989afc1befcb2f17a238f6b534451b0d92c25c7f33071c9428d9542",
+    "rose": "1746e55cb1eaa914217cae475f8648263d2687aecb0c8da5567befa3fdc9e531",
+    "blue": "48e239ae9afcdadf2d7ff3e225a1f33ead962c99576f2e45472cb29e935b9b54"
+  },
+  "checks": [
+    {
+      "name": "mode and chosen color produce distinct garden screens",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no JavaScript errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

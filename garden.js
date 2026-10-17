@@ -4,9 +4,12 @@
   const E=GardenEngine,$=id=>document.getElementById(id),canvas=$('garden'),ctx=canvas.getContext('2d');
   const query=new URLSearchParams(location.search), media=matchMedia('(prefers-reduced-motion: reduce)');
   const fixed=query.has('frame')?E.clamp(Number(query.get('frame')),0,36000)/60:null;
-  const number=(key,fallback,min,max)=>query.has(key)?E.clamp(Number(query.get(key)),min,max):fallback;
+  const number=(key,fallback,min,max)=>query.has(key)&&Number.isFinite(Number(query.get(key)))?E.clamp(Number(query.get(key)),min,max):fallback;
   const state={seed:(query.get('seed')||'271828').slice(0,80),wind:number('wind',35,0,100),density:Math.round(number('density',7,2,12)),time:fixed??0,paused:false,reduced:media.matches,plants:[],next:0};
   state.flower=FlowerArt.kinds.includes(query.get("flower"))?query.get("flower"):"cosmos";
+  state.mode=query.get('mode')==='ink'?'ink':'tint';
+  const defaults={cosmos:'#9b6773',daisy:'#9e8c64',poppy:'#a05e50'};
+  state.color=/^[0-9a-f]{6}$/i.test(query.get('color')||'')?'#'+query.get('color'):defaults[state.flower];
   state.brush=BrushArt.kinds.includes(query.get("brush"))?query.get("brush"):"ink";
   state.petalStrength=number('petals',65,0,100);
   state.width=number("width",1,.5,2.5);state.texture=number("texture",60,0,100);state.opacity=number("opacity",85,30,100);
@@ -19,29 +22,23 @@
     $('pause').textContent=state.paused?'계속 자라기':'일시정지';$('pause').setAttribute('aria-pressed',String(state.paused));
     $('reduced').checked=state.reduced;
   }
-  function plant(x,y,initial=false){
+  function plant(x,y,initial=false,size=1){
     if(state.plants.length>=E.MAX_PLANTS){announce('정원이 가득 찼어요. 비우기로 새로 시작하세요.');return false;}
-    const id=state.next++,data=E.createPlant(state.seed,id,x,y,state.density);
-    state.plants.push({...data,id,born:initial?0:state.time-(state.reduced||fixed!==null?6:0)});
+    const id=state.next++,data=E.createInkPlant(state.seed,id,x,y,state.density);
+    state.plants.push({...data,id,size,born:initial?0:state.time-(state.reduced||fixed!==null?6:0)});
     sync();update();return true;
   }
   function restart(){
     state.seed=$('seed').value.trim().slice(0,80)||'271828';$('seed').value=state.seed;
     state.next=0;state.time=fixed??0;state.plants=[];
-    [[.17,.87],[.33,.79],[.51,.9],[.69,.82],[.84,.91]].forEach(([x,y])=>plant(x,y,true));
+    [[.20,.90,.85],[.29,.86,1.06],[.50,.91,1.20],[.57,.87,.84],[.78,.90,.74]].forEach(([x,y,size])=>plant(x,y,true,size));
     sync();update();
   }
   function makeBackground(){
     background=document.createElement('canvas');background.width=Math.max(1,Math.round(w));background.height=Math.max(1,Math.round(h));
-    const c=background.getContext('2d'),sky=c.createLinearGradient(0,0,0,h);
-    sky.addColorStop(0,'#edeedf');sky.addColorStop(.7,'#e1e6cf');sky.addColorStop(1,'#cbd7b5');c.fillStyle=sky;c.fillRect(0,0,w,h);
-    c.fillStyle='#f7f3dd';c.beginPath();c.arc(w*.77,h*.24,Math.min(w,h)*.10,0,Math.PI*2);c.fill();
-    c.strokeStyle='#cbd1bd';c.lineWidth=.6;c.beginPath();c.moveTo(0,h*.73);c.bezierCurveTo(w*.25,h*.65,w*.62,h*.89,w,h*.72);c.stroke();
-    c.fillStyle='#d0d9bd';c.beginPath();c.moveTo(0,h*.87);c.bezierCurveTo(w*.3,h*.72,w*.6,h*.92,w,h*.81);c.lineTo(w,h);c.lineTo(0,h);c.fill();
-    const texture=E.random('paper-2718');
-    for(let i=0;i<750;i++){c.fillStyle=i%3?'#526b3d12':'#faf5db50';c.fillRect(texture()*w,texture()*h,1,1);}
-    c.fillStyle='#536f4240';const grass=E.random('meadow');
-    for(let i=0;i<90;i++){const x=grass()*w,y=h*(.87+grass()*.10);c.fillRect(x,y,1,1+grass()*3);}
+    const c=background.getContext('2d');
+    // Empty paper is part of the composition; no landscape or per-pixel noise.
+    c.fillStyle='#f6f3ea';c.fillRect(0,0,w,h);
   }
   function resize(){
     const b=canvas.getBoundingClientRect();w=b.width;h=b.height;
@@ -52,7 +49,7 @@
     if(!background)return;
     // Fractional CSS heights may leave a partially covered final device row.
     // Paint an opaque base each time so repeated draws cannot accumulate alpha.
-    ctx.fillStyle='#cbd7b5';ctx.fillRect(0,0,w+2,h+2);
+    ctx.fillStyle='#f6f3ea';ctx.fillRect(0,0,w+2,h+2);
     ctx.drawImage(background,0,0,w,h);
     for(const p of [...state.plants].sort((a,b)=>a.y-b.y))PlantRenderer.draw(ctx,p,state,w,h);
     if(keyboard&&showCursor){
@@ -91,7 +88,7 @@
   $('regenerate').addEventListener('click',()=>{restart();announce('이 번호로 정원을 다시 피웠어요.');});
   $('seed').addEventListener('keydown',e=>{if(e.key==='Enter'){restart();announce('정원을 다시 피웠어요.');}});
   $('wind').addEventListener('input',e=>{state.wind=+e.target.value;$('wind-value').value=state.wind;update();});
-  $('density').addEventListener('input',e=>{state.density=+e.target.value;$('density-value').value=state.density;state.plants=state.plants.map(p=>({...E.createPlant(state.seed,p.id,p.x,p.y,state.density),id:p.id,born:p.born}));update();});
+  $('density').addEventListener('input',e=>{state.density=+e.target.value;$('density-value').value=state.density;state.plants=state.plants.map(p=>({...E.createInkPlant(state.seed,p.id,p.x,p.y,state.density),id:p.id,size:p.size,born:p.born}));PlantRenderer.clear();update();});
   $('pause').addEventListener('click',()=>{state.paused=!state.paused;sync();update();announce(state.paused?'성장과 바람을 멈췄어요.':'성장과 바람을 다시 시작했어요.');});
   $('reset').addEventListener('click',()=>{state.plants=[];state.next=0;sync();update();announce('빈 정원이에요. 씨앗을 심어 보세요.');});
   $('reduced').addEventListener('change',e=>{setReduced(e.target.checked,'직접 선택');announce(e.target.checked?'움직임 없이 완성된 정원을 보여 드려요.':'정원 움직임을 켰어요.');});
@@ -105,6 +102,15 @@
   $('fixed-note').hidden=fixed===null;
   if(fixed!==null)$('fixed-note').firstChild.textContent='성장 '+fixed+'초를 고정한 기록 화면입니다. ';
   $('motion-source').textContent=media.matches?'시스템 설정':'';
+  function syncColor(){
+    $('painting-mode').value=state.mode;$('flower-color').value=state.color;
+    $('color-value').textContent=state.color.toUpperCase();
+    $('color-help').textContent=state.mode==='ink'?'수묵은 색을 보관하고 먹의 농담으로 그립니다.':'고른 색을 꽃잎에 옅게 물들입니다.';
+  }
+  $('painting-mode').addEventListener('change',e=>{state.mode=e.target.value;syncColor();PlantRenderer.clear();update();announce(state.mode==='ink'?'수묵으로 그렸어요.':'선택한 색의 담채로 그렸어요.');});
+  $('flower-color').addEventListener('input',e=>{state.color=e.target.value;syncColor();PlantRenderer.clear();update();});
+  $('restore-color').addEventListener('click',()=>{state.color=defaults[state.flower];syncColor();PlantRenderer.clear();update();announce('선택한 꽃의 기본 담채색을 복원했어요.');});
+  syncColor();
   for(const [id,key,output] of [['flower','flower'],['brush','brush'],['stroke-width','width','width-value'],['texture','texture','texture-value'],['opacity','opacity','opacity-value'],['petal-strength','petalStrength','petal-value']]){
     $(id).value=state[key];if(output)$(output).value=state[key];
     $(id).addEventListener(id==='flower'||id==='brush'?'change':'input',e=>{state[key]=output?+e.target.value:e.target.value;if(output)$(output).value=state[key];PlantRenderer.clear();update();});

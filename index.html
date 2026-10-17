@@ -6,14 +6,17 @@
 <div class="shell">
   <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✳</span> 여린 정원 <small>GARDEN STUDY / 001</small></a><a href="process.html">만드는 과정 ↗</a></header>
   <main>
-    <div class="intro"><div><p class="eyebrow">AN EXPERIMENT IN GROWING</p><h1>작은 씨앗, <em>느린 풍경.</em></h1><p class="subtitle">당신의 손끝에서 시작되는 하나뿐인 정원.</p></div><p class="intro-note">어디든 눌러 씨앗을 심어 보세요.<br>가지가 뻗고, 잎 사이로 바람이 흐릅니다.</p></div>
-    <details class="material-drawer" open><summary>꽃과 선의 재료 <span>종류와 표현을 독립적으로 고르세요</span></summary><div class="material-grid">
+    <div class="intro"><div><p class="eyebrow">INK, FLOWERS & EMPTY SPACE</p><h1>먹의 흐름, <em>꽃 사이의 여백.</em></h1><p class="subtitle">한 번의 손길로 피어나는 작은 화훼.</p></div><p class="intro-note">종이 위에 씨앗을 심어 보세요.<br>휘는 줄기와 잎 사이, 꽃빛이 머뭅니다.</p></div>
+    <details class="material-drawer" open><summary>먹과 꽃빛 <span>색과 붓의 결을 골라 보세요</span></summary><div class="material-grid">
       <label class="field" for="flower"><span>꽃 종류</span><select id="flower"><option value="cosmos">코스모스</option><option value="daisy">데이지</option><option value="poppy">개양귀비</option></select></label>
+      <label class="field" for="painting-mode"><span>화면의 색</span><select id="painting-mode"><option value="tint">수묵담채</option><option value="ink">수묵 · 먹의 농담</option></select></label>
+      <label class="field color-field" for="flower-color"><span>꽃잎 색 <output id="color-value">#9B6773</output></span><input id="flower-color" type="color" value="#9b6773" aria-describedby="color-help"></label>
+      <div class="color-actions"><button id="restore-color" class="secondary">꽃의 기본색 복원 <span aria-hidden="true">↺</span></button><p id="color-help" class="help">고른 색을 꽃잎에 옅게 물들입니다.</p></div>
       <label class="field" for="brush"><span>줄기·꽃잎 브러시</span><select id="brush"><option value="pen">균일 펜</option><option value="ink" selected>압력 잉크</option><option value="pencil">연필</option><option value="dry">드라이 브러시</option><option value="watercolor">수채</option></select></label>
       <label class="field" for="stroke-width"><span>선 두께 <output id="width-value">1</output></span><input id="stroke-width" type="range" min="0.5" max="2.5" step="0.1" value="1"></label>
       <label class="field" for="texture"><span>질감 <output id="texture-value">60</output></span><input id="texture" type="range" min="0" max="100" value="60"></label>
       <label class="field" for="opacity"><span>농도 <output id="opacity-value">85</output></span><input id="opacity" type="range" min="30" max="100" value="85"></label>
-      <label class="field" for="petal-strength"><span>꽃잎 표현 <output id="petal-value">65</output></span><input id="petal-strength" type="range" min="0" max="100" value="65"></label><a href="reference.html">꽃·브러시 레퍼런스 ↗</a><a href="petal-study.html">전체 출력 관찰실 ↗</a>
+      <label class="field" for="petal-strength"><span>꽃잎 표현 <output id="petal-value">65</output></span><input id="petal-strength" type="range" min="0" max="100" value="65"></label><a href="reference.html">水墨 · 공식 작품과 관찰 ↗</a><a href="petal-study.html">꽃잎 브러시 관찰실 ↗</a>
     </div></details>
     <div class="workspace">
       <section class="garden-panel" aria-label="정원 작품">
@@ -22,7 +25,7 @@
         <div class="canvas-bottom"><span id="count">5 / 32 씨앗</span><span>CLICK TO PLANT · STAY TO WATCH</span></div>
       </section>
       <aside class="controls" aria-label="정원 조절">
-        <div class="control-title"><span class="eyebrow">YOUR LITTLE ECOSYSTEM</span><h2>정원을 돌보는 법</h2><p>우연의 모양을 고르고,<br>당신만의 속도로 바라보세요.</p></div>
+        <div class="control-title"><span class="eyebrow">A SMALL PAINTING, GROWING</span><h2>종이 위를 가꾸는 법</h2><p>꽃의 빛과 붓의 농담을 고르고,<br>당신만의 속도로 바라보세요.</p></div>
         <label class="field seed-field" for="seed"><span>정원의 번호 <small>SEED</small></span><input id="seed" type="text" value="271828" maxlength="80" spellcheck="false" autocomplete="off"></label>
         <button id="regenerate" class="secondary">이 번호로 다시 피우기 <span aria-hidden="true">↗</span></button>
         <label class="field range-field wind-field" for="wind"><span>바람 <output id="wind-value" for="wind">35</output></span><input id="wind" type="range" min="0" max="100" value="35"><span class="range-ends"><small>고요하게</small><small>살랑이게</small></span></label>
@@ -38,4 +41,4 @@
     </div>
     <footer class="footer"><span>우연을 심고, 변화를 관찰합니다.</span><span>HTML · CANVAS · NO AI API <span aria-hidden="true">↗</span></span></footer>
   </main>
-</div><script src="engine.js"></script><script src="petal-paint.js"></script><script src="flower-art.js"></script><script src="brush-art.js"></script><script src="plant-renderer.js"></script><script src="garden.js"></script></body></html>
+</div><script src="engine.js"></script><script src="petal-paint.js"></script><script src="ink-palette.js"></script><script src="flower-art.js"></script><script src="brush-art.js"></script><script src="plant-renderer.js"></script><script src="garden.js"></script></body></html>
