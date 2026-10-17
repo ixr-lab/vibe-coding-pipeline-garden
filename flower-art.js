@@ -46,8 +46,8 @@
       [0, '#293f2b'], [.42, '#668047'], [.76, '#365b36'], [1, '#273e2c']
     ]);
     stroke(ctx, green, kind === 'poppy' ? .037 : .031, function () {
-      ctx.moveTo(.005, .12);
-      ctx.quadraticCurveTo(.055, .42, .035, .75);
+      ctx.moveTo(0, .10);
+      ctx.quadraticCurveTo(.006, .22, 0, .36);
     });
     // Involucral bracts sit behind the rays; a common poppy sheds its sepals.
     if (kind === 'poppy') return;
@@ -59,8 +59,8 @@
       ctx.rotate(a);
       ctx.beginPath();
       ctx.moveTo(-.085, 0);
-      ctx.quadraticCurveTo(-.12, .27, 0, .40);
-      ctx.quadraticCurveTo(.075, .22, .08, 0);
+      ctx.quadraticCurveTo(-.09, .10, 0, .14);
+      ctx.quadraticCurveTo(.065, .09, .08, 0);
       ctx.closePath();
       ctx.fill();
       ctx.restore();

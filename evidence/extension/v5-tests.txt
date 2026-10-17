@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: same seed repeats 20 random samples
+ok 1 - same seed repeats 20 random samples
+  ---
+  duration_ms: 1.1816
+  type: 'test'
+  ...
+# Subtest: edge planting keeps the full canopy above ground and inside top margin
+ok 2 - edge planting keeps the full canopy above ground and inside top margin
+  ---
+  duration_ms: 2.9206
+  type: 'test'
+  ...
+# Subtest: plant geometry is deterministic, finite, bounded at high density
+ok 3 - plant geometry is deterministic, finite, bounded at high density
+  ---
+  duration_ms: 0.3647
+  type: 'test'
+  ...
+# Subtest: isotropic layout preserves branch proportions and keeps canopy inside view
+ok 4 - isotropic layout preserves branch proportions and keeps canopy inside view
+  ---
+  duration_ms: 0.2233
+  type: 'test'
+  ...
+# Subtest: curve sampling keeps endpoints, midpoint and finite unit tangent on degenerate path
+ok 5 - curve sampling keeps endpoints, midpoint and finite unit tangent on degenerate path
+  ---
+  duration_ms: 0.9742
+  type: 'test'
+  ...
+# Subtest: material catalog exposes 3 independent flower species and 5 distinct brush identifiers
+ok 6 - material catalog exposes 3 independent flower species and 5 distinct brush identifiers
+  ---
+  duration_ms: 0.4327
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 87.8031

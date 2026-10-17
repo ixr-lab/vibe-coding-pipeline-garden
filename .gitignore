@@ -1,5 +1,6 @@
 __pycache__/
 node_modules/
+.venv/
 .DS_Store
 *.zip
 evidence/*-local.json

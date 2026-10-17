@@ -1,0 +1,121 @@
+{
+  "recorded_at": "2026-10-17T02:33:57.810483+00:00",
+  "browser": "155.0.8059.84",
+  "os": "Windows",
+  "checks": [
+    {
+      "name": "same seed/settings/time reproduce exact Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "different seed changes image",
+      "pass": true
+    },
+    {
+      "name": "density changes image",
+      "pass": true
+    },
+    {
+      "name": "density round trip restores image",
+      "pass": true
+    },
+    {
+      "name": "wind changes fixed-time pose",
+      "pass": true
+    },
+    {
+      "name": "normal mode actually grows",
+      "pass": true
+    },
+    {
+      "name": "pause freezes Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "resize preserves pause and remains still",
+      "pass": true
+    },
+    {
+      "name": "resume changes Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "system reduced motion checked and static",
+      "pass": true
+    },
+    {
+      "name": "system motion change updates checkbox",
+      "pass": true
+    },
+    {
+      "name": "manual reduced motion selects static mode",
+      "pass": true
+    },
+    {
+      "name": "plant count capped at 32",
+      "pass": true
+    },
+    {
+      "name": "cap explains recovery",
+      "pass": true
+    },
+    {
+      "name": "blank seed normalizes to default",
+      "pass": true
+    },
+    {
+      "name": "long seed limited to 80 characters",
+      "pass": true
+    },
+    {
+      "name": "typing Space in input does not plant",
+      "pass": true
+    },
+    {
+      "name": "keyboard Space plants one seed",
+      "pass": true
+    },
+    {
+      "name": "export is valid PNG matching current Canvas",
+      "pass": true
+    },
+    {
+      "name": "mobile touch plants one seed",
+      "pass": true
+    },
+    {
+      "name": "mobile DPR backing buffer capped at 2",
+      "pass": true
+    },
+    {
+      "name": "390px no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "process page loads and contains 8 stages",
+      "pass": true
+    },
+    {
+      "name": "process mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no JavaScript page errors",
+      "pass": true
+    },
+    {
+      "name": "app makes no external requests",
+      "pass": true
+    }
+  ],
+  "passed": 26,
+  "errors": [],
+  "performance": {
+    "scene": "32 mature plants, density=12, viewport=1200x900, DPR=1",
+    "samples": 120,
+    "raf_interval_mean_ms": 16.667,
+    "raf_interval_p95_ms": 16.9,
+    "note": "RAF callback interval, not isolated draw time; one machine/headless result."
+  },
+  "fixed_canvas_sha256": "3edefe0c368431d21a5b1baf724e4fd1f1768c245e1049fd6b6c716eb32b3f59"
+}

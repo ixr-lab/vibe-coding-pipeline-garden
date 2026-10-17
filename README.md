@@ -2,7 +2,13 @@
 
 씨앗을 심고 바람·잎 밀도·정원의 번호(seed)를 조절하는 Canvas 2D 작품입니다. HTML, CSS, 일반 JavaScript로 만들어 앱 실행에 패키지 설치나 API 키가 필요하지 않습니다. AI가 구현·실행·비교한 **v0 → v1 → v2 두 차례 실제 개선**을 원본 화면과 시험 기록으로 남겼습니다. 사람의 미적 만족은 아직 확인 대기입니다.
 
-![같은 seed와 시간을 고정한 v2 정원](evidence/v2-desktop.png)
+![꽃과 브러시 확장 v5 실제 화면](evidence/extension/v5-desktop.png)
+
+## 꽃과 선 확장
+
+꽃 3종(코스모스·데이지·개양귀비)과 브러시 5종(균일 펜·압력 잉크·연필·드라이·수채)을 독립 선택합니다. 선 두께·질감·농도를 조절할 수 있습니다. [레퍼런스 보드](reference.html), [출력 관찰실](study.html), [확장 실험 로그](docs/extension/log.md)를 참고하세요. 실물 사진/공식 샘플은 관찰 근거로 링크하고, 제품에는 직접 그린 출력만 포함합니다. v0~v2와 원래 ZIP은 보존합니다.
+
+![꽃과 브러시 확장 전후](evidence/extension/garden-evolution.png)
 
 ## 바로 실행
 
@@ -37,7 +43,13 @@ cd vibe-coding-pipeline-garden
 
 그다음 `index.html`을 여세요. Git이 없다면 전달받은 ZIP을 풀어 같은 파일을 열면 됩니다. 버전은 `v0`, `v1`, `v2` 태그로 구분하며, 과거 버전 실행 방법은 [재현 지침](docs/reproduce.md)에 있습니다.
 
-## 실제 개선과 확인 범위
+## 확장 검증과 한계
+
+확장에서는 [v3→v4 꽃 개선](evidence/extension/flower-evolution.png), [v3→v5 브러시 개선](evidence/extension/brush-evolution.png), [15개 조합](evidence/extension/v5-combinations.png)을 실제 렌더로 비교했습니다. [항목별 시각 비교](docs/extension/comparison.md)와 [확장 시험 기록](docs/extension/tests.md)을 보세요. 수채의 자연스러운 구름상 안료와 종이 섬유·실제 3차원 식물 구조는 아직 미달이며 사진급 물리 재현을 주장하지 않습니다. 선택 변경은 최대 장면에서 초기 캐시 재생성 비용이 있습니다.
+
+레퍼런스는 JSON에서 페이지와 문서를 함께 생성합니다. 후속 변경 때 [관리 지침](docs/extension/reference-maintenance.md)에 따라 `python scripts/build_references.py --check`를 실행하세요.
+
+## 최초 v0~v2 개선과 확인 범위
 
 | 버전 | 실제 변경·관찰 | 근거 |
 | --- | --- | --- |

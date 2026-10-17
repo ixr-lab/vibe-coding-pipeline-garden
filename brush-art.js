@@ -98,109 +98,148 @@
   }
 
   function pencil(ctx, points, width, texture, alpha, rand) {
-    const passes = 4 + Math.round(texture * 3);
-    ctx.lineCap = 'round';
-    for (let pass = 0; pass < passes; pass++) {
-      const lane = (pass / (passes - 1) - .5) * width * .94;
-      ctx.lineWidth = width * (.075 + rand() * .055);
-      ctx.globalAlpha = alpha * (.30 + rand() * .18);
-      ctx.beginPath();
-      let down = false;
-      for (let i = 0; i < points.length; i++) {
-        const p = points[i];
-        const rough = (rand() - .5) * width * (.11 + texture * .18);
-        const pressure = .72 + .28 * Math.sin(Math.PI * p.t);
-        const x = p.x + p.nx * (lane * pressure + rough);
-        const y = p.y + p.ny * (lane * pressure + rough);
-        if (rand() < texture * .12) { down = false; continue; }
-        if (down) ctx.lineTo(x, y); else ctx.moveTo(x, y);
-        down = true;
-      }
-      ctx.stroke();
+    ctx.globalAlpha=alpha*(.065+(1-texture)*.09);ctx.lineWidth=width*.88;
+    ctx.beginPath();trace(ctx,points,0,width*.14,rand);ctx.stroke();
+    let length=0;for(let i=1;i<points.length;i++)length+=Math.hypot(points[i].x-points[i-1].x,points[i].y-points[i-1].y);
+    const grains=clamp(Math.ceil(length/Math.max(width*.10,1)),24,220);
+    ctx.lineCap='butt';
+    // Aperiodic graphite fragments across the full paper footprint, not repeating dashes.
+    for(let group=0;group<4;group++){
+      ctx.globalAlpha=alpha*(.24+group*.13);ctx.lineWidth=width*(.085+rand()*.08);ctx.beginPath();
+      for(let i=group;i<grains;i+=4){
+        const q=pointAt(points,(i+rand())/grains),d=(rand()-.5)*width*(.76+.24*Math.sin(Math.PI*i/grains));
+        const x=q.x+q.nx*d,y=q.y+q.ny*d,len=width*(.055+rand()*(.20+texture*.23));
+        ctx.moveTo(x,y);ctx.lineTo(x+q.tx*len+q.nx*(rand()-.5)*width*.08,y+q.ty*len+q.ny*(rand()-.5)*width*.08);
+      }ctx.stroke();
     }
-    // Short graphite flecks sit between the fine passes, never a solid fill.
-    const grains = 3 + Math.round(texture * 7);
-    ctx.globalAlpha = alpha * .40;
-    ctx.lineWidth = width * .09;
-    ctx.beginPath();
-    for (let i = 0; i < grains; i++) {
-      const p = points[1 + Math.floor(rand() * (points.length - 2))];
-      const d = (rand() - .5) * width, length = width * (.12 + rand() * .30);
-      const x = p.x + p.nx * d, y = p.y + p.ny * d;
-      ctx.moveTo(x, y); ctx.lineTo(x + p.tx * length, y + p.ty * length);
-    }
-    ctx.stroke();
   }
 
   function dry(ctx, points, width, texture, alpha, rand) {
-    // Separate flat-ended bristles retain paper channels all the way through.
-    const bristles = 4 + Math.round(texture * 3);
-    ctx.lineCap = 'butt';
-    for (let pass = 0; pass < bristles; pass++) {
-      const lane = (pass / (bristles - 1) - .5) * width * 1.15;
-      const phase = rand() * TAU;
-      ctx.lineWidth = width * (.09 + rand() * .065);
-      ctx.globalAlpha = alpha * (.59 + rand() * .30);
-      ctx.beginPath();
-      let down = false;
+    // Correlated paper skips interrupt several bristle bundles together.
+    const holes = points.map(() => rand());
+    const bundles = 3 + Math.round(texture * 2);
+    for (let pass = 0; pass < bundles; pass++) {
+      const lane = ((pass + .3 + rand() * .4) / bundles - .5) * 1.12;
+      const fatness = (.46 + rand() * .34) / bundles;
+      const phase = rand() * TAU, end = .90 + rand() * .10;
+      let run = [];
+      const deposit = () => {
+        if (run.length < 2) { run = []; return; }
+        ctx.globalAlpha = alpha * (.53 + rand() * .39);
+        ctx.beginPath();
+        for (let side = 1; side >= -1; side -= 2) {
+          for (let j = 0; j < run.length; j++) {
+            const k = side === 1 ? j : run.length - 1 - j;
+            const s = run[k], p = s.p;
+            const fringe = (k === 0 || k === run.length - 1) ? .25 + rand() * .60 : 1;
+            const d = s.lane + side * s.radius * fringe;
+            const x = p.x + p.nx * d, y = p.y + p.ny * d;
+            if (side === 1 && !j) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+          }
+        }
+        ctx.closePath(); ctx.fill(); run = [];
+      };
       for (let i = 0; i < points.length; i++) {
         const p = points[i];
-        // Clumps break independently instead of sharing one dashed outline.
-        const skip = rand() < .13 + texture * .28 || (p.t > .86 && rand() < .35);
-        const d = lane * (1 - p.t * .19) + Math.sin(p.t * 19 + phase) * width * texture * .055;
-        const x = p.x + p.nx * d, y = p.y + p.ny * d;
-        if (skip) { down = false; continue; }
-        if (down) ctx.lineTo(x, y); else ctx.moveTo(x, y);
-        down = true;
+        const taper = (.68 + .32 * Math.sin(Math.PI * p.t)) * Math.pow(1 - p.t, .42) + .025;
+        const skip = (holes[i] < texture * .18 && i > 1) || rand() < texture * .09 || p.t > end;
+        if (skip) { deposit(); continue; }
+        run.push({ p, lane: width * taper * (lane + Math.sin(p.t * 23 + phase) * texture * .045),
+          radius: width * taper * fatness * (.65 + rand() * .68) });
+      }
+      deposit();
+    }
+    // A few wiry fibers bridge only portions of the broad, ragged clumps.
+    ctx.lineCap = 'butt'; ctx.lineWidth = width * .035;
+    for (let pass = 0; pass < 2; pass++) {
+      ctx.globalAlpha = alpha * (.42 + rand() * .23);
+      if (typeof ctx.setLineDash === 'function') ctx.setLineDash([width * (1 + rand() * 3), width * (.4 + texture * 3), width * .7, width * (1 + texture * 2)]);
+      ctx.lineDashOffset = rand() * width * 8;
+      ctx.beginPath();
+      for (let i = 0; i < points.length; i++) {
+        const p = points[i], taper = Math.pow(1 - p.t, .55);
+        const d = (pass ? 1 : -1) * width * (.36 + rand() * .11) * taper;
+        if (!i) ctx.moveTo(p.x + p.nx * d, p.y + p.ny * d);
+        else ctx.lineTo(p.x + p.nx * d, p.y + p.ny * d);
       }
       ctx.stroke();
     }
+    if (typeof ctx.setLineDash === 'function') ctx.setLineDash([]);
+  }
+
+  function pointAt(points, t) {
+    const f = clamp(t, 0, 1) * (points.length - 1), i = Math.min(points.length - 2, Math.floor(f));
+    const a = points[i], b = points[i + 1], u = f - i;
+    const tx = a.tx + (b.tx - a.tx) * u, ty = a.ty + (b.ty - a.ty) * u;
+    const length = Math.hypot(tx, ty) || 1;
+    return { x: a.x + (b.x - a.x) * u, y: a.y + (b.y - a.y) * u,
+      tx: tx / length, ty: ty / length, nx: -ty / length, ny: tx / length };
   }
 
   function watercolor(ctx, points, width, texture, alpha, rand) {
-    // Broad translucent deposits overlap, leaving a pale core and pooled edges.
-    const washWidths = [1.62, 1.27, .91];
-    for (let pass = 0; pass < washWidths.length; pass++) {
-      ctx.lineWidth = width * washWidths[pass];
-      ctx.globalAlpha = alpha * [.105, .13, .14][pass];
+    // Only a faint irregular wet bed remains continuous. Most color is in local washes.
+    for (let pass = 0; pass < 2; pass++) {
+      const phase = rand() * TAU, center = (rand() - .5) * width * .25;
+      const radii = points.map(p => width * (pass ? .36 : .64) *
+        (.88 + Math.sin(p.t * 17 + phase) * texture * .15 + (rand() - .5) * texture * .28));
+      ctx.globalAlpha = alpha * (pass ? .055 : .045);
       ctx.beginPath();
-      trace(ctx, points, (rand() - .5) * width * .19, width * texture * .11, rand);
-      ctx.stroke();
-    }
-    // Two irregular pigment rims, with incomplete pooling along either edge.
-    ctx.lineWidth = width * (.055 + texture * .055);
-    for (const side of [-1, 1]) {
-      ctx.globalAlpha = alpha * (.20 + texture * .12);
-      ctx.beginPath();
-      let down = false;
-      for (let i = 0; i < points.length; i++) {
-        const p = points[i];
-        const d = side * width * (.66 + Math.sin(p.t * 13 + side) * texture * .07);
-        if (rand() < .10 + texture * .15) { down = false; continue; }
-        const x = p.x + p.nx * d, y = p.y + p.ny * d;
-        if (down) ctx.lineTo(x, y); else ctx.moveTo(x, y);
-        down = true;
+      for (let side = 1; side >= -1; side -= 2) {
+        for (let j = 0; j < points.length; j++) {
+          const i = side === 1 ? j : points.length - 1 - j, p = points[i];
+          const d = center + side * radii[i];
+          if (side === 1 && !j) ctx.moveTo(p.x + p.nx * d, p.y + p.ny * d);
+          else ctx.lineTo(p.x + p.nx * d, p.y + p.ny * d);
+        }
       }
-      ctx.stroke();
+      ctx.closePath(); ctx.fill();
     }
-    // Bounded translucent pigment blooms; all dimensions follow stem width.
-    const pools = 2 + Math.round(texture * 3);
-    ctx.globalAlpha = alpha * (.07 + texture * .06);
-    ctx.beginPath();
+    let length = 0;
+    for (let i = 1; i < points.length; i++) length += Math.hypot(points[i].x - points[i - 1].x, points[i].y - points[i - 1].y);
+    const pigment=ctx.fillStyle;
+    const pools = clamp(Math.ceil(length / Math.max(width * 2.8, 1)), 6, 14);
     for (let i = 0; i < pools; i++) {
-      const p = points[Math.floor(rand() * points.length)];
-      const d = (rand() - .5) * width * .75;
-      const x = p.x + p.nx * d, y = p.y + p.ny * d;
-      const radius = width * (.13 + rand() * .21);
-      ctx.moveTo(x + radius, y); ctx.arc(x, y, radius, 0, TAU);
+      const t = clamp((i + .30 + rand() * .40) / pools, .01, .99), p = pointAt(points, t);
+      const offset = (rand() - .5) * width * (.30 + texture * .42);
+      const x = p.x + p.nx * offset, y = p.y + p.ny * offset;
+      const rx = length / pools * (.55 + rand() * .75), ry = width * (.35 + rand() * .43);
+      const phase = rand() * TAU, contour = [];
+      for (let j = 0; j < 10; j++) {
+        const a = j / 10 * TAU;
+        const irregular = 1 + texture * (.14 * Math.sin(a * 3 + phase) + .11 * Math.sin(a * 5 - phase) + (rand() - .5) * .18);
+        const u = Math.cos(a) * rx * irregular, v = Math.sin(a) * ry * irregular;
+        contour.push({ x: x + p.tx * u + p.nx * v, y: y + p.ty * u + p.ny * v });
+      }
+      const last = contour[9], first = contour[0];
+      ctx.save();ctx.translate(x,y);ctx.transform(p.tx*rx,p.ty*rx,p.nx*ry,p.ny*ry,0,0);
+      const wash=ctx.createRadialGradient(-.2,.1,.05,0,0,1.3);wash.addColorStop(0,pigment);wash.addColorStop(.45,pigment);wash.addColorStop(1,'#00000000');
+      ctx.fillStyle=wash;ctx.globalAlpha=alpha*(.14+rand()*(.08+texture*.08));
+      ctx.beginPath();
+      const local=contour.map(q=>({x:((q.x-x)*p.tx+(q.y-y)*p.ty)/rx,y:((q.x-x)*p.nx+(q.y-y)*p.ny)/ry}));
+      ctx.moveTo((local[9].x+local[0].x)/2,(local[9].y+local[0].y)/2);
+      for(let j=0;j<10;j++){const a=local[j],b=local[(j+1)%10];ctx.quadraticCurveTo(a.x,a.y,(a.x+b.x)/2,(a.y+b.y)/2);}
+      ctx.closePath();ctx.fill();ctx.restore();
+      // Pigment catches a short, changing part of a cloud boundary, never twin rails.
+      if (i % 2 === 0) {
+        const start = Math.floor(rand() * 10), count = 2 + Math.floor(rand() * 2);
+        const a = contour[(start + 9) % 10], b = contour[start];
+        ctx.lineWidth = width * (.025 + texture * .028);
+        ctx.globalAlpha = alpha * (.07 + rand() * .08);
+        ctx.beginPath(); ctx.moveTo((a.x + b.x) / 2, (a.y + b.y) / 2);
+        for (let j = 0; j < count; j++) {
+          const c = contour[(start + j) % 10], d = contour[(start + j + 1) % 10];
+          ctx.quadraticCurveTo(c.x, c.y, (c.x + d.x) / 2, (c.y + d.y) / 2);
+        }
+        ctx.stroke();
+      }
     }
-    ctx.fill();
   }
 
   /**
    * Draw one quadratic mark in the context's current coordinate system.
    * width is the nominal stem width in canvas units, texture/opacity are 0..1.
-   * At most 29 geometry samples, 8 strokes and 5 small pigment pools per mark.
+   * At most 29 centerline samples; material geometry stays below 500 vertices.
+   * Pencil paper grain uses native fine dashes; watercolor uses at most 14 clouds.
    * Context drawing properties and transforms are restored even after an error.
    */
   function draw(ctx, kind, path, options = {}) {

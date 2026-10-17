@@ -1,0 +1,55 @@
+{
+  "at": "2026-10-17T02:37:28.804238+00:00",
+  "checks": [
+    {
+      "name": "generated source and Markdown match canonical JSON",
+      "pass": true
+    },
+    {
+      "name": "check mode rejects stale generated data",
+      "pass": true
+    },
+    {
+      "name": "all 8 references render",
+      "pass": true
+    },
+    {
+      "name": "current output images all load",
+      "pass": true
+    },
+    {
+      "name": "no external reference images embedded",
+      "pass": true
+    },
+    {
+      "name": "flower filter 3",
+      "pass": true
+    },
+    {
+      "name": "brush filter 5",
+      "pass": true
+    },
+    {
+      "name": "all visible source details open",
+      "pass": true
+    },
+    {
+      "name": "source rights and visual inspection are present",
+      "pass": true
+    },
+    {
+      "name": "mobile reference page no overflow",
+      "pass": true
+    },
+    {
+      "name": "reference filter targets 44px",
+      "pass": true
+    },
+    {
+      "name": "no reference page exceptions",
+      "pass": true
+    }
+  ],
+  "passed": 12,
+  "errors": []
+}

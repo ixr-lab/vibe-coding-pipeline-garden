@@ -1,0 +1,89 @@
+{
+  "at": "2026-10-17T02:34:12.675157+00:00",
+  "plants": 32,
+  "density": 12,
+  "combinations": [
+    {
+      "flower": "cosmos",
+      "brush": "pen",
+      "synchronous_change_ms": 215.09999999403954
+    },
+    {
+      "flower": "cosmos",
+      "brush": "ink",
+      "synchronous_change_ms": 188.80000001192093
+    },
+    {
+      "flower": "cosmos",
+      "brush": "pencil",
+      "synchronous_change_ms": 230.89999997615814
+    },
+    {
+      "flower": "cosmos",
+      "brush": "dry",
+      "synchronous_change_ms": 279.7000000178814
+    },
+    {
+      "flower": "cosmos",
+      "brush": "watercolor",
+      "synchronous_change_ms": 444.59999999403954
+    },
+    {
+      "flower": "daisy",
+      "brush": "pen",
+      "synchronous_change_ms": 605
+    },
+    {
+      "flower": "daisy",
+      "brush": "ink",
+      "synchronous_change_ms": 345.80000001192093
+    },
+    {
+      "flower": "daisy",
+      "brush": "pencil",
+      "synchronous_change_ms": 344.5
+    },
+    {
+      "flower": "daisy",
+      "brush": "dry",
+      "synchronous_change_ms": 411.2000000178814
+    },
+    {
+      "flower": "daisy",
+      "brush": "watercolor",
+      "synchronous_change_ms": 680.3000000119209
+    },
+    {
+      "flower": "poppy",
+      "brush": "pen",
+      "synchronous_change_ms": 617.4000000059605
+    },
+    {
+      "flower": "poppy",
+      "brush": "ink",
+      "synchronous_change_ms": 314.2000000178814
+    },
+    {
+      "flower": "poppy",
+      "brush": "pencil",
+      "synchronous_change_ms": 357.09999999403954
+    },
+    {
+      "flower": "poppy",
+      "brush": "dry",
+      "synchronous_change_ms": 397.90000000596046
+    },
+    {
+      "flower": "poppy",
+      "brush": "watercolor",
+      "synchronous_change_ms": 669.0999999940395
+    }
+  ],
+  "max_cold_change_ms": 680.3000000119209,
+  "warm_worst_brush": "poppy/watercolor width2.5 texture100 opacity100",
+  "raf_samples": 120,
+  "raf_mean_ms": 16.666666666666668,
+  "raf_p95_ms": 16.899999999999636,
+  "errors": [],
+  "note": "One headless Windows machine. Cold synchronous two-control change includes CPU draw/readback; RAF intervals are not isolated draw time."
+}

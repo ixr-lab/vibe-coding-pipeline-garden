@@ -50,3 +50,623 @@
 | 동작 줄이기 상태에서도 결과와 HTML 조작을 사용할 수 있다 | 2, 4 | 시스템 설정을 켜고 정적 결과·상태 텍스트·버튼 확인 |
 
 출처는 원리의 근거이며 프로젝트 검증을 대신하지 않는다. 이 문서는 웹 조회와 설계 연결을 기록한 것으로, 위 검증이 실행되었다는 보고는 아니다.
+
+---
+
+# 꽃·브러시 확장 레퍼런스
+
+이 구역은 `reference-source/flowers.json`과 `reference-source/brushes.json`에서 생성한다. 원문·외부 이미지는 링크로만 제공하며, 직접 관찰과 기관 설명, 구현 판단, 결과 검토를 구별한다.
+
+현재 결과 링크는 프로젝트에서 생성한 로컬 crop이다. 외부 원본 이미지를 저장소에 복사하지 않는다.
+
+## 꽃 · 코스모스 (cosmos)
+
+- **학명:** Cosmos bipinnatus Cav.
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-cosmos.png>)
+
+### 출처·권리
+
+1. [Wikimedia Commons — Cosmos bipinnatus \(5\).jpg](<https://commons.wikimedia.org/wiki/File:Cosmos_bipinnatus_(5).jpg>)
+   - **저작자:** Kabir Bakie
+   - **권리·사용 범위:** CC BY-SA 2.5 — https://creativecommons.org/licenses/by-sa/2.5/ . 원본을 저장소 밖 참고 폴더에서만 관찰했으며 이 저장소에는 사진을 포함하지 않는다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://upload.wikimedia.org/wikipedia/commons/3/3f/Cosmos_bipinnatus_%285%29.jpg>)
+2. [NC State Extension Gardener Plant Toolbox — Cosmos bipinnatus](<https://plants.ces.ncsu.edu/plants/cosmos-bipinnatus/>)
+   - **저작자:** NC State Extension, North Carolina State University
+   - **권리·사용 범위:** 공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다. 사진의 개별 라이선스는 기관 페이지에 별도 표시되어 있다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 사진 직접 관찰: 가운데 분홍 꽃은 넓은 설상화 약 8장이 방사상으로 둘러선다. 각 조각은 중심에서 좁게 출발해 바깥쪽으로 넓어지는 부채·주걱 모양이다.
+- 사진 직접 관찰: 바깥끝은 둥근 타원이 아니라 얕게 갈라지고 물결치는 톱니 윤곽이다. 한 조각 안에서도 끝선의 높이가 다르다.
+- 사진 직접 관찰: 위쪽 두 조각은 길고 비교적 곧게 펼쳐지며 아래쪽 조각은 말리거나 비스듬히 꺾여 짧게 보인다. 같은 길이의 회전 복제처럼 보이지 않는다.
+- 사진 직접 관찰: 인접 설상화는 일부 가장자리에서 겹친다. 왼쪽과 아래쪽에는 좁은 틈도 있어 외곽이 완전한 원으로 닫히지 않는다.
+- 사진 직접 관찰: 기부에서 끝으로 가는 길고 가는 밝은 결이 보인다. 접힌 능선은 밝은 분홍, 골과 겹침 부분은 진한 자주색으로 읽힌다.
+- 사진 직접 관찰: 중심은 단색 노란 점이 아니라 작은 노랑·주황 돌기와 어두운 틈이 모인 원반이다. 사진에서 중심의 폭은 꽃 전체 폭보다 훨씬 작다.
+- 사진 직접 관찰: 꽃 바로 아래로 가느다란 녹색 꽃자루가 이어지고, 아래 주변에 길고 뾰족한 녹색 조각들이 보인다. 앞면 꽃잎이 기부를 가려 총포의 전체 배열은 확인하기 어렵다.
+- 기관 설명 근거: 바깥의 꽃잎처럼 보이는 부분은 설상화, 가운데는 관상화가 모인 두상화서다. 잎은 깊게 갈라진 실 같은 질감이므로 넓은 단엽을 붙이는 표현과 구별한다.
+
+### 회피할 특징
+
+- 매끈한 물방울형 타원 8개를 정확히 같은 길이·각도로 배치하기
+- 설상화 끝을 모두 뾰족하게 만들거나 톱니를 크고 규칙적인 지그재그로 만들기
+- 꽃 중심을 매끈한 검정 단추 또는 과도하게 큰 노란 구로 만들기
+- 보이지 않는 꽃받침 구조를 확인한 사실처럼 기록하거나, 녹색 다섯 갈래 별을 종의 공통 구조로 단정하기
+- 사진의 조명·채도·한 개체의 비대칭을 종 전체의 고정된 색과 치수로 취급하기
+
+### 목표
+
+- 넓은 분홍 설상화와 얕은 끝 톱니만으로 데이지의 길고 좁은 흰 설상화와 구분된다.
+- 실루엣을 축소해도 몇 조각의 접힘, 길이 차이, 겹침 순서가 남는다.
+- 작은 노란 관상화 군집과 가는 꽃자루 연결이 보인다.
+- 사진급 복제보다 꽃의 배열·윤곽·곡률을 근거 있게 단순화한 그림을 목표로 한다.
+
+### 구현
+
+- 권장 구현: 기본 8장의 개별 베지어 경로를 만들고, 기부는 좁게·끝은 넓게 구성한다. 끝선에 3개 안팎의 얕은 굴곡을 넣는다. 이 수치는 해당 사진을 읽기 위한 디자인 선택이다.
+- 권장 구현: 씨드로 각 조각의 길이·폭·기울기를 조금씩 달리하고, 일부 아래쪽 조각은 굽은 중심선과 짧은 투영 길이를 사용한다.
+- 권장 구현: 뒤쪽 조각부터 그리고 겹침 경계에 낮은 불투명도의 자주색 음영을 둔다. 전체 꽃을 두른 진한 외곽선은 줄인다.
+- 권장 구현: 밝은 능선 2~3개와 옅은 방사형 결을 조각별 곡률에 따라 휘게 그린다. 결은 텍스처 장식보다 접힌 방향을 설명하도록 사용한다.
+- 권장 구현: 중심을 작은 황색·주황 점군과 일부 갈색 틈으로 구성하고 꽃 아래의 가는 꽃자루가 기부에 닿도록 연결한다.
+
+### 미달·확인하지 못한 부분
+
+- 직접 본 코스모스 사진은 앞면 위주 한 장이다. 총포 뒷면의 겹수·개수·꽃자루와 만나는 단면은 시각 확인하지 못했다.
+- 기관 페이지의 품종별 사진 전체를 관찰한 것은 아니다. 겹꽃·통 모양 설상화 품종까지 이번 형태로 일반화하지 않는다.
+- 사진은 절대 치수나 정량 색상 측정용 자료가 아니다. 구현의 비율·색은 사진 관찰을 바탕으로 한 도식화 선택이다.
+
+### 결과 검토
+
+- **단계 (stage):** v4 형태 개선 + v5 접합 보정 · 실제 렌더 비교 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3 둥근 scallop 대비 v4 얕은 톱니·부채꼴 8개·짧은 아래쪽 ray가 더 읽힘.
+- 전체 정원 잎은 가늘게 갈라진 선형으로 변경.
+- v5 내부 꽃자루·총포를 중심 가까이 줄여 분리된 녹색 조각을 줄임.
+
+#### 채택된 특징 (adopted)
+
+- 종별 ray 구조와 길이 차이 개선 채택.
+
+#### 남은 차이 (remaining)
+
+- 방사 융기선이 아직 규칙적이며 아래 접힘/총포는 단순화.
+- 재귀 가지 전체는 실제 코스모스 생장 구조를 재현하지 않음.
+
+## 꽃 · 데이지 · 옥스아이 데이지 (daisy)
+
+- **학명:** Leucanthemum vulgare Lam.
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-daisy.png>)
+
+### 출처·권리
+
+1. [Wikimedia Commons — Ox-eye daisy 01.jpg \(960px 미리보기 직접 관찰\)](<https://commons.wikimedia.org/wiki/File:Ox-eye_daisy_01.jpg>)
+   - **저작자:** Tony Wills
+   - **권리·사용 범위:** 파일 페이지에 CC BY 2.5, CC BY-SA 3.0, GFDL 선택 라이선스가 명시되어 있다. 참고 기준: CC BY 2.5 — https://creativecommons.org/licenses/by/2.5/ . 관찰용 사본은 저장소 밖에만 보관한다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://thumb.wikimedia.org/wikipedia/commons/thumb/1/14/Ox-eye_daisy_01.jpg/960px-Ox-eye_daisy_01.jpg>)
+2. [NC State Extension — Leucanthemum vulgare, Flower detail 사진](<https://plants.ces.ncsu.edu/plants/leucanthemum-vulgare/>)
+   - **저작자:** Jason Pratt
+   - **권리·사용 범위:** 기관 페이지 사진 표기에 CC BY 2.0 — https://creativecommons.org/licenses/by/2.0/ . 사진은 저장소 밖에서만 관찰하며 저장소에는 이미지 링크만 수록한다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://eit-planttoolbox-prod.s3.amazonaws.com/media/images/Leucanthemum-vulgare--Jason-Pratt--cc-by-2-0.jpg>)
+3. [NC State Extension Gardener Plant Toolbox — Leucanthemum vulgare 기관 설명](<https://plants.ces.ncsu.edu/plants/leucanthemum-vulgare/>)
+   - **저작자:** NC State Extension, North Carolina State University
+   - **권리·사용 범위:** 공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 사진 직접 관찰: 두 사진 모두 긴 흰색 설상화가 여러 장 둘러서며, 코스모스보다 각 조각의 폭이 좁고 길이 대비 폭이 작다. 기관 설명은 흰 설상화 15~35개를 제시한다.
+- 사진 직접 관찰: 기부는 가늘고 바깥쪽 중후반에서 넓어진 뒤 둥글거나 얕게 갈라진 끝으로 마무리된다. 일부 끝은 접혀 뾰족해 보인다.
+- 사진 직접 관찰: 전체 배열은 방사상이지만 각도와 간격이 일정하지 않다. Tony Wills 사진에서는 왼쪽 위와 아래쪽에서 설상화가 겹치고 일부 사이에 어두운 틈이 열린다.
+- 사진 직접 관찰: 길이와 투영 폭이 다르다. Tony Wills 사진의 오른쪽 아래 일부 조각은 좁게 말리고, Jason Pratt 사진의 왼쪽 아래 조각들은 아래로 처진다.
+- 사진 직접 관찰: 흰 표면 안에 길이 방향의 골과 능선이 이어진다. 겹침 아래와 접힌 옆면은 회청색 그늘, 위를 향한 면은 밝은 흰색이다.
+- 사진 직접 관찰: 노란 중심은 꽃 전체에 비해 충분히 넓고 작은 입자가 촘촘하다. 안쪽은 비교적 촘촘한 점, 가장자리는 솟은 작은 노란 관상화가 불규칙한 테두리를 만든다.
+- 사진 직접 관찰: 중심과 흰 설상화 기부의 경계에는 가늘고 어두운 녹색·회색 틈이 있다. 노란 원반을 흰 조각 위에 평평하게 덮은 스티커처럼 읽히지 않는다.
+- 기관 설명 근거: 꽃 기부에는 녹색에 자갈색 가장자리를 가진 포엽이 있다. 앞면 사진 두 장에서는 그 뒷면 배열과 꽃자루 부착부가 가려져 직접 확인하지 못했다.
+- 기관 설명 근거: 줄기는 녹색이며 단일 줄기 또는 위쪽 분지가 가능하다. 윗줄기의 잎은 작고 잎자루가 없으며, 아래쪽 잎은 더 넓고 톱니가 있는 형태다.
+
+### 회피할 특징
+
+- 코스모스의 넓은 꽃 조각을 흰색으로 바꾸어 데이지로 사용하기
+- 모든 설상화를 동일한 타원·길이·간격으로 그려 톱니바퀴처럼 만들기
+- 흰색을 전체 면적에 균일하게 칠해 접힘과 겹침을 없애기
+- 중심을 질감 없는 노란 원 또는 구형 볼로 과장하기
+- 총포·줄기 연결이 직접 보이지 않는 사진을 근거로 정확한 뒷면 구조를 관찰했다고 쓰기
+
+### 목표
+
+- 여러 장의 길고 좁은 흰 설상화와 넓은 노란 관상화 원반으로 코스모스와 구분된다.
+- 조각별 미세한 처짐·비틀림·길이 차이가 종이처럼 얇은 표면을 보여 준다.
+- 중심과 설상화 경계의 깊이, 겹친 조각의 회색 그림자가 축소 화면에서도 읽힌다.
+- 총포와 꽃자루는 기관 설명에 근거해 절제해서 보완하고, 관찰하지 못한 뒷면은 별도로 표시한다.
+
+### 구현
+
+- 권장 구현: 24~30개의 개별 설상화를 기본 디자인 범위로 사용한다. 이는 기관의 15~35개 범위 안에서 정한 표현 선택이며 고정된 종 진단 수치가 아니다.
+- 권장 구현: 좁은 기부와 둥근 끝을 연결하는 긴 베지어 윤곽에 작은 끝 갈라짐을 넣고, 일부 조각의 한쪽 가장자리를 안으로 말아 폭 차이를 준다.
+- 권장 구현: 설상화의 순서를 나누어 겹쳐 그리고 회청색의 옅은 골·가장자리 그림자를 추가한다. 모든 조각에 같은 줄무늬를 찍지 않는다.
+- 권장 구현: 노란 원반을 낮은 볼륨으로 두고 중심의 작은 점군, 바깥의 더 큰 관상화 입자, 가장자리의 짧은 그림자를 단계적으로 그린다.
+- 권장 구현: 꽃자루는 꽃 중앙 아래 총포까지 연결한다. 녹색 총포는 정면에서 필요한 만큼만 노출하고 자갈색 가장자리는 작은 색 차이로 표현한다.
+
+### 미달·확인하지 못한 부분
+
+- daisy는 여러 속을 부르는 보통명이다. 이번 기준종은 Bellis perennis나 샤스타데이지가 아닌 Leucanthemum vulgare로 한정한다.
+- Tony Wills 사진의 전체 해상도 원본 다운로드는 HTTP 429로 실패했다. 같은 파일의 공개 960px 미리보기 다운로드와 시각 관찰은 성공했다. 전체 해상도 원본을 관찰했다고 주장하지 않는다.
+- 직접 본 두 사진은 정면에 가까워 총포 뒷면과 꽃자루 연결부의 정확한 부피를 확인하지 못했다.
+- 사진의 꽃 크기·원반 비율은 촬영각과 개체에 영향을 받는다. 구현 비율은 도식화 목표이지 식물학적 실측값이 아니다.
+
+### 결과 검토
+
+- **단계 (stage):** v4 형태 개선 + v5 접합 보정 · 실제 렌더 비교 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v4 흰 ray 아래 회청색 겹침 음영과 일부 접힌 끝을 확인.
+- 노란 원반의 점상 관상화는 묘사되나 규칙적인 장식 느낌이 남음.
+- v5 내부 꽃자루·총포를 중심 가까이 줄여 분리된 녹색 조각을 줄임.
+
+#### 채택된 특징 (adopted)
+
+- 중첩/방향 차이 개선 채택.
+
+#### 남은 차이 (remaining)
+
+- 꽃머리 뒤 총포와 줄기 접합의 3차원 부피는 여전히 단순화.
+- 꽃잎 수는 표본 전체의 개체차를 대표하지 않음.
+
+## 꽃 · 꽃양귀비 · 개양귀비 (poppy)
+
+- **학명:** Papaver rhoeas L.
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-poppy.png>)
+
+### 출처·권리
+
+1. [Wikimedia Commons — Papaver rhoeas.jpg](<https://commons.wikimedia.org/wiki/File:Papaver_rhoeas.jpg>)
+   - **저작자:** Pablo Alberto Salguero Quiles
+   - **권리·사용 범위:** CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/ ; GFDL 1.2 이상도 파일 페이지에 명시되어 있다. 원본은 저장소 밖 참고 폴더에서만 관찰했다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://upload.wikimedia.org/wikipedia/commons/8/8f/Papaver_rhoeas.jpg>)
+2. [NC State Extension — Papaver rhoeas, Life stages 사진](<https://plants.ces.ncsu.edu/plants/papaver-rhoeas/>)
+   - **저작자:** Alvesgaspar
+   - **권리·사용 범위:** 기관 페이지 사진 표기에 CC BY-SA 3.0 — https://creativecommons.org/licenses/by-sa/3.0/ . 관찰용 사본은 저장소 밖에만 보관하며 저장소에는 이미지 링크만 수록한다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://eit-planttoolbox-prod.s3.amazonaws.com/media/images/Poster_papaver_life__qLybDx9GFPhE.jpg>)
+3. [NC State Extension Gardener Plant Toolbox — Papaver rhoeas 기관 설명](<https://plants.ces.ncsu.edu/plants/papaver-rhoeas/>)
+   - **저작자:** NC State Extension, North Carolina State University
+   - **권리·사용 범위:** 공식 기관 설명을 읽고 독자적으로 요약했다. 본문·사진의 복제 없이 출처 링크를 수록한다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+4. [VicFlora — Papaver rhoeas 분류기재](<https://vicflora.rbg.vic.gov.au/flora/taxon/1d9d59f0-bdbd-4118-9bc0-51785bd44ea4>)
+   - **저작자:** Royal Botanic Gardens Victoria; R. W. Kiger \(1996\), Daniel Ohlsen \(2017 갱신\)
+   - **권리·사용 범위:** VicFlora 본문은 CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/ . 권리 안내: https://vicflora.rbg.vic.gov.au/pages/copyright . 해당 기관 사진은 이번 연구에서 내려받거나 관찰하지 않았다.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 사진 직접 관찰: Salguero 사진의 앞쪽 큰 꽃은 넓고 둥근 네 꽃잎이 겹쳐 얕은 컵을 이룬다. 기관 설명도 네 장의 주름진 꽃잎을 제시한다.
+- 사진 직접 관찰: 왼쪽 꽃잎은 위로 서고 아래 꽃잎은 앞으로 크게 펼쳐져, 꽃 둘레가 균등한 십자나 네 개 타원이 되지 않는다.
+- 사진 직접 관찰: 꽃잎 가장자리는 물결치고 얇게 접힌다. 표면의 가는 방사 주름이 반투명한 종이 같은 질감을 만든다.
+- 사진 직접 관찰: 조각이 겹친 안쪽은 짙은 붉은색, 빛을 향한 넓은 면은 밝은 주홍색이다. 골과 접힌 테두리에 어두운 띠가 생겨 컵의 깊이를 보여 준다.
+- 사진 직접 관찰: 꽃잎의 기부 부근에는 불규칙한 검은 반점이 보인다. 네 개의 똑같은 검정 타원으로 분리되지 않고 일부는 수술의 그림자와 이어진다.
+- 사진 직접 관찰: 중앙에는 회녹색·자주색의 작은 원반과 방사상 줄이 보이고, 그 둘레를 어두운 자주·검정의 짧은 수술들이 고리처럼 둘러싼다. 데이지 같은 노란 관상화 원반은 없다.
+- 사진 직접 관찰: Alvesgaspar 몽타주의 봉오리는 녹색 달걀형이며 줄기 끝이 고리처럼 굽어 아래를 향한다. 봉오리와 꽃줄기 표면에는 가는 털이 바깥으로 돌출한다.
+- 사진 직접 관찰: 같은 몽타주의 개화 단계는 꽃잎 기부가 줄기 끝의 중심 아래로 모인다. 개화한 꽃 둘레에 큰 녹색 별형 꽃받침은 보이지 않는다. 이 사진만으로 꽃받침의 탈락 시점이나 개수를 판정하지 않는다.
+- 기관 설명 근거: 꽃은 긴 꽃자루 끝에 단독으로 달리고 줄기는 거친 털을 지닌다. VicFlora는 가는 자주색 수술대, 푸른빛 꽃밥, 대체로 평평한 암술머리 원반을 기재해 사진의 어두운 중심 구조 해석을 뒷받침한다.
+
+### 회피할 특징
+
+- 데이지처럼 여러 장의 가는 설상화를 빨갛게 칠하기
+- 꽃잎 네 장을 동일한 타원으로 정확히 90도씩 회전해 평평하게 배열하기
+- 노란 구형 중심, 매끈한 검정 단추, 규칙적인 검은 점 네 개로 중앙 구조를 대체하기
+- 주름을 꽃 전체에 걸친 균일한 직선 줄무늬로 만들기
+- 개화 사진에서 확인되지 않은 큰 녹색 별형 꽃받침을 꽃 둘레에 덧붙이기
+
+### 목표
+
+- 큰 네 장의 얇은 붉은 꽃잎, 비대칭 컵 실루엣, 어두운 수술 고리로 다른 두 종과 구분된다.
+- 앞으로 펼쳐진 꽃잎과 위로 선 꽃잎의 곡률·명암 차이가 보인다.
+- 중앙의 작은 방사상 암술머리와 주변 수술을 서로 다른 구조로 읽을 수 있다.
+- 봉오리를 표시한다면 아래로 굽은 꽃줄기와 털 있는 녹색 외피를 개화 형태와 구별한다.
+
+### 구현
+
+- 권장 구현: 뒤의 두 꽃잎과 앞의 두 꽃잎에 서로 다른 베지어 경로를 사용한다. 폭·높이·접힘·가림을 달리해 네 조각이 보이되 균등한 클로버 실루엣은 피한다.
+- 권장 구현: 중심에서 가장자리로 휘는 몇 개의 주름과 투명도가 낮은 붉은 음영을 추가한다. 상단 테두리는 밝게, 겹친 안쪽과 컵 바닥은 짙게 하여 얇음과 깊이를 함께 표현한다.
+- 권장 구현: 기부 반점은 꽃잎 좌표에 붙이고 겹침으로 일부 가린다. 별도의 검은 원 네 개를 중심 주변에 떠 있게 두지 않는다.
+- 권장 구현: 중앙에 작은 회녹색·자주색 원반과 방사선, 그 밖에 짧은 선과 어두운 꽃밥 점군으로 수술 고리를 그린다.
+- 권장 구현: 꽃자루는 컵 아래 중앙에 연결하고 일부 짧은 털을 넣는다. 봉오리에는 아래로 굽은 끝줄기와 달걀형 녹색 윤곽을 사용한다.
+
+### 미달·확인하지 못한 부분
+
+- 직접 관찰한 개화 원본은 512×384px이며 세부 수술 하나하나를 판독하기에는 해상도가 낮다. 더 선명한 생육단계 몽타주와 공식 분류기재로 중심 구조를 보완했다.
+- 꽃받침의 개수·탈락 과정은 직접 확인하지 못했다. 개화 사진에 큰 녹색 별이 보이지 않는다는 관찰과 식물학적 개수 판정은 구별한다.
+- 이번 형태는 붉은 홑꽃 Papaver rhoeas 기준이다. 겹꽃 품종이나 다른 Papaver 종의 형태까지 대표하지 않는다.
+- 작은 털·꽃밥은 축소 화면에서 생략될 수 있다. 네 장의 컵형 배열과 중앙 구조를 우선 보존한다.
+
+### 결과 검토
+
+- **단계 (stage):** v4 형태 개선 + v5 접합 보정 · 실제 렌더 비교 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3 주홍 방사 패널에서 v4 적색 4장 비대칭 컵/국소 주름으로 변경됨.
+- 중심의 검은 기부·수술링·작은 방사 원반이 구분됨.
+- v5 내부 꽃자루·총포를 중심 가까이 줄여 분리된 녹색 조각을 줄임.
+
+#### 채택된 특징 (adopted)
+
+- 겹침·색·컵형 수정 채택.
+
+#### 남은 차이 (remaining)
+
+- 매우 얇은 주름의 깊이/투광과 꽃잎 말림은 그림에 한정.
+- 줄기/씨방의 실제 3차원 접합과 개체별 검은 반점은 단순화.
+
+## 브러시 · Uniform pen · 균일 펜 (uniform-pen)
+
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-uniform-pen.png>)
+
+### 출처·권리
+
+1. [Krita 4 preset sample: Ink-2 Fineliner](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_d-brush-family.jpg>)
+2. [Krita 4 preset sample: Basic-1](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_b-brush-family.jpg>)
+3. [Pixel Brush Engine: tip, spacing, dab](<https://docs.krita.org/en/reference_manual/brushes/brush_engines/pixel_brush_engine.html>)
+   - **저작자:** Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.
+   - **권리·사용 범위:** 권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 직접 관찰: Ink-2 Fineliner의 큰 원·사각형과 Basic-1 지그재그는 폭이 거의 일정하고 내부가 고르게 채워진다.
+- 끝은 둥글며 가장자리는 매끈하다. 연필의 점상 공백이나 드라이 브러시의 길게 갈라진 붓결은 보이지 않는다.
+
+### 회피할 특징
+
+- 압력·속도 때문에 두께가 흔들리는 효과
+- 반투명한 점들이 반복되어 마디처럼 보이는 접합부
+- 흐린 에어브러시 테두리와 임의의 종이 입자
+
+### 목표
+
+- 실제 공통 비교판: 동일 quadratic 경로 \(240,75\)→control\(600,-25\)→\(1130,75\), 기본 폭18px·질감60·농도85·같은색/seed. 브러시별 행은 y만 평행이동. 가압 잉크의 압력 프로파일은 코드 내부 함수이며 실시간 필압 실험이 아니다.
+- 폭은 압력열과 무관하게 일정하고, 단면 농도는 평평하며 둥근 끝이 남는다.
+- 같은 색의 교차부·재추적이 본문보다 진해지지 않는다.
+
+### 구현
+
+- 상수 반지름의 연속 경로에 round cap/join을 쓰거나, 촘촘한 원형 dab을 한 스트로크 마스크로 합친다.
+- 스트로크 마스크에 한 번 색을 입혀 이벤트 수에 따른 농도 누적을 막는다.
+- 포인터 간 거리에 맞춰 보간하여 빠르게 그려도 선이 끊기지 않게 한다.
+
+### 미달·확인하지 못한 부분
+
+- 기준 이미지는 Krita 4 프리셋 예시다. 실물 펜을 직접 그리거나 측정한 데이터가 아니다.
+- 조사 초안의 S경로24px·X교차2회 비교는 이번 구현에 채택하지 않았다. 실제 줄기의 quadratic 경로에 맞춰 같은18px 스와치로 비교했고, 추가 교차/필압 실험은 미검증이다.
+
+### 결과 검토
+
+- **단계 (stage):** v5 실제 스와치 비교 · AI 부분/개별 채택 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3와 v5 모두 고른 폭·둥근 양끝의 연속 실선.
+
+#### 채택된 특징 (adopted)
+
+- 공식 Fineliner의 일정한 외곽을 배우는 기준선으로 유지.
+
+#### 남은 차이 (remaining)
+
+- 실제 종이와 금속 펜촉의 잉크 침투를 계산하지 않음.
+
+## 브러시 · Pressure ink · 필압 잉크 (pressure-ink)
+
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-pressure-ink.png>)
+
+### 출처·권리
+
+1. [Krita 4 preset sample: Basic-5 Size default](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_b-brush-family.jpg>)
+2. [Krita 4 preset sample: Ink-3 Gpen](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_d-brush-family.jpg>)
+3. [Loading and Saving Brushes: inking and sensor curves](<https://docs.krita.org/en/user_manual/loading_saving_brushes.html>)
+   - **저작자:** Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.
+   - **권리·사용 범위:** 권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 직접 관찰: Basic-5 Size default의 검은 물결은 시작이 매우 가늘고 중앙이 굵어지며 끝이 다시 뾰족해진다.
+- Ink-3 Gpen은 가는 세부선과 굵은 윤곽선을 함께 만든다. 선 안쪽은 대체로 단단한 잉크 면이다.
+
+### 회피할 특징
+
+- 폭은 고정한 채 불투명도만 바꾸는 필압 표현
+- 모든 점을 같은 크기의 둥근 원으로 찍어 생기는 구슬 모양
+- 저압 끝부분이 갑자기 끊기거나 검은 덩어리로 끝나는 현상
+
+### 목표
+
+- 실제 공통 비교판: 동일 quadratic 경로 \(240,75\)→control\(600,-25\)→\(1130,75\), 기본 폭18px·질감60·농도85·같은색/seed. 브러시별 행은 y만 평행이동. 가압 잉크의 압력 프로파일은 코드 내부 함수이며 실시간 필압 실험이 아니다.
+- 저압 입출구는 중앙보다 눈에 띄게 가늘고, 굵기 변화가 연속적이다.
+- 주요 차이는 폭이다. 중앙은 균일 펜처럼 진하고 종이 입자·마른 공백이 없다.
+
+### 구현
+
+- 입력 pressure를 완만한 비선형 곡선으로 반지름에 매핑한다. 마우스용 데모는 명시적인 고정 압력열을 쓴다.
+- 스무딩한 중심선과 가변 반지름으로 외곽선을 만들고 접선 방향으로 가는 입출구를 연결한다.
+- 농도는 높은 값으로 유지하고 스트로크 마스크를 합쳐 자체 겹침의 검은 혹을 방지한다.
+
+### 미달·확인하지 못한 부분
+
+- 사진 속 필압 값은 공개되지 않았다. 실제 태블릿 입력과 감마 곡선은 별도 보정이 필요하다.
+- Adobe brush dynamics 페이지는 이번 접근에서 열리지 않아 근거로 사용하지 않았다.
+- 조사 초안의 S경로24px·X교차2회 비교는 이번 구현에 채택하지 않았다. 실제 줄기의 quadratic 경로에 맞춰 같은18px 스와치로 비교했고, 추가 교차/필압 실험은 미검증이다.
+
+### 결과 검토
+
+- **단계 (stage):** v5 실제 스와치 비교 · AI 부분/개별 채택 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- 입구와 출구가 가늘고 중앙이 넓은 실루엣이 펜과 구분됨.
+
+#### 채택된 특징 (adopted)
+
+- 압력 프로파일의 폭 변화 유지.
+
+#### 남은 차이 (remaining)
+
+- 실시간 펜 압력 입력이 아닌 경로상의 미리 정한 압력 곡선.
+
+## 브러시 · Pencil · 연필 (pencil)
+
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-pencil.png>)
+
+### 출처·권리
+
+1. [Krita 4 preset sample: Pencil-3 Large 4B / Pencil-4 Soft](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_c-brush-family.jpg>)
+2. [Pixel Brush Engine: texture](<https://docs.krita.org/en/reference_manual/brushes/brush_engines/pixel_brush_engine.html>)
+   - **저작자:** Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.
+   - **권리·사용 범위:** 권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+3. [Opacity and Flow: stroke versus dab transparency](<https://docs.krita.org/en/reference_manual/brushes/brush_settings/opacity_and_flow.html>)
+   - **저작자:** Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.
+   - **권리·사용 범위:** 권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 직접 관찰: Large 4B의 짧은 사선과 Soft의 물결에는 작은 밝은 점들이 남고 회색 입자가 촘촘히 모인다.
+- Tilted의 넓은 음영은 겹친 곳이 진해지지만 종이처럼 작은 공백이 남는다. 드라이 브러시보다 공백이 작고 촘촘하다.
+
+### 회피할 특징
+
+- 완전히 매끈한 회색 선에 화면 전체 노이즈만 얹기
+- 길게 쪼개진 붓털 자국이나 큰 페인트 조각
+- 매 프레임 새 난수를 써서 입자가 흔들리는 효과
+
+### 목표
+
+- 실제 공통 비교판: 동일 quadratic 경로 \(240,75\)→control\(600,-25\)→\(1130,75\), 기본 폭18px·질감60·농도85·같은색/seed. 브러시별 행은 y만 평행이동. 가압 잉크의 압력 프로파일은 코드 내부 함수이며 실시간 필압 실험이 아니다.
+- 압력이 커지면 흑연 입자의 밀도·농도가 주로 증가하고 종이의 미세한 밝은 점은 일부 유지된다.
+- 교차부·재추적은 서서히 진해지며 균일 펜보다 거친 가장자리가 남는다.
+
+### 구현
+
+- 캔버스 좌표에 고정한 다중 스케일 paper-tooth noise를 만들고 압력에 따라 흑연이 닿는 임계값을 조절한다.
+- 짧은 미세 입자와 좁은 비등방성 텍스처를 스트로크 마스크 내부에 합성한다.
+- 낮은 알파의 흑연층을 제한적으로 누적해 반복 음영이 짙어지게 한다. 배경 전체에는 텍스처를 덧칠하지 않는다.
+
+### 미달·확인하지 못한 부분
+
+- 샘플의 종이 텍스처·흑연 경도·개별 프리셋 파라미터를 추출하지 않았다.
+- 제품용 입자는 원본 브러시 텍스처를 복사하지 않고 절차적으로 생성한다.
+- 조사 초안의 S경로24px·X교차2회 비교는 이번 구현에 채택하지 않았다. 실제 줄기의 quadratic 경로에 맞춰 같은18px 스와치로 비교했고, 추가 교차/필압 실험은 미검증이다.
+
+### 결과 검토
+
+- **단계 (stage):** v5 실제 스와치 비교 · AI 부분/개별 채택 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3 긴 평행선/중간v5 그물무늬를 비주기 짧은 흑연 침착으로 바꿔 반복 패턴을 줄임.
+- 미세 조각과 옅은 바탕이 서로 다른 농도로 겹침.
+
+#### 채택된 특징 (adopted)
+
+- 정형 평행선보다 입자적 분포가 읽혀 부분 채택.
+
+#### 남은 차이 (remaining)
+
+- 공식 샘플보다 성기며 일부 크기에서 점찍기처럼 보임.
+- 실제 종이 섬유/흑연의 연속적인 마찰·압력은 계산하지 않음.
+
+## 브러시 · Dry brush · 마른 붓 (dry-brush)
+
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-dry-brush.png>)
+
+### 출처·권리
+
+1. [Krita 4 preset sample: Dry Brushing / Dry Bristles](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_g-brush-family.jpg>)
+2. [Krita 4 preset sample: Bristles-2 Flat Rough](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_f-brush-family.jpg>)
+3. [Bristle Brush Engine: scale, offset, density examples](<https://docs.krita.org/en/reference_manual/brushes/brush_engines/bristle_engine.html>)
+   - **저작자:** Krita 문서 저자: Wolthera van Hövell tot Westerflier, Raghavendra Kamath, Scott Petrovic, ValerieVK. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/brushes/brush\_engines/bristle\_engine.rst.txt\). 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita-tutorial7-B.I.2-1.png>)
+4. [Winsor &amp; Newton: Creating granulation with watercolour](<https://www.winsornewton.com/blogs/guides/granulation-techniques-watercolour>)
+   - **저작자:** Winsor &amp; Newton; 개별 필자 표기 없음.
+   - **권리·사용 범위:** © 2026 Winsor &amp; Newton NA. All rights reserved. 링크 인용 및 설명 요약만 사용하며 이미지·영상은 복제하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 직접 관찰: Dry Brushing의 굽은 선에는 이동 방향을 따라 길게 열린 밝은 틈과 여러 가닥의 붓결이 있다.
+- Dry Bristles Eroded는 더 큰 불규칙 공백을 남긴다. 브리슬 엔진의 낮은 density 예시는 배경이 많이 드러나고 높은 density는 촘촘하다.
+- 실물 화구 설명\(이미지 미관찰\): 제조사 Winsor &amp; Newton은 물을 적게 쓰는 drybrush가 긁힌 듯한 안료 자국을 만든다고 설명한다.
+
+### 회피할 특징
+
+- 연필과 동일한 균일한 점상 노이즈만 사용하기
+- 넓은 페인트 면을 투명하게 만드는 것만으로 건조함 표현하기
+- 각 dab이 같은 얼룩 모양으로 반복되는 도장 패턴
+
+### 목표
+
+- 실제 공통 비교판: 동일 quadratic 경로 \(240,75\)→control\(600,-25\)→\(1130,75\), 기본 폭18px·질감60·농도85·같은색/seed. 브러시별 행은 y만 평행이동. 가압 잉크의 압력 프로파일은 코드 내부 함수이며 실시간 필압 실험이 아니다.
+- 곡선을 따라 긴 붓결과 종이가 노출된 빈틈이 이어져야 한다.
+- 중앙에서도 완전히 채워지지 않는 부분이 남고, 입출구는 여러 가닥으로 갈라진다. 압력 증가 시 가닥 접촉률이 커진다.
+
+### 구현
+
+- 스트로크의 접선·법선 좌표에서 지속되는 여러 bristle ribbon을 배치하고 가닥별 굵기·위치·색 농도를 시드로 고정한다.
+- paper noise와 가닥별 ink depletion으로 긴 빈틈과 짧은 접촉 구간을 함께 만든다.
+- 가닥 방향을 중심선에 따라 연속 회전시키고 압력으로 닿는 가닥 수를 늘린다.
+
+### 미달·확인하지 못한 부분
+
+- Krita의 dry 분류는 마른 기존 색 위에 칠하는 동작도 뜻하므로, 모든 dry 프리셋이 공백 많은 실물 drybrush와 같지는 않다.
+- 가닥·공백 비율은 시각 목표이며 실제 붓털 물리 시뮬레이션을 의미하지 않는다.
+- 조사 초안의 S경로24px·X교차2회 비교는 이번 구현에 채택하지 않았다. 실제 줄기의 quadratic 경로에 맞춰 같은18px 스와치로 비교했고, 추가 교차/필압 실험은 미검증이다.
+
+### 결과 검토
+
+- **단계 (stage):** v5 실제 스와치 비교 · AI 부분/개별 채택 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3 가는 병렬 분절선에서 v5 폭이 다른 강모 뭉치와 큰 비정기 공백으로 변화.
+- 끝이 모이고 종이 간극이 드러나 펜/연필과 구분됨.
+
+#### 채택된 특징 (adopted)
+
+- 마른 붓의 뭉침·건조 간극 개선 채택.
+
+#### 남은 차이 (remaining)
+
+- 자연 털 끝의 수많은 잔섬유·실제 종이의 불규칙 접촉은 단순화.
+
+## 브러시 · Watercolor · 수채화 (watercolor)
+
+- **현재 결과:** [로컬 crop](<../evidence/extension/current-watercolor.png>)
+
+### 출처·권리
+
+1. [Krita 4 preset sample: Watercolor Texture / Waterpaint Hard Edges / Soft Edges](<https://docs.krita.org/en/reference_manual/krita_4_preset_bundle.html>)
+   - **저작자:** Krita 문서 저자: David Revoy, Scott Petrovic, Wolthera van Hövell tot Westerflier. 개별 이미지 제작자는 미확인.
+   - **권리·사용 범위:** 문서 원문은 GNU FDL 1.3+ \(https://docs.krita.org/en/\_sources/reference\_manual/krita\_4\_preset\_bundle.rst.txt\). 이미지 기여 지침도 문서 라이선스를 명시하나 개별 이미지 권리·별도 고지는 미확인. 링크 인용 및 로컬 조사에만 사용하며 저장소·제품·배포물에는 포함하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 예
+   - **관찰 이미지:** [외부 이미지 링크](<https://docs.krita.org/en/_images/Krita4_j-brush-family.jpg>)
+2. [Opacity and Flow: wash and build-up](<https://docs.krita.org/en/reference_manual/brushes/brush_settings/opacity_and_flow.html>)
+   - **저작자:** Krita documentation contributors; 이 페이지의 개별 저자는 이번 조사에서 확인하지 않음.
+   - **권리·사용 범위:** 권리 미확인: 공식 문서 링크만 인용. 원본·이미지·프리셋을 복제하거나 재배포하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+3. [Winsor &amp; Newton: Creating granulation with watercolour](<https://www.winsornewton.com/blogs/guides/granulation-techniques-watercolour>)
+   - **저작자:** Winsor &amp; Newton; 개별 필자 표기 없음.
+   - **권리·사용 범위:** © 2026 Winsor &amp; Newton NA. All rights reserved. 링크 인용 및 설명 요약만 사용하며 이미지·영상은 복제하지 않음.
+   - **접근일:** 2026-10-17
+   - **이미지 직접 관찰:** 아니오
+
+### 관찰
+
+- 직접 관찰: Watercolor Texture의 보라·빨강·노랑 영역은 밝은 바탕이 비치고 내부 농도가 구름처럼 불균일하다.
+- Hard Edges의 둥근 얼룩은 겹친 부분이 진하다. Soft Edges는 옅은 중심과 군데군데 진한 청색·자홍색 테두리를 보인다.
+- 실물 화구 설명\(이미지 미관찰\): Winsor &amp; Newton은 거친 종이의 홈에 안료가 모여 과립 질감이 강조된다고 설명한다.
+
+### 회피할 특징
+
+- 반투명 균일 펜을 여러 번 찍어 생기는 규칙적인 원형 마디
+- 전체 선 둘레에 같은 두께의 검은 외곽선
+- 연필처럼 균일한 흑색 점만 흩뿌리는 과립 표현
+
+### 목표
+
+- 실제 공통 비교판: 동일 quadratic 경로 \(240,75\)→control\(600,-25\)→\(1130,75\), 기본 폭18px·질감60·농도85·같은색/seed. 브러시별 행은 y만 평행이동. 가압 잉크의 압력 프로파일은 코드 내부 함수이며 실시간 필압 실험이 아니다.
+- 밑색이 비치는 얇은 wash, 넓고 완만한 내부 농도 변화, 부분적인 안료 테두리가 함께 보인다.
+- X 교차와 별도 재추적은 농도가 증가하되 한 스트로크 안의 dab 경계는 두드러지지 않는다.
+- 과립은 주로 안료가 모인 작은 농도 차이로 보이며, 드라이 브러시의 긴 빈 통로와 구별된다.
+
+### 구현
+
+- 연속 스트로크 영역을 먼저 만들고 낮은 주파수의 pigment noise와 미세한 paper grain을 다른 크기로 합성한다.
+- 경계 거리장을 이용해 테두리 일부에 안료를 모으고 저압 끝부분은 옅게 풀어 준다.
+- 하나의 wash 내부는 마스크 합성으로 평탄화하고 별도 스트로크끼리는 반투명 색을 누적한다.
+- 제품 설명에서 절차적 수채화 질감 표현으로 명시한다.
+
+### 미달·확인하지 못한 부분
+
+- 공식 문서도 이 프리셋이 완전한 안료 확산을 재현하지 않는다고 설명한다.
+- 직접 관찰한 것은 디지털 샘플이다. 실제 습윤 확산·건조 시간·중력·색소 침전은 검증하지 않았다.
+- 조사 초안의 S경로24px·X교차2회 비교는 이번 구현에 채택하지 않았다. 실제 줄기의 quadratic 경로에 맞춰 같은18px 스와치로 비교했고, 추가 교차/필압 실험은 미검증이다.
+
+### 결과 검토
+
+- **단계 (stage):** v5 실제 스와치 비교 · AI 부분/개별 채택 · 사용자 승인 확인 대기
+
+#### 결과에서 관찰한 것 (observed)
+
+- v3 균일한 투명 튜브에서 v5 국소적인 투명 wash와 겹침 농도·부분 변연으로 변경.
+- 중간 타원 침착 경계를 alpha gradient로 추가 조정.
+
+#### 채택된 특징 (adopted)
+
+- 농도와 겹침의 비균일성은 부분 채택.
+
+#### 남은 차이 (remaining)
+
+- 길쭉한 얼룩 패턴이 여전히 보이며 실제 수채 샘플과 차이가 큼.
+- 안료 과립·모세관 흐름·건조시간의 물리 재현이 아닌 벡터 레이어 근사.

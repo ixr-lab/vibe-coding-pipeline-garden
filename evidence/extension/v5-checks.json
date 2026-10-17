@@ -1,0 +1,119 @@
+{
+  "at": "2026-10-17T02:33:15.354607+00:00",
+  "version": "v5",
+  "browser": "155.0.8059.84",
+  "seed": "271828",
+  "frame": 360,
+  "viewport": [
+    1440,
+    1000
+  ],
+  "checks": [
+    {
+      "name": "independent flower and brush controls exist",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor retains selected flower",
+      "pass": true
+    },
+    {
+      "name": "15 rendered combinations differ",
+      "pass": true
+    },
+    {
+      "name": "stroke-width changes image",
+      "pass": true
+    },
+    {
+      "name": "stroke-width roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "texture changes image",
+      "pass": true
+    },
+    {
+      "name": "texture roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "opacity changes image",
+      "pass": true
+    },
+    {
+      "name": "opacity roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "selection roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    }
+  ],
+  "passed": 26,
+  "errors": []
+}
