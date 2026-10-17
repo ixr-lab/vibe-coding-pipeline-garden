@@ -27,3 +27,15 @@
 - 변경 예정: 방향키로 심기 위치 이동 + Enter/Space 심기 + 대체 심기 버튼, 시스템/수동 동작 줄이기, 이벤트 기반 RAF 시작/취소, 배경 캐시, 모바일 제어 2열과 주요 버튼 상단 배치.
 - 고정 비교 조건은 유지. 재현 URL은 고정 상태임을 UI에 명시. 모션 감소는 즉시 완성된 식물과 흔들림 없는 화면을 제공.
 - 검증 예정: 실제 키보드 심기, pause 전후 픽셀/RAF, reduced-motion RAF, mobile 버튼 크기, 32개 상한, seed/density/wind 재현, PNG와 canvas 일치.
+
+### 실험 2 실제 결과 — 2026-10-17T01:58:53Z ~ 02:02:25Z
+수정 전 실제 audit(v1-before-v2-accessibility.json): 키보드 Enter 심기 5→5 실패, pause 후 RAF 15회, reduced-motion 후 RAF 10회, 버튼40px/슬라이더16px. 수정 후(v2-accessibility.json): 키보드5→6, pause/reduced RAF 각0, 정지 픽셀 동일, 측정한 버튼·range 7개 높이44px. 자동 시험과 별개로 v2 desktop/mobile PNG를 열어 식물 형태가 유지되고 모바일 정지·저장 버튼이 제어 패널 위쪽으로 올라왔음을 AI가 확인했다. 모든 제어가 한 화면에 들어오는 것은 아니다.
+
+모든 추가 기능/안내를 넣어 desktop Canvas 높이는 최종 약777px로 늘어났다(원본 PNG/실제 CSS 레이아웃 기준). viewport는 고정 1440×1000이고 full-page PNG 길이는 늘어난다. v2의 식물 확대는 이 배치 변화도 포함하므로 생물 형태 알고리즘의 개선만으로 주장하지 않는다. mobile Canvas는440px 유지. fixed UI는 ‘고정 기록’과 ‘직접 가꾸기’ 링크를 표시한다.
+
+**판정: 채택.** 기술 근거는 audit와 final-checks.json의 26개 실제 브라우저 시험. AI 시각 판단은 보조 근거, 사용자 미적 승인 확인 대기. Node 모델/배치 4개 통과. 앞선 자료의 trial 수치는 덮어쓰지 않고 v2-initial-*로 보존했다.
+
+### 실제로 드러난 추가 결함과 수정
+최종 통합 첫 실행에서 density 7→12→7이 같은 픽셀을 복원하지 못했다. 원인 조사에서 Canvas CSS 높이776.78125px, 실제 버퍼777px, 차이 bbox [0,775,996,777], 다른 픽셀996개를 확인했다(density-diagnosis.txt, density-before/after/diff.png). 마지막 행 부분 투명도를 반복 합성한 것이 원인이라는 가설 아래 불투명 바탕을 매 draw 앞에 채웠다. 동일 시험 재실행에서 density 왕복 픽셀 일치 통과. 식물 모델을 임의로 바꾸지 않았다.
+
+다음 통합 실행은 시스템 media 변경 직후 checkbox를 즉시 읽어 실패했다(final-checks-last-failure.json). 변경 이벤트가 비동기로 전달되는 것이 원인이며, 조건 대기 wait_for_function 후 재실행26개 통과. 이는 제품 수정보다 시험 교정이다. 실패나 회귀를 억지로 만든 사례가 아니며, 실패를 최종 통과와 구분해 보존했다.

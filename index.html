@@ -10,18 +10,21 @@
     <div class="workspace">
       <section class="garden-panel" aria-label="정원 작품">
         <div class="canvas-top"><span><i class="live-dot"></i> <span id="mode">자라는 중</span></span><span>CANVAS / <span id="edition">271828</span></span></div>
-        <canvas id="garden" tabindex="0" role="img" aria-label="인터랙티브 정원. 클릭하여 씨앗을 심으세요." aria-describedby="canvas-help">Canvas를 지원하는 브라우저가 필요합니다.</canvas>
+        <canvas id="garden" tabindex="0" role="application" aria-label="키보드로 씨앗을 심는 정원" aria-describedby="canvas-help">Canvas를 지원하는 브라우저가 필요합니다. 아래 가운데 심기 버튼을 이용할 수도 있습니다.</canvas>
         <div class="canvas-bottom"><span id="count">5 / 32 씨앗</span><span>CLICK TO PLANT · STAY TO WATCH</span></div>
       </section>
       <aside class="controls" aria-label="정원 조절">
         <div class="control-title"><span class="eyebrow">YOUR LITTLE ECOSYSTEM</span><h2>정원을 돌보는 법</h2><p>우연의 모양을 고르고,<br>당신만의 속도로 바라보세요.</p></div>
-        <label class="field" for="seed"><span>정원의 번호 <small>SEED</small></span><input id="seed" type="text" value="271828" maxlength="80" spellcheck="false" autocomplete="off"></label>
+        <label class="field seed-field" for="seed"><span>정원의 번호 <small>SEED</small></span><input id="seed" type="text" value="271828" maxlength="80" spellcheck="false" autocomplete="off"></label>
         <button id="regenerate" class="secondary">이 번호로 다시 피우기 <span aria-hidden="true">↗</span></button>
-        <label class="field range-field" for="wind"><span>바람 <output id="wind-value" for="wind">35</output></span><input id="wind" type="range" min="0" max="100" value="35"><span class="range-ends"><small>고요하게</small><small>살랑이게</small></span></label>
-        <label class="field range-field" for="density"><span>잎의 밀도 <output id="density-value" for="density">7</output></span><input id="density" type="range" min="2" max="12" value="7"><span class="range-ends"><small>성기게</small><small>풍성하게</small></span></label>
+        <label class="field range-field wind-field" for="wind"><span>바람 <output id="wind-value" for="wind">35</output></span><input id="wind" type="range" min="0" max="100" value="35"><span class="range-ends"><small>고요하게</small><small>살랑이게</small></span></label>
+        <label class="field range-field density-field" for="density"><span>잎의 밀도 <output id="density-value" for="density">7</output></span><input id="density" type="range" min="2" max="12" value="7"><span class="range-ends"><small>성기게</small><small>풍성하게</small></span></label>
         <div class="actions"><button id="pause" class="primary" aria-pressed="false">일시정지</button><button id="reset" class="secondary">비우기</button></div>
         <button id="save" class="save">정원 이미지 저장 <span aria-hidden="true">↓</span></button>
-        <p id="canvas-help" class="help">정원 안을 클릭해 씨앗을 심으세요. 최대 32개까지 심을 수 있습니다.</p>
+        <button id="plant-center" class="secondary">가운데 씨앗 심기 <span aria-hidden="true">＋</span></button>
+        <label class="motion-field"><input id="reduced" type="checkbox"> 동작 줄이기 <small id="motion-source"></small></label>
+        <p id="canvas-help" class="help">클릭·터치로 심기. 정원에 Tab으로 들어간 뒤 방향키로 위치를 옮기고 Enter 또는 Space로 심으세요. 최대 32개.</p>
+        <p id="fixed-note" class="help" hidden>성장 6초를 고정한 기록 화면입니다. <a href="index.html">직접 가꾸기 ↗</a></p>
         <p id="status" class="status" role="status" aria-live="polite">다섯 개의 씨앗으로 시작했어요.</p>
       </aside>
     </div>

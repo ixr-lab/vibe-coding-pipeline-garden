@@ -1,0 +1,21 @@
+{
+  "recorded_at": "2026-10-17T01:58:55.975361+00:00",
+  "version": "v2",
+  "browser": "155.0.8059.84",
+  "protocol": "file://",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "seed": "271828",
+  "density": 7,
+  "wind": 35,
+  "frame": 360,
+  "baseline": "5 / 32 씨앗",
+  "after_click": "6 / 32 씨앗",
+  "paused": "true",
+  "cleared": "0 / 32 씨앗",
+  "mobile_overflow": false,
+  "errors": [],
+  "export_bytes": 277973
+}

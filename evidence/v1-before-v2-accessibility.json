@@ -1,0 +1,44 @@
+{
+  "recorded_at": "2026-10-17T01:56:37.096811+00:00",
+  "label": "v1-before-v2",
+  "keyboard_before": "5 / 32 씨앗",
+  "keyboard_after": "5 / 32 씨앗",
+  "keyboard_pass": false,
+  "pause_raf_requests": 15,
+  "pause_pixels_equal": true,
+  "reduced_raf_requests": 10,
+  "reduced_status": "자라는 중",
+  "targets": [
+    {
+      "id": "regenerate",
+      "height": 40,
+      "width": 350
+    },
+    {
+      "id": "wind",
+      "height": 16,
+      "width": 350
+    },
+    {
+      "id": "density",
+      "height": 16,
+      "width": 350
+    },
+    {
+      "id": "pause",
+      "height": 40,
+      "width": 171
+    },
+    {
+      "id": "reset",
+      "height": 40,
+      "width": 171
+    },
+    {
+      "id": "save",
+      "height": 40,
+      "width": 350
+    }
+  ],
+  "targets_44px": false
+}

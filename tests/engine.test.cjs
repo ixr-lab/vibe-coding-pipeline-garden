@@ -8,6 +8,14 @@ test('same seed repeats 20 random samples',()=>{
   assert.deepEqual(x,y); assert.notDeepEqual(x,Array.from({length:20},c));
   assert.ok(x.every(v=>v>=0&&v<1));
 });
+test('edge planting keeps the full canopy above ground and inside top margin',()=>{
+  for(const [w,h] of [[1000,630],[350,440],[280,360]]) for(let i=0;i<20;i++){
+    const p=E.createPlant('edge-'+i,i,.01,.38,12),l=E.layout(p,w,h);
+    assert.ok(Number.isFinite(l.baseY));
+    for(const b of p.branches) assert.ok(l.baseY+b.y2*l.scale>=40);
+    assert.ok(l.baseY<=h-40);
+  }
+});
 test('plant geometry is deterministic, finite, bounded at high density',()=>{
   assert.equal(typeof E.createPlant,'function');
   const a=E.createPlant('271828',0,.5,.8,7);

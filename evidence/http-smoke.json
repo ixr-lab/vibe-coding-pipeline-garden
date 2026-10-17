@@ -1,0 +1,7 @@
+{
+  "recorded_at": "2026-10-17T02:05:50.413073+00:00",
+  "server": "Python ThreadingHTTPServer on localhost",
+  "http_status": 200,
+  "center_plant_count": 6,
+  "passed": true
+}

@@ -23,9 +23,9 @@
     return {x:clamp(x,.04,.96),y:clamp(y,.38,.94),height,hue,branches};
   }
   function layout(p,w,h){
-    let min=0,max=0;for(const b of p.branches){min=Math.min(min,b.x1,b.x2);max=Math.max(max,b.x1,b.x2);}
-    const scale=Math.min(h*1.9,w*1.9,(w-40)/Math.max(.01,max-min));
-    return {scale,root:clamp(p.x*w,20-min*scale,w-20-max*scale)};
+    let min=0,max=0,top=0;for(const b of p.branches){min=Math.min(min,b.x1,b.x2);max=Math.max(max,b.x1,b.x2);top=Math.min(top,b.y1,b.y2);}
+    const scale=Math.min(h*1.9,w*1.9,Math.max(1,w-60)/Math.max(.01,max-min),Math.max(1,h-105)/Math.max(.01,-top));
+    return {scale,root:clamp(p.x*w,30-min*scale,w-30-max*scale),baseY:clamp(p.y*h,60-top*scale,h-45)};
   }
   const api={random,createPlant,clamp,layout,MAX_PLANTS:32};
   if(typeof module!=='undefined'&&module.exports) module.exports=api;

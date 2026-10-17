@@ -1,0 +1,49 @@
+{
+  "recorded_at": "2026-10-17T02:00:55.171483+00:00",
+  "checks": [
+    {
+      "name": "same seed/settings/time reproduce exact Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "different seed changes image",
+      "pass": true
+    },
+    {
+      "name": "density changes image",
+      "pass": true
+    },
+    {
+      "name": "density round trip restores image",
+      "pass": true
+    },
+    {
+      "name": "wind changes fixed-time pose",
+      "pass": true
+    },
+    {
+      "name": "normal mode actually grows",
+      "pass": true
+    },
+    {
+      "name": "pause freezes Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "resize preserves pause and remains still",
+      "pass": true
+    },
+    {
+      "name": "resume changes Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "system reduced motion checked and static",
+      "pass": true
+    },
+    {
+      "name": "system motion change updates checkbox",
+      "pass": false
+    }
+  ]
+}

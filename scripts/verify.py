@@ -3,7 +3,7 @@ import sys, json, pathlib, datetime
 from playwright.sync_api import sync_playwright
 
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-version=sys.argv[1] if len(sys.argv)>1 else 'v0'
+version=sys.argv[1] if len(sys.argv)>1 else 'replay-v2'
 url=(ROOT/'index.html').as_uri()+'?seed=271828&density=7&wind=35&frame=360'
 with sync_playwright() as p:
     browser=p.chromium.launch(executable_path=r'C:\Program Files\Google\Chrome\Application\chrome.exe',headless=True)

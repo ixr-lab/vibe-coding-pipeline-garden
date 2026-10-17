@@ -1,0 +1,54 @@
+TAP version 13
+# Subtest: same seed repeats 20 random samples
+ok 1 - same seed repeats 20 random samples
+  ---
+  duration_ms: 1.1984
+  type: 'test'
+  ...
+# Subtest: edge planting keeps the full canopy above ground and inside top margin
+not ok 2 - edge planting keeps the full canopy above ground and inside top margin
+  ---
+  duration_ms: 4.8887
+  type: 'test'
+  location: '[PROJECT]\\tests\\engine.test.cjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The expression evaluated to a falsy value:
+    
+      assert.ok(Number.isFinite(l.baseY))
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: true
+  actual: false
+  operator: '=='
+  stack: |-
+    TestContext.<anonymous> ([PROJECT]\tests\engine.test.cjs:14:12)
+    Test.runInAsyncScope (node:async_hooks:214:14)
+    Test.run (node:internal/test_runner/test:1047:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:744:18)
+    Test.postRun (node:internal/test_runner/test:1173:19)
+    Test.run (node:internal/test_runner/test:1101:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+# Subtest: plant geometry is deterministic, finite, bounded at high density
+ok 3 - plant geometry is deterministic, finite, bounded at high density
+  ---
+  duration_ms: 0.7251
+  type: 'test'
+  ...
+# Subtest: isotropic layout preserves branch proportions and keeps canopy inside view
+ok 4 - isotropic layout preserves branch proportions and keeps canopy inside view
+  ---
+  duration_ms: 0.2466
+  type: 'test'
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 3
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 84.544

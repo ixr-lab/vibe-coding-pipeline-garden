@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3f0e7">
+  <title>작은 정원 — 만드는 과정</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="process.css">
+</head>
+<body>
+  <a class="skip-link" href="#process">본문으로 건너뛰기</a>
+  <div class="page">
+    <header class="masthead">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">✳</span> 작은 정원 <span class="edition">GARDEN STUDY / 001</span></a>
+      <a class="return-link" href="index.html">정원으로 돌아가기 <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main id="process">
+      <section class="introduction" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">A GARDEN, THROUGH ITERATION</p>
+          <h1 id="page-title">작은 정원이<br> <em>자라는 과정.</em></h1>
+        </div>
+        <div class="intro-copy">
+          <p class="lead">심고, 바라보고, 다시 고칩니다.</p>
+          <p>하나의 Canvas 작품을 만드는 여덟 단계.<br>기준을 먼저 세우고, 실제 화면과 실행 기록으로<br class="desktop-break"> 개선의 과정을 남깁니다.</p>
+          <div class="approval"><span class="status-dot" aria-hidden="true"></span><span>사용자 미적 승인 <strong>확인 대기</strong></span></div>
+        </div>
+      </section>
+
+      <section class="comparison" aria-labelledby="comparison-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">01 / OBSERVE THE CHANGE</p><h2 id="comparison-title">같은 씨앗, 달라지는 풍경</h2></div>
+          <span class="section-note">실제 실행 화면 · AI의 관찰</span>
+        </div>
+        <div class="comparison-layout">
+          <fieldset class="version-switch">
+            <legend class="visually-hidden">비교할 버전 선택</legend>
+            <input class="version-input" type="radio" name="version" id="version-v0">
+            <input class="version-input" type="radio" name="version" id="version-v1">
+            <input class="version-input" type="radio" name="version" id="version-v2" checked>
+            <div class="switch-labels">
+              <label for="version-v0"><b>v0</b><span>첫 실행</span></label>
+              <label for="version-v1"><b>v1</b><span>형태 개선</span></label>
+              <label for="version-v2"><b>v2</b><span>조작 개선</span></label>
+              <span class="switch-hint">버전을 눌러 비교하세요</span>
+            </div>
+            <div class="frames">
+              <figure class="frame frame-v0">
+                <a href="evidence/v0-desktop.png" aria-label="v0 데스크톱 원본 이미지 열기"><img src="evidence/v0-desktop.png" alt="v0 정원. 원형 끝점과 가로로 넓어진 가지가 보이는 최소 기능 화면." width="1440" height="1000" loading="lazy"></a>
+                <figcaption><span class="frame-number">v0</span><span><strong>동작하는 첫 정원.</strong> 씨앗 심기와 조절·저장 기능을 실행했다. 원형 잎과 서로 다른 축 배율로 가지가 도식처럼 보이고 오른쪽 수관이 잘렸다.</span></figcaption>
+              </figure>
+              <figure class="frame frame-v1">
+                <a href="evidence/v1-desktop.png" aria-label="v1 데스크톱 원본 이미지 열기"><img src="evidence/v1-desktop.png" alt="v1 정원. 세로로 선 줄기, 방향을 가진 잎과 층진 지면을 적용한 화면." width="1440" height="1000"></a>
+                <figcaption><span class="frame-number">v1</span><span><strong>식물의 형태가 읽히도록.</strong> 동일 축 배율, 곡선 가지와 방향성 잎, 제한된 색과 지면을 적용했다. AI가 원본을 비교해 렌더 개선을 채택했다.</span></figcaption>
+              </figure>
+              <figure class="frame frame-v2">
+                <a href="evidence/v2-desktop.png" aria-label="v2 데스크톱 원본 이미지 열기"><img src="evidence/v2-desktop.png" alt="v2 고정 비교 화면. 실행 결과와 최종 판정은 별도 검증 기록에서 확인." width="1440" height="1000" loading="lazy"></a>
+                <figcaption><span class="frame-number">v2</span><span><strong>편하게 가꾸는 정원.</strong> 키보드 심기, 동작 줄이기, 모바일 조절을 구현하고 실제 실행했다. 정지 중 RAF 0회, 통합 26개 통과. <a href="docs/tests.md">검증 범위</a>와 <a href="evidence/v2-run.json">실행 원본</a>을 참조한다.</span></figcaption>
+              </figure>
+            </div>
+            <p class="protocol"><span>고정 비교 조건</span> seed 271828 · 잎 밀도 7 · 바람 35 · frame 360<br>Chromium · 1440 × 1000 viewport · DPR 1 · 같은 위치의 식물 5개</p>
+          </fieldset>
+
+          <aside class="iteration-notes" aria-label="실제 수정 요약과 비교의 한계">
+            <article class="iteration-card">
+              <p class="iteration-kicker">v0 → v1 <span class="pill">실행 · AI 채택</span></p>
+              <h3>먼저, 식물답게.</h3>
+              <p>축마다 달랐던 배율을 맞추고, 원형 끝점을 방향 있는 잎으로 바꿨다. 줄기·잎·지면의 위계와 제한된 색을 더했다.</p>
+              <p class="observation">관찰: 세로 가지와 잎 방향이 읽히고 오른쪽 수관이 화면 안에 들어왔다. 클릭·초기화·PNG·모바일 가로 넘침 smoke에서 회귀가 관찰되지 않았다.</p>
+            </article>
+            <article class="iteration-card">
+              <p class="iteration-kicker">v1 → v2 <span class="pill">실행 · 채택</span></p>
+              <h3>다음은, 편안한 조작.</h3>
+              <p>방향키·Enter/Space 심기, 대체 심기 버튼, 시스템·수동 동작 줄이기, RAF 시작·취소와 배경 캐시, 모바일 제어 배치를 개선했다.</p>
+              <p class="observation">실행: 키보드 심기 5→6, 정지·동작 줄이기 RAF 각 0회, 조작 영역 44px. 최종 픽셀 복귀 결함도 수정했다. <a href="docs/tests.md">검증 기록</a>과 <a href="evidence/v2-run.json">실행 원본</a>으로 확인한다.</p>
+            </article>
+            <p class="comparison-caveat"><strong>비교를 읽는 방법</strong> viewport는 같지만 Canvas 높이는 v0 550 → v1 630 → v2 약777px로 변경됐다. 화면 구성도 실험 변수이므로 형태 변경의 효과만 따로 수치화하지 않는다. 미적 만족은 자동 시험과 별개의 판단이다.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="workflow" aria-labelledby="workflow-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">02 / THE WORKING METHOD</p><h2 id="workflow-title">여덟 단계, 하나의 기록</h2></div>
+          <a class="text-link" href="docs/log.md">전체 작업 로그 <span aria-hidden="true">↗</span></a>
+        </div>
+        <ol class="steps">
+          <li><span class="step-number">01</span><div><h3>목표와 맥락</h3><p>독립 Canvas 정원과 두 차례 개선을 목표로 정했다. 기존 프로젝트 자산은 보존한다.</p><a href="docs/requirements.md">범위와 요구사항 ↗</a></div></li>
+          <li><span class="step-number">02</span><div><h3>레퍼런스와 기준</h3><p>원문 네 개를 읽고 배울 점·피할 점을 정리했다. 비교 조건과 평가 기준을 구현 전에 고정했다.</p><a href="docs/references.md">레퍼런스 보드 ↗</a></div></li>
+          <li><span class="step-number">03</span><div><h3>작업 설계</h3><p>HTML·CSS·Canvas·일반 JavaScript로 파일 책임과 실행 순서를 나눴다. 외부 API 없이 작동한다.</p><a href="docs/plan.md">구현 계획 ↗</a></div></li>
+          <li><span class="step-number">04</span><div><h3>최소 기능 구현</h3><p>v0를 실제 Chromium에서 실행했다. 씨앗 5 → 6, 초기화 0, PNG 저장과 예외 여부를 기록했다.</p><a href="evidence/v0-run.json">v0 실행 원본 ↗</a></div></li>
+          <li><span class="step-number">05</span><div><h3>실행과 비교</h3><p>원본 화면을 열어 가지 왜곡·잎 형태·수관 잘림을 확인했다. 기능 통과와 시각 판단을 구분했다.</p><a href="docs/experiments.md">관찰과 원인 가설 ↗</a></div></li>
+          <li><span class="step-number">06</span><div><h3>반복 개선</h3><p>v1 형태 개선, v2 조작·모션·모바일 개선을 실제 실행했다. 부족점·가설·수정·회귀 결과를 보존했다.</p><a href="docs/experiments.md">수정 전후 기록 ↗</a></div></li>
+          <li><span class="step-number">07</span><div><h3>통합과 의도 판정</h3><p>최종 실행 결과는 검증 문서와 원본으로 확인한다. 사용자의 미적 만족은 <strong>확인 대기</strong>다.</p><a href="docs/tests.md">실제 검증 결과 ↗</a></div></li>
+          <li><span class="step-number">08</span><div><h3>전달과 재사용</h3><p>코드·기준·실험·원본을 함께 보존한다. private 저장소와 Library 전달은 완료 기록으로 확인한다.</p><a href="docs/log.md">전달 진행 기록 ↗</a></div></li>
+        </ol>
+      </section>
+
+      <section class="references" aria-labelledby="references-title">
+        <div class="section-heading">
+          <div><p class="eyebrow">03 / IDEAS WE LEARNED FROM</p><h2 id="references-title">원리는 배우고, 풍경은 직접 그리기</h2></div>
+          <span class="section-note">원문 확인 · 2026.10.17 UTC</span>
+        </div>
+        <div class="reference-grid">
+          <article><span class="reference-number">01 / FORM</span><h3><a href="https://natureofcode.com/fractals/">The Nature of Code · Fractals <span aria-hidden="true">↗</span></a></h3><p>재귀 위계와 제한된 불규칙성에서 배운다. 완벽한 대칭과 무제한 분기는 피하고, <code>engine.js</code>의 시드·깊이·가지 상한으로 옮겼다.</p></article>
+          <article><span class="reference-number">02 / SURFACE</span><h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_usage">MDN · Canvas 기본 사용 <span aria-hidden="true">↗</span></a></h3><p>표시 크기와 그리기 크기를 구분한다. 늘어난 그림과 그림 속에만 있는 안내를 피하며, 초기화·리사이즈와 HTML 설명에 적용한다.</p></article>
+          <article><span class="reference-number">03 / TIME</span><h3><a href="https://developer.mozilla.org/en-US/docs/Web/API/Window/requestAnimationFrame">MDN · requestAnimationFrame <span aria-hidden="true">↗</span></a></h3><p>시간 기반 진행과 단일 요청 관리에서 배운다. 중첩 루프와 정지 뒤 요청을 피하는 방향으로 성장·재생 루프를 개선한다.</p></article>
+          <article><span class="reference-number">04 / COMFORT</span><h3><a href="https://www.w3.org/WAI/WCAG22/Techniques/css/C39">W3C WAI · 동작 줄이기 <span aria-hidden="true">↗</span></a></h3><p>사용자 설정과 정적 결과를 존중한다. CSS만으로 Canvas도 멈췄다고 가정하지 않고, JavaScript 루프와 완성 장면에 확장 적용한다.</p></article>
+        </div>
+        <p class="source-note">타인의 코드·이미지·페이지 구성을 가져오지 않았다. 출처는 원리의 근거이며, 이 정원의 동작을 검증한 증거는 아니다. <a href="docs/references.md">배울 특징·피할 특징·적용 위치 전체 보기 ↗</a></p>
+      </section>
+
+      <footer class="page-footer">
+        <p><strong>AI가 구현하고 기록합니다.</strong> 분위기와 만족에 대한 최종 판단은 사람에게 남겨 둡니다.</p>
+        <a href="index.html">이제, 정원에 씨앗을 심어 보세요 <span aria-hidden="true">↗</span></a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
