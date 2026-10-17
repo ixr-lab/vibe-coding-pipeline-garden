@@ -9,11 +9,11 @@
     <div class="intro"><div><p class="eyebrow">AN EXPERIMENT IN GROWING</p><h1>작은 씨앗, <em>느린 풍경.</em></h1><p class="subtitle">당신의 손끝에서 시작되는 하나뿐인 정원.</p></div><p class="intro-note">어디든 눌러 씨앗을 심어 보세요.<br>가지가 뻗고, 잎 사이로 바람이 흐릅니다.</p></div>
     <details class="material-drawer" open><summary>꽃과 선의 재료 <span>종류와 표현을 독립적으로 고르세요</span></summary><div class="material-grid">
       <label class="field" for="flower"><span>꽃 종류</span><select id="flower"><option value="cosmos">코스모스</option><option value="daisy">데이지</option><option value="poppy">개양귀비</option></select></label>
-      <label class="field" for="brush"><span>줄기 브러시</span><select id="brush"><option value="pen">균일 펜</option><option value="ink" selected>압력 잉크</option><option value="pencil">연필</option><option value="dry">드라이 브러시</option><option value="watercolor">수채</option></select></label>
+      <label class="field" for="brush"><span>줄기·꽃잎 브러시</span><select id="brush"><option value="pen">균일 펜</option><option value="ink" selected>압력 잉크</option><option value="pencil">연필</option><option value="dry">드라이 브러시</option><option value="watercolor">수채</option></select></label>
       <label class="field" for="stroke-width"><span>선 두께 <output id="width-value">1</output></span><input id="stroke-width" type="range" min="0.5" max="2.5" step="0.1" value="1"></label>
       <label class="field" for="texture"><span>질감 <output id="texture-value">60</output></span><input id="texture" type="range" min="0" max="100" value="60"></label>
       <label class="field" for="opacity"><span>농도 <output id="opacity-value">85</output></span><input id="opacity" type="range" min="30" max="100" value="85"></label>
-      <a href="reference.html">꽃·브러시 레퍼런스 ↗</a><a href="study.html">전체 출력 관찰실 ↗</a>
+      <label class="field" for="petal-strength"><span>꽃잎 표현 <output id="petal-value">65</output></span><input id="petal-strength" type="range" min="0" max="100" value="65"></label><a href="reference.html">꽃·브러시 레퍼런스 ↗</a><a href="study.html">전체 출력 관찰실 ↗</a>
     </div></details>
     <div class="workspace">
       <section class="garden-panel" aria-label="정원 작품">
@@ -38,4 +38,4 @@
     </div>
     <footer class="footer"><span>우연을 심고, 변화를 관찰합니다.</span><span>HTML · CANVAS · NO AI API <span aria-hidden="true">↗</span></span></footer>
   </main>
-</div><script src="engine.js"></script><script src="flower-art.js"></script><script src="brush-art.js"></script><script src="plant-renderer.js"></script><script src="garden.js"></script></body></html>
+</div><script src="engine.js"></script><script src="petal-paint.js"></script><script src="flower-art.js"></script><script src="brush-art.js"></script><script src="plant-renderer.js"></script><script src="garden.js"></script></body></html>

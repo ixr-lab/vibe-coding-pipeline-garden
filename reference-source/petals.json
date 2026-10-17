@@ -1,0 +1,163 @@
+[
+  {
+    "id": "petal-watercolor",
+    "name": "꽃잎 · 수채의 밝은 면과 굽은 결",
+    "sources": [
+      {
+        "title": "The Metropolitan Museum of Art — Gloriosa Superba (Climbing Lily), ca. 1810, 2015.604.2",
+        "url": "https://www.metmuseum.org/art/collection/search/697703",
+        "creator": "Pierre Joseph Redouté",
+        "rights": "공식 작품 페이지 Public Domain. Met Open Access의 공공영역 작품 이미지에 CC0 적용: https://www.metmuseum.org/hubs/open-access . 관찰용 사본은 저장소 밖 petal-reference-study에만 보관하며 제품·코드 저장소·Library에 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/697703/1786207/main-image"
+      },
+      {
+        "title": "Wikimedia Commons — Cosmos bipinnatus (5).jpg, 실물 형태 재확인",
+        "url": "https://commons.wikimedia.org/wiki/File:Cosmos_bipinnatus_(5).jpg",
+        "creator": "Kabir Bakie",
+        "rights": "CC BY-SA 2.5: https://creativecommons.org/licenses/by-sa/2.5/ . 권리 페이지를 재확인하고 저장소 밖에만 관찰용 사본을 보관했다. 제품에는 사진을 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Cosmos_bipinnatus_%285%29.jpg"
+      }
+    ],
+    "observations": [
+      "회화 직접 관찰: Redouté의 꽃잎은 가는 기부에서 올라와 뒤로 굽고, 붉은 끝의 물결과 노란 안쪽 면이 서로 다른 방향을 보여 준다. 굽은 가장자리만 복잡하고 모든 내부가 같은 굵기의 선으로 채워지지는 않는다.",
+      "회화 직접 관찰: 밝은 노랑·옅은 색면과 진한 붉은 띠가 함께 있어 면의 방향을 읽을 수 있다. 몇몇 굽은 경계에는 밝은 좁은 틈이 남으며, 모든 접힘을 검은 폐곡선으로 두르지 않는다.",
+      "회화 직접 관찰: 잎에는 길이 방향을 따르는 가는 칠 자국이 보인다. 이 잎의 결은 꽃잎을 그릴 때도 형태의 긴 축에 맞춰 결을 배치하는 조형 참고이며, 꽃잎 자체에 같은 잎맥이 있다는 근거는 아니다.",
+      "실물 사진 재관찰: 코스모스의 넓은 설상화는 중심의 좁은 기부에서 바깥의 넓고 얕게 갈라진 끝으로 퍼진다. 밝고 어두운 긴 주름은 대체로 이 확장 방향을 따르며 옆 설상화와 겹치는 경계가 일부 끊긴다.",
+      "관찰과 추론 구분: 회화의 밝은 면은 확인했으나 실제 물감의 투명도, 칠한 순서, 붓의 압력을 복원하지 않았다. 아래의 얇은 겹칠과 폭 조절은 화면에서 같은 조형 효과를 얻기 위한 구현 제안이다."
+    ],
+    "avoid": [
+      "수채라는 이유로 꽃잎 바깥에 균일한 안개나 흐림을 두르기",
+      "긴 축과 무관한 가로 줄무늬나 모든 꽃잎에 동일한 결을 도장처럼 반복하기",
+      "겹침을 표현하려고 모든 외곽을 똑같이 진하고 굵게 두르기",
+      "Gloriosa의 뒤집힌 물결 윤곽을 코스모스·데이지·양귀비의 실제 형태 대신 사용하기"
+    ],
+    "targets": [
+      "형태를 읽는 기본 면은 유지하고, 기부에서 끝으로 휘는 2~4개의 성긴 결이 꽃잎의 방향을 보강한다.",
+      "밝은 면과 가장자리 일부의 여백이 남고, 어두운 겹침은 꽃잎 기부·접힌 한쪽·가려진 경계에 집중된다.",
+      "겹칠은 기존의 종별 꽃잎 윤곽 안에서 일어나며 사진 같은 질감보다 손으로 칠한 면의 차이를 목표로 한다."
+    ],
+    "implementation": [
+      "구현 제안: 꽃잎 기부→끝의 국소 곡선을 붓결의 주축으로 삼고 곡선의 접선에 맞춰 결 방향을 갱신한다. 기울어진 꽃잎에도 화면 기준의 직선 해칭을 적용하지 않는다.",
+      "구현 제안: 옅은 기본 면 위에 좁은 반투명 색띠를 소수만 겹친다. 접힘 한쪽에 색을 더하고 반대쪽에 밝은 가는 틈을 남겨, 전체 불투명도 저하만으로 수채를 표현하지 않는다.",
+      "구현 제안: 결의 폭과 농도를 기부·중간·끝에서 달리하고 끝에서는 줄인다. 이 변화는 붓의 눌림과 들어 올림을 연상시키는 설계이며 원작의 실제 필압 측정값이 아니다.",
+      "구현 제안: 외곽선은 가려진 짧은 구간이나 접힌 한쪽에만 허용한다. 종별로 정한 넓은 코스모스, 좁은 데이지, 큰 주름의 양귀비 윤곽은 유지한다."
+    ],
+    "gaps": [
+      "직접 관찰한 Met 제공 JPEG는 높이 1200px이다. 종이·양피지의 미세한 흡수나 개별 붓털 자국을 확인한 자료로 삼지 않는다.",
+      "이 특정 Redouté 작품의 공식 재료는 watercolor and gilt on vellum이다. 인쇄물 또는 일반 수채화지의 번짐 사례로 바꾸어 기술하지 않는다.",
+      "회화의 Gloriosa는 구현 대상 세 꽃과 다르다. 색면·방향성만 참고하고 종의 꽃잎 수·곡률·외곽 형태는 flowers.json의 실물 관찰을 우선한다."
+    ]
+  },
+  {
+    "id": "petal-ink-hatching",
+    "name": "꽃잎 · 기부에서 퍼지는 먹선과 해칭",
+    "sources": [
+      {
+        "title": "The Metropolitan Museum of Art — Poppies, mid-17th century, 29.100.524",
+        "url": "https://www.metmuseum.org/art/collection/search/48974",
+        "creator": "Attributed to Kitagawa Sōsetsu",
+        "rights": "공식 작품 페이지 Public Domain. Met Open Access의 공공영역 작품 이미지에 CC0 적용: https://www.metmuseum.org/hubs/open-access . 관찰용 사본은 저장소 밖 petal-reference-study에만 보관하며 제품·코드 저장소·Library에 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/48974/103900/main-image"
+      },
+      {
+        "title": "Wikimedia Commons — Papaver rhoeas.jpg, 실물 형태 재확인",
+        "url": "https://commons.wikimedia.org/wiki/File:Papaver_rhoeas.jpg",
+        "creator": "Pablo Alberto Salguero Quiles",
+        "rights": "CC BY-SA 3.0: https://creativecommons.org/licenses/by-sa/3.0/ ; GFDL 1.2 이상도 병기. 권리 페이지를 재확인하고 저장소 밖에만 관찰용 사본을 보관했다. 제품에는 사진을 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Papaver_rhoeas.jpg"
+      }
+    ],
+    "observations": [
+      "회화 직접 관찰: Sōsetsu 귀속작의 흰 꽃은 넓은 밝은 면이 큰 비중을 차지한다. 옆으로 열린 꽃의 밑부분에는 가늘고 짧은 어두운 선이 모였다가 위쪽으로 벌어져 컵 모양을 설명한다.",
+      "회화 직접 관찰: 선은 기부 부근에 조밀하고 바깥 면으로 갈수록 성기다. 모든 선이 꽃잎 끝에 닿지 않으며, 밝은 중앙 면에 칠하지 않은 듯 보이는 넓은 부분이 남아 있다.",
+      "회화 직접 관찰: 흰 꽃잎의 외곽은 따뜻한 회갈색으로 부분적으로 강조되며 굵기와 농도가 일정하지 않다. 붉은 부분은 가장자리 또는 밑부분의 색띠로 모이고, 흰 꽃잎 전체를 붉게 덮지 않는다.",
+      "회화 직접 관찰: 위쪽의 흰 꽃잎들이 서로 가리는 곳에는 짧은 경계가 생긴다. 하나의 꽃 둘레를 같은 먹선으로 완전히 닫는 방식보다 경계의 강약과 중단이 먼저 읽힌다.",
+      "실물 사진 재관찰: Papaver rhoeas는 넓고 얇은 붉은 꽃잎이 크게 겹친다. 앞쪽의 넓은 꽃잎과 뒤쪽에서 세워진 꽃잎의 밝기·방향이 다르며, 어두운 기부 주변에서 주름이 뻗는다.",
+      "관찰과 추론 구분: 원작의 카탈로그 재료는 color and gold on paper이다. 보이는 가는 선을 조형상 해칭의 참고로 사용하지만 해당 선의 안료를 먹이라고 확정하거나 제작 순서를 단정하지 않는다."
+    ],
+    "avoid": [
+      "꽃잎 전체에 등간격 평행선이나 교차선을 채워 공업용 망처럼 만들기",
+      "모든 해칭을 기부와 무관한 같은 화면 각도로 그리기",
+      "깊이를 만들기 위해 전체 꽃잎을 검은 윤곽선으로 둘러싸기",
+      "회화의 겹꽃 양귀비 외형을 Papaver rhoeas의 단순한 큰 꽃잎 구조로 일반화하기"
+    ],
+    "targets": [
+      "기부에서 바깥으로 퍼지는 선의 방향과 줄어드는 밀도로 꽃잎의 굽음을 읽을 수 있다.",
+      "밝은 여백이 선보다 넓게 남고, 해칭은 겹침·기부·접힌 면을 설명하는 부분에 집중된다.",
+      "부분 외곽선을 허용하되 꽃잎 실루엣이 두꺼운 스티커 테두리처럼 보이지 않는다."
+    ],
+    "implementation": [
+      "구현 제안: 꽃잎 내부의 기부→끝 곡선을 따라 선을 배치하고 폭 방향으로 벌어지는 부채꼴을 만든다. 곡률·길이·시작점을 조금씩 달리해 같은 선의 회전 복제를 피한다.",
+      "구현 제안: 기부와 가려진 한쪽에 짧은 선을 더하고 끝 쪽으로 선 개수와 농도를 줄인다. 중간에서 끝나는 선, 작은 끊김, 비어 있는 중앙 면을 함께 둔다.",
+      "구현 제안: 선의 중간을 약간 넓히고 끝을 가늘게 줄여 손의 눌림과 이완을 연상시킨다. 실제 원작의 필압 수치나 한 번의 운필을 복원한 것으로 표시하지 않는다.",
+      "구현 제안: 외곽은 전체 둘레가 아니라 접힘·겹침이 필요한 짧은 구간에만 그린다. 데이지의 좁은 설상화에는 해칭 수를 줄이고, 양귀비의 넓은 꽃잎에는 큰 곡률을 따르는 길이 차이를 준다."
+    ],
+    "gaps": [
+      "직접 관찰한 Met 제공 JPEG는 492×1200px이다. 꽃잎의 세부 안료·붓털 단위 흔적을 판정할 해상도는 아니다.",
+      "공식 귀속은 Attributed to Kitagawa Sōsetsu이며 작가는 확정되지 않았다. 작가명을 단정형으로 바꾸지 않는다.",
+      "회화 속 양귀비의 종·품종을 이 이미지로 특정하지 않았다. 이 참고는 해칭의 방향·밀도·여백에 한정하며 종별 구조는 실물 사진으로 검토한다."
+    ]
+  },
+  {
+    "id": "petal-pressure",
+    "name": "꽃잎 · 눌림을 연상시키는 색면과 가는 끝",
+    "sources": [
+      {
+        "title": "The Metropolitan Museum of Art — Birds and Flowers, ca. 1887, 14.76.61.41",
+        "url": "https://www.metmuseum.org/art/collection/search/54671",
+        "creator": "Watanabe Seitei",
+        "rights": "공식 작품 페이지 Public Domain. Met Open Access의 공공영역 작품 이미지에 CC0 적용: https://www.metmuseum.org/hubs/open-access . 관찰용 사본은 저장소 밖 petal-reference-study에만 보관하며 제품·코드 저장소·Library에 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://collectionapi.metmuseum.org/api/collection/v1/iiif/54671/169453/main-image"
+      },
+      {
+        "title": "NC State Extension — Leucanthemum vulgare, Flower detail, 실물 형태 재확인",
+        "url": "https://plants.ces.ncsu.edu/plants/leucanthemum-vulgare/",
+        "creator": "Jason Pratt",
+        "rights": "공식 페이지 해당 사진에 CC BY 2.0: https://creativecommons.org/licenses/by/2.0/ . 권리 표기를 재확인하고 저장소 밖에만 관찰용 사본을 보관했다. 제품에는 사진을 복제하지 않는다.",
+        "accessed": "2026-10-17",
+        "visualObserved": true,
+        "imageUrl": "https://eit-planttoolbox-prod.s3.amazonaws.com/media/images/Leucanthemum-vulgare--Jason-Pratt--cc-by-2-0.jpg"
+      }
+    ],
+    "observations": [
+      "회화 직접 관찰: Seitei 작품의 늘어진 꽃차례에는 작은 푸른 꽃들이 밝고 짙은 둥근 면·물방울 모양 면으로 모여 있다. 모든 꽃잎의 외곽을 선으로 닫기보다 서로 다른 폭의 색면과 작은 빈틈으로 꽃 덩어리를 읽게 한다.",
+      "회화 직접 관찰: 아래쪽 꽃차례에는 넓고 짙은 파란 면과 작고 옅은 면이 섞여 있다. 겹침이나 어두운 부분은 국소적으로 보이고, 가지와 배경의 넓은 여백은 옅게 남는다.",
+      "회화 직접 관찰: 큰 잎은 넓은 몸체와 가늘어진 끝을 가진 색면으로 표현되며 긴 축을 따르는 어두운 선이 일부 보인다. 이 폭 변화는 압력에 반응하는 붓의 조형 참고이고, 꽃잎에서 같은 잎맥을 관찰했다는 뜻은 아니다.",
+      "실물 사진 재관찰: 데이지의 흰 설상화는 좁은 기부에서 길게 나와 바깥쪽이 넓어지고 둥글거나 얕게 갈라진 끝으로 끝난다. 이 형태는 단순한 뾰족한 물방울 도장과 다르다.",
+      "실물 사진 재관찰: 데이지 일부 설상화에는 긴 밝은 능선과 회청색의 접힌 면이 있고 이웃 꽃잎을 가리는 한쪽만 어두워진다. 모든 끝이 같은 길이·각도·넓이를 가지지 않는다.",
+      "관찰과 추론 구분: 색면의 넓고 좁음은 보이나 실제 붓의 압력·속도·물의 양·한 획 여부는 확인할 수 없다. 압력 반응은 같은 시각적 폭 변화를 만드는 디지털 설계다."
+    ],
+    "avoid": [
+      "모든 꽃잎을 같은 크기의 뾰족한 물방울로 찍기",
+      "필압을 꽃잎 크기나 선 굵기 하나에만 연결해 겹침과 여백을 잃기",
+      "잎에서 보인 결을 꽃잎의 실제 해부학적 잎맥이라고 설명하기",
+      "비단 위의 먹과 채색을 종이 위 수채의 번짐과 동일한 재료 반응으로 단정하기"
+    ],
+    "targets": [
+      "누르는 구간의 넓은 면과 들어 올리는 구간의 가는 결이 연결되되, 종별 끝 모양과 윤곽은 보존된다.",
+      "넓은 면·얇은 결·남겨 둔 여백의 비중이 꽃잎마다 약간 달라 손으로 그린 리듬이 보인다.",
+      "겹침의 진한 작은 면과 밝은 빈틈으로 깊이를 만들며 작은 꽃에서도 전체 형태가 먼저 읽힌다."
+    ],
+    "implementation": [
+      "구현 제안: 기부→끝 곡선 위에서 폭 함수를 바꿔 좁음→넓음→가늘어짐을 만든다. 종별 실루엣 마스크 안에서만 결을 그려 데이지의 둥근 끝, 코스모스의 넓은 끝, 양귀비의 주름을 보존한다.",
+      "구현 제안: 폭 변화와 농도 변화를 완전히 같은 값으로 묶지 않는다. 넓고 옅은 면과 좁고 짙은 짧은 결을 함께 허용해 모든 꽃잎이 단순한 그라데이션 도장으로 보이지 않게 한다.",
+      "구현 제안: 한 꽃잎의 주된 넓은 칠은 소수로 제한하고 일부 끝에서 들어 올린 듯한 가는 결을 남긴다. 전 구간에 여러 겹을 채워 면을 탁하게 만들지 않는다.",
+      "구현 제안: 배경을 뚫는 꽃잎 사이의 틈과 꽃잎 안 밝은 면을 분리해 보존한다. 겹침의 국소 색면 외에는 외곽선을 필수로 쓰지 않는다."
+    ],
+    "gaps": [
+      "직접 관찰한 Met 제공 JPEG는 높이 1200px이며 개별 푸른 꽃은 작게 보인다. 꽃잎 하나의 정확한 운필 순서나 압력 곡선을 추정할 자료는 아니다.",
+      "공식 재료는 album leaf; ink and color on silk이다. 같은 작가의 목판화 화보와 이 작품을 혼동하지 않는다.",
+      "푸른 꽃의 종을 카탈로그가 특정하지 않으므로 등나무라고 확정하지 않았다. 대상 세 꽃의 형태 근거로는 기존 flowers.json과 재확인한 실물 사진을 사용한다."
+    ]
+  }
+]

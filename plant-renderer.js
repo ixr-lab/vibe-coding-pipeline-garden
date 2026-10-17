@@ -18,7 +18,7 @@
   }
   function sprite(p,s,scale){
     const age=s.reduced?6:Math.min(6,Math.max(0,Math.floor((s.time-p.born)*8)/8));
-    const key=[s.seed,p.id,s.density,s.flower,s.brush,s.width,s.texture,s.opacity,scale.toFixed(4),age].join('|');
+    const key=[s.seed,p.id,s.density,s.flower,s.brush,s.width,s.texture,s.opacity,s.petalStrength,scale.toFixed(4),age].join('|');
     if(cache.has(key)){const hit=cache.get(key);cache.delete(key);cache.set(key,hit);return hit;}
     let xmin=0,xmax=0,ymin=0;for(const b of p.branches){xmin=Math.min(xmin,b.x1,b.x2);xmax=Math.max(xmax,b.x1,b.x2);ymin=Math.min(ymin,b.y1,b.y2);}
     const pad=34,ox=-xmin*scale+pad,oy=-ymin*scale+pad;
@@ -32,7 +32,7 @@
       BrushArt.draw(c,s.brush,{x1,y1,cx:x1+(x2-x1)*.28,cy:y2+(y1-y2)*.3,x2,y2},{width:b.width*.72*s.width,texture:s.texture/100,opacity:s.opacity/100,color:['#526b43','#637747','#7b7048'][p.hue],seed:s.seed+'|'+p.id+'|'+i});
       if(flowers.has(i)){
         const bloom=GardenEngine.clamp((age-b.start*3-.4)/.8,0,1);
-        if(bloom)FlowerArt.draw(c,s.flower,x2,y2,Math.max(11,Math.min(23,scale*.022))*bloom,s.seed+'|'+p.id+'|'+i,Math.sin(i)*.13);
+        if(bloom)FlowerArt.draw(c,s.flower,x2,y2,Math.max(11,Math.min(23,scale*.022))*bloom,s.seed+'|'+p.id+'|'+i,Math.sin(i)*.13,{brush:s.brush,widthScale:s.width,texture:s.texture/100,opacity:s.opacity/100,strength:s.petalStrength/100});
       }else if(b.leaf&&g>.65){
         const a=Math.atan2(y2-y1,x2-x1),size=(b.width+2.5)*Math.min(3.6,scale/300)*GardenEngine.clamp((g-.65)/.35,0,1);
         leaf(c,s.flower,x2,y2,a,size,p.hue);

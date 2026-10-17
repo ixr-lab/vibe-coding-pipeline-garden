@@ -1,0 +1,115 @@
+{
+  "at": "2026-10-17T02:54:21.716026+00:00",
+  "version": "v5",
+  "browser": "155.0.8059.84",
+  "seed": "271828",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "radii": [
+    105,
+    23
+  ],
+  "checks": [
+    {
+      "name": "cosmos/105 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "daisy/105 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "poppy/105 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "cosmos/23 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "daisy/23 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "poppy/23 five isolated flower heads differ",
+      "pass": false
+    },
+    {
+      "name": "pen isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "ink isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "pencil isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "dry isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "watercolor isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    }
+  ],
+  "signatures": {
+    "cosmos/105": [
+      "38755941b313ee0d67bc0e5dc58b415c6edb3260d9364fc8db00140060b74a6b",
+      "38755941b313ee0d67bc0e5dc58b415c6edb3260d9364fc8db00140060b74a6b",
+      "38755941b313ee0d67bc0e5dc58b415c6edb3260d9364fc8db00140060b74a6b",
+      "38755941b313ee0d67bc0e5dc58b415c6edb3260d9364fc8db00140060b74a6b",
+      "38755941b313ee0d67bc0e5dc58b415c6edb3260d9364fc8db00140060b74a6b"
+    ],
+    "daisy/105": [
+      "e5374dde05eb6221f4b25cb1071d6716a7744223801b0e89676e24f518f217e3",
+      "e5374dde05eb6221f4b25cb1071d6716a7744223801b0e89676e24f518f217e3",
+      "e5374dde05eb6221f4b25cb1071d6716a7744223801b0e89676e24f518f217e3",
+      "e5374dde05eb6221f4b25cb1071d6716a7744223801b0e89676e24f518f217e3",
+      "e5374dde05eb6221f4b25cb1071d6716a7744223801b0e89676e24f518f217e3"
+    ],
+    "poppy/105": [
+      "37f6609520efa905007af820d167ecf3faa27c6d1f969eba946781cd81c0ebaa",
+      "37f6609520efa905007af820d167ecf3faa27c6d1f969eba946781cd81c0ebaa",
+      "37f6609520efa905007af820d167ecf3faa27c6d1f969eba946781cd81c0ebaa",
+      "37f6609520efa905007af820d167ecf3faa27c6d1f969eba946781cd81c0ebaa",
+      "37f6609520efa905007af820d167ecf3faa27c6d1f969eba946781cd81c0ebaa"
+    ],
+    "cosmos/23": [
+      "bae637881a38c803e6e4c53ce62cc7b213964d15d2118a97382243a1712197ea",
+      "bae637881a38c803e6e4c53ce62cc7b213964d15d2118a97382243a1712197ea",
+      "bae637881a38c803e6e4c53ce62cc7b213964d15d2118a97382243a1712197ea",
+      "bae637881a38c803e6e4c53ce62cc7b213964d15d2118a97382243a1712197ea",
+      "bae637881a38c803e6e4c53ce62cc7b213964d15d2118a97382243a1712197ea"
+    ],
+    "daisy/23": [
+      "62e2bfdc071e49aaf85a647e01ef959a271e3307fa569212927d3c8c4c1eace6",
+      "62e2bfdc071e49aaf85a647e01ef959a271e3307fa569212927d3c8c4c1eace6",
+      "62e2bfdc071e49aaf85a647e01ef959a271e3307fa569212927d3c8c4c1eace6",
+      "62e2bfdc071e49aaf85a647e01ef959a271e3307fa569212927d3c8c4c1eace6",
+      "62e2bfdc071e49aaf85a647e01ef959a271e3307fa569212927d3c8c4c1eace6"
+    ],
+    "poppy/23": [
+      "7970c06402028d0c209da6a2493dc0fdff9b5d97325de6a79422ba541a889d6b",
+      "7970c06402028d0c209da6a2493dc0fdff9b5d97325de6a79422ba541a889d6b",
+      "7970c06402028d0c209da6a2493dc0fdff9b5d97325de6a79422ba541a889d6b",
+      "7970c06402028d0c209da6a2493dc0fdff9b5d97325de6a79422ba541a889d6b",
+      "7970c06402028d0c209da6a2493dc0fdff9b5d97325de6a79422ba541a889d6b"
+    ]
+  },
+  "errors": [],
+  "passed": 7,
+  "total": 13
+}

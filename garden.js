@@ -8,6 +8,7 @@
   const state={seed:(query.get('seed')||'271828').slice(0,80),wind:number('wind',35,0,100),density:Math.round(number('density',7,2,12)),time:fixed??0,paused:false,reduced:media.matches,plants:[],next:0};
   state.flower=FlowerArt.kinds.includes(query.get("flower"))?query.get("flower"):"cosmos";
   state.brush=BrushArt.kinds.includes(query.get("brush"))?query.get("brush"):"ink";
+  state.petalStrength=number('petals',65,0,100);
   state.width=number("width",1,.5,2.5);state.texture=number("texture",60,0,100);state.opacity=number("opacity",85,30,100);
   let w=1,h=1,last=null,raf=0,background=null,keyboard=false;
   const cursor={x:.5,y:.85};
@@ -104,7 +105,7 @@
   $('fixed-note').hidden=fixed===null;
   if(fixed!==null)$('fixed-note').firstChild.textContent='성장 '+fixed+'초를 고정한 기록 화면입니다. ';
   $('motion-source').textContent=media.matches?'시스템 설정':'';
-  for(const [id,key,output] of [['flower','flower'],['brush','brush'],['stroke-width','width','width-value'],['texture','texture','texture-value'],['opacity','opacity','opacity-value']]){
+  for(const [id,key,output] of [['flower','flower'],['brush','brush'],['stroke-width','width','width-value'],['texture','texture','texture-value'],['opacity','opacity','opacity-value'],['petal-strength','petalStrength','petal-value']]){
     $(id).value=state[key];if(output)$(output).value=state[key];
     $(id).addEventListener(id==='flower'||id==='brush'?'change':'input',e=>{state[key]=output?+e.target.value:e.target.value;if(output)$(output).value=state[key];PlantRenderer.clear();update();});
   }

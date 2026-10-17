@@ -1,0 +1,151 @@
+{
+  "at": "2026-10-17T02:54:44.314573+00:00",
+  "version": "v6",
+  "browser": "155.0.8059.84",
+  "seed": "271828",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "radii": [
+    105,
+    23
+  ],
+  "checks": [
+    {
+      "name": "cosmos/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "daisy/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "poppy/105 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "cosmos/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "daisy/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "poppy/23 five isolated flower heads differ",
+      "pass": true
+    },
+    {
+      "name": "pen isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "ink isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "pencil isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "dry isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "watercolor isolated deterministic draw",
+      "pass": true
+    },
+    {
+      "name": "stroke-width changes garden",
+      "pass": true
+    },
+    {
+      "name": "stroke-width roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "texture changes garden",
+      "pass": true
+    },
+    {
+      "name": "texture roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "opacity changes garden",
+      "pass": true
+    },
+    {
+      "name": "opacity roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "petal-strength changes garden",
+      "pass": true
+    },
+    {
+      "name": "petal-strength roundtrip identical",
+      "pass": true
+    },
+    {
+      "name": "fixed grain stable after wait",
+      "pass": true
+    },
+    {
+      "name": "mobile no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    }
+  ],
+  "signatures": {
+    "cosmos/105": [
+      "628152eb01177e8861d68a3f7c1fefda864e53098f2ade488a15e3a3b88e7733",
+      "205cdd3287a6675beaa55313d7c909d5ec634c164766d3d7cbef6d187698ee4f",
+      "044a91cbd81f37ca9c34cfd7e435ea3b7157bc2bbd6a089c9faa6bdc80802110",
+      "6c86ca7dde2a56550b4284c5df127a999b210dfc8890a3ce1cd3725bda9f7844",
+      "c2bda22c1d9f101bdac097028d5fa7eb075f04fdf670a6e2e4864173b7358c0c"
+    ],
+    "daisy/105": [
+      "fffdd094b6515aa192e6eab2b0ca4c887d89969f85850ec689baec01a12965ba",
+      "c9de0a514943b227bc6ddd8baf1702a395fc9c57dbc2ba5142484cfb02ba2799",
+      "3415674142115d9cc3c3bd8bb19f64c2538c89367a0590e1778edd52d94a38e7",
+      "833c8d3b5f481beeb8758aecccec810c31cce53d8e44c7305197e62c57b37caf",
+      "aeb42934988fc828f5b496e7790aa7871c5566e2c57edce50168ba1db3449d18"
+    ],
+    "poppy/105": [
+      "9e6d939d85735b150831016829d9348053309e05e4068ed6fc0c581d7c8c13df",
+      "d0b252a72bd6acff51bc06506960b926ae2e04e6fb64c9daf6a487c777223c84",
+      "89ef5bf9b42370d667790fe37d7d10a3b35e8b9713d5b54143aa47a899ac6dd3",
+      "f44aaddf7327257e5f3be0a6aa3a6c52adb956380d233d3fb9a05cdf06df3e96",
+      "0a805ffbcf30017db081a07be55d0b9b89e721afc0e0bd4b5232fc1fe88634c8"
+    ],
+    "cosmos/23": [
+      "ef72e4f407042262d7bdf56d16c5de606c3516e24b41af942604abd3e0843992",
+      "398a598c1624dfc19bcfd48ac20cc4ca38a675d43f75da5f567b1b6a6ff534ce",
+      "1b3ea192daa2992d22a382fa5edf3b3b99c1b3be3f8700c996a9b0987941dd8a",
+      "72cf586e48b24ce27dc8a5d19b687f7175eabc99dbb0e68000fa1efed53bf56c",
+      "7790c14e624005356d96bffb694aa84b230102c054eac88b5484ca176e841a52"
+    ],
+    "daisy/23": [
+      "4c6f11fb8f04460aea42f47f432022b9554d937b2bd2cc2b04e2293a1c6648d6",
+      "9addf55dbc751b177dc2c3162226ed1c7d400569ccead4df36c51bd0c4a33b74",
+      "5c88de235fa851091f68366d4205d3e08cbd1b9cb697cb62b78b95af7916741d",
+      "396191c2046113d2fe59c31444890c61bdd2ee204d2b7cb29b5d8dd2e4616d8b",
+      "d412a0ba7e54aa46f3b6d4b6e6456355593545581504dc94ce43b00457107d83"
+    ],
+    "poppy/23": [
+      "a2852a8d0de28d24a9d07d8f62934d82576f7cca9152fb2679d8b8fc9ba69a2b",
+      "83090e679a37f3d5ea9ede3dd50a658108561469b3f8f8a9495ba7078bcc3f1e",
+      "e33adf9c7103b42c3b1e4959d95620063e78701a48bc8dff9f6f03034de87ce7",
+      "c1e59523e4dbe52707ad40b9078d30cc8cd3775c2c1fac57ee1c0e8e2e2cee6b",
+      "413356434023d7e46e0b7f8e8c392262fabb3209d8aa7bacfbbd97c866614e3a"
+    ]
+  },
+  "errors": [],
+  "passed": 22,
+  "total": 22
+}
