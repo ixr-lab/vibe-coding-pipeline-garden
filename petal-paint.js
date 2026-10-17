@@ -44,7 +44,10 @@
       color: mix(mid, light, .22),
       light: mix(light, paper, daisy ? .20 : .12),
       tooth: mix(paper, light, daisy ? .08 : .21),
-      matte: mix(light, paper, daisy ? .35 : .48)
+      matte: mix(light, paper, daisy ? .35 : .48),
+      pale: mix(light, paper, .64),
+      basal: mix(base, paper, .20),
+      graphite: mix(base, rgb('#596761', '#596761'), daisy ? .76 : .48)
     };
   }
 
@@ -122,33 +125,53 @@
     if (typeof ctx.setLineDash === 'function') ctx.setLineDash([]);
   }
 
+  function ground(ctx, shape, m, c, kind) {
+    // Material coverage changes before its marks: paper remains a visible surface.
+    // Every layer still uses the same opacity/strength and the botanical clip.
+    const g = ctx.createLinearGradient(0, -.12, m.bend, -m.length);
+    const coverage = m.alpha * (m.folded ? .76 : 1);
+    if (kind === 'pen') {
+      g.addColorStop(0, c.basal); g.addColorStop(.38, c.pale); g.addColorStop(1, c.pale);
+      ctx.globalAlpha = coverage * .96; ctx.fillStyle = g; ctx.fill(shape);
+    } else if (kind === 'pencil') {
+      g.addColorStop(0, c.basal); g.addColorStop(.30, c.tooth); g.addColorStop(1, c.tooth);
+      ctx.globalAlpha = coverage * .82; ctx.fillStyle = g;
+      ctx.fill(shape); ctx.fill(shape);
+    } else {
+      g.addColorStop(0, c.basal); g.addColorStop(.35, c.tooth); g.addColorStop(1, c.pale);
+      ctx.globalAlpha = coverage * .92; ctx.fillStyle = g; ctx.fill(shape);
+    }
+  }
+
   function pen(ctx, shape, m, c, rand) {
-    // Colored contour ink and disciplined curved hatching remain readable at garden size.
-    const count = m.small ? (m.species === 'daisy' ? 2 : 5) : (m.species === 'daisy' ? 3 : 9);
-    outline(ctx, shape, c.dark, m.hair * 2.1, m.alpha * .86);
+    // Pale tint, continuous contour and sparse even lines are a pen illustration.
+    ground(ctx, shape, m, c, 'pen');
+    const count = m.small ? (m.species === 'daisy' ? 1 : 3) : (m.species === 'daisy' ? 2 : 5);
+    const edgeWidth = Math.max(m.hair * 1.8, (m.small ? 1.22 : .78) / m.pixelRadius) * Math.pow(m.widthScale, .32);
+    outline(ctx, shape, c.dark, edgeWidth, m.alpha * .96);
     for (let i = 0; i < count; i++) {
       const u = (i + .5) / count * 1.72 - .86;
-      curve(ctx, m, u, .16 + rand() * .14, .86 + rand() * .11, c.dark,
-        m.hair * (.66 + rand() * .38), m.alpha * (.43 + rand() * .20), .02 + m.texture * .045);
+      curve(ctx, m, u, .24 + rand() * .09, .88 + rand() * .07, c.dark,
+        Math.max(m.hair * .76, .29 / m.pixelRadius * Math.sqrt(m.widthScale)), m.alpha * .66, .015 + m.texture * .035);
     }
-    const hatches = Math.round((m.small ? (m.species === 'daisy' ? 3 : 8) : (m.species === 'daisy' ? 6 : 19)) * (.55 + m.texture * .45));
+    const hatches = Math.round((m.small ? (m.species === 'daisy' ? 2 : 4) : (m.species === 'daisy' ? 3 : 9)) * (.55 + m.texture * .45));
     for (let i = 0; i < hatches; i++) {
       const u = (rand() < .5 ? -1 : 1) * (.45 + rand() * .46);
       const t = .25 + rand() * .52;
       curve(ctx, m, u, t, Math.min(.98, t + .10 + rand() * .14), c.dark,
-        m.hair * .80, m.alpha * (.28 + m.texture * .18 + rand() * .22), -u * (.10 + m.texture * .10));
+        Math.max(m.hair * .70, .27 / m.pixelRadius * Math.sqrt(m.widthScale)), m.alpha * (.43 + m.texture * .18), -u * (.10 + m.texture * .08));
     }
   }
 
   function ink(ctx, shape, m, c, rand) {
-    // Long, smooth pressure lines use a third of v6's width and much less contrast.
-    const count = m.species === 'daisy' ? 2 : m.small ? 3 : 5;
-    const inkColor = mix(rgb(c.dark, '#90305e'), rgb(c.color, '#d7609d'), .56);
+    // The original saturated ground carries a few pressure-controlled deposits.
+    const count = m.species === 'daisy' ? (m.small ? 1 : 2) : m.small ? 3 : 4;
+    const inkColor = mix(rgb(c.dark, '#90305e'), rgb(c.color, '#d7609d'), .36);
     for (let i = 0; i < count; i++) {
       const u = (i + .5) / count * 1.58 - .79 + (rand() - .5) * .065;
       ribbon(ctx, m, u, .06 + rand() * .12, .92 + rand() * .075,
-        Math.min(m.width * .24, m.width * (m.species === 'daisy' ? .16 : .12) * Math.sqrt(m.widthScale)),
-        i % 3 === 1 ? c.middle : inkColor, m.alpha * (.32 + m.texture * .10 + rand() * .10), rand, .05 + m.texture * .10, true);
+        Math.min(m.width * .36, Math.max(m.width * .12, (m.small ? .86 : .50) / m.pixelRadius)) * Math.sqrt(m.widthScale),
+        i % 3 === 1 ? c.middle : inkColor, m.alpha * (.65 + m.texture * .12 + rand() * .10), rand, .05 + m.texture * .10, true);
     }
     curve(ctx, m, -.90, .24, .94, inkColor, m.hair * 1.5, m.alpha * .40, .025);
     curve(ctx, m, .90, .56, .96, c.middle, m.hair * 1.1, m.alpha * .28, -.025);
@@ -156,19 +179,19 @@
   }
 
   function pencil(ctx, shape, m, c, rand) {
-    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .30; ctx.fill(shape);
-    outline(ctx, shape, c.dark, m.hair * 1.5, m.alpha * .55,
-      [m.length * .013, m.length * .009, m.length * .037, m.length * .012]);
-    const grains = m.small ? 17 : m.species === 'daisy' ? 31 : 47;
+    ground(ctx, shape, m, c, 'pencil');
+    outline(ctx, shape, c.graphite, Math.max(m.hair, .46 / m.pixelRadius), m.alpha * .57,
+      [m.length * .027, m.length * .016, m.length * .047, m.length * .023]);
+    const grains = m.small ? (m.species === 'daisy' ? 9 : 17) : m.species === 'daisy' ? 31 : 47;
     ctx.lineCap = 'butt';
     // Unequal curved graphite runs follow the fibers instead of becoming round grain.
     for (let i = 0; i < grains; i++) {
-      const u = (rand() * 2 - 1) * .94, start = .13 + rand() * .65;
-      const end = Math.min(.98, start + .09 + rand() * .24 * (.65 + m.texture * .65));
+      const u = ((i + .2 + rand() * .6) / grains * 2 - 1) * .94, start = .13 + rand() * .52;
+      const end = Math.min(.98, start + (m.small ? .17 : .10) + rand() * .27 * (.65 + m.texture * .65));
       const tooth = i % 8 === 0;
-      curve(ctx, m, u, start, end, tooth ? c.tooth : i % 4 === 0 ? c.middle : c.dark,
-        Math.min(m.width * .14, m.hair * (.50 + rand() * .65) * Math.sqrt(m.widthScale)),
-        m.alpha * (tooth ? .55 + m.texture * .25 : .40 + rand() * .35), (rand() - .5) * .09);
+      curve(ctx, m, u, start, end, tooth ? c.tooth : i % 4 === 0 ? c.middle : c.graphite,
+        Math.min(m.width * .18, Math.max(m.hair * (.66 + rand() * .42), .30 / m.pixelRadius)) * Math.sqrt(m.widthScale),
+        m.alpha * (tooth ? .62 + m.texture * .25 : .64 + rand() * .24), (rand() - .5) * .065);
     }
     curve(ctx, m, -.34, .23, .88, c.dark, m.hair * .7, m.alpha * .29, .08);
     curve(ctx, m, .38, .37, .95, c.light, m.hair, m.alpha * .40, -.06);
@@ -182,22 +205,22 @@
       const gap = .39 + rand() * .22, gapEnd = gap + .035 + rand() * m.texture * .12;
       for (let j = 0; j < hairs; j++) {
         const lane = u + (j - (hairs - 1) / 2) * (.035 + m.texture * .035);
-        const width = Math.min(m.width * .16, m.hair * (.65 + rand() * .55));
+        const width = Math.min(m.width * .24, Math.max(m.hair * (.85 + rand() * .50), .35 / m.pixelRadius));
         const color = j % 3 === 0 ? c.middle : c.dark;
-        const alpha = m.alpha * (.39 + rand() * .24);
+        const alpha = m.alpha * (.66 + rand() * .24);
         const sway = (rand() - .5) * .035;
         curve(ctx, m, lane, start + rand() * .035, gap, color, width, alpha, sway);
         curve(ctx, m, lane, gapEnd, end - rand() * .035, color, width * .78, alpha * .92, sway);
       }
     }
-    // Long hairline paper slits sit between related bristles; no torn paint polygons.
-    const gaps = m.small ? 5 : 9;
+    // Paper slits have a visible pixel footprint at garden size, between pigment bundles.
+    const gaps = m.small ? (m.species === 'daisy' ? 1 : 3) : 7;
     for (let i = 0; i < gaps; i++) {
-      const u = rand() * 1.8 - .9, start = .20 + rand() * .22;
-      const end = Math.min(.98, start + .32 + rand() * .25);
+      const u = gaps === 1 ? .02 : (i + .3 + rand() * .4) / gaps * 1.5 - .75;
+      const start = .18 + rand() * .16, end = Math.min(.98, start + .45 + rand() * .19);
       curve(ctx, m, u, start, end, c.tooth,
-        Math.min(m.width * .10, m.hair * (.60 + rand() * .55)),
-        m.alpha * (.44 + m.texture * .24), (rand() - .5) * .04);
+        Math.min(m.width * .48, Math.max(.006, (m.small ? .74 : .55) / m.pixelRadius)) * Math.sqrt(m.widthScale),
+        Math.min(1, m.alpha * (1.08 + m.texture * .36)), (rand() - .5) * .035);
     }
     outline(ctx, shape, c.middle, m.hair * 1.8, m.alpha * .44,
       [m.length * .11, m.length * .07, m.length * .025, m.length * .09]);
@@ -213,20 +236,20 @@
   }
 
   function watercolor(ctx, shape, m, c, rand) {
-    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .22; ctx.fill(shape);
-    const count = m.small ? 3 : 4;
+    ground(ctx, shape, m, c, 'watercolor');
+    const count = m.small ? 2 : 3;
     const wetColor = mix(rgb(c.dark, '#90305e'), rgb(c.middle, '#d7609d'), .52);
     for (let i = 0; i < count; i++) {
-      const u = (i + .28 + rand() * .42) / count * 1.5 - .75;
-      wetBand(ctx, m, i % 3 === 1 ? c.light : wetColor, u,
-        .08 + rand() * .13, .86 + rand() * .13,
-        m.width * (.44 + rand() * .24) * Math.sqrt(m.widthScale),
-        m.alpha * (.19 + m.texture * .10 + rand() * .07), rand);
+      const u = (i + .28 + rand() * .42) / count * 1.05 - .525;
+      wetBand(ctx, m, i % 3 === 1 ? c.color : wetColor, u,
+        .04 + rand() * .13, .83 + rand() * .16,
+        m.width * (1.03 + rand() * .48) * Math.sqrt(m.widthScale),
+        m.alpha * (.30 + m.texture * .13 + rand() * .08), rand);
     }
     // Sparse pigment follows the rim; no radial clouds or bright circular centers.
     const side = rand() < .5 ? -1 : 1;
     curve(ctx, m, side * .91, .46 + rand() * .08, .80 + rand() * .10,
-      wetColor, m.hair * 1.6, m.alpha * .31, side * .025);
+      wetColor, Math.max(m.hair * 1.3, .54 / m.pixelRadius), m.alpha * .39, side * .025);
     curve(ctx, m, -side * .91, .72, .96, c.middle, m.hair * 1.1, m.alpha * .22, 0);
     outline(ctx, shape, c.middle, m.hair * 1.1, m.alpha * .08);
   }
