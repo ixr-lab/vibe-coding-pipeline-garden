@@ -306,7 +306,7 @@ def audit(repo: Path, output_rel: str) -> dict:
         "recorded_at": datetime.now(timezone.utc).isoformat(),
         "status": "findings" if scanner.findings else "pass",
         "scope": {"repository": ".", "refs": refs, "missing_optional_refs": [r for r in missing if r != "refs/heads/main"],
-                  "git_selection": "Explicit main and existing v0-v9 refs only; no other refs or reflogs enumerated.",
+                  "git_selection": "Explicit main and listed version tags only; no other refs or reflogs enumerated.",
                   "replace_objects_disabled": True, "lazy_fetch_disabled": True, "shallow": shallow,
                   "annotated_tag_metadata_included": True,
                   "working_tree": "Tracked and nonignored untracked candidates; links are not followed; deleted tracked paths recorded.",

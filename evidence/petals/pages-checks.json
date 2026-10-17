@@ -1,0 +1,92 @@
+{
+  "at": "2026-10-17T03:35:10.551624+00:00",
+  "checks": [
+    {
+      "name": "index.html/1440 no overflow",
+      "pass": true
+    },
+    {
+      "name": "index.html/1440 local links exist",
+      "pass": true
+    },
+    {
+      "name": "process.html/1440 no overflow",
+      "pass": true
+    },
+    {
+      "name": "process.html/1440 local links exist",
+      "pass": true
+    },
+    {
+      "name": "reference.html/1440 no overflow",
+      "pass": true
+    },
+    {
+      "name": "reference.html/1440 local links exist",
+      "pass": true
+    },
+    {
+      "name": "study.html/1440 no overflow",
+      "pass": true
+    },
+    {
+      "name": "study.html/1440 local links exist",
+      "pass": true
+    },
+    {
+      "name": "petal-study.html/1440 no overflow",
+      "pass": true
+    },
+    {
+      "name": "petal-study.html/1440 local links exist",
+      "pass": true
+    },
+    {
+      "name": "index.html/390 no overflow",
+      "pass": true
+    },
+    {
+      "name": "index.html/390 local links exist",
+      "pass": true
+    },
+    {
+      "name": "process.html/390 no overflow",
+      "pass": true
+    },
+    {
+      "name": "process.html/390 local links exist",
+      "pass": true
+    },
+    {
+      "name": "reference.html/390 no overflow",
+      "pass": true
+    },
+    {
+      "name": "reference.html/390 local links exist",
+      "pass": true
+    },
+    {
+      "name": "study.html/390 no overflow",
+      "pass": true
+    },
+    {
+      "name": "study.html/390 local links exist",
+      "pass": true
+    },
+    {
+      "name": "petal-study.html/390 no overflow",
+      "pass": true
+    },
+    {
+      "name": "petal-study.html/390 local links exist",
+      "pass": true
+    },
+    {
+      "name": "no page exceptions",
+      "pass": true
+    }
+  ],
+  "passed": 21,
+  "total": 21,
+  "errors": []
+}

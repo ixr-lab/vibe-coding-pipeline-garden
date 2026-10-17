@@ -30,6 +30,7 @@
 | [단위 검사](../../evidence/petals/unit.tap) | Node6/6 |
 | [재료 경계](../../evidence/petals/material-bounds.json) | 실제 Canvas720개. r11/23/105, 3종×5재료×4제어양끝에서 예외/잘못된 알파0. 알파 guard 전후 비교30개 해시 동일 |
 | [최대 밀도](../../evidence/petals/stress.json) | 32개·density12·15조합 오류0. cold201.8~1019.2ms. warm120 RAF 평균16.667ms/p9516.9ms |
+| [설명 페이지](../../evidence/petals/pages-checks.json) | 21/21. 5개 HTML의1440/390px 이미지 로드·로컬 연결·넘침·예외 검사 |
 
 최대 밀도에서 cold 재료 변경이 약1초까지 걸린다는 한계가 있다. warm 장면은 poppy/watercolor, 두께2.5/질감100/농도100/표현100이다. cold는 두 제어 change+draw/readback이고 warm은 콜백 간격이므로 서로 다른 측정값이다. 시각 판정의 충족/부분충족은 [비교 문서](comparison.md)에 있다.
 

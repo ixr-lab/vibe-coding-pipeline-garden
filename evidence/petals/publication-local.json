@@ -1,13 +1,13 @@
 {
   "schema_version": 1,
-  "recorded_at": "2026-10-17T03:33:00.676683+00:00",
+  "recorded_at": "2026-10-17T03:36:06.492893+00:00",
   "status": "pass",
   "scope": {
     "repository": ".",
     "refs": {
       "refs/heads/main": {
-        "object": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
-        "commit": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57"
+        "object": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+        "commit": "5967d30ebe8e630cc4c55e263092076986bd2cdd"
       },
       "refs/tags/v0": {
         "object": "95283a8a251f7aea096b9dc9be23658575899da0",
@@ -52,12 +52,14 @@
       "refs/tags/v10": {
         "object": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
         "commit": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57"
+      },
+      "refs/tags/v11": {
+        "object": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+        "commit": "5967d30ebe8e630cc4c55e263092076986bd2cdd"
       }
     },
-    "missing_optional_refs": [
-      "refs/tags/v11"
-    ],
-    "git_selection": "Explicit main and existing v0-v9 refs only; no other refs or reflogs enumerated.",
+    "missing_optional_refs": [],
+    "git_selection": "Explicit main and listed version tags only; no other refs or reflogs enumerated.",
     "replace_objects_disabled": true,
     "lazy_fetch_disabled": true,
     "shallow": false,
@@ -68,42 +70,42 @@
     ]
   },
   "head": {
-    "object": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "object": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
     "symbolic_ref": "refs/heads/main",
     "is_main_tip": true,
     "included_in_selected_history": true
   },
   "snapshot": {
     "stable_during_read": true,
-    "working_tree_sha256": "e5ffb91ebbedbf37dd53ee44928dfc640ee0f747e22c6f13e050bbd3dd9a8cc9",
-    "head_after": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "working_tree_sha256": "3bc6f3c8e408f93d5d4082c1a99ce6375d5bf5c02b0efa1b12af6d43b6d920f6",
+    "head_after": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
     "refs_unchanged": true
   },
   "counts": {
     "git_objects": {
-      "commit": 13,
-      "blob": 264,
-      "tree": 73
+      "commit": 14,
+      "blob": 341,
+      "tree": 81
     },
-    "historical_paths": 234,
+    "historical_paths": 338,
     "git_blob_formats": {
-      "text": 163,
-      "png": 101
+      "text": 207,
+      "png": 134
     },
     "working_tree": {
-      "candidate_files": 337,
-      "text_files": 137,
+      "candidate_files": 338,
+      "text_files": 138,
       "png_files": 200
     },
     "png_chunks_git_and_worktree": {
-      "IHDR": 301,
-      "IDAT": 14979,
-      "IEND": 301
+      "IHDR": 334,
+      "IDAT": 16124,
+      "IEND": 334
     },
     "git_identities": {
-      "allowed": 26
+      "allowed": 28
     },
-    "suppressed_self_pattern_literal_matches": 1,
+    "suppressed_self_pattern_literal_matches": 2,
     "findings": 0,
     "errors": 0
   },
