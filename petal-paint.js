@@ -74,32 +74,43 @@
   function curve(ctx, m, u, start, end, color, width, alpha, sway) {
     ctx.strokeStyle = color; ctx.lineWidth = width; ctx.globalAlpha = alpha;
     ctx.beginPath();
-    const steps = 9;
+    const steps = 10, points = [];
     for (let i = 0; i <= steps; i++) {
       const t = start + (end - start) * i / steps;
-      const p = point(m, u + (sway || 0) * Math.sin(Math.PI * i / steps), t);
-      if (!i) ctx.moveTo(p.x, p.y); else ctx.lineTo(p.x, p.y);
+      points.push(point(m, u + (sway || 0) * Math.sin(Math.PI * i / steps), t));
     }
+    ctx.moveTo(points[0].x, points[0].y);
+    for (let i = 1; i < points.length - 1; i++) {
+      const p = points[i], q = points[i + 1];
+      ctx.quadraticCurveTo(p.x, p.y, (p.x + q.x) / 2, (p.y + q.y) / 2);
+    }
+    const last = points[points.length - 1];
+    ctx.quadraticCurveTo(last.x, last.y, last.x, last.y);
     ctx.stroke();
   }
 
   function ribbon(ctx, m, u, start, end, width, color, alpha, rand, roughness, pressure) {
-    const contour = [], steps = 11;
+    const contour = [], steps = 14, phase = rand() * TAU;
     for (let i = 0; i <= steps; i++) {
       const t = i / steps, p = frame(m, u, start + (end - start) * t);
-      const taper = pressure ? .08 + Math.pow(Math.sin(Math.PI * t), .70) * Math.pow(1 - t, .12) : .58 + .42 * Math.sin(Math.PI * t);
-      const radius = width * taper * (.82 + rand() * roughness) / 2;
-      const drift = (rand() - .5) * width * roughness * .3;
+      const taper = pressure ? .025 + Math.pow(Math.sin(Math.PI * t), .76) * Math.pow(1 - t, .12) : .20 + .80 * Math.pow(Math.sin(Math.PI * t), .36);
+      const radius = width * taper * (1 + Math.sin(t * 11 + phase) * roughness * .13) / 2;
+      const drift = Math.sin(t * 8 + phase) * width * roughness * .07;
       contour.push({p, radius, drift});
     }
-    ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
+    const rim = [];
     for (let side = 1; side >= -1; side -= 2) {
       for (let j = 0; j < contour.length; j++) {
         const q = contour[side === 1 ? j : contour.length - 1 - j];
-        const x = q.p.x + q.p.nx * (q.drift + side * q.radius);
-        const y = q.p.y + q.p.ny * (q.drift + side * q.radius);
-        if (side === 1 && !j) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+        rim.push({x: q.p.x + q.p.nx * (q.drift + side * q.radius),
+          y: q.p.y + q.p.ny * (q.drift + side * q.radius)});
       }
+    }
+    ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
+    ctx.moveTo((rim[rim.length - 1].x + rim[0].x) / 2, (rim[rim.length - 1].y + rim[0].y) / 2);
+    for (let i = 0; i < rim.length; i++) {
+      const a = rim[i], b = rim[(i + 1) % rim.length];
+      ctx.quadraticCurveTo(a.x, a.y, (a.x + b.x) / 2, (a.y + b.y) / 2);
     }
     ctx.closePath(); ctx.fill();
   }
@@ -118,125 +129,106 @@
     for (let i = 0; i < count; i++) {
       const u = (i + .5) / count * 1.72 - .86;
       curve(ctx, m, u, .16 + rand() * .14, .86 + rand() * .11, c.dark,
-        m.hair * (.66 + rand() * .38), m.alpha * (.43 + rand() * .20), .035);
+        m.hair * (.66 + rand() * .38), m.alpha * (.43 + rand() * .20), .02 + m.texture * .045);
     }
     const hatches = Math.round((m.small ? (m.species === 'daisy' ? 3 : 8) : (m.species === 'daisy' ? 6 : 19)) * (.55 + m.texture * .45));
     for (let i = 0; i < hatches; i++) {
       const u = (rand() < .5 ? -1 : 1) * (.45 + rand() * .46);
       const t = .25 + rand() * .52;
       curve(ctx, m, u, t, Math.min(.98, t + .10 + rand() * .14), c.dark,
-        m.hair * .80, m.alpha * (.36 + rand() * .22), -u * .16);
+        m.hair * .80, m.alpha * (.28 + m.texture * .18 + rand() * .22), -u * (.10 + m.texture * .10));
     }
   }
 
   function ink(ctx, shape, m, c, rand) {
-    // Pressure forms opaque tapered sweeps; bright interstices prevent a flat dark petal.
-    const count = m.species === 'daisy' ? 2 : m.small ? 4 : 6;
+    // Long, smooth pressure lines use a third of v6's width and much less contrast.
+    const count = m.species === 'daisy' ? 2 : m.small ? 3 : 5;
+    const inkColor = mix(rgb(c.dark, '#90305e'), rgb(c.color, '#d7609d'), .56);
     for (let i = 0; i < count; i++) {
-      const u = (i + .5) / count * 1.65 - .825 + (rand() - .5) * .11;
-      ribbon(ctx, m, u, .07 + rand() * .13, .88 + rand() * .11,
-        Math.min(m.width * .56, m.width * (m.species === 'daisy' ? .48 : .36) * m.widthScale),
-        i % 3 === 1 ? c.color : c.dark, m.alpha * (.64 + rand() * .30), rand, .12 + m.texture * .13, true);
+      const u = (i + .5) / count * 1.58 - .79 + (rand() - .5) * .065;
+      ribbon(ctx, m, u, .06 + rand() * .12, .92 + rand() * .075,
+        Math.min(m.width * .24, m.width * (m.species === 'daisy' ? .16 : .12) * Math.sqrt(m.widthScale)),
+        i % 3 === 1 ? c.middle : inkColor, m.alpha * (.32 + m.texture * .10 + rand() * .10), rand, .05 + m.texture * .10, true);
     }
-    ribbon(ctx, m, -.22, .25, .95, m.width * .18, c.light, m.alpha * .48, rand, .09, true);
-    curve(ctx, m, -.92, .32, .89, c.dark, m.hair * 2.7, m.alpha * .54, .055);
-    curve(ctx, m, .92, .64, .94, c.middle, m.hair * 1.9, m.alpha * .37, -.04);
-    outline(ctx, shape, c.middle, m.hair * 1.3, m.alpha * .18);
+    curve(ctx, m, -.90, .24, .94, inkColor, m.hair * 1.5, m.alpha * .40, .025);
+    curve(ctx, m, .90, .56, .96, c.middle, m.hair * 1.1, m.alpha * .28, -.025);
+    outline(ctx, shape, c.middle, m.hair * 1.1, m.alpha * .22);
   }
 
   function pencil(ctx, shape, m, c, rand) {
-    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .43; ctx.fill(shape);
+    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .30; ctx.fill(shape);
     outline(ctx, shape, c.dark, m.hair * 1.5, m.alpha * .55,
       [m.length * .013, m.length * .009, m.length * .037, m.length * .012]);
-    const grains = m.small ? 22 : m.species === 'daisy' ? 42 : 67;
+    const grains = m.small ? 17 : m.species === 'daisy' ? 31 : 47;
     ctx.lineCap = 'butt';
-    // Independent positions and lengths avoid a repeating dash lattice on the paper.
+    // Unequal curved graphite runs follow the fibers instead of becoming round grain.
     for (let i = 0; i < grains; i++) {
-      const u = (rand() * 2 - 1) * .97, t = .11 + rand() * .83;
-      const p = frame(m, u, t);
-      const length = m.length * (.008 + rand() * (m.small ? .055 : .039) * (.65 + m.texture * .65));
-      const tooth = i % 7 === 0;
-      ctx.strokeStyle = tooth ? c.tooth : i % 3 === 0 ? c.middle : c.dark;
-      ctx.globalAlpha = m.alpha * (tooth ? .45 + m.texture * .35 : .40 + rand() * .48);
-      ctx.lineWidth = Math.min(m.width * .17, m.hair * (.70 + rand() * 1.35) * m.widthScale);
-      ctx.beginPath(); ctx.moveTo(p.x, p.y);
-      ctx.lineTo(p.x + p.tx * length + p.nx * (rand() - .5) * m.width * .065,
-        p.y + p.ty * length + p.ny * (rand() - .5) * m.width * .065);
-      ctx.stroke();
+      const u = (rand() * 2 - 1) * .94, start = .13 + rand() * .65;
+      const end = Math.min(.98, start + .09 + rand() * .24 * (.65 + m.texture * .65));
+      const tooth = i % 8 === 0;
+      curve(ctx, m, u, start, end, tooth ? c.tooth : i % 4 === 0 ? c.middle : c.dark,
+        Math.min(m.width * .14, m.hair * (.50 + rand() * .65) * Math.sqrt(m.widthScale)),
+        m.alpha * (tooth ? .55 + m.texture * .25 : .40 + rand() * .35), (rand() - .5) * .09);
     }
     curve(ctx, m, -.34, .23, .88, c.dark, m.hair * .7, m.alpha * .29, .08);
     curve(ctx, m, .38, .37, .95, c.light, m.hair, m.alpha * .40, -.06);
   }
 
   function dry(ctx, shape, m, c, rand) {
-    const bundles = m.small ? (m.species === 'daisy' ? 3 : 5) : (m.species === 'daisy' ? 5 : 10);
+    const bundles = m.small ? 3 : (m.species === 'daisy' ? 3 : 5), hairs = m.small ? 3 : 5;
     for (let i = 0; i < bundles; i++) {
-      const u = (i + .3 + rand() * .4) / bundles * 1.85 - .925;
-      const start = .12 + rand() * .30, end = .72 + rand() * .27;
-      ribbon(ctx, m, u, start, end, m.width * (.14 + rand() * .15) * Math.sqrt(m.widthScale),
-        i % 3 === 0 ? c.light : c.dark, m.alpha * (.50 + rand() * .41), rand, .86 + m.texture * .72, true);
+      const u = (i + .35 + rand() * .3) / bundles * 1.7 - .85;
+      const start = .12 + rand() * .16, end = .87 + rand() * .12;
+      const gap = .39 + rand() * .22, gapEnd = gap + .035 + rand() * m.texture * .12;
+      for (let j = 0; j < hairs; j++) {
+        const lane = u + (j - (hairs - 1) / 2) * (.035 + m.texture * .035);
+        const width = Math.min(m.width * .16, m.hair * (.65 + rand() * .55));
+        const color = j % 3 === 0 ? c.middle : c.dark;
+        const alpha = m.alpha * (.39 + rand() * .24);
+        const sway = (rand() - .5) * .035;
+        curve(ctx, m, lane, start + rand() * .035, gap, color, width, alpha, sway);
+        curve(ctx, m, lane, gapEnd, end - rand() * .035, color, width * .78, alpha * .92, sway);
+      }
     }
-    // Narrow paper exposures follow bristle travel. No erasing or canvas-wide speckle.
-    const gaps = m.small ? 8 : m.species === 'daisy' ? 12 : 18;
+    // Long hairline paper slits sit between related bristles; no torn paint polygons.
+    const gaps = m.small ? 5 : 9;
     for (let i = 0; i < gaps; i++) {
-      const u = rand() * 1.92 - .96, start = .16 + rand() * .59;
-      const end = Math.min(.99, start + .08 + rand() * .24);
+      const u = rand() * 1.8 - .9, start = .20 + rand() * .22;
+      const end = Math.min(.98, start + .32 + rand() * .25);
       curve(ctx, m, u, start, end, c.tooth,
-        Math.min(m.width * .12, m.hair * (1 + rand() * 1.9)),
-        m.alpha * (.31 + m.texture * .31 + rand() * .16), (rand() - .5) * .12);
+        Math.min(m.width * .10, m.hair * (.60 + rand() * .55)),
+        m.alpha * (.44 + m.texture * .24), (rand() - .5) * .04);
     }
-    const hairs = m.small ? 3 : 7;
-    for (let i = 0; i < hairs; i++) {
-      const start = .19 + rand() * .34;
-      curve(ctx, m, rand() * 1.8 - .9, start, Math.min(.99, start + .25 + rand() * .35),
-        i % 2 ? c.color : c.dark, m.hair * .66, m.alpha * .65, (rand() - .5) * .12);
-    }
-    outline(ctx, shape, c.dark, m.hair * 2.2, m.alpha * .52,
-      [m.length * .071, m.length * .042, m.length * .019, m.length * .063]);
+    outline(ctx, shape, c.middle, m.hair * 1.8, m.alpha * .44,
+      [m.length * .11, m.length * .07, m.length * .025, m.length * .09]);
   }
 
-  function localWash(ctx, m, c, u, t, length, width, alpha, rand) {
-    const p = frame(m, u, t), phase = rand() * TAU;
-    ctx.save();
-    try {
-      ctx.transform(p.nx * width, p.ny * width, p.tx * length, p.ty * length, p.x, p.y);
-      const g = ctx.createRadialGradient(-.14, -.12, .06, 0, 0, 1.12);
-      g.addColorStop(0, c); g.addColorStop(.48, c); g.addColorStop(1, c + '00');
-      ctx.fillStyle = g; ctx.globalAlpha = alpha; ctx.beginPath();
-      const rim = [];
-      for (let i = 0; i < 12; i++) {
-        const a = i / 12 * TAU;
-        const r = 1 + m.texture * (.08 * Math.sin(a * 3 + phase) + .05 * Math.sin(a * 5 - phase));
-        rim.push({x: Math.cos(a) * r, y: Math.sin(a) * r});
-      }
-      ctx.moveTo((rim[11].x + rim[0].x) / 2, (rim[11].y + rim[0].y) / 2);
-      for (let i = 0; i < 12; i++) {
-        const a = rim[i], b = rim[(i + 1) % 12];
-        ctx.quadraticCurveTo(a.x, a.y, (a.x + b.x) / 2, (a.y + b.y) / 2);
-      }
-      ctx.closePath(); ctx.fill();
-    } finally {
-      ctx.restore();
-    }
+  function wetBand(ctx, m, color, u, start, end, width, alpha, rand) {
+    const p = frame(m, u, (start + end) / 2), half = width * .5;
+    const g = ctx.createLinearGradient(p.x - p.nx * half, p.y - p.ny * half,
+      p.x + p.nx * half, p.y + p.ny * half);
+    g.addColorStop(0, color + '00'); g.addColorStop(.22, color);
+    g.addColorStop(.61, color); g.addColorStop(1, color + '00');
+    ribbon(ctx, m, u, start, end, width, g, alpha, rand, .12 + m.texture * .25, false);
   }
 
   function watercolor(ctx, shape, m, c, rand) {
-    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .50; ctx.fill(shape);
-    const count = m.small ? 3 : 5;
+    ctx.fillStyle = c.matte; ctx.globalAlpha = m.alpha * .22; ctx.fill(shape);
+    const count = m.small ? 3 : 4;
+    const wetColor = mix(rgb(c.dark, '#90305e'), rgb(c.middle, '#d7609d'), .52);
     for (let i = 0; i < count; i++) {
-      const t = .26 + (i + rand() * .7) / count * .57;
-      localWash(ctx, m, i % 3 === 0 ? c.light : c.middle,
-        (rand() - .5) * 1.12, t, m.length * (.13 + rand() * .11),
-        m.width * (.27 + rand() * .28), m.alpha * (.25 + rand() * .18), rand);
+      const u = (i + .28 + rand() * .42) / count * 1.5 - .75;
+      wetBand(ctx, m, i % 3 === 1 ? c.light : wetColor, u,
+        .08 + rand() * .13, .86 + rand() * .13,
+        m.width * (.44 + rand() * .24) * Math.sqrt(m.widthScale),
+        m.alpha * (.19 + m.texture * .10 + rand() * .07), rand);
     }
-    // Pigment settles along a few pieces of the rim, with soft unpainted intervals.
+    // Sparse pigment follows the rim; no radial clouds or bright circular centers.
     const side = rand() < .5 ? -1 : 1;
-    curve(ctx, m, side * .91, .42 + rand() * .11, .76 + rand() * .14,
-      c.dark, m.hair * 2, m.alpha * .31, side * .035);
-    curve(ctx, m, -side * .91, .69, .92, c.middle, m.hair * 1.3, m.alpha * .23, 0);
-    outline(ctx, shape, c.middle, m.hair * 1.5, m.alpha * .12);
-    localWash(ctx, m, c.tooth, .24, .66, m.length * .17,
-      m.width * .20, m.alpha * .26, rand);
+    curve(ctx, m, side * .91, .46 + rand() * .08, .80 + rand() * .10,
+      wetColor, m.hair * 1.6, m.alpha * .31, side * .025);
+    curve(ctx, m, -side * .91, .72, .96, c.middle, m.hair * 1.1, m.alpha * .22, 0);
+    outline(ctx, shape, c.middle, m.hair * 1.1, m.alpha * .08);
   }
 
   /** Paint a material over an existing petal underdrawing in flower-local units.

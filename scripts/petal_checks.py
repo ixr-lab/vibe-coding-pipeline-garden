@@ -30,6 +30,11 @@ with sync_playwright() as p:
         a=page.evaluate('''brush=>{const c=document.createElement('canvas');c.width=c.height=300;const x=c.getContext('2d');FlowerArt.draw(x,'poppy',150,150,105,'271828',-.1,{brush,widthScale:1,texture:.6,opacity:.85,strength:.65});return c.toDataURL();}''',brush)
         b=page.evaluate('''brush=>{const c=document.createElement('canvas');c.width=c.height=300;const x=c.getContext('2d');FlowerArt.draw(x,'poppy',150,150,105,'271828',-.1,{brush,widthScale:1,texture:.6,opacity:.85,strength:.65});return c.toDataURL();}''',brush)
         check(brush+' isolated deterministic draw',a==b)
+    isolated=page.evaluate('''()=>{
+      function draw(r,brush,patch){const c=document.createElement('canvas');c.width=c.height=r*3;const x=c.getContext('2d');FlowerArt.draw(x,'daisy',r*1.5,r*1.5,r,'271828',-.1,Object.assign({brush,widthScale:1,texture:.6,opacity:.85,strength:.65},patch));return c.toDataURL();}
+      const result=[];for(const r of [23,105])for(const brush of ['pen','ink','pencil','dry','watercolor']){const a=draw(r,brush,{});for(const [key,value] of [['widthScale',2.5],['texture',0],['opacity',.3],['strength',0]])result.push({name:brush+'/'+r+'/'+key+' isolated effect and return',pass:a!==draw(r,brush,{[key]:value})&&a===draw(r,brush,{})});}return result;
+    }''')
+    for item in isolated:check(item['name'],item['pass'])
     page.set_viewport_size({'width':1440,'height':1000})
     page.goto((RUNTIME/'index.html').as_uri()+'?seed=271828&density=7&wind=35&frame=360&flower=cosmos&brush=ink&width=1&texture=60&opacity=85&petals=65')
     page.screenshot(path=str(OUT/(label+'-desktop.png')),full_page=True);page.locator('#garden').screenshot(path=str(OUT/(label+'-garden.png')))
