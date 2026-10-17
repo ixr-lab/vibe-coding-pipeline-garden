@@ -6,7 +6,7 @@
   const kinds = Object.freeze(['cosmos', 'daisy', 'poppy']);
   const metadata = Object.freeze({
     cosmos: Object.freeze({name: 'Cosmos', scientific: 'Cosmos bipinnatus', rays: 8}),
-    daisy: Object.freeze({name: 'Oxeye daisy', scientific: 'Leucanthemum vulgare', rays: '22–28'}),
+    daisy: Object.freeze({name: 'Oxeye daisy', scientific: 'Leucanthemum vulgare', rays: '24-29'}),
     poppy: Object.freeze({name: 'Common poppy', scientific: 'Papaver rhoeas', petals: 4})
   });
 
@@ -76,32 +76,43 @@
     ]);
     ctx.beginPath();
     ctx.moveTo(-.035, -.115);
-    ctx.bezierCurveTo(-w * .43, -.30, -w * 1.03 + bend, -l * .72, -w * .80 + bend, -l * .90);
-    // The broad ray terminates in shallow, irregular teeth, not a round tip.
-    ctx.quadraticCurveTo(-w * .74 + bend, -l * .99, -w * .54 + bend, -l * .98);
-    ctx.lineTo(-w * .39 + bend, -l * .938);
-    ctx.quadraticCurveTo(-w * .27 + bend, -l * 1.026, -w * .10 + bend, -l * 1.012);
-    ctx.lineTo(w * .055 + bend, -l * .963);
-    ctx.quadraticCurveTo(w * .24 + bend, -l * 1.036, w * .39 + bend, -l * .989);
-    ctx.lineTo(w * .50 + bend, -l * .941);
-    ctx.quadraticCurveTo(w * .68 + bend, -l * 1.00, w * .78 + bend, -l * .90);
-    ctx.bezierCurveTo(w * .97 + bend, -l * .66, w * .39, -.29, .04, -.115);
+    ctx.bezierCurveTo(-w * .32, -.30, -w * .99 + bend, -l * .72, -w * .83 + bend, -l * .90);
+    // Short, unequal tooth facets replace v3's rounded decorative scallops.
+    const cap = [[-.71, .968], [-.55, .950], [-.40, .987], [-.22, .970],
+      [-.035, 1.008], [.135, .982], [.32, .995], [.48, .959], [.65, .974], [.79, .908]];
+    for (let i = 0; i < cap.length; i++) {
+      ctx.lineTo(w * cap[i][0] + bend, -l * (cap[i][1] + p.teeth[i]));
+    }
+    ctx.bezierCurveTo(w * .95 + bend, -l * .66, w * .32, -.29, .04, -.115);
     ctx.closePath();
     ctx.fill();
 
-    // A broad curved crease gives each ray a folded surface without an outline.
-    ctx.fillStyle = p.fold;
-    ctx.beginPath();
-    ctx.moveTo(.012, -.18);
-    ctx.bezierCurveTo(w * .12, -l * .44, w * .12 + bend, -l * .82, bend, -l * .965);
-    ctx.bezierCurveTo(w * .28 + bend, -l * .76, w * .29, -l * .40, .012, -.18);
-    ctx.fill();
+    // Narrow channels follow each ray instead of dividing it into large panels.
+    stroke(ctx, p.fold, p.folded ? .020 : .012, function () {
+      ctx.moveTo(.007, -.19);
+      ctx.bezierCurveTo(w * .10, -l * .43, w * .13 + bend, -l * .73, bend, -l * .95);
+    });
+    stroke(ctx, '#86285535', .008, function () {
+      ctx.moveTo(-w * .36, -l * .48);
+      ctx.bezierCurveTo(-w * .74 + bend, -l * .68, -w * .88 + bend, -l * .83, -w * .73 + bend, -l * .95);
+    });
+    if (p.folded) {
+      ctx.fillStyle = gradient(ctx, 0, -l * .79, 0, -l * .96,
+        [[0, '#92265f00'], [.52, '#8f2a626b'], [.76, '#ed8bbf8c'], [1, '#f7a0ce18']]);
+      ctx.beginPath();
+      ctx.moveTo(-w * .72 + bend, -l * .90);
+      ctx.quadraticCurveTo(bend, -l * .82, w * .72 + bend, -l * .92);
+      ctx.lineTo(w * .66 + bend, -l * .97);
+      ctx.quadraticCurveTo(bend, -l * .90, -w * .65 + bend, -l * .97);
+      ctx.closePath();
+      ctx.fill();
+    }
     if (detailed) {
-      for (let v = -1; v <= 1; v++) {
-        stroke(ctx, p.vein, .0044, function () {
-          ctx.moveTo(v * .018, -.21);
-          ctx.bezierCurveTo(v * w * .33, -l * .47, v * w * .43 + bend * .65, -l * .72,
-            v * w * .46 + bend, -l * .91);
+      for (let v = -3; v <= 3; v++) {
+        stroke(ctx, v % 2 ? p.vein : '#fff2fc35', .0036 + p.ridges[v + 3] * .003, function () {
+          ctx.moveTo(v * .010, -.21);
+          ctx.bezierCurveTo(v * w * .15, -l * .47, v * w * .21 + bend * .65, -l * .72,
+            v * w * .23 + bend, -l * (.88 + p.ridges[v + 3] * .06));
         });
       }
     }
@@ -133,18 +144,20 @@
 
   function cosmos(ctx, rand, detailed) {
     const palettes = [
-      ['#94224f', '#ca497e', '#ec78a7', '#f299b8', '#fff0f51e', '#8e315e30'],
-      ['#87214f', '#bb3977', '#df68a5', '#ed8bbc', '#fff1fb24', '#70265033'],
-      ['#aa3658', '#db6686', '#f29aaf', '#f6b2c0', '#fff5f325', '#a53c6530']
+      ['#8e1a61', '#c63d8e', '#e76ab2', '#ed91c5', '#fff0fa46', '#82265f40'],
+      ['#801c5e', '#b93189', '#d85cab', '#e583be', '#fff1fb45', '#70265040'],
+      ['#9c2c69', '#d25698', '#ec88ba', '#f0a0c8', '#fff5fb48', '#97326e40']
     ];
     const colors = palettes[Math.floor(rand() * palettes.length)];
     const turn = rand() * TAU, rays = [];
     for (let i = 0; i < 8; i++) {
-      const angle = turn + i * TAU / 8 + (rand() - .5) * .105;
+      const angle = turn + i * TAU / 8 + (rand() - .5) * .16;
       const folded = Math.cos(angle) < -.63;
       rays.push({angle,
-        length: (.88 + rand() * .16) * (folded ? .86 : 1),
-        width: (.36 + rand() * .082) * (folded ? .94 : 1), bend: (rand() - .5) * .07,
+        length: (.86 + rand() * .18) * (folded ? .73 + rand() * .10 : 1),
+        width: (.33 + rand() * .073) * (folded ? .84 : 1), bend: (rand() - .5) * .11,
+        folded, teeth: Array.from({length: 10}, () => (rand() - .5) * .018),
+        ridges: Array.from({length: 7}, () => rand()),
         base: colors[0], mid: colors[1], light: colors[2], edge: colors[3], fold: colors[4], vein: colors[5]});
     }
     // Alternating depth makes the long rays overlap like a single flower head.
@@ -157,20 +170,32 @@
     ctx.save();
     ctx.rotate(p.angle);
     ctx.fillStyle = gradient(ctx, -w, -.25, w * .7, -l, [
-      [0, '#b6ab7b'], [.18, '#d9d7bf'], [.48, p.shadow ? '#e0e1d5' : '#f1f2e7'],
-      [.83, p.shadow ? '#efefe4' : '#fffef5'], [1, '#f8f7eb']
+      [0, '#9f9d7b'], [.18, p.shadow ? '#aeb7b6' : '#d1d7d1'],
+      [.48, p.shadow ? '#cdd3d4' : '#eeefed'],
+      [.83, p.shadow ? '#e0e4e3' : '#fffef7'], [1, '#f7f7f1']
     ]);
     ctx.beginPath();
     ctx.moveTo(-.018, -.16);
-    ctx.bezierCurveTo(-w * .82, -.39, -w + bend, -l * .72, -w * .73 + bend, -l * .94);
-    ctx.quadraticCurveTo(-w * .36 + bend, -l * 1.022, bend, -l * 1.002);
-    ctx.quadraticCurveTo(w * .28 + bend, -l * 1.033, w * .70 + bend, -l * .96);
-    ctx.bezierCurveTo(w * .92 + bend, -l * .75, w * .53, -.42, .018, -.16);
+    ctx.bezierCurveTo(-w * .72, -.39, -w + bend, -l * .72, -w * .57 + bend, -l * .94);
+    ctx.quadraticCurveTo(-w * .27 + bend, -l * 1.015, bend - w * .06, -l);
+    ctx.lineTo(bend + w * .06, -l * .978);
+    ctx.quadraticCurveTo(w * .23 + bend, -l * 1.014, w * .49 + bend, -l * .96);
+    ctx.bezierCurveTo(w * .94 + bend, -l * .76, w * .49, -.42, .018, -.16);
     ctx.closePath();
     ctx.fill();
-    // Only a shallow central channel; dark all-round outlines make rays look rigid.
+    // The shaded edge sits beneath the adjacent ray, not around its whole outline.
+    stroke(ctx, p.shadow ? '#82929a5e' : '#a2adb34b', .009, function () {
+      ctx.moveTo(-w * .26, -.32);
+      ctx.bezierCurveTo(-w * .75, -l * .54, -w * .93 + bend, -l * .77, -w * .46 + bend, -l * .95);
+    });
+    if (p.curl) {
+      stroke(ctx, '#a7b0b36b', .015, function () {
+        ctx.moveTo(-w * .49 + bend, -l * .91);
+        ctx.quadraticCurveTo(bend, -l * .958, w * .35 + bend, -l * .943);
+      });
+    }
     if (detailed) {
-      stroke(ctx, '#aab39d38', .006, function () {
+      stroke(ctx, '#8f9ca34f', .006, function () {
         ctx.moveTo(0, -.30);
         ctx.bezierCurveTo(-w * .16, -.53, bend * .75, -l * .72, bend, -l * .93);
       });
@@ -183,11 +208,13 @@
   }
 
   function daisy(ctx, rand, detailed) {
-    const count = 22 + Math.floor(rand() * 7), turn = rand() * TAU, rays = [];
+    const count = 24 + Math.floor(rand() * 6), turn = rand() * TAU, rays = [];
     for (let i = 0; i < count; i++) {
-      rays.push({angle: turn + i * TAU / count + (rand() - .5) * .037,
-        length: .84 + rand() * .19, width: .068 + rand() * .024,
-        bend: (rand() - .5) * .055, shadow: i % 3 === 0});
+      const angle = turn + i * TAU / count + (rand() - .5) * .062;
+      const curl = Math.cos(angle) < -.4 && rand() > .3;
+      rays.push({angle, length: (.83 + rand() * .22) * (curl ? .88 : 1),
+        width: .084 + rand() * .029, bend: (rand() - .5) * .085,
+        shadow: i % 2 === 0, curl});
     }
     for (let parity = 0; parity < 2; parity++) {
       for (let i = parity; i < count; i += 2) daisyRay(ctx, rays[i], detailed);
@@ -196,94 +223,111 @@
   }
 
   function poppyPetal(ctx, p, detailed) {
-    const w = p.width, l = p.length;
+    const w = p.width, l = p.length, lean = p.lean;
     ctx.save();
     ctx.rotate(p.angle);
-    ctx.fillStyle = gradient(ctx, -w * .70, -.06, w * .42, -l, [
-      [0, '#6c1726'], [.17, p.dark], [.43, p.red], [.79, p.light], [1, p.edge]
+    ctx.fillStyle = gradient(ctx, -w * .14, -.03, w * .25, -l, [
+      [0, '#7e122c'], [.16, p.dark], [.42, p.red], [.83, p.light], [1, p.edge]
     ]);
     ctx.beginPath();
     ctx.moveTo(-.055, .035);
-    ctx.bezierCurveTo(-w * .60, -.10, -w * 1.11, -l * .37, -w * .96, -l * .64);
-    ctx.bezierCurveTo(-w * 1.02, -l * .79, -w * .79, -l * .89, -w * .61, -l * .86);
-    ctx.bezierCurveTo(-w * .40, -l * 1.02, -w * .19, -l * .96, -.03, -l * .99);
-    ctx.bezierCurveTo(w * .13, -l * .94, w * .30, -l * 1.04, w * .47, -l * .92);
-    ctx.bezierCurveTo(w * .65, -l * .96, w * .94, -l * .78, w * .91, -l * .62);
-    ctx.bezierCurveTo(w * 1.04, -l * .38, w * .57, -.10, .055, .035);
+    ctx.bezierCurveTo(-w * .53, -.10, -w * 1.10, -l * .35, -w * .97 + lean, -l * .62);
+    ctx.bezierCurveTo(-w * 1.04 + lean, -l * .75, -w * .91 + lean, -l * .88, -w * .70 + lean, -l * .90);
+    ctx.bezierCurveTo(-w * .63 + lean, -l * (1.01 + p.edgeWave), -w * .31 + lean, -l * .91, -w * .20 + lean, -l * .99);
+    ctx.bezierCurveTo(w * .02 + lean, -l * 1.035, w * .11 + lean, -l * .97, w * .28 + lean, -l * 1.01);
+    ctx.bezierCurveTo(w * .49 + lean, -l * (1.01 - p.edgeWave), w * .65 + lean, -l * .88, w * .76 + lean, -l * .87);
+    ctx.bezierCurveTo(w * 1.04 + lean, -l * .77, w * .96 + lean, -l * .45, w * .80, -l * .31);
+    ctx.bezierCurveTo(w * .67, -l * .14, w * .31, -.04, .055, .035);
     ctx.closePath();
     ctx.fill();
-    // Thin, translucent-looking folds run outwards from the petal base.
-    ctx.fillStyle = '#ffbb7923';
-    ctx.beginPath();
-    ctx.moveTo(-.01, -.07);
-    ctx.bezierCurveTo(-w * .27, -l * .37, -w * .47, -l * .68, -w * .48, -l * .88);
-    ctx.bezierCurveTo(-w * .24, -l * .72, -w * .13, -l * .44, -.01, -.07);
-    ctx.fill();
-    ctx.fillStyle = '#71192724';
-    ctx.beginPath();
-    ctx.moveTo(.02, -.05);
-    ctx.bezierCurveTo(w * .28, -l * .41, w * .61, -l * .64, w * .46, -l * .91);
-    ctx.bezierCurveTo(w * .37, -l * .63, w * .15, -l * .34, .02, -.05);
-    ctx.fill();
-    if (detailed) {
-      for (let i = -3; i <= 3; i++) {
-        const reach = .81 + p.veins[i + 3] * .11;
-        const end = i * w * .235;
-        stroke(ctx, i % 2 ? '#73192b29' : '#ffb08530', .004 + p.veins[i + 3] * .003, function () {
-          ctx.moveTo(i * .014, -.17);
-          ctx.bezierCurveTo(end * .45, -l * .39, end * .94, -l * .65, end, -l * reach);
+    ctx.clip();
+
+    // Short irregular creases replace the thick, continuous v3 highlight panels.
+    const creaseCount = detailed ? 24 : 8;
+    for (let i = 0; i < creaseCount; i++) {
+      const v = p.veins[i], u = (i + .5) / creaseCount * 2 - 1;
+      const endX = u * w * .91 + lean;
+      const endY = -l * (.73 + v * .29 - Math.abs(u) * .15);
+      const startY = -l * (.19 + p.veins[(i + 7) % 24] * .39);
+      const startX = endX * (.23 + p.veins[(i + 11) % 24] * .25);
+      const kink = (p.veins[(i + 3) % 24] - .5) * .055;
+      stroke(ctx, i % 3 === 0 ? '#8f12302e' : '#ffafbc26', .003 + v * .005, function () {
+        ctx.moveTo(startX, startY);
+        ctx.bezierCurveTo(startX + (endX - startX) * .24 + kink, startY * .65 + endY * .35,
+          endX * .85 - kink, endY * .77, endX, endY);
+      });
+      if (detailed && i % 3 === 0) {
+        stroke(ctx, '#fca1b21e', .004, function () {
+          ctx.moveTo(endX * .66 + .008, endY * .67);
+          ctx.quadraticCurveTo(endX * .90 + .012, endY * .87, endX + .006, endY);
         });
       }
-      stroke(ctx, '#ffb08a3b', .006, function () {
-        ctx.moveTo(-w * .82, -l * .73);
-        ctx.bezierCurveTo(-w * .51, -l * .89, -w * .40, -l * .91, -w * .22, -l * .91);
+    }
+    // A local overlap shadow curls along one side; the other edge stays light.
+    const side = gradient(ctx, -w, -.4, -w * .63, -.4,
+      [[0, '#7c123557'], [.58, '#b51e3b28'], [1, '#b51e3b00']]);
+    ellipse(ctx, -w * .87 + lean, -l * .60, w * .31, l * .36, side);
+    if (detailed) {
+      stroke(ctx, '#ffa6b23b', .005, function () {
+        ctx.moveTo(-w * .66 + lean, -l * .91);
+        ctx.bezierCurveTo(-w * .48 + lean, -l * 1.00, -w * .30 + lean, -l * .93,
+          -w * .20 + lean, -l * .985);
       });
     }
     ctx.restore();
   }
 
   function poppy(ctx, rand, detailed) {
-    const turn = rand() * TAU, petals = [];
+    const turn = (rand() - .5) * .42, petals = [];
     const warm = rand() > .45;
+    // Two taller back petals and two shorter front petals make an uneven cup.
+    const angles = [-.63, .67, 2.16, 4.08];
     for (let i = 0; i < 4; i++) {
-      petals.push({angle: turn + i * Math.PI / 2 + (rand() - .5) * .15,
-        width: .63 + rand() * .09, length: .87 + rand() * .15,
-        dark: warm ? '#ae252d' : '#a62135', red: warm ? '#e24437' : '#d93842',
-        light: warm ? '#f76a4d' : '#ef5e5a', edge: warm ? '#f47a5c' : '#ed756d',
-        veins: Array.from({length: 7}, () => rand())});
+      petals.push({angle: turn + angles[i] + (rand() - .5) * .15,
+        width: (i < 2 ? .63 : .73) + rand() * .12,
+        length: (i < 2 ? .91 : .72) + rand() * .16,
+        lean: (rand() - .5) * .12, edgeWave: (rand() - .5) * .065,
+        dark: warm ? '#b21330' : '#a91538', red: warm ? '#e51f3a' : '#dc2448',
+        light: warm ? '#f43a4f' : '#ed3b5b', edge: warm ? '#ef4255' : '#e84965',
+        blotch: .25 + rand() * .095, blotchWidth: .12 + rand() * .055,
+        veins: Array.from({length: 24}, () => rand())});
     }
-    for (const i of [0, 2, 1, 3]) poppyPetal(ctx, petals[i], detailed);
-    // Four basal blotches remain visible between the capsule and the red folds.
+    for (const i of [0, 1, 3, 2]) poppyPetal(ctx, petals[i], detailed);
+    // Unequal basal marks merge into the loose stamen ring, rather than a black flower.
     for (const p of petals) {
+      const b = p.blotch, w = p.blotchWidth;
       ctx.save();
       ctx.rotate(p.angle);
-      ctx.fillStyle = gradient(ctx, 0, -.08, 0, -.43, [
-        [0, '#221f26'], [.52, '#34212d'], [.86, '#48212ee8'], [1, '#661f3030']
+      ctx.fillStyle = gradient(ctx, 0, -.08, 0, -b, [
+        [0, '#271f2d'], [.66, '#342030'], [1, '#5d1935c7']
       ]);
       ctx.beginPath();
       ctx.moveTo(-.07, .01);
-      ctx.bezierCurveTo(-.14, -.11, -.22, -.22, -.18, -.34);
-      ctx.quadraticCurveTo(-.10, -.40, -.04, -.345);
-      ctx.quadraticCurveTo(.06, -.42, .14, -.32);
-      ctx.bezierCurveTo(.19, -.21, .13, -.10, .07, .01);
+      ctx.bezierCurveTo(-w * .84, -.10, -w * 1.12, -b * .70, -w, -b * .90);
+      ctx.lineTo(-w * .65, -b * .86);
+      ctx.lineTo(-w * .28, -b);
+      ctx.lineTo(w * .16, -b * .92);
+      ctx.lineTo(w * .48, -b * .97);
+      ctx.lineTo(w * .89, -b * .78);
+      ctx.bezierCurveTo(w, -b * .52, w * .68, -.10, .07, .01);
       ctx.closePath();
       ctx.fill();
       ctx.restore();
     }
-    ellipse(ctx, 0, .012, .238, .205, '#291e28');
-    const count = detailed ? 48 : 27;
+    ellipse(ctx, 0, .012, .157, .138, '#3a2532');
+    const count = detailed ? 58 : 29;
     for (let i = 0; i < count; i++) {
       const a = i * TAU / count + (rand() - .5) * .12;
-      const d = .19 + rand() * .091;
+      const d = .18 + rand() * .13;
       const x = Math.cos(a) * d, y = Math.sin(a) * d * .87;
-      stroke(ctx, '#53404a', .008, function () {
+      stroke(ctx, i % 3 ? '#4c2f3b' : '#79505b', .006, function () {
         ctx.moveTo(Math.cos(a) * .09, Math.sin(a) * .08);
-        ctx.quadraticCurveTo(x * .79, y * .7 - .012, x, y);
+        ctx.quadraticCurveTo(x * .79, y * .7 - .02, x, y);
       });
       ctx.save();
       ctx.translate(x, y);
       ctx.rotate(a);
-      ellipse(ctx, 0, 0, detailed ? .018 : .023, .011, i % 4 === 0 ? '#76616c' : '#221e27');
+      ellipse(ctx, 0, 0, detailed ? .016 : .020, .009, i % 4 === 0 ? '#715660' : '#2d2430');
       ctx.restore();
     }
     const capsule = ctx.createRadialGradient(-.035, -.041, .006, 0, -.008, .114);

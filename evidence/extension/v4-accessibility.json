@@ -1,0 +1,74 @@
+{
+  "recorded_at": "2026-10-17T02:24:42.826188+00:00",
+  "label": "v4",
+  "keyboard_before": "5 / 32 씨앗",
+  "keyboard_after": "6 / 32 씨앗",
+  "keyboard_pass": true,
+  "pause_raf_requests": 0,
+  "pause_pixels_equal": true,
+  "reduced_raf_requests": 0,
+  "reduced_status": "고요한 정원",
+  "targets": [
+    {
+      "id": "flower",
+      "height": 44,
+      "width": 167
+    },
+    {
+      "id": "brush",
+      "height": 44,
+      "width": 167
+    },
+    {
+      "id": "stroke-width",
+      "height": 44,
+      "width": 167
+    },
+    {
+      "id": "texture",
+      "height": 44,
+      "width": 167
+    },
+    {
+      "id": "opacity",
+      "height": 44,
+      "width": 350
+    },
+    {
+      "id": "regenerate",
+      "height": 44,
+      "width": 350
+    },
+    {
+      "id": "wind",
+      "height": 44,
+      "width": 169
+    },
+    {
+      "id": "density",
+      "height": 44,
+      "width": 169
+    },
+    {
+      "id": "pause",
+      "height": 44,
+      "width": 171
+    },
+    {
+      "id": "reset",
+      "height": 44,
+      "width": 171
+    },
+    {
+      "id": "save",
+      "height": 44,
+      "width": 350
+    },
+    {
+      "id": "plant-center",
+      "height": 44,
+      "width": 350
+    }
+  ],
+  "targets_44px": true
+}

@@ -3,6 +3,19 @@
   'use strict';
   const cache=new Map();let pixels=0;
   function clear(){cache.clear();pixels=0;}
+  function leaf(c,kind,x,y,a,size,hue){
+    c.save();c.translate(x,y);c.rotate(a);c.fillStyle=['#537548dd','#819259dd','#8b914fdd'][hue];c.strokeStyle='#58734bbf';
+    if(kind==='cosmos'){
+      c.lineWidth=.65;c.beginPath();c.moveTo(-1,0);c.lineTo(size*1.8,0);
+      for(let k=1;k<=5;k++){const t=k/6,xx=size*t*1.6,yy=size*.4*(1-t*.5);c.moveTo(xx-size*.2,0);c.lineTo(xx+size*.3,-yy);c.moveTo(xx-size*.2,0);c.lineTo(xx+size*.3,yy);}c.stroke();
+    }else if(kind==='poppy'){
+      c.beginPath();c.moveTo(-1,0);
+      for(let k=0;k<4;k++){const x=size*(k+1)*.38;c.lineTo(x-size*.24,-size*.18);c.lineTo(x,-size*(.47-k*.06));c.lineTo(x+size*.09,-size*.12);}
+      c.lineTo(size*1.7,0);
+      for(let k=3;k>=0;k--){const x=size*(k+1)*.38;c.lineTo(x+size*.09,size*.12);c.lineTo(x,size*(.47-k*.06));c.lineTo(x-size*.24,size*.18);}c.closePath();c.fill();
+    }else{c.beginPath();c.moveTo(-1,0);c.bezierCurveTo(size*.5,-size*.38,size*1.5,-size*.6,size*1.6,0);c.bezierCurveTo(size*1.5,size*.6,size*.5,size*.38,-1,0);c.fill();}
+    c.restore();
+  }
   function sprite(p,s,scale){
     const age=s.reduced?6:Math.min(6,Math.max(0,Math.floor((s.time-p.born)*8)/8));
     const key=[s.seed,p.id,s.density,s.flower,s.brush,s.width,s.texture,s.opacity,scale.toFixed(4),age].join('|');
@@ -22,8 +35,7 @@
         if(bloom)FlowerArt.draw(c,s.flower,x2,y2,Math.max(11,Math.min(23,scale*.022))*bloom,s.seed+'|'+p.id+'|'+i,Math.sin(i)*.13);
       }else if(b.leaf&&g>.65){
         const a=Math.atan2(y2-y1,x2-x1),size=(b.width+2.5)*Math.min(3.6,scale/300)*GardenEngine.clamp((g-.65)/.35,0,1);
-        c.save();c.translate(x2,y2);c.rotate(a);c.fillStyle=['#537548dd','#819259dd','#b09b54dd'][p.hue];
-        c.beginPath();c.moveTo(-1,0);c.bezierCurveTo(size*.25,-size*.6,size*.9,-size*.4,size*1.4,0);c.bezierCurveTo(size*.9,size*.4,size*.25,size*.6,-1,0);c.fill();c.restore();
+        leaf(c,s.flower,x2,y2,a,size,p.hue);
       }
     });
     const result={canvas,ox,oy,area:canvas.width*canvas.height};
