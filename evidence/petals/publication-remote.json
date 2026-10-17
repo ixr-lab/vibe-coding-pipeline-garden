@@ -1,0 +1,242 @@
+{
+  "at": "2026-10-17T03:38:35.806529+00:00",
+  "repository_url": "https://github.com/ixr-lab/vibe-coding-pipeline-garden",
+  "visibility": "public",
+  "private": false,
+  "commit": "cd38356430bcffd8ae80212641b31bf7ad594a20",
+  "remote_refs": {
+    "refs/heads/main": "cd38356430bcffd8ae80212641b31bf7ad594a20",
+    "refs/tags/v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "refs/tags/v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "refs/tags/v10": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "refs/tags/v11": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+    "refs/tags/v2": "90a835bb1499723045e55aac464965d29e19aa7a",
+    "refs/tags/v3": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+    "refs/tags/v4": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+    "refs/tags/v5": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+    "refs/tags/v6": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+    "refs/tags/v7": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+    "refs/tags/v8": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+    "refs/tags/v9": "21529f0310313906be5d65b637f954fe6ac1b7d3"
+  },
+  "release_count": 0,
+  "tags": {
+    "v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "v2": "90a835bb1499723045e55aac464965d29e19aa7a",
+    "v3": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+    "v4": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+    "v5": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+    "v6": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+    "v7": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+    "v8": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+    "v9": "21529f0310313906be5d65b637f954fe6ac1b7d3",
+    "v10": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "v11": "5967d30ebe8e630cc4c55e263092076986bd2cdd"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "blob_sha": "5e6526d1f9829584edad3bfb65da23c9001c2266",
+      "bytes": 9923,
+      "read_back_equal": true
+    },
+    {
+      "path": "index.html",
+      "blob_sha": "195ae54a0737aeb3f8578a7372fea3558cc15255",
+      "bytes": 5847,
+      "read_back_equal": true
+    },
+    {
+      "path": "garden.js",
+      "blob_sha": "5e78533b9ddddf94020b8d969615fc82f55e6611",
+      "bytes": 8955,
+      "read_back_equal": true
+    },
+    {
+      "path": "engine.js",
+      "blob_sha": "4f0fae83857edc30d2797fb8c58c6c2ce629f133",
+      "bytes": 1787,
+      "read_back_equal": true
+    },
+    {
+      "path": "flower-art.js",
+      "blob_sha": "3d0ec4fd62804b0201091fc0cf3de51f52784c82",
+      "bytes": 19314,
+      "read_back_equal": true
+    },
+    {
+      "path": "brush-art.js",
+      "blob_sha": "aa1380c31936ec03b8a58bc53806a46680f2bbed",
+      "bytes": 13747,
+      "read_back_equal": true
+    },
+    {
+      "path": "petal-paint.js",
+      "blob_sha": "de1309786c6852cce556595607f88a321f805b06",
+      "bytes": 19233,
+      "read_back_equal": true
+    },
+    {
+      "path": "plant-renderer.js",
+      "blob_sha": "7341bb38a6cd345cdc7f5ba53589a185c75f49a7",
+      "bytes": 3948,
+      "read_back_equal": true
+    },
+    {
+      "path": "petal-study.html",
+      "blob_sha": "d40d0466eb608b5c6c54f723bccbb895a78c5796",
+      "bytes": 1192,
+      "read_back_equal": true
+    },
+    {
+      "path": "petal-study.js",
+      "blob_sha": "5b55aa65f12b2bc50f7013120c104db7f5ffccae",
+      "bytes": 1148,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference.html",
+      "blob_sha": "96e629cfacee7dedec568497fef421bf28a428e2",
+      "bytes": 4820,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-page.js",
+      "blob_sha": "1a69466079eeeefadf006001fef1d9089c1cb31f",
+      "bytes": 10073,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-data.js",
+      "blob_sha": "06c3c8bb64c96deed745d7e4da9ec61851a3963e",
+      "bytes": 76968,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-source/petals.json",
+      "blob_sha": "1767e224586a8b99a907f2e9f19cf09377a8a54d",
+      "bytes": 19450,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/build_references.py",
+      "blob_sha": "bcaeeb9494a24fc802cb6bef5603122253b7c49e",
+      "bytes": 11443,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/petal_checks.py",
+      "blob_sha": "7b7acb9fb905d55f60041f933a91ab5429548211",
+      "bytes": 4868,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/petals/log.md",
+      "blob_sha": "5181a6e169d26dca35e1fafdd1e411bd1a98509c",
+      "bytes": 9146,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/petals/comparison.md",
+      "blob_sha": "6fcf4f406d82a55716113e4e8f80f4159d2fed3e",
+      "bytes": 5047,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/petals/tests.md",
+      "blob_sha": "d24cb5ec49298b3b2086438505f49c0f6ee03768",
+      "bytes": 4700,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/petals/reproduce.md",
+      "blob_sha": "31f49d0c395bc2915943831a62d627053bd125c4",
+      "bytes": 3904,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/petals/publication-audit.md",
+      "blob_sha": "e0daec712565d30db7fd1581a5cb9121c4c80357",
+      "bytes": 5468,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/v11-checks.json",
+      "blob_sha": "b894dd10c534eecb2cae52a76da94f09d5119bcd",
+      "bytes": 8244,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/final-checks.json",
+      "blob_sha": "f266e450db3e045a8b44801e9e29752a50c3a764",
+      "bytes": 2668,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/reference-checks.json",
+      "blob_sha": "d0932d57fda6482f77e46985dc5ac6ab0de59409",
+      "bytes": 1137,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/stress.json",
+      "blob_sha": "867de8a372460544ac3b98e27b75c24f50c576ef",
+      "bytes": 2106,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/v11-large.png",
+      "blob_sha": "0244317825b2851f046311532320d183740c3945",
+      "bytes": 515028,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/v11-basic.png",
+      "blob_sha": "a1706e6e0041e87b25ebb59093599e2c24b5dcf7",
+      "bytes": 51342,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/v11-garden.png",
+      "blob_sha": "e0ee41d5c6eb438778d6de074879637f4f5b31a1",
+      "bytes": 231046,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/petals/before-after.png",
+      "blob_sha": "bb9965d8f44fc0c985ef3c399c22570378da2dfa",
+      "bytes": 663901,
+      "read_back_equal": true
+    }
+  ],
+  "anonymous_fetches": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/cd38356430bcffd8ae80212641b31bf7ad594a20/README.md",
+      "http_status": 200,
+      "bytes": 9923,
+      "sha256": "589d455970c6f679c54681425d8da389c414e0a2747d813a1d0a90d294bcbce9",
+      "matches_commit": true,
+      "authorization_header": false
+    },
+    {
+      "path": "petal-paint.js",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/cd38356430bcffd8ae80212641b31bf7ad594a20/petal-paint.js",
+      "http_status": 200,
+      "bytes": 19233,
+      "sha256": "e1185ebf4c9b39afb0d0960b31a6632dba78c58e9999cb27ebdc18d2f29703e4",
+      "matches_commit": true,
+      "authorization_header": false
+    },
+    {
+      "path": "evidence/petals/v11-large.png",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/cd38356430bcffd8ae80212641b31bf7ad594a20/evidence/petals/v11-large.png",
+      "http_status": 200,
+      "bytes": 515028,
+      "sha256": "ced32874b85a09d8d12d2bb048448ea4bc5b97aeb6a635ac2b50db855252b7bb",
+      "matches_commit": true,
+      "authorization_header": false
+    }
+  ]
+}

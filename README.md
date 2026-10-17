@@ -10,7 +10,7 @@
 
 v5에서는 꽃머리가 브러시를 바꿔도 같았습니다. v6 첫 적용 뒤 v7~v10에서 금속 주름·박편·반복선·큰 색필름을 줄였고, v11은 좁은 꽃잎의 폭 상한 때문에 사라지던 드라이 접촉과 종이 빈틈을 조정했습니다. [확대 표본](evidence/petals/v11-large.png), [기본 크기](evidence/petals/v11-basic.png), [정원 안 원배율 표본](evidence/petals/v11-in-garden.png)을 함께 보세요. 변경별 의도·관찰·채택 판단은 [비교 기록](docs/petals/comparison.md)과 [작업 로그](docs/petals/log.md)에 있습니다.
 
-AI 제작자와 독립 리뷰어의 v11 판정은 P1/P2/P4/P5/P6 충족, 재료별 세부 충실도 P3 부분충족입니다. 펜·먹·연필·드라이는 채택했으며 수채는 디지털 그라데이션 인상이 남아 부분 채택입니다. 데이지의 차이는 다른 종보다 약하고, 약 11px의 작은 꽃에서는 미세한 결이 줄어듭니다. 실제 화구의 물리나 사진을 완벽히 재현하지 않습니다. **현재 공개 전 검증 중**이며, 시각 검토의 조건부 공개 추천과 실제 공개·업로드 완료는 별개입니다.
+AI 제작자와 독립 리뷰어의 v11 판정은 P1/P2/P4/P5/P6 충족, 재료별 세부 충실도 P3 부분충족입니다. 펜·먹·연필·드라이는 채택했으며 수채는 디지털 그라데이션 인상이 남아 부분 채택입니다. 데이지의 차이는 다른 종보다 약하고, 약 11px의 작은 꽃에서는 미세한 결이 줄어듭니다. 실제 화구의 물리나 사진을 완벽히 재현하지 않습니다. **v11은 public 업로드와 비인증 조회 검증을 완료**했습니다. 이후 들어온 수묵·담채와 색 선택, 전체 식물 비율의 새 요청은 [새 기준](docs/ink/plan.md)으로 별도 진행합니다. 공개 상태와 사용자의 최종 미적 승인은 별개입니다.
 
 [꽃잎 시험과 한계](docs/petals/tests.md) · [재현 지침](docs/petals/reproduce.md) · [후속 8단계](docs/petals/eight-stages.md)
 
@@ -44,7 +44,7 @@ python -m http.server 8000
 
 ## 코드 내려받기
 
-[GitHub 저장소](https://github.com/ixr-lab/vibe-coding-pipeline-garden)의 이전 v0~v5 private 업로드 검증 기록을 보존합니다. 2026-10-17 UTC에 private 상태, 원격 v0/v1/v2 태그, v2 커밋과 주요 파일8개의 바이트 일치를 다시 읽어 확인했습니다. [원격 검증 기록](evidence/remote-initial.json)과 [전달·증거 색인](docs/delivery.md)을 참고하세요. 현재 v11의 원격 push·정확한 바이트 대조와 공개 전 검증은 진행 중이며, 이 문서는 v11 업로드나 공개 완료를 선언하지 않습니다.
+[GitHub 저장소](https://github.com/ixr-lab/vibe-coding-pipeline-garden)는 2026-10-17 UTC v11 검증 후 public으로 전환했습니다. 원격 커밋 `cd38356430bcffd8ae80212641b31bf7ad594a20`, 주요 파일 29개 바이트 일치, v0~v11 태그 12개 일치, 비인증 README·코드·PNG 조회를 [원격 기록](evidence/petals/publication-remote.json)으로 확인했습니다. 이전 private 업로드의 [최초 기록](evidence/remote-initial.json)과 [전달·증거 색인](docs/delivery.md)도 보존합니다. 공개 호스팅/Pages는 만들지 않았습니다.
 
 저장소 접근 권한과 Git이 있다면 터미널에서 다음을 실행하세요.
 
@@ -53,7 +53,7 @@ git clone https://github.com/ixr-lab/vibe-coding-pipeline-garden.git
 cd vibe-coding-pipeline-garden
 ```
 
-그다음 `index.html`을 여세요. Git이 없다면 전달받은 ZIP을 풀어 같은 파일을 열면 됩니다. 최초 버전은 `v0`, `v1`, `v2` 태그로 구분하며, 과거 버전 실행 방법은 [최초 재현 지침](docs/reproduce.md)에 있습니다. 꽃잎 단계의 확인된 소스는 v6 `f2d687e`, v7 `e1aa152`, v8 `de94619`, v9 `21529f0`, v10 `3e0e494`입니다. v11은 현재 작업본으로, 확정 커밋·태그는 원격 검증 후 전달 기록을 따릅니다. [꽃잎 재현 지침](docs/petals/reproduce.md)을 참고하세요.
+그다음 `index.html`을 여세요. Git이 없다면 전달받은 ZIP을 풀어 같은 파일을 열면 됩니다. 최초 버전은 `v0`, `v1`, `v2` 태그로 구분하며, 과거 버전 실행 방법은 [최초 재현 지침](docs/reproduce.md)에 있습니다. 꽃잎 단계의 확인된 소스는 v6 `f2d687e`, v7 `e1aa152`, v8 `de94619`, v9 `21529f0`, v10 `3e0e494`, v11 `5967d30`입니다. [꽃잎 재현 지침](docs/petals/reproduce.md)을 참고하세요.
 
 ## 확장 검증과 한계
 

@@ -16,6 +16,7 @@ CATEGORIES = (
     ("flowers.json", "flower", "꽃"),
     ("brushes.json", "brush", "브러시"),
     ("petals.json", "petal", "꽃잎"),
+    ("ink-paintings.json", "ink", "새 목표 · 수묵·담채"),
 )
 ARRAY_FIELDS = ("observations", "avoid", "targets", "implementation", "gaps")
 SECTION_LABELS = (
@@ -97,7 +98,7 @@ def load_references(root):
                 **entry,
                 "category": category,
                 "categoryLabel": label,
-                "currentImage": f"evidence/{'petals' if category == 'petal' else 'extension'}/current-{identifier}.png",
+                "currentImage": f"evidence/{'ink' if category == 'ink' else 'petals' if category == 'petal' else 'extension'}/current-{identifier}.png",
             })
     return items
 
@@ -144,10 +145,10 @@ def render_markdown(foundation, items):
     """Keep every foundation byte, then append the extension reference board."""
     foundation.decode("utf-8-sig")
     lines = [
-        "---", "", "# 꽃·브러시·꽃잎 확장 레퍼런스", "",
-        "이 구역은 `reference-source/flowers.json`, `reference-source/brushes.json`, `reference-source/petals.json`에서 생성한다. "
+        "---", "", "# 새 수묵·담채 목표와 기존 꽃·브러시·꽃잎 레퍼런스", "",
+        "이 구역은 `reference-source/flowers.json`, `reference-source/brushes.json`, `reference-source/petals.json`, `reference-source/ink-paintings.json`에서 생성한다. "
         "원문·외부 이미지는 링크로만 제공하며, 직접 관찰과 기관 설명, 구현 판단, 결과 검토를 구별한다.", "",
-        "현재 결과 링크는 프로젝트에서 생성한 로컬 crop이다. 외부 원본 이미지를 저장소에 복사하지 않는다.", "",
+        "현재 결과 링크는 프로젝트가 직접 제작하는 로컬 crop 경로다. 새 수묵·담채 결과는 아직 없으며 구현 후 채운다. 기존 카드의 과거 검토는 보존하며 새 목표의 승인 근거로 쓰지 않는다. 외부 원본 이미지를 저장소에 복사하지 않는다.", "",
     ]
     for item in items:
         lines.extend([

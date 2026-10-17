@@ -7,9 +7,9 @@
   const expand = document.getElementById('expand-all');
   const filters = [...document.querySelectorAll('[data-filter]')];
   const items = window.GARDEN_REFERENCES;
-  const categoryLabels = { all: '전체', flower: '꽃', brush: '브러시', petal: '꽃잎' };
-  const categoryKickers = { flower: '꽃 / FLOWER', brush: '브러시 / BRUSH', petal: '꽃잎 / PETAL' };
-  let selected = 'all';
+  const categoryLabels = { all: '전체', ink: '새 목표 · 수묵·담채', flower: '기존 · 꽃', brush: '기존 · 브러시', petal: '기존 · 꽃잎' };
+  const categoryKickers = { ink: '새 목표 / INK & LIGHT COLOR', flower: '기존 꽃 / FLOWER', brush: '기존 브러시 / BRUSH', petal: '기존 꽃잎 / PETAL' };
+  let selected = 'ink';
 
   function element(tag, className, text) {
     const node = document.createElement(tag);
@@ -86,10 +86,10 @@
   function currentFigure(item) {
     const figure = element('figure', 'study-figure');
     const area = element('div', 'study-image-area');
-    const pending = element('p', 'image-pending', '현재 결과 이미지를 준비하고 있습니다.');
+    const pending = element('p', 'image-pending', item.category === 'ink' ? '새 목표의 결과는 아직 없습니다. 구현 후 직접 제작한 화면으로 비교합니다.' : '현재 결과 이미지를 준비하고 있습니다.');
     const caption = element('figcaption');
-    caption.append(element('span', '', '현재 결과 · 직접 제작한 Canvas 출력'));
-    const expected = 'evidence/' + (item.category === 'petal' ? 'petals' : 'extension') + '/current-' + item.id + '.png';
+    caption.append(element('span', '', item.category === 'ink' ? '새 목표 · 직접 제작한 Canvas 결과 대기' : '기존 목표의 현재 결과 · 직접 제작한 Canvas 출력'));
+    const expected = 'evidence/' + (item.category === 'ink' ? 'ink' : item.category === 'petal' ? 'petals' : 'extension') + '/current-' + item.id + '.png';
     if (/^[a-z0-9-]+$/.test(item.id) && item.currentImage === expected) {
       const image = element('img', 'study-image');
       image.alt = item.name + '의 현재 Canvas 결과. 참고 원본은 출처 링크에서 확인할 수 있습니다.';
