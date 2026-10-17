@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: same seed repeats 20 random samples
+ok 1 - same seed repeats 20 random samples
+  ---
+  duration_ms: 1.64
+  type: 'test'
+  ...
+# Subtest: edge planting keeps the full canopy above ground and inside top margin
+ok 2 - edge planting keeps the full canopy above ground and inside top margin
+  ---
+  duration_ms: 3.1536
+  type: 'test'
+  ...
+# Subtest: plant geometry is deterministic, finite, bounded at high density
+ok 3 - plant geometry is deterministic, finite, bounded at high density
+  ---
+  duration_ms: 0.3607
+  type: 'test'
+  ...
+# Subtest: isotropic layout preserves branch proportions and keeps canopy inside view
+ok 4 - isotropic layout preserves branch proportions and keeps canopy inside view
+  ---
+  duration_ms: 0.2243
+  type: 'test'
+  ...
+# Subtest: ink plants reproduce curved stems, attached foliage and blooms from the seed
+ok 5 - ink plants reproduce curved stems, attached foliage and blooms from the seed
+  ---
+  duration_ms: 3.2955
+  type: 'test'
+  ...
+# Subtest: each long stem joins its quadratic sections without a corner or a gap
+ok 6 - each long stem joins its quadratic sections without a corner or a gap
+  ---
+  duration_ms: 1.6973
+  type: 'test'
+  ...
+# Subtest: density adds foliage gradually while keeping the main silhouette and flowers fixed
+ok 7 - density adds foliage gradually while keeping the main silhouette and flowers fixed
+  ---
+  duration_ms: 0.7367
+  type: 'test'
+  ...
+# Subtest: foliage sits along the stem body and becomes smaller toward the flower neck
+ok 8 - foliage sits along the stem body and becomes smaller toward the flower neck
+  ---
+  duration_ms: 0.7437
+  type: 'test'
+  ...
+# Subtest: bloom necks meet terminal stems and their orientation follows the terminal tangent
+ok 9 - bloom necks meet terminal stems and their orientation follows the terminal tangent
+  ---
+  duration_ms: 1.5321
+  type: 'test'
+  ...
+# Subtest: de Casteljau growth follows the original curve at intermediate ages
+ok 10 - de Casteljau growth follows the original curve at intermediate ages
+  ---
+  duration_ms: 0.1919
+  type: 'test'
+  ...
+# Subtest: mobile and edge layouts contain leaf width, corollas, controls and maximum wind shear
+ok 11 - mobile and edge layouts contain leaf width, corollas, controls and maximum wind shear
+  ---
+  duration_ms: 7.481
+  type: 'test'
+  ...
+# Subtest: ink planting normalizes invalid coordinates and density without nonfinite geometry
+ok 12 - ink planting normalizes invalid coordinates and density without nonfinite geometry
+  ---
+  duration_ms: 0.1662
+  type: 'test'
+  ...
+# Subtest: foliage groups vary their leaf count, node spacing and dominant leaf size
+ok 13 - foliage groups vary their leaf count, node spacing and dominant leaf size
+  ---
+  duration_ms: 0.4492
+  type: 'test'
+  ...
+# Subtest: secondary stems without a flower finish with small terminal foliage
+ok 14 - secondary stems without a flower finish with small terminal foliage
+  ---
+  duration_ms: 0.4986
+  type: 'test'
+  ...
+# Subtest: the hero stem changes its sweep through the body rather than remaining a single leaning rod
+ok 15 - the hero stem changes its sweep through the body rather than remaining a single leaning rod
+  ---
+  duration_ms: 0.1837
+  type: 'test'
+  ...
+# Subtest: intermediate growth keeps every revealed leaf attached to its completed petiole
+ok 16 - intermediate growth keeps every revealed leaf attached to its completed petiole
+  ---
+  duration_ms: 2.4869
+  type: 'test'
+  ...
+# Subtest: no mode preserves every v11 Canvas drawing command for all species/materials
+ok 17 - no mode preserves every v11 Canvas drawing command for all species/materials
+  ---
+  duration_ms: 68.3875
+  type: 'test'
+  ...
+# Subtest: ink mode makes petals, centers and attachments achromatic without altering geometry
+ok 18 - ink mode makes petals, centers and attachments achromatic without altering geometry
+  ---
+  duration_ms: 76.1973
+  type: 'test'
+  ...
+# Subtest: tint follows the selected color on every species while keeping non-petal pigment gray
+ok 19 - tint follows the selected color on every species while keeping non-petal pigment gray
+  ---
+  duration_ms: 12.6626
+  type: 'test'
+  ...
+# Subtest: hex alpha, unsupported styles, native gradients and save/restore survive wrapping
+ok 20 - hex alpha, unsupported styles, native gradients and save/restore survive wrapping
+  ---
+  duration_ms: 0.2884
+  type: 'test'
+  ...
+# Subtest: pose changes projection without moving the seeded petals or color mode changing the pose
+ok 21 - pose changes projection without moving the seeded petals or color mode changing the pose
+  ---
+  duration_ms: 5.2121
+  type: 'test'
+  ...
+# Subtest: curve sampling keeps endpoints, midpoint and finite unit tangent on degenerate path
+ok 22 - curve sampling keeps endpoints, midpoint and finite unit tangent on degenerate path
+  ---
+  duration_ms: 1.0214
+  type: 'test'
+  ...
+# Subtest: material catalog exposes 3 independent flower species and 5 distinct brush identifiers
+ok 23 - material catalog exposes 3 independent flower species and 5 distinct brush identifiers
+  ---
+  duration_ms: 0.4825
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 260.2875

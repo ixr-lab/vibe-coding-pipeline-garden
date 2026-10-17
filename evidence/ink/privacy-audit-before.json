@@ -1,0 +1,4666 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-17T04:11:13.997661+00:00",
+  "status": "findings",
+  "scope": {
+    "repository": ".",
+    "refs": {
+      "refs/heads/main": {
+        "object": "0be865897b39fd49b164f4d304bc421176a9b216",
+        "commit": "0be865897b39fd49b164f4d304bc421176a9b216"
+      },
+      "refs/tags/v0": {
+        "object": "95283a8a251f7aea096b9dc9be23658575899da0",
+        "commit": "95283a8a251f7aea096b9dc9be23658575899da0"
+      },
+      "refs/tags/v1": {
+        "object": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+        "commit": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9"
+      },
+      "refs/tags/v2": {
+        "object": "90a835bb1499723045e55aac464965d29e19aa7a",
+        "commit": "90a835bb1499723045e55aac464965d29e19aa7a"
+      },
+      "refs/tags/v3": {
+        "object": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+        "commit": "fe2a481dcda6e23e1b9024a89c144e2bce703def"
+      },
+      "refs/tags/v4": {
+        "object": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+        "commit": "c68c96d633f5597a82480247de33ee0e3f6b809f"
+      },
+      "refs/tags/v5": {
+        "object": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+        "commit": "6f1d1e8a468d77b74040315ff13a04873e583db4"
+      },
+      "refs/tags/v6": {
+        "object": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+        "commit": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454"
+      },
+      "refs/tags/v7": {
+        "object": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+        "commit": "e1aa152ba62ed30281307010b0ef74c821ac17e5"
+      },
+      "refs/tags/v8": {
+        "object": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+        "commit": "de94619f9ea90be9ad6d4364d7eef39975dbb613"
+      },
+      "refs/tags/v9": {
+        "object": "21529f0310313906be5d65b637f954fe6ac1b7d3",
+        "commit": "21529f0310313906be5d65b637f954fe6ac1b7d3"
+      },
+      "refs/tags/v10": {
+        "object": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+        "commit": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57"
+      },
+      "refs/tags/v11": {
+        "object": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+        "commit": "5967d30ebe8e630cc4c55e263092076986bd2cdd"
+      },
+      "refs/tags/v12": {
+        "object": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a",
+        "commit": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a"
+      },
+      "refs/tags/v13": {
+        "object": "9a5c49ad1ad3ae6899e2a1852cacf54c39f24290",
+        "commit": "9a5c49ad1ad3ae6899e2a1852cacf54c39f24290"
+      },
+      "refs/tags/v14": {
+        "object": "0be865897b39fd49b164f4d304bc421176a9b216",
+        "commit": "0be865897b39fd49b164f4d304bc421176a9b216"
+      }
+    },
+    "missing_optional_refs": [],
+    "git_selection": "Explicit main and listed version tags only; no other refs or reflogs enumerated.",
+    "replace_objects_disabled": true,
+    "lazy_fetch_disabled": true,
+    "shallow": false,
+    "annotated_tag_metadata_included": true,
+    "working_tree": "Tracked and nonignored untracked candidates; links are not followed; deleted tracked paths recorded.",
+    "excluded_generated_paths": [
+      "evidence/ink/publication-local.json"
+    ]
+  },
+  "head": {
+    "object": "0be865897b39fd49b164f4d304bc421176a9b216",
+    "symbolic_ref": "refs/heads/main",
+    "is_main_tip": true,
+    "included_in_selected_history": true
+  },
+  "snapshot": {
+    "stable_during_read": true,
+    "working_tree_sha256": "7baf982002c04bf6867668aebd50fae406942c98b7aabb9f9fbdadb99db9ba9d",
+    "head_after": "0be865897b39fd49b164f4d304bc421176a9b216",
+    "refs_unchanged": true
+  },
+  "counts": {
+    "git_objects": {
+      "blob": 468,
+      "tree": 117,
+      "commit": 19
+    },
+    "historical_paths": 444,
+    "git_blob_formats": {
+      "text": 263,
+      "png": 205
+    },
+    "working_tree": {
+      "candidate_files": 504,
+      "text_files": 190,
+      "png_files": 314
+    },
+    "png_chunks_git_and_worktree": {
+      "IHDR": 519,
+      "IDAT": 22477,
+      "IEND": 519
+    },
+    "git_identities": {
+      "allowed": 38
+    },
+    "suppressed_self_pattern_literal_matches": 3,
+    "findings": 453,
+    "errors": 453
+  },
+  "findings": [
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "git_blob",
+      "object": "aae9c51fdfb9d80579ff20fbfd2201b4d5de402b",
+      "paths": [
+        "evidence/ink/v12-qa-checks.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "git_blob",
+      "object": "ea6ab5e00303b119059a6f5d3a429fc842ff5ccb",
+      "paths": [
+        "evidence/ink/v14-final-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "git_blob",
+      "object": "f307dee1d73456b9bc46b7807460e5668b05e1b2",
+      "paths": [
+        "evidence/ink/v12-qa-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "git_blob",
+      "object": "fba6ca723945368e67887726c98bff1a3505ad0f",
+      "paths": [
+        "evidence/ink/v12-qa-r2-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 5,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 808,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 809,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 810,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 811,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 812,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 813,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 814,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 815,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 816,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 965,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 966,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 967,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 968,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 969,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 970,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 971,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 972,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 973,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 974,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 975,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 976,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 977,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 978,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 979,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 980,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 981,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1138,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1139,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1140,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1141,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1142,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1143,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1144,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1159,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1160,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1161,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1162,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1177,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1178,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1179,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1180,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1181,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1182,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1183,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1184,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1185,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1186,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1187,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1188,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1189,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1190,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1191,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1192,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1193,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 1194,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2569,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2570,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2571,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2572,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2573,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2574,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2575,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2576,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2577,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2726,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2727,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2728,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2729,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2730,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2731,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2732,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2733,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2734,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2735,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2736,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2737,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2738,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2739,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2740,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2741,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2742,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2899,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2900,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2901,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2902,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2903,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2904,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2905,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2920,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2921,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2922,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2923,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2938,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2939,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2940,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2941,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2942,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2943,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2944,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2945,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2946,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2947,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2948,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2949,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2950,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2951,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2952,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2953,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2954,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-r2-site-checks.json"
+      ],
+      "line": 2955,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 5,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 816,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 817,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 818,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 819,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 820,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 821,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 822,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 823,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 824,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 973,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 974,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 975,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 976,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 977,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 978,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 979,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 980,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 981,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 982,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 983,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 984,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 985,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 986,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 987,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 988,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 989,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1146,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1147,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1148,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1149,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1150,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1151,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1152,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1167,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1168,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1169,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1170,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1185,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1186,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1187,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1188,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1189,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1190,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1191,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1192,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1193,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1194,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1195,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1196,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1197,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1198,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1199,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1200,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1201,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 1202,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2577,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2578,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2579,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2580,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2581,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2582,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2583,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2584,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2585,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2734,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2735,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2736,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2737,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2738,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2739,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2740,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2741,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2742,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2743,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2744,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2745,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2746,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2747,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2748,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2749,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2750,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2907,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2908,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2909,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2910,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2911,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2912,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2913,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2928,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2929,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2930,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2931,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2946,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2947,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2948,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2949,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2950,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2951,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2952,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2953,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2954,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2955,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2956,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2957,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2958,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2959,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2960,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2961,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2962,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/final-site-checks.json"
+      ],
+      "line": 2963,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 5,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 816,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 817,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 818,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 819,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 820,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 821,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 822,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 823,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 824,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 973,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 974,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 975,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 976,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 977,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 978,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 979,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 980,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 981,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 982,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 983,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 984,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 985,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 986,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 987,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 988,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 989,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1146,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1147,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1148,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1149,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1150,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1151,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1152,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1167,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1168,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1169,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1170,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1185,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1186,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1187,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1188,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1189,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1190,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1191,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1192,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1193,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1194,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1195,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1196,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1197,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1198,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1199,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1200,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1201,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 1202,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2577,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2578,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2579,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2580,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2581,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2582,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2583,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2584,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2585,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2734,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2735,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2736,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2737,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2738,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2739,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2740,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2741,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2742,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2743,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2744,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2745,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2746,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2747,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2748,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2749,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2750,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2907,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2908,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2909,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2910,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2911,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2912,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2913,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2928,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2929,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2930,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2931,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2946,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2947,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2948,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2949,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2950,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2951,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2952,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2953,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2954,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2955,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2956,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2957,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2958,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2959,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2960,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2961,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2962,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks-before-20261017T040947281972Z.json"
+      ],
+      "line": 2963,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 5,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 808,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 809,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 810,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 811,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 812,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 813,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 814,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 815,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 816,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 965,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 966,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 967,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 968,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 969,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 970,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 971,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 972,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 973,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 974,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 975,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 976,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 977,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 978,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 979,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 980,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 981,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1138,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1139,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1140,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1141,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1142,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1143,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1144,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1159,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1160,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1161,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1162,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1177,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1178,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1179,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1180,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1181,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1182,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1183,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1184,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1185,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1186,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1187,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1188,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1189,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1190,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1191,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1192,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1193,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 1194,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2569,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2570,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2571,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2572,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2573,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2574,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2575,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2576,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2577,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2726,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2727,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2728,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2729,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2730,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2731,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2732,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2733,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2734,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2735,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2736,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2737,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2738,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2739,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2740,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2741,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2742,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2899,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2900,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2901,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2902,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2903,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2904,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2905,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2920,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2921,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2922,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2923,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2938,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2939,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2940,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2941,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2942,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2943,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2944,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2945,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2946,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2947,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2948,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2949,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2950,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2951,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2952,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2953,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2954,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/site-checks.json"
+      ],
+      "line": 2955,
+      "column": 18
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/v12-qa-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/v12-qa-checks.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/v12-qa-r2-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/v14-final-accessibility.json"
+      ],
+      "line": 4,
+      "column": 15
+    },
+    {
+      "category": "personal_path",
+      "severity": "error",
+      "source": "working_tree",
+      "paths": [
+        "evidence/ink/v14-final-checks.json"
+      ],
+      "line": 4,
+      "column": 15
+    }
+  ],
+  "limits": [
+    "No remote query, credential lookup, application execution, visibility change, or Git mutation.",
+    "Pattern checks cannot prove absence of every secret or identify the origin of arbitrary image pixels.",
+    "External source URLs and rights prose are not image redistribution; source licensing/visual provenance require manual review.",
+    "A pass is an automated local scan, not public-release approval or visual acceptance."
+  ]
+}

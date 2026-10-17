@@ -7,6 +7,19 @@
   <title>작은 정원 — 만드는 과정</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="process.css">
+  <style>
+    .switch-labels label{min-height:44px}
+    details>summary{display:flex;align-items:center;min-height:44px;box-sizing:border-box;cursor:pointer}
+    details>summary::before{content:"+";flex:none;margin-right:9px;font:16px Consolas,monospace}
+    details[open]>summary::before{content:"−"}
+    .ink-study-copy{font-size:13px;line-height:1.9;color:var(--muted)}
+    .ink-links{display:flex;flex-wrap:wrap;gap:4px 20px;font-size:11px;line-height:1.8;margin:12px 0}
+    .ink-links a,#petal-brush-study nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 0;box-sizing:border-box}
+    .ink-figure{margin:18px 0 0;min-width:0}.ink-figure img{display:block;width:100%;height:auto;border:1px solid var(--line)}
+    .ink-gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:18px}
+    .ink-study details{font-size:11px;line-height:1.8;margin-top:12px}.ink-study summary{padding:8px 0}
+    .ink-status{font-size:12px;line-height:1.9;color:var(--muted);margin:16px 0}
+  </style>
 </head>
 <body>
   <a class="skip-link" href="#process">본문으로 건너뛰기</a>
@@ -17,10 +30,59 @@
     </header>
 
     <main id="process">
+      <!-- INK-STUDY-UPDATE:START -->
+      <section class="workflow ink-study" id="ink-study" aria-labelledby="ink-study-title" style="margin-top:24px;padding-bottom:25px">
+        <div class="section-heading">
+          <div><p class="eyebrow">LATEST / INK &amp; TINT STUDY</p><h2 id="ink-study-title">꽃을 받치는 줄기, 사이에 남는 종이.</h2></div>
+          <span class="pill">v12 → v13 → v14</span>
+        </div>
+        <p class="ink-study-copy">꽃머리 아래의 몸체를 다시 구성하고 수묵·담채와 꽃잎 색 선택을 더했습니다. 공식 회화 3점의 실제 이미지와 출처를 먼저 관찰한 뒤 v12를 실행했습니다. 반복 부채꼴 잎과 중앙 과밀을 보고 v13에서 종별 잎·구도를, 옅은 연결과 균일한 면을 보고 v14에서 먹의 농담·재료별 구조선을 고쳤습니다. 각 단계의 원본 PNG와 소스 태그를 보존합니다.</p>
+        <nav class="ink-links" aria-label="수묵 담채 작업 자료">
+          <a href="index.html">v14 정원 열기 ↗</a>
+          <a href="docs/ink/plan.md">고정 기준 I1~I6 ↗</a>
+          <a href="docs/ink/log.md">실제 작업 로그 ↗</a>
+          <a href="docs/ink/reference-observations.md">공식 작품 관찰 ↗</a>
+          <a href="docs/ink/comparison.md">전후 비교와 채택 ↗</a>
+          <a href="docs/ink/visual-review.md">독립 AI 시각 리뷰 ↗</a>
+          <a href="docs/ink/code-review.md">독립 코드 리뷰 ↗</a>
+          <a href="docs/ink/tests.md">시험과 한계 ↗</a>
+          <a href="docs/ink/reproduce.md">같은 조건 실행 ↗</a>
+          <a href="docs/ink/eight-stages.md">이번 작업의 8단계 ↗</a>
+          <a href="docs/ink/delivery.md">실제 전달 상태 ↗</a>
+          <a href="docs/ink/ai-boundary.md">AI와 사람의 경계 ↗</a>
+        </nav>
+        <figure class="ink-figure">
+          <a href="evidence/ink/evolution.png" aria-label="v12 v13 v14 전체 정원 비교 도판 열기"><img src="evidence/ink/evolution.png" alt="v12의 반복 잎군, v13의 열린 구조, v14의 먹 농담을 비교한 실제 정원 도판. 패널은 비율을 유지해 축소함." loading="lazy"></a>
+          <figcaption><span class="frame-number">v12–14</span><span><strong>실행 후 두 차례 개선.</strong> 자체 생성한 전체 정원 화면을 비율을 유지해 축소했습니다. 원본: <a href="evidence/ink/v12-garden.png">v12</a> · <a href="evidence/ink/v13-garden.png">v13</a> · <a href="evidence/ink/v14-garden.png">v14</a>. seed271828 · frame360 · 밀도7 · 바람35 · 압력 먹 · 담채 기본색.</span></figcaption>
+        </figure>
+        <div class="ink-gallery">
+          <figure class="ink-figure">
+            <a href="evidence/ink/color-modes.png" aria-label="v14 수묵 장미색 청색 비교 도판 열기"><img src="evidence/ink/color-modes.png" alt="같은 v14 정원의 무채색 수묵, 장미색 담채, 청색 담채 실제 출력 비교. 패널은 축소함." loading="lazy"></a>
+            <figcaption><span class="frame-number">색</span><span><strong>수묵과 선택색 담채.</strong> 색 선택값은 수묵 중에도 보관합니다. 기본색 복원은 선택한 종을 따르며 PNG에도 현재 색이 반영됩니다.</span></figcaption>
+          </figure>
+          <figure class="ink-figure">
+            <a href="evidence/ink/plant-evolution.png" aria-label="v12 재캡처와 v13 v14 단독 식물 비교 도판 열기"><img src="evidence/ink/plant-evolution.png" alt="재료 seed를 교정한 v12-r2와 v13 v14의 전체 식물 비교. 패널은 축소함." loading="lazy"></a>
+            <figcaption><span class="frame-number">몸체</span><span><strong>잎군·연결·농담.</strong> 첫 단독 캡처의 재료 seed 누락을 고친 v12-r2를 기준으로 비교했습니다. 원본과 QA 교정의 경위는 <a href="docs/ink/comparison.md">비교 기록</a>에 남겼습니다.</span></figcaption>
+          </figure>
+        </div>
+        <details>
+          <summary>v14의 종별 전체 식물·다섯 브러시·모바일 원본 펼쳐 보기</summary>
+          <div class="ink-gallery">
+            <figure class="ink-figure"><a href="evidence/ink/v14-plants.png"><img src="evidence/ink/v14-plants.png" alt="v14 코스모스 데이지 개양귀비 세 종의 실제 전체 식물 도판" loading="lazy"></a><figcaption><span class="frame-number">3종</span><span>같은 모델·재료 seed271828의 실제 Canvas. 코스모스 분할 잎, 데이지 긴 잎, 개양귀비 갈래 잎을 구분합니다.</span></figcaption></figure>
+            <figure class="ink-figure"><a href="evidence/ink/v14-brushes.png"><img src="evidence/ink/v14-brushes.png" alt="v14 전체 코스모스의 펜 먹 연필 드라이 수채 다섯 브러시 비교" loading="lazy"></a><figcaption><span class="frame-number">5재료</span><span>같은 전체 식물의 브러시 비교. 작은 결의 차이는 원본을 열어 관찰합니다.</span></figcaption></figure>
+            <figure class="ink-figure"><a href="evidence/ink/v14-mobile.png"><img src="evidence/ink/v14-mobile.png" alt="390 곱하기 844 뷰포트 터치 에뮬레이션의 v14 모바일 전체 화면" loading="lazy"></a><figcaption><span class="frame-number">모바일</span><span>390×844 뷰포트·터치 에뮬레이션입니다. 실제 휴대전화 검증과 구분합니다.</span></figcaption></figure>
+          </div>
+        </details>
+        <nav class="ink-links" aria-label="추가 실제 실행 증거"><a href="evidence/ink/v14-materials.png">전체 식물15조합 원본 ↗</a><a href="evidence/ink/v14-materials-closeups.png">꽃목·잎군 원배율 근접 ↗</a><a href="evidence/ink/growth-before-after.png">성장 연결 실제 전후 ↗</a><a href="evidence/ink/growth-raster.json">성장 캡처 조건 ↗</a></nav>
+        <p class="ink-status">제작자와 독립 AI 리뷰는 연결 I1·구도 I2·색 범위 I4를 채택했습니다. 먹과 종이 I3은 <strong>부분 채택</strong>입니다. 넓은 잎의 평평한 벡터 면과 제한된 실제 먹 번짐은 남습니다. 성장 중 잎자루가 닿기 전 잎이 나타나던 문제는 v14에서 수정했습니다. <a href="evidence/ink/growth-connection.json">기하·실제 타이밍 함수5/5</a>·<a href="evidence/ink/unit.tap">Node23/23</a>·<a href="evidence/ink/v14-final-checks.json">기능127/127</a>·<a href="evidence/ink/v14-final-accessibility.json">접근17/17</a>·<a href="evidence/ink/v14-materials.json">전체 식물/근접52/52</a>·<a href="evidence/ink/final-r2-site-checks.json">페이지132/132</a>를 확인했습니다. <a href="evidence/ink/stress.json">최대 장면 관찰</a>에서 캐시를 다시 만드는 선택 변경은 약0.97초까지 걸렸습니다. 출처/이력 감사·원격 전달은 실제 후속 결과로 확인합니다.</p>
+        <p class="protocol"><span>근거와 승인</span> v12 <code>d63b83b</code> · v13 <code>6dfb850</code> · v14 <code>ff638fa</code>. 비교 패널은 자체 캡처를 축소한 편집 도판이며 원본을 따로 보존합니다. 외부 회화 픽셀은 포함하지 않습니다. 기술 통과·AI 시각 판정·공개 업로드는 사람의 취향 승인과 별개입니다. 사용자 직접 미적 승인 <strong style="color:var(--ochre);font-weight:500">확인 대기</strong>.</p>
+      </section>
+      <!-- INK-STUDY-UPDATE:END -->
+
       <!-- PETAL-STUDY-UPDATE:START -->
       <section class="workflow" id="petal-brush-study" aria-labelledby="petal-brush-title" style="margin-top:24px;padding-bottom:25px">
         <div class="section-heading">
-          <div><p class="eyebrow">LATEST / PETAL BRUSH STUDY</p><h2 id="petal-brush-title">꽃잎에도, 브러시의 결을.</h2></div>
+          <div><p class="eyebrow">EARLIER / PETAL BRUSH STUDY</p><h2 id="petal-brush-title">꽃잎에도, 브러시의 결을.</h2></div>
           <span class="pill">v11 실행 도판</span>
         </div>
         <p style="font-size:13px;line-height:1.9;color:var(--muted)">줄기에 머물던 다섯 브러시의 차이를 꽃잎의 외곽과 내부로 확장했습니다. v5 → v6 → v7 → v8 → v9 → v10 → v11의 실제 반복을 거쳐 붓결·겹침·밝은 여백을 조정했습니다. v11에서는 드라이 획의 화면 픽셀 폭을 보정했습니다. 확대·기본 크기·실제 정원 도판은 실행 상태를 기록하며, 재료 충실도에 대한 시각 판단은 별도 기록에서 확인합니다.</p>
@@ -142,7 +204,7 @@
           <li><span class="step-number">05</span><div><h3>실행과 비교</h3><p>원본 화면을 열어 가지 왜곡·잎 형태·수관 잘림을 확인했다. 기능 통과와 시각 판단을 구분했다.</p><a href="docs/experiments.md">관찰과 원인 가설 ↗</a></div></li>
           <li><span class="step-number">06</span><div><h3>반복 개선</h3><p>v1 형태 개선, v2 조작·모션·모바일 개선을 실제 실행했다. 부족점·가설·수정·회귀 결과를 보존했다.</p><a href="docs/experiments.md">수정 전후 기록 ↗</a></div></li>
           <li><span class="step-number">07</span><div><h3>통합과 의도 판정</h3><p>최종 실행 결과는 검증 문서와 원본으로 확인한다. 사용자의 미적 만족은 <strong>확인 대기</strong>다.</p><a href="docs/tests.md">실제 검증 결과 ↗</a></div></li>
-          <li><span class="step-number">08</span><div><h3>전달과 재사용</h3><p>코드·기준·실험·원본을 함께 보존한다. private 저장소와 Library 전달은 완료 기록으로 확인한다.</p><a href="docs/log.md">전달 진행 기록 ↗</a></div></li>
+          <li><span class="step-number">08</span><div><h3>전달과 재사용</h3><p>코드·기준·실험·원본을 함께 보존한다. 최초 private 업로드와 이후 public 전환, Library 전달은 각각의 완료 기록으로 확인한다.</p><a href="docs/log.md">전달 진행 기록 ↗</a></div></li>
         </ol>
       </section>
 

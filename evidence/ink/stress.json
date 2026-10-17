@@ -1,0 +1,96 @@
+{
+  "at": "2026-10-17T04:06:41.973222+00:00",
+  "browser": "155.0.8059.84",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "DPR": 1,
+  "plants": 32,
+  "density": 12,
+  "seed": "271828",
+  "combinations": [
+    {
+      "flower": "cosmos",
+      "brush": "pen",
+      "synchronous_two_control_change_ms": 285.40000000596046
+    },
+    {
+      "flower": "cosmos",
+      "brush": "ink",
+      "synchronous_two_control_change_ms": 232.90000000596046
+    },
+    {
+      "flower": "cosmos",
+      "brush": "pencil",
+      "synchronous_two_control_change_ms": 347.60000002384186
+    },
+    {
+      "flower": "cosmos",
+      "brush": "dry",
+      "synchronous_two_control_change_ms": 479.2999999821186
+    },
+    {
+      "flower": "cosmos",
+      "brush": "watercolor",
+      "synchronous_two_control_change_ms": 965.7000000178814
+    },
+    {
+      "flower": "daisy",
+      "brush": "pen",
+      "synchronous_two_control_change_ms": 600.5
+    },
+    {
+      "flower": "daisy",
+      "brush": "ink",
+      "synchronous_two_control_change_ms": 359.59999999403954
+    },
+    {
+      "flower": "daisy",
+      "brush": "pencil",
+      "synchronous_two_control_change_ms": 541.1000000238419
+    },
+    {
+      "flower": "daisy",
+      "brush": "dry",
+      "synchronous_two_control_change_ms": 694.4000000059605
+    },
+    {
+      "flower": "daisy",
+      "brush": "watercolor",
+      "synchronous_two_control_change_ms": 617.4000000059605
+    },
+    {
+      "flower": "poppy",
+      "brush": "pen",
+      "synchronous_two_control_change_ms": 384
+    },
+    {
+      "flower": "poppy",
+      "brush": "ink",
+      "synchronous_two_control_change_ms": 251.7999999821186
+    },
+    {
+      "flower": "poppy",
+      "brush": "pencil",
+      "synchronous_two_control_change_ms": 397.80000001192093
+    },
+    {
+      "flower": "poppy",
+      "brush": "dry",
+      "synchronous_two_control_change_ms": 353.40000000596046
+    },
+    {
+      "flower": "poppy",
+      "brush": "watercolor",
+      "synchronous_two_control_change_ms": 396.40000000596046
+    }
+  ],
+  "max_cold_change_ms": 965.7000000178814,
+  "warm_scene": "poppy/watercolor tint blue width2.5 texture100 opacity100 petals100",
+  "raf_samples": 120,
+  "raf_mean_ms": 16.669166666666676,
+  "raf_p95_ms": 16.900000000001455,
+  "errors": [],
+  "note": "One headless Windows machine, no simultaneous QA browser during measurement. Cold two-control change includes CPU draw/readback, not isolated frame/input latency. RAF intervals do not guarantee 60fps on other devices."
+}

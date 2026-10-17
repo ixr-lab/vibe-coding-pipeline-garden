@@ -1,0 +1,580 @@
+{
+  "recorded_at": "2026-10-17T04:03:51.591444+00:00",
+  "version": "v14 final material evidence",
+  "browser": "155.0.8059.84",
+  "device_scale_factor": 1,
+  "canvas": [
+    300,
+    580
+  ],
+  "plant": {
+    "index": 2,
+    "x": 0.52,
+    "y": 0.91,
+    "density": 7,
+    "id": 2,
+    "size": 1.2,
+    "born": 0
+  },
+  "settings": {
+    "seed": "271828",
+    "time": 6,
+    "reduced": false,
+    "wind": 35,
+    "density": 7,
+    "width": 1,
+    "texture": 60,
+    "opacity": 85,
+    "petalStrength": 65,
+    "mode": "ink",
+    "color": "#9b6773"
+  },
+  "layout": {
+    "scale": 1094.287384778305,
+    "root": 155.01338077331488,
+    "baseY": 527.8000000000001
+  },
+  "wind_shear": 0.001312881724886161,
+  "shared_geometry_sha256": "bc665229f246acd6432b48b4ced4fb1e657ae21add724af1bb3e25a267885b25",
+  "source_sha256": {
+    "engine.js": "88940ce9faa23960c8c1e0965acfee45c44d06eb003c4aade4c401f9e04b6c17",
+    "brush-art.js": "5758073701a2cf6eb65dffdeb8695fbb67580719d8a44cb5df67f0fdf08b8b30",
+    "petal-paint.js": "e1185ebf4c9b39afb0d0960b31a6632dba78c58e9999cb27ebdc18d2f29703e4",
+    "ink-palette.js": "bb92c9c327df651f9e05ca347a2cc3c57cf625b3fb35a8c21b910a166502cca1",
+    "flower-art.js": "7c6f7ea84d36748fb61f8e1fe960d683b8c65c6ebbdf96fa28ec26ba2ae13ef7",
+    "plant-renderer.js": "15d135377a617a9983afbc1de5ed200c049fcee0c7190b9c6c7358762799a6eb"
+  },
+  "crops": {
+    "flower_and_neck": {
+      "box": [
+        137,
+        55,
+        248,
+        212
+      ],
+      "bloom_index": 0,
+      "pose": "droop",
+      "center": {
+        "x": 192.58935761574492,
+        "y": 107.82135586796466
+      },
+      "radius": 34.612039605238586
+    },
+    "lower_leaf_group": {
+      "box": [
+        132,
+        301,
+        282,
+        448
+      ],
+      "group_id": "body-0",
+      "position": 0.24110072497325016
+    }
+  },
+  "crop_policy": "Native 1:1 rectangular crops from the exact saved 300x580 case PNG; never resized or redrawn.",
+  "matrix": "evidence/ink/v14-materials.png",
+  "closeups": "evidence/ink/v14-materials-closeups.png",
+  "case_count": 15,
+  "cases": [
+    {
+      "flower": "cosmos",
+      "brush": "pen",
+      "file": "evidence/ink/v14-materials-cosmos-pen.png",
+      "png_sha256": "5d70819eba38c56661ebd71c0ff93229634a3f875121d34e120ac1298452a5fd",
+      "pixel_sha256": "d9d952928c1791f423c8b067ff9222ee2cadbb554b4ee12acc069ee686fc5524",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        76,
+        261,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "cosmos",
+      "brush": "ink",
+      "file": "evidence/ink/v14-materials-cosmos-ink.png",
+      "png_sha256": "c1a679307c3111f24d08742e111fe70f8273c72dc3b3d13b717881e7b0119f44",
+      "pixel_sha256": "f94a4d6012fabbb7b57ba6850065509ee6e4e939d58d49771ca23d9460e4b0f9",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        36,
+        76,
+        260,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "cosmos",
+      "brush": "pencil",
+      "file": "evidence/ink/v14-materials-cosmos-pencil.png",
+      "png_sha256": "360e511a571f2765c644a98c3f3ad3085744e7cdf3b169ae9f0489f0d486ec3a",
+      "pixel_sha256": "7062710605e8e38f64399dbcaa81408b0587242175b6f33a2927dcc00167b2ca",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        36,
+        76,
+        260,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "cosmos",
+      "brush": "dry",
+      "file": "evidence/ink/v14-materials-cosmos-dry.png",
+      "png_sha256": "bed7d438754e6212bddb098820a3cfa49ddd57acc37eb99a9825c13e9c0508b5",
+      "pixel_sha256": "6829a2cdca7600f2714a06f5928e0e84300db77787a6d6063a4b67b1dc350691",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        36,
+        76,
+        258,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "cosmos",
+      "brush": "watercolor",
+      "file": "evidence/ink/v14-materials-cosmos-watercolor.png",
+      "png_sha256": "6b11aff7083a73dcbe23f7fb4a7b8a4b34b2f09e28d6e424bfe4cd06b23c9a39",
+      "pixel_sha256": "86b30d48a337d114860b8afb298cfefe3936ecc83b3e5242d6a5347633f94a8f",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        36,
+        76,
+        260,
+        535
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "daisy",
+      "brush": "pen",
+      "file": "evidence/ink/v14-materials-daisy-pen.png",
+      "png_sha256": "cbef247942600d42d4ebc84b96c47464696762be4a6bf53a1620a89fdf0ab584",
+      "pixel_sha256": "7c0bf267be9f21fdcee4978ef4b4caa1c4398ea97a7fadbc15a8c4a042036d60",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        79,
+        261,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "daisy",
+      "brush": "ink",
+      "file": "evidence/ink/v14-materials-daisy-ink.png",
+      "png_sha256": "4b197e400afdeb3929d17c305e2278d2514bb8867cf7af48c821322329ca9eb1",
+      "pixel_sha256": "7fbc733d4c1e519ea9516be3eca0b59a697de38c8d55abcf51e84838f046add6",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        79,
+        261,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "daisy",
+      "brush": "pencil",
+      "file": "evidence/ink/v14-materials-daisy-pencil.png",
+      "png_sha256": "41d9ef499d42ff69d92ce4946460def2c2cf9c68a384a00a9cea4d67a1626971",
+      "pixel_sha256": "e7fcade79e6bbe4e9b7ee5e75cca5eb7658d6aba4e78575a48618459804ac6d2",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        79,
+        261,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "daisy",
+      "brush": "dry",
+      "file": "evidence/ink/v14-materials-daisy-dry.png",
+      "png_sha256": "0e19dd81d7b1d9f4d8f344afb6435b555766ec7cf8c8a8ea895096061897cd73",
+      "pixel_sha256": "9aa8a29e0ff253f50d6e04998bdd1eea9bb7941d405b03e30293bbb5a078f08c",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        79,
+        261,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "daisy",
+      "brush": "watercolor",
+      "file": "evidence/ink/v14-materials-daisy-watercolor.png",
+      "png_sha256": "61001af794f9b32867ca1f1edc544ab7d90dbb9ce990246b8a5faf12895f2e84",
+      "pixel_sha256": "9a01b9e8394da6c493ff38048d844ccacc66ade3ac7dc08497439ddd4e9fd0a1",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        35,
+        79,
+        261,
+        535
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "poppy",
+      "brush": "pen",
+      "file": "evidence/ink/v14-materials-poppy-pen.png",
+      "png_sha256": "c4265d4bfb528e6f2a0c4f7aaab950a3437715318fe5e22cd1d1465a4378a170",
+      "pixel_sha256": "0eff4f32e5238e130c7a5ff08c59fb86d9df87e8d99f0963aa693fbde671c681",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        39,
+        76,
+        251,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "poppy",
+      "brush": "ink",
+      "file": "evidence/ink/v14-materials-poppy-ink.png",
+      "png_sha256": "a495612af7d322f235cf0605e31e55ba417508eccdbabe22ea1bdb37c92254c3",
+      "pixel_sha256": "4d7533cb439324d769ee75988bd8c584efa000e6acdd483fcb3a39e48de3affb",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        39,
+        76,
+        251,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "poppy",
+      "brush": "pencil",
+      "file": "evidence/ink/v14-materials-poppy-pencil.png",
+      "png_sha256": "92401a0c1d7ec0db91b739908f6a4ed25e3e25b23f0746888d6e8dd8853d6996",
+      "pixel_sha256": "71d919df76c0501e6db2cf04d3adfbd7a5f54dd1c063bc350702f96ce5a3de3e",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        40,
+        76,
+        251,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "poppy",
+      "brush": "dry",
+      "file": "evidence/ink/v14-materials-poppy-dry.png",
+      "png_sha256": "2a0220a25814754d9fd4cc340710cbf331b131e4c979b7937761ee28bd11e911",
+      "pixel_sha256": "8f76807559b9dfc4cde00ecdab8799b1f2186f4b1287cf39eae4bb99c4f7e5c3",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        39,
+        76,
+        251,
+        533
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    },
+    {
+      "flower": "poppy",
+      "brush": "watercolor",
+      "file": "evidence/ink/v14-materials-poppy-watercolor.png",
+      "png_sha256": "ce5537dbceb38cb1e7d4491eaa9e002cac4ea74d60618e7e6ecd853c7cb90e46",
+      "pixel_sha256": "cced4bff0bbc5ff5f724a3a2f1bc4e2daabffeb3ca7f00daa2bad6c7abe84121",
+      "canvas": [
+        300,
+        580
+      ],
+      "paint_bounds": [
+        39,
+        76,
+        251,
+        535
+      ],
+      "deterministic": true,
+      "geometry_unchanged": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "cosmos/pen deterministic",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink deterministic",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil deterministic",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry deterministic",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor deterministic",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen deterministic",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink deterministic",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil deterministic",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry deterministic",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor deterministic",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen deterministic",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink deterministic",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil deterministic",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry deterministic",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor deterministic",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor preserves the shared plant geometry",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor paint remains within its Canvas",
+      "pass": true
+    },
+    {
+      "name": "all 15 species/material combinations produce different pixels",
+      "pass": true
+    },
+    {
+      "name": "cosmos has five distinct brush results",
+      "pass": true
+    },
+    {
+      "name": "daisy has five distinct brush results",
+      "pass": true
+    },
+    {
+      "name": "poppy has five distinct brush results",
+      "pass": true
+    },
+    {
+      "name": "all native source crops remain inside the original Canvas",
+      "pass": true
+    },
+    {
+      "name": "no JavaScript page errors",
+      "pass": true
+    },
+    {
+      "name": "no external network requests",
+      "pass": true
+    }
+  ],
+  "passed": 52,
+  "total": 52,
+  "errors": [],
+  "material_realism": "Not graded by pixel-difference checks. I3 remains partial: some flower surfaces retain smooth digital gradients or flat faces.",
+  "ownership": "Own executed Canvas output only. No source artwork or external imagery included."
+}

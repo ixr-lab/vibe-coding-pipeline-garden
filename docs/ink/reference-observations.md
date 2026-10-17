@@ -1,6 +1,6 @@
 # 새 목표: 수묵·수묵담채 화훼 — 전체 식물 관찰
 
-관찰·공식 기록 확인일: 2026-10-17 UTC. 구현 전 참고 기록이다. 기존 11개 꽃·브러시·꽃잎 카드와 v11 검토는 과거 목표의 기록으로 보존하며 새 화면의 성공·사용자 미적 승인으로 이어 붙이지 않는다. 기계가 읽는 원본은 [ink-paintings.json](../../reference-source/ink-paintings.json)이며 [참고 페이지](../../reference.html)의 ‘새 목표 · 수묵·담채’에 3개 카드로 나타난다.
+관찰·공식 기록 확인일: 2026-10-17 UTC. 아래 원본 관찰과 구현 제안은 앱 구현 전에 기록했다. 현재는 v14 실제 화면의 별도 검토를 연결했으며 초기 검토는 JSON의 `reviewHistory`와 페이지에 보존했다. 기존 11개 꽃·브러시·꽃잎 카드와 v11 검토는 과거 목표의 기록으로 보존하며 새 화면의 성공·사용자 미적 승인으로 이어 붙이지 않는다. 기계가 읽는 원본은 [ink-paintings.json](../../reference-source/ink-paintings.json)이며 [참고 페이지](../../reference.html)의 ‘새 목표 · 수묵·담채’에 3개 카드로 나타난다.
 
 ## 출처와 직접 관찰 범위
 
@@ -10,7 +10,7 @@
 | [Birds and Flowers](https://www.metmuseum.org/art/collection/search/54671), 14.76.61.41 | Watanabe Seitei, 일본, 메이지, ca. 1887. Album leaf; ink and color on silk | [Met 주 이미지](https://collectionapi.metmuseum.org/api/collection/v1/iiif/54671/169453/main-image), 926×1200px. 기존 작품을 전체 식물 관점에서 다시 관찰. |
 | [Tree Peonies](https://www.metmuseum.org/art/collection/search/49165), 1972.16 | **After Yun Shouping**, 중국, 청대(1644–1911). Hanging scroll; ink and color on silk. 특정 제작 연도는 공식 페이지에 없음. | [Met 주 이미지](https://collectionapi.metmuseum.org/api/collection/v1/iiif/49165/2280634/main-image), 701×1200px. 장황이 포함된 전경. |
 
-세 작품 페이지의 Public Domain 표기와 [Met Open Access의 CC0 정책](https://www.metmuseum.org/hubs/open-access)을 확인했다. 원본 JPEG와 API 확인 사본은 저장소 밖 `../ink-reference-study/`에만 저장하고 `view_image`로 열어 직접 관찰했다. 저장소·Library·웹 배포물에는 원본을 넣지 않는다. 페이지의 이미지는 앞으로 직접 제작할 앱 결과 전용이며 아직 빈 상태다.
+세 작품 페이지의 Public Domain 표기와 [Met Open Access의 CC0 정책](https://www.metmuseum.org/hubs/open-access)을 확인했다. 원본 JPEG와 API 확인 사본은 저장소 밖 `../ink-reference-study/`에만 저장하고 `view_image`로 열어 직접 관찰했다. 저장소·Library·웹 배포물에는 원본을 넣지 않는다. 페이지에는 외부 원본 대신 직접 제작한 v14 앱 결과만 표시한다.
 
 작가 귀속은 작품 페이지를 우선한다. 49165 API의 `artistDisplayName`은 Yun Shouping이나 현재 작품 페이지는 **After Yun Shouping** 및 ‘佚名　倣惲壽平’이다. 진작으로 기록하지 않는다. 중국 두 작품과 일본 한 작품의 개별 차이를 아래에 유지한다. 한국 회화는 이번에 관찰하지 않았다.
 
@@ -22,7 +22,7 @@
 
 **운수평을 따른 작자 미상, 중국 청대 채색:** 큰 모란 사이에도 많은 잎과 여러 굵기의 지지 가지가 있어 꽃이 고립된 도장처럼 떠 있지 않다. 중간 오른쪽은 촘촘하고 왼쪽 위는 글과 빈 바탕으로 가벼우며 아래 바위는 별도 큰 덩어리를 이룬다. 흰 꽃 면과 옅은 분홍·보라, 세밀한 경계, 엷게 뒤로 물러나는 가지를 볼 수 있다. 작품 전체를 순수 수묵이나 모두 옅은 담채라고 단정하지 않고 비율과 앞뒤 농도를 선택해 참고한다.
 
-## 구현으로 옮길 판단 — 아직 미적용
+## 구현 전에 정한 방향 — 당시 제안 보존
 
 - 전체 화면에서 줄기·잎의 구조와 연결된 여백이 먼저 읽혀야 한다. 큰 꽃머리만 줄이거나 채도만 낮추는 작업으로 완료하지 않는다.
 - 주줄기는 굵고 길게, 끝가지는 가늘고 불규칙하게 나눈다. 같은 각도·간격의 분기를 반복하지 않고 꽃 없는 가지도 남긴다.
@@ -30,6 +30,8 @@
 - 수묵은 담묵 면·중간 농도·작은 농묵 접촉부를 구별한다. 담채는 먹 구조 위의 제한된 옅은 색 면으로 다루고 꽃 전체를 같은 진한 원형으로 채우지 않는다.
 - 넓은 접촉부, 가늘어진 끝, 일부 끊김·번짐을 서로 다르게 설계한다. 실제 시작점·진행 방향·압력·순서는 측정하지 않았으므로 시각 효과를 만드는 디지털 제안이라고 명시한다.
 
-## 구현 후 필요한 증거
+## v14 실제 결과 연결
 
-새 카드의 결과 경로는 `evidence/ink/current-<id>.png`이다. 현재 파일이 없고 페이지는 ‘새 목표의 결과는 아직 없습니다’라고 표시한다. 실제 화면을 만든 뒤 넓은 화면에서 군락/여백을, 확대 화면에서 굵기·농담·획 끝을 비교한다. 아직 `review.adopted`는 비어 있으며 결과 성공·사용자 승인 기록도 없다.
+새 카드의 결과 경로 `evidence/ink/current-<id>.png`에 v14 자체 제작 분석 예시를 연결했다. 팔대산인 카드에는 개양귀비 한 포기, 세이테이 카드에는 청색 코스모스 정원, 운수평을 따른 모란 카드에는 데이지 한 포기를 보인다. 각각 줄기·잎 비율, 제한된 색과 여백, 꽃을 지지하는 몸체의 분석 예시이며 원작의 연꽃·꽃차례·모란을 묘사하거나 원작 구도를 복제한 결과가 아니다.
+
+[전체 정원](../../evidence/ink/v14-garden.png), [세 식물](../../evidence/ink/v14-plants.png), [수묵](../../evidence/ink/v14-ink.png), [청색 담채](../../evidence/ink/v14-blue.png), [모바일](../../evidence/ink/v14-mobile.png), [다섯 브러시](../../evidence/ink/v14-brushes.png) 및 카드별 결과를 직접 열어 확인했다. [독립 AI 검토](visual-review.md)와 함께 I1 식물 연결·I2 구도·I4 색의 시각적 구분을 채택하고 I3는 부분 채택으로 기록한다. 넓은 잎은 평평한 디지털 면에 가깝고 실제 먹의 국소 번짐과 우연한 농도 변화는 제한된다. I4의 기능적 동작과 I5·I6는 별도 실행 시험·이력 감사가 근거다. 사용자 최종 색·비율·취향 만족은 확인 대기다.

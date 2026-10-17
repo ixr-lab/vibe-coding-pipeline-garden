@@ -51,3 +51,15 @@
 실제 실행: [전체](../../evidence/ink/v14-garden.png), [3종 한 포기](../../evidence/ink/v14-plants.png), [5브러시](../../evidence/ink/v14-brushes.png), [색 선택](../../evidence/ink/color-modes.png), [모바일](../../evidence/ink/v14-mobile.png), [JSON](../../evidence/ink/v14-capture.json). 같은 조건 3개 검사와 Node 23개가 통과했다.
 
 관찰 → 채택/부분 채택: 제작자와 [독립 시각 리뷰](visual-review.md)는 I1/I2/I4를 채택했다. 연필 연결과 아래 먹잎군도 개선됐다. I3은 부분 채택이다. 넓은 잎은 평평한 디지털 면에 가깝고 실제 먹의 국소 번짐·우연한 농도는 제한적이다. 참조작을 완전히 재현했다고 표현하지 않는다. 기본 코스모스와 현재 구도는 유지한다. 사용자 직접 미적 승인은 확인 대기다. 기능·접근 입력·성능·출처·이력 검증을 이어간다.
+
+## 04:09 — 전체 페이지 검사에서 찾은 입력 영역 수정
+
+최종 사이트 검사 132개 중 131개가 통과하고, 데스크톱의 재료 패널 summary 높이 32px가 44px 기준에 미달했다. 제품 기능 127개·접근 입력 17개의 기존 검사 범위 밖에 있던 펼치기 영역이다. `styles.css`에서 이 영역을 44px로 높였다. Canvas 기하·재료와 v14 원본 표본은 바꾸지 않는다. 최초 실패 JSON은 `final-site-checks.json`으로 보존하고 같은 검사를 다시 실행한다.
+
+재실행은 [132/132 통과](../../evidence/ink/final-r2-site-checks.json)했다. 실제 최종 UI [데스크톱](../../evidence/ink/delivery-desktop.png)·[모바일](../../evidence/ink/delivery-mobile.png)을 추가했다. 이 입력 영역 보정은 v14 기하·재료 태그 이후의 최종 통합 변경이다.
+
+## 04:11~04:13 — 공개 전 경로 메타데이터 정리
+
+[전체 이력 감사의 첫 결과](../../evidence/ink/privacy-audit-before.json)는 개인 경로 패턴 453건을 찾았다. 새 시험 JSON의 runtime와 로컬 링크 배열에 실행 폴더가 기록된 것이 원인이었다. 이 새 커밋들은 아직 원격에 push하지 않았다.
+
+로컬 경로만 상대 표기로 바꾸고 아직 공개하지 않은 네 커밋 범위의 해당 JSON 메타데이터를 정리했다. 검사 결과·실행 시각·PNG·제품 코드·작성/커밋 시각·메시지는 유지했다. 공개된 v0~v11과 경계 커밋 `cd383564`는 바꾸지 않았다. [정리 영수증](../../evidence/ink/privacy-redaction.json)은 원 SHA와 공개용 SHA를 대응시킨다. v12 `d63b83b`는 동일하고 v13은 `6dfb850`, v14는 `ff638fa`가 됐다. 원본 실행의 JSON에 이전 SHA가 남아 있으면 이 대응표로 같은 제품 코드임을 확인한다. 이후 시험 도구도 공개 결과에 절대 경로를 기록하지 않도록 수정한다. 전체 selected-ref 감사를 다시 수행한 뒤에만 새 이력을 push한다.

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "recorded_at": "2026-10-17T04:15:20.986834+00:00",
+  "status": "pass",
+  "scope": {
+    "repository": ".",
+    "refs": {
+      "refs/heads/main": {
+        "object": "ff638fae2f156e2551906a3aaff09814ec1d72d0",
+        "commit": "ff638fae2f156e2551906a3aaff09814ec1d72d0"
+      },
+      "refs/tags/v0": {
+        "object": "95283a8a251f7aea096b9dc9be23658575899da0",
+        "commit": "95283a8a251f7aea096b9dc9be23658575899da0"
+      },
+      "refs/tags/v1": {
+        "object": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+        "commit": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9"
+      },
+      "refs/tags/v2": {
+        "object": "90a835bb1499723045e55aac464965d29e19aa7a",
+        "commit": "90a835bb1499723045e55aac464965d29e19aa7a"
+      },
+      "refs/tags/v3": {
+        "object": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+        "commit": "fe2a481dcda6e23e1b9024a89c144e2bce703def"
+      },
+      "refs/tags/v4": {
+        "object": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+        "commit": "c68c96d633f5597a82480247de33ee0e3f6b809f"
+      },
+      "refs/tags/v5": {
+        "object": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+        "commit": "6f1d1e8a468d77b74040315ff13a04873e583db4"
+      },
+      "refs/tags/v6": {
+        "object": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+        "commit": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454"
+      },
+      "refs/tags/v7": {
+        "object": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+        "commit": "e1aa152ba62ed30281307010b0ef74c821ac17e5"
+      },
+      "refs/tags/v8": {
+        "object": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+        "commit": "de94619f9ea90be9ad6d4364d7eef39975dbb613"
+      },
+      "refs/tags/v9": {
+        "object": "21529f0310313906be5d65b637f954fe6ac1b7d3",
+        "commit": "21529f0310313906be5d65b637f954fe6ac1b7d3"
+      },
+      "refs/tags/v10": {
+        "object": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+        "commit": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57"
+      },
+      "refs/tags/v11": {
+        "object": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+        "commit": "5967d30ebe8e630cc4c55e263092076986bd2cdd"
+      },
+      "refs/tags/v12": {
+        "object": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a",
+        "commit": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a"
+      },
+      "refs/tags/v13": {
+        "object": "6dfb85071c6a7d8a4ac7cd9a2d06c0d63abe29bc",
+        "commit": "6dfb85071c6a7d8a4ac7cd9a2d06c0d63abe29bc"
+      },
+      "refs/tags/v14": {
+        "object": "ff638fae2f156e2551906a3aaff09814ec1d72d0",
+        "commit": "ff638fae2f156e2551906a3aaff09814ec1d72d0"
+      }
+    },
+    "missing_optional_refs": [],
+    "git_selection": "Explicit main and listed version tags only; no other refs or reflogs enumerated.",
+    "replace_objects_disabled": true,
+    "lazy_fetch_disabled": true,
+    "shallow": false,
+    "annotated_tag_metadata_included": true,
+    "working_tree": "Tracked and nonignored untracked candidates; links are not followed; deleted tracked paths recorded.",
+    "excluded_generated_paths": [
+      "evidence/ink/publication-local.json"
+    ]
+  },
+  "head": {
+    "object": "ff638fae2f156e2551906a3aaff09814ec1d72d0",
+    "symbolic_ref": "refs/heads/main",
+    "is_main_tip": true,
+    "included_in_selected_history": true
+  },
+  "snapshot": {
+    "stable_during_read": true,
+    "working_tree_sha256": "f5ff3ba3c77513c2a59345c926e3b82ebc6bcb6ab3f4b5d49bb6957fc6e27496",
+    "head_after": "ff638fae2f156e2551906a3aaff09814ec1d72d0",
+    "refs_unchanged": true
+  },
+  "counts": {
+    "git_objects": {
+      "blob": 468,
+      "tree": 117,
+      "commit": 19
+    },
+    "historical_paths": 444,
+    "git_blob_formats": {
+      "text": 263,
+      "png": 205
+    },
+    "working_tree": {
+      "candidate_files": 506,
+      "text_files": 192,
+      "png_files": 314
+    },
+    "png_chunks_git_and_worktree": {
+      "IHDR": 519,
+      "IDAT": 22477,
+      "IEND": 519
+    },
+    "git_identities": {
+      "allowed": 38
+    },
+    "suppressed_self_pattern_literal_matches": 3,
+    "findings": 0,
+    "errors": 0
+  },
+  "findings": [],
+  "limits": [
+    "No remote query, credential lookup, application execution, visibility change, or Git mutation.",
+    "Pattern checks cannot prove absence of every secret or identify the origin of arbitrary image pixels.",
+    "External source URLs and rights prose are not image redistribution; source licensing/visual provenance require manual review.",
+    "A pass is an automated local scan, not public-release approval or visual acceptance."
+  ]
+}

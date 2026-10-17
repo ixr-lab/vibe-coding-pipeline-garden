@@ -1,0 +1,16 @@
+{
+  "checked_date_utc": "2026-10-17",
+  "account_login": "ixr-lab",
+  "account_type": "User",
+  "repository_url": "https://github.com/ixr-lab/vibe-coding-pipeline-garden",
+  "owner_type": "User",
+  "origin": "https://github.com/ixr-lab/vibe-coding-pipeline-garden.git",
+  "visibility": "public",
+  "push_permission": true,
+  "disabled": false,
+  "archived": false,
+  "has_pages": false,
+  "new_authentication_or_scope_request": false,
+  "visibility_mutation_after_ink_request": false,
+  "method": "Existing gh API read of user and this repository, plus git remote get-url. No token values read or recorded."
+}

@@ -1,0 +1,593 @@
+{
+  "recorded_at": "2026-10-17T04:03:48.032754+00:00",
+  "label": "v14-final",
+  "runtime": ".",
+  "os": "Windows",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "fixed_settings": {
+    "seed": "271828",
+    "density": 7,
+    "wind": 35,
+    "frame": 360,
+    "flower": "cosmos",
+    "brush": "ink",
+    "width": 1,
+    "texture": 60,
+    "opacity": 85,
+    "petals": 65,
+    "mode": "tint"
+  },
+  "checks": [
+    {
+      "name": "three species remain available",
+      "pass": true
+    },
+    {
+      "name": "five brush materials remain available",
+      "pass": true
+    },
+    {
+      "name": "painting mode is native ink/tint select",
+      "pass": true
+    },
+    {
+      "name": "color picker uses native color input",
+      "pass": true
+    },
+    {
+      "name": "restore color is a button",
+      "pass": true
+    },
+    {
+      "name": "initial garden has five plants",
+      "pass": true
+    },
+    {
+      "name": "query selects explicit tint mode",
+      "pass": true
+    },
+    {
+      "name": "same seed, mode, color, settings and time reproduce exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "different seed changes scene",
+      "pass": true
+    },
+    {
+      "name": "density changes scene",
+      "pass": true
+    },
+    {
+      "name": "density round trip restores exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "wind changes fixed-time plant pose",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pen: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "cosmos/ink: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "cosmos/pencil: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "cosmos/dry: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "cosmos/watercolor: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "daisy/pen: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "daisy/ink: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "daisy/pencil: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "daisy/dry: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "daisy/watercolor: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "poppy/pen: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "poppy/ink: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "poppy/pencil: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "poppy/dry: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor: tint color affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor: ink pixels ignore selected tint color",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor: tint restores chosen blue without geometry drift",
+      "pass": true
+    },
+    {
+      "name": "poppy/watercolor: mode toggles preserve chosen rose",
+      "pass": true
+    },
+    {
+      "name": "tint/cosmos: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/daisy: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/poppy: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/pen: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/ink: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/pencil: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/dry: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "tint/watercolor: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/cosmos: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/daisy: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/poppy: all five brush materials produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/pen: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/ink: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/pencil: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/dry: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "ink/watercolor: all three species produce distinct gardens",
+      "pass": true
+    },
+    {
+      "name": "cosmos: muted default picker color",
+      "pass": true
+    },
+    {
+      "name": "cosmos: restore returns selected species default and Canvas",
+      "pass": true
+    },
+    {
+      "name": "daisy: muted default picker color",
+      "pass": true
+    },
+    {
+      "name": "daisy: restore returns selected species default and Canvas",
+      "pass": true
+    },
+    {
+      "name": "poppy: muted default picker color",
+      "pass": true
+    },
+    {
+      "name": "poppy: restore returns selected species default and Canvas",
+      "pass": true
+    },
+    {
+      "name": "query accepts hex color without hash",
+      "pass": true
+    },
+    {
+      "name": "query accepts explicit ink mode",
+      "pass": true
+    },
+    {
+      "name": "stroke-width still affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "stroke-width round trip restores exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "texture still affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "texture round trip restores exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "opacity still affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "opacity round trip restores exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "petal-strength still affects actual garden",
+      "pass": true
+    },
+    {
+      "name": "petal-strength round trip restores exact Canvas",
+      "pass": true
+    },
+    {
+      "name": "fixed-time grain remains static",
+      "pass": true
+    },
+    {
+      "name": "normal mode actually grows",
+      "pass": true
+    },
+    {
+      "name": "pause freezes Canvas",
+      "pass": true
+    },
+    {
+      "name": "resize preserves pause and static image",
+      "pass": true
+    },
+    {
+      "name": "resume changes Canvas",
+      "pass": true
+    },
+    {
+      "name": "system reduced motion selects static Canvas",
+      "pass": true
+    },
+    {
+      "name": "system reduced-motion change updates control",
+      "pass": true
+    },
+    {
+      "name": "manual reduced motion freezes Canvas",
+      "pass": true
+    },
+    {
+      "name": "reset empties garden",
+      "pass": true
+    },
+    {
+      "name": "plant count capped at 32",
+      "pass": true
+    },
+    {
+      "name": "cap announces a distinct status",
+      "pass": true,
+      "detail": "정원이 가득 찼어요. 비우기로 새로 시작하세요."
+    },
+    {
+      "name": "blank seed normalizes to default",
+      "pass": true
+    },
+    {
+      "name": "long seed limited to 80 characters",
+      "pass": true
+    },
+    {
+      "name": "Space in seed input does not plant",
+      "pass": true
+    },
+    {
+      "name": "keyboard Space plants one seed",
+      "pass": true
+    },
+    {
+      "name": "keyboard Enter plants one seed",
+      "pass": true
+    },
+    {
+      "name": "download is PNG matching current Canvas pixels",
+      "pass": true
+    },
+    {
+      "name": "mobile touch plants one seed",
+      "pass": true
+    },
+    {
+      "name": "DPR3 backing buffer capped at DPR2 in both dimensions",
+      "pass": true,
+      "detail": {
+        "width": 696,
+        "height": 876,
+        "cssWidth": 348,
+        "cssHeight": 438
+      }
+    },
+    {
+      "name": "390px closed drawer has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "390px open drawer has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "app and new mode/color controls make no external requests",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "signatures": {
+    "fixed_tint_blue": "bf275d2fef8eb0a11953d5ae2213cd4f2f6bc322517e97ea956242fc3d10afc1",
+    "species_and_materials": {
+      "tint": {
+        "cosmos/pen": "6f1de04c9ed418708472aa20824a2b9e4a80c94dbb2410d5af7445899680f197",
+        "cosmos/ink": "bf275d2fef8eb0a11953d5ae2213cd4f2f6bc322517e97ea956242fc3d10afc1",
+        "cosmos/pencil": "df947ee200505ce1aef544c92ab508b14aee9927ff98be133064c621c3a99b6a",
+        "cosmos/dry": "d567f94cfc5fcb05c03373bc02e9866e1aac1587a6596725790ecd4afc7309a2",
+        "cosmos/watercolor": "d41ec778bb27ec0328d6e7cf14f5dc1e04c865c8edea05638948df0795972f5d",
+        "daisy/pen": "be2bddb23ca1244b95527cc49b2d9de0e076726a419104d60521f78f85328f62",
+        "daisy/ink": "acb8b256be8791bbe12c8d4dedbc4344bc4b545c9901086c59dc7733a92d1a13",
+        "daisy/pencil": "67199a40cf84ece6bbc0773ac358f29ae4238e52cb986742c1cd81a61ec8f5e4",
+        "daisy/dry": "8600d7eaa8b940f4acceab84c46b068c27fc4f32a7514e26c2078de196b6f1c0",
+        "daisy/watercolor": "43f2813eb68db44bf0c3ec3ace90cb5c0470e4d34ea446faa2b58c5ddbea192e",
+        "poppy/pen": "20d2802461b0deb1f4ae7217cf02fc844c4635903eb4aed3c01843b7c3f2ee65",
+        "poppy/ink": "f956a49249cd020ac0b20209a5844efb4321476b9d8ac448bdc84b5c1e5974f5",
+        "poppy/pencil": "da2900ec62674d19737609b3e504d96815f5643b50405f5af00e564042d50b0b",
+        "poppy/dry": "17fd0c3c76f6d76de30594f99bbf0453c4d5ba3405dc0bc4f6ce64d01cc4e050",
+        "poppy/watercolor": "94ef7864de85d6345415c9694861ab028f6f53865450e1115d7f7228c5b83520"
+      },
+      "ink": {
+        "cosmos/pen": "4a322b5cec99149528931288069ceca483a425ff3aa541dd7b938e46f7865529",
+        "cosmos/ink": "69142dcf40ee1ac678922d7b7f5468b7df8c7444336f45979a25fbc962de3937",
+        "cosmos/pencil": "79f611b3f8bfcaf8bbdce2c4e7b4ba7b391882d120f9f3d109fde18e7175def5",
+        "cosmos/dry": "4b7f8c1ebe565c845cf3b84d97926bff42988b1726e985728c3f42a707c0e349",
+        "cosmos/watercolor": "fb09f81d1e00249c95d7aeda7afdb9274e96432350a08d2cb954263eecc0bc97",
+        "daisy/pen": "43bb0a8929c19f97c364371fdbda3de725fe214c816f057646939e524fd11d3a",
+        "daisy/ink": "71b0a4a1af9976297fe7c33a035acfdb107847674837d5cf61b83bf0a53cc806",
+        "daisy/pencil": "18313c18d2f46d9a4f9cdb2f5b0e7a1f56604632199b52f18d7e512312e0e07c",
+        "daisy/dry": "93fa6cbed403202e8064971aa02d25b88042b7645dfc6ff423a795d2665a3d74",
+        "daisy/watercolor": "15474d17ef91b9bd1ca75438efd58c3a13a7dafaaf62382335a241373fd255ac",
+        "poppy/pen": "4af05fba69c9878ff582276924ffcba52406e21af25c91c8ea22a0cb31cc6103",
+        "poppy/ink": "01031357835f763bebf1d210d5cded2f5507682f293846d921e90f226ea6bff9",
+        "poppy/pencil": "49e7e0f34710872672779ba96409a9ae4b975634f1e2b216aadd49c8f401b513",
+        "poppy/dry": "cc73c937c98bb1f12de4bed0a8e504a1483e794e4d7938b36138a398888269f2",
+        "poppy/watercolor": "606c6be3c275f853960bb4cc04be5ed51f0b1967822384d9c582f388d50f6695"
+      }
+    }
+  },
+  "passed": 127,
+  "total": 127,
+  "browser": "155.0.8059.84",
+  "export": {
+    "path": "evidence\\ink\\v14-final-export.png",
+    "size": [
+      996,
+      798
+    ],
+    "sha256": "2bcc7b0f282543dec6152d93fa8c4713d11295c196f0ca0a7b2e82b5d53ff31a"
+  }
+}

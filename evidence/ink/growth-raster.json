@@ -1,0 +1,26 @@
+{
+  "at": "2026-10-17T04:04:32.782138+00:00",
+  "before_source": "v13",
+  "after_source": "0be865897b39fd49b164f4d304bc421176a9b216",
+  "seed": "271828",
+  "id": 2,
+  "time_seconds": 2.125,
+  "viewport": [
+    1000,
+    778
+  ],
+  "DPR": 1,
+  "flower": "daisy",
+  "brush": "pen",
+  "wind": 0,
+  "opacity": 100,
+  "crop": [
+    420,
+    250,
+    620,
+    410
+  ],
+  "crop_resized": false,
+  "errors": [],
+  "note": "Isolated real Canvas renderer, not default five-plant composition. Numeric distance is documented separately in growth-connection.json."
+}

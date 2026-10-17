@@ -1,0 +1,4340 @@
+{
+  "recorded_at": "2026-10-17T04:08:38.442953+00:00",
+  "started_at": "2026-10-17T04:08:31.224255+00:00",
+  "label": "final",
+  "runtime": ".",
+  "browser": "155.0.8059.84",
+  "checks": [
+    {
+      "name": "index.html/desktop all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "index.html/desktop local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/desktop no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "index.html/desktop visible control targets are at least 44px",
+      "pass": false,
+      "detail": [
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 1310.40625,
+          "height": 32
+        }
+      ]
+    },
+    {
+      "name": "index.html/desktop no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/desktop no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/desktop no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/desktop all own images load",
+      "pass": true,
+      "detail": {
+        "count": 15,
+        "failed": []
+      }
+    },
+    {
+      "name": "process.html/desktop local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/desktop no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "process.html/desktop visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/desktop no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/desktop no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/desktop no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/desktop all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "study.html/desktop local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/desktop no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "study.html/desktop visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/desktop no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/desktop no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/desktop no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/desktop all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "petal-study.html/desktop local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/desktop no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "petal-study.html/desktop visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/desktop no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/desktop no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/desktop no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop all own images load",
+      "pass": true,
+      "detail": {
+        "count": 14,
+        "failed": []
+      }
+    },
+    {
+      "name": "reference.html/desktop local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 1440,
+        "viewport": 1440
+      }
+    },
+    {
+      "name": "reference.html/desktop visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop 14 reference cards render",
+      "pass": true,
+      "detail": {
+        "actual": 14
+      }
+    },
+    {
+      "name": "reference.html/desktop default ink filter shows three cards",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop ink filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/desktop ink count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop ink filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop ink expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 30,
+        "open": 30
+      }
+    },
+    {
+      "name": "reference.html/desktop ink collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop all filter count",
+      "pass": true,
+      "detail": {
+        "expected": 14,
+        "actual": 14
+      }
+    },
+    {
+      "name": "reference.html/desktop all count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop all filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop all expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 137,
+        "open": 137
+      }
+    },
+    {
+      "name": "reference.html/desktop all collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop flower filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/desktop flower count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop flower filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop flower expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 30,
+        "open": 30
+      }
+    },
+    {
+      "name": "reference.html/desktop flower collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop brush filter count",
+      "pass": true,
+      "detail": {
+        "expected": 5,
+        "actual": 5
+      }
+    },
+    {
+      "name": "reference.html/desktop brush count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop brush filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop brush expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 50,
+        "open": 50
+      }
+    },
+    {
+      "name": "reference.html/desktop brush collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop petal filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/desktop petal count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop petal filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop petal expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 27,
+        "open": 27
+      }
+    },
+    {
+      "name": "reference.html/desktop petal collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop every source has rights and observation labels",
+      "pass": true,
+      "detail": {
+        "sources": 35,
+        "invalid": []
+      }
+    },
+    {
+      "name": "reference.html/desktop each card has one local current-result image",
+      "pass": true,
+      "detail": {
+        "images": [
+          "evidence/extension/current-cosmos.png",
+          "evidence/extension/current-daisy.png",
+          "evidence/extension/current-poppy.png",
+          "evidence/extension/current-uniform-pen.png",
+          "evidence/extension/current-pressure-ink.png",
+          "evidence/extension/current-pencil.png",
+          "evidence/extension/current-dry-brush.png",
+          "evidence/extension/current-watercolor.png",
+          "evidence/petals/current-petal-watercolor.png",
+          "evidence/petals/current-petal-ink-hatching.png",
+          "evidence/petals/current-petal-pressure.png",
+          "evidence/ink/current-ink-bada-lotus.png",
+          "evidence/ink/current-ink-seitei-flowers.png",
+          "evidence/ink/current-ink-after-yun-peonies.png"
+        ]
+      }
+    },
+    {
+      "name": "reference.html/desktop all reference controls and summaries have 44px targets",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop all-filter view has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "reference.html/desktop no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/desktop no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/mobile all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "index.html/mobile local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "index.html/mobile visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/mobile no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/mobile no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "index.html/mobile no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/mobile all own images load",
+      "pass": true,
+      "detail": {
+        "count": 15,
+        "failed": []
+      }
+    },
+    {
+      "name": "process.html/mobile local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "process.html/mobile visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/mobile no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/mobile no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "process.html/mobile no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/mobile all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "study.html/mobile local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "study.html/mobile visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/mobile no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/mobile no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "study.html/mobile no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/mobile all own images load",
+      "pass": true,
+      "detail": {
+        "count": 0,
+        "failed": []
+      }
+    },
+    {
+      "name": "petal-study.html/mobile local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "petal-study.html/mobile visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/mobile no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/mobile no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "petal-study.html/mobile no failed local requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile all own images load",
+      "pass": true,
+      "detail": {
+        "count": 14,
+        "failed": []
+      }
+    },
+    {
+      "name": "reference.html/mobile local href/src targets resolve",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile no horizontal overflow",
+      "pass": true,
+      "detail": {
+        "scrollWidth": 390,
+        "viewport": 390
+      }
+    },
+    {
+      "name": "reference.html/mobile visible control targets are at least 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile 14 reference cards render",
+      "pass": true,
+      "detail": {
+        "actual": 14
+      }
+    },
+    {
+      "name": "reference.html/mobile default ink filter shows three cards",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile ink filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/mobile ink count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile ink filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile ink expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 30,
+        "open": 30
+      }
+    },
+    {
+      "name": "reference.html/mobile ink collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile all filter count",
+      "pass": true,
+      "detail": {
+        "expected": 14,
+        "actual": 14
+      }
+    },
+    {
+      "name": "reference.html/mobile all count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile all filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile all expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 137,
+        "open": 137
+      }
+    },
+    {
+      "name": "reference.html/mobile all collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile flower filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/mobile flower count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile flower filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile flower expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 30,
+        "open": 30
+      }
+    },
+    {
+      "name": "reference.html/mobile flower collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile brush filter count",
+      "pass": true,
+      "detail": {
+        "expected": 5,
+        "actual": 5
+      }
+    },
+    {
+      "name": "reference.html/mobile brush count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile brush filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile brush expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 50,
+        "open": 50
+      }
+    },
+    {
+      "name": "reference.html/mobile brush collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile petal filter count",
+      "pass": true,
+      "detail": {
+        "expected": 3,
+        "actual": 3
+      }
+    },
+    {
+      "name": "reference.html/mobile petal count badge",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile petal filter pressed state",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile petal expands all visible details",
+      "pass": true,
+      "detail": {
+        "details": 27,
+        "open": 27
+      }
+    },
+    {
+      "name": "reference.html/mobile petal collapses all visible details",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile every source has rights and observation labels",
+      "pass": true,
+      "detail": {
+        "sources": 35,
+        "invalid": []
+      }
+    },
+    {
+      "name": "reference.html/mobile each card has one local current-result image",
+      "pass": true,
+      "detail": {
+        "images": [
+          "evidence/extension/current-cosmos.png",
+          "evidence/extension/current-daisy.png",
+          "evidence/extension/current-poppy.png",
+          "evidence/extension/current-uniform-pen.png",
+          "evidence/extension/current-pressure-ink.png",
+          "evidence/extension/current-pencil.png",
+          "evidence/extension/current-dry-brush.png",
+          "evidence/extension/current-watercolor.png",
+          "evidence/petals/current-petal-watercolor.png",
+          "evidence/petals/current-petal-ink-hatching.png",
+          "evidence/petals/current-petal-pressure.png",
+          "evidence/ink/current-ink-bada-lotus.png",
+          "evidence/ink/current-ink-seitei-flowers.png",
+          "evidence/ink/current-ink-after-yun-peonies.png"
+        ]
+      }
+    },
+    {
+      "name": "reference.html/mobile all reference controls and summaries have 44px targets",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile all-filter view has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "reference.html/mobile no JavaScript page errors",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile no external requests",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "reference.html/mobile no failed local requests",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "pages": [
+    {
+      "page": "index.html",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "errors": [],
+      "requests": [
+        "./index.html?frame=360&mode=tint",
+        "./styles.css",
+        "./engine.js",
+        "./petal-paint.js",
+        "./ink-palette.js",
+        "./flower-art.js",
+        "./brush-art.js",
+        "./plant-renderer.js",
+        "./garden.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 14,
+      "control_targets": [
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 1310.40625,
+          "height": 32
+        },
+        {
+          "id": "flower",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "painting-mode",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "flower-color",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 242.890625,
+          "height": 44
+        },
+        {
+          "id": "restore-color",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "brush",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 242.890625,
+          "height": 44
+        },
+        {
+          "id": "stroke-width",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "texture",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "opacity",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 242.890625,
+          "height": 44
+        },
+        {
+          "id": "petal-strength",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 242.875,
+          "height": 44
+        },
+        {
+          "id": "seed",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "regenerate",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "wind",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "density",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "pause",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 136,
+          "height": 44
+        },
+        {
+          "id": "reset",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 136,
+          "height": 44
+        },
+        {
+          "id": "save",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "plant-center",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 280,
+          "height": 44
+        },
+        {
+          "id": "reduced",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 280,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "page": "process.html",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "errors": [],
+      "requests": [
+        "./process.html",
+        "./process.css",
+        "./evidence/extension/garden-evolution.png",
+        "./evidence/v1-desktop.png",
+        "./evidence/ink/evolution.png",
+        "./evidence/ink/color-modes.png",
+        "./evidence/ink/plant-evolution.png",
+        "./evidence/petals/v5-large.png",
+        "./evidence/petals/v11-large.png",
+        "./evidence/petals/v11-basic.png",
+        "./evidence/petals/v11-garden.png",
+        "./evidence/v2-desktop.png",
+        "./evidence/ink/v14-plants.png",
+        "./evidence/ink/v14-brushes.png",
+        "./evidence/ink/v14-mobile.png",
+        "./evidence/petals/v11-in-garden.png",
+        "./evidence/v0-desktop.png"
+      ],
+      "request_failures": [],
+      "images": [
+        {
+          "src": "evidence/ink/evolution.png",
+          "complete": true,
+          "width": 1500,
+          "height": 460,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/color-modes.png",
+          "complete": true,
+          "width": 1500,
+          "height": 460,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/plant-evolution.png",
+          "complete": true,
+          "width": 1260,
+          "height": 760,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-plants.png",
+          "complete": true,
+          "width": 1260,
+          "height": 740,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-brushes.png",
+          "complete": true,
+          "width": 1500,
+          "height": 620,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-mobile.png",
+          "complete": true,
+          "width": 390,
+          "height": 1526,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v5-large.png",
+          "complete": true,
+          "width": 1500,
+          "height": 991,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-large.png",
+          "complete": true,
+          "width": 1500,
+          "height": 991,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-basic.png",
+          "complete": true,
+          "width": 1000,
+          "height": 361,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-garden.png",
+          "complete": true,
+          "width": 998,
+          "height": 778,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-in-garden.png",
+          "complete": true,
+          "width": 700,
+          "height": 384,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/garden-evolution.png",
+          "complete": true,
+          "width": 1500,
+          "height": 570,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v0-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1018,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v1-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1018,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v2-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1166,
+          "hidden": false
+        }
+      ],
+      "local_link_count": 88,
+      "control_targets": [
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 1260.40625,
+          "height": 44
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 1260.40625,
+          "height": 44
+        },
+        {
+          "id": "version-v0",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 108,
+          "height": 44
+        },
+        {
+          "id": "version-v1",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 108,
+          "height": 44
+        },
+        {
+          "id": "version-v2",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 108,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "page": "study.html",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "errors": [],
+      "requests": [
+        "./study.html",
+        "./styles.css",
+        "./engine.js",
+        "./petal-paint.js",
+        "./flower-art.js",
+        "./brush-art.js",
+        "./study.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 8,
+      "control_targets": []
+    },
+    {
+      "page": "petal-study.html",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "errors": [],
+      "requests": [
+        "./petal-study.html",
+        "./petal-paint.js",
+        "./flower-art.js",
+        "./petal-study.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 5,
+      "control_targets": []
+    },
+    {
+      "page": "reference.html",
+      "viewport": [
+        1440,
+        1000
+      ],
+      "errors": [],
+      "requests": [
+        "./reference.html",
+        "./reference.css",
+        "./reference-data.js",
+        "./reference-page.js",
+        "./evidence/ink/current-ink-bada-lotus.png",
+        "./evidence/ink/current-ink-seitei-flowers.png",
+        "./evidence/ink/current-ink-after-yun-peonies.png",
+        "./evidence/extension/current-cosmos.png",
+        "./evidence/extension/current-daisy.png",
+        "./evidence/extension/current-poppy.png",
+        "./evidence/extension/current-uniform-pen.png",
+        "./evidence/extension/current-pressure-ink.png",
+        "./evidence/extension/current-pencil.png",
+        "./evidence/extension/current-dry-brush.png",
+        "./evidence/extension/current-watercolor.png",
+        "./evidence/petals/current-petal-watercolor.png",
+        "./evidence/petals/current-petal-ink-hatching.png",
+        "./evidence/petals/current-petal-pressure.png"
+      ],
+      "request_failures": [],
+      "images": [
+        {
+          "src": "evidence/extension/current-cosmos.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-daisy.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-poppy.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-uniform-pen.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-pressure-ink.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-pencil.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-dry-brush.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-watercolor.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-watercolor.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-ink-hatching.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-pressure.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-bada-lotus.png",
+          "complete": true,
+          "width": 420,
+          "height": 700,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-seitei-flowers.png",
+          "complete": true,
+          "width": 998,
+          "height": 800,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-after-yun-peonies.png",
+          "complete": true,
+          "width": 420,
+          "height": 700,
+          "hidden": false
+        }
+      ],
+      "local_link_count": 45,
+      "control_targets": [
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 159.5625,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 87.125,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 104.234375,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 128.234375,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 116.234375,
+          "height": 44
+        },
+        {
+          "id": "expand-all",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 135.671875,
+          "height": 45
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 587.203125,
+          "height": 48
+        }
+      ],
+      "reference": {
+        "source_count": 35,
+        "observed_yes": 24,
+        "observed_no": 11,
+        "control_targets": [
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 159.5625,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 87.125,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 104.234375,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 128.234375,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 116.234375,
+            "height": 44
+          },
+          {
+            "id": "expand-all",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 135.671875,
+            "height": 45
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 587.203125,
+            "height": 48
+          }
+        ]
+      }
+    },
+    {
+      "page": "index.html",
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "requests": [
+        "./index.html?frame=360&mode=tint",
+        "./styles.css",
+        "./engine.js",
+        "./petal-paint.js",
+        "./ink-palette.js",
+        "./flower-art.js",
+        "./brush-art.js",
+        "./plant-renderer.js",
+        "./garden.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 14,
+      "control_targets": [
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "flower",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "painting-mode",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "flower-color",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "restore-color",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "brush",
+          "tag": "SELECT",
+          "targetTag": "SELECT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "stroke-width",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "texture",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "opacity",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "petal-strength",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 167,
+          "height": 44
+        },
+        {
+          "id": "seed",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "regenerate",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "wind",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 169,
+          "height": 44
+        },
+        {
+          "id": "density",
+          "tag": "INPUT",
+          "targetTag": "INPUT",
+          "width": 169,
+          "height": 44
+        },
+        {
+          "id": "pause",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 171,
+          "height": 44
+        },
+        {
+          "id": "reset",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 171,
+          "height": 44
+        },
+        {
+          "id": "save",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "plant-center",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "reduced",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 350,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "page": "process.html",
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "requests": [
+        "./process.html",
+        "./process.css",
+        "./evidence/extension/garden-evolution.png",
+        "./evidence/v1-desktop.png",
+        "./evidence/ink/evolution.png",
+        "./evidence/ink/color-modes.png",
+        "./evidence/ink/plant-evolution.png",
+        "./evidence/petals/v5-large.png",
+        "./evidence/petals/v11-large.png",
+        "./evidence/petals/v11-basic.png",
+        "./evidence/petals/v11-garden.png",
+        "./evidence/ink/v14-plants.png",
+        "./evidence/ink/v14-brushes.png",
+        "./evidence/ink/v14-mobile.png",
+        "./evidence/petals/v11-in-garden.png",
+        "./evidence/v0-desktop.png",
+        "./evidence/v2-desktop.png"
+      ],
+      "request_failures": [],
+      "images": [
+        {
+          "src": "evidence/ink/evolution.png",
+          "complete": true,
+          "width": 1500,
+          "height": 460,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/color-modes.png",
+          "complete": true,
+          "width": 1500,
+          "height": 460,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/plant-evolution.png",
+          "complete": true,
+          "width": 1260,
+          "height": 760,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-plants.png",
+          "complete": true,
+          "width": 1260,
+          "height": 740,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-brushes.png",
+          "complete": true,
+          "width": 1500,
+          "height": 620,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/v14-mobile.png",
+          "complete": true,
+          "width": 390,
+          "height": 1526,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v5-large.png",
+          "complete": true,
+          "width": 1500,
+          "height": 991,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-large.png",
+          "complete": true,
+          "width": 1500,
+          "height": 991,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-basic.png",
+          "complete": true,
+          "width": 1000,
+          "height": 361,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-garden.png",
+          "complete": true,
+          "width": 998,
+          "height": 778,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/v11-in-garden.png",
+          "complete": true,
+          "width": 700,
+          "height": 384,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/garden-evolution.png",
+          "complete": true,
+          "width": 1500,
+          "height": 570,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v0-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1018,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v1-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1018,
+          "hidden": false
+        },
+        {
+          "src": "evidence/v2-desktop.png",
+          "complete": true,
+          "width": 1440,
+          "height": 1166,
+          "hidden": false
+        }
+      ],
+      "local_link_count": 88,
+      "control_targets": [
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 350,
+          "height": 44
+        },
+        {
+          "id": "version-v0",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 112.65625,
+          "height": 44
+        },
+        {
+          "id": "version-v1",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 112.671875,
+          "height": 44
+        },
+        {
+          "id": "version-v2",
+          "tag": "INPUT",
+          "targetTag": "LABEL",
+          "width": 112.671875,
+          "height": 44
+        }
+      ]
+    },
+    {
+      "page": "study.html",
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "requests": [
+        "./study.html",
+        "./styles.css",
+        "./engine.js",
+        "./petal-paint.js",
+        "./flower-art.js",
+        "./brush-art.js",
+        "./study.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 8,
+      "control_targets": []
+    },
+    {
+      "page": "petal-study.html",
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "requests": [
+        "./petal-study.html",
+        "./petal-paint.js",
+        "./flower-art.js",
+        "./petal-study.js"
+      ],
+      "request_failures": [],
+      "images": [],
+      "local_link_count": 5,
+      "control_targets": []
+    },
+    {
+      "page": "reference.html",
+      "viewport": [
+        390,
+        844
+      ],
+      "errors": [],
+      "requests": [
+        "./reference.html",
+        "./reference.css",
+        "./reference-data.js",
+        "./reference-page.js",
+        "./evidence/ink/current-ink-bada-lotus.png",
+        "./evidence/extension/current-cosmos.png",
+        "./evidence/extension/current-daisy.png",
+        "./evidence/extension/current-poppy.png",
+        "./evidence/extension/current-uniform-pen.png",
+        "./evidence/extension/current-pressure-ink.png",
+        "./evidence/extension/current-pencil.png",
+        "./evidence/extension/current-dry-brush.png",
+        "./evidence/extension/current-watercolor.png",
+        "./evidence/petals/current-petal-watercolor.png",
+        "./evidence/petals/current-petal-ink-hatching.png",
+        "./evidence/petals/current-petal-pressure.png",
+        "./evidence/ink/current-ink-seitei-flowers.png",
+        "./evidence/ink/current-ink-after-yun-peonies.png"
+      ],
+      "request_failures": [],
+      "images": [
+        {
+          "src": "evidence/extension/current-cosmos.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-daisy.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-poppy.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-uniform-pen.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-pressure-ink.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-pencil.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-dry-brush.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/extension/current-watercolor.png",
+          "complete": true,
+          "width": 300,
+          "height": 380,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-watercolor.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-ink-hatching.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/petals/current-petal-pressure.png",
+          "complete": true,
+          "width": 300,
+          "height": 290,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-bada-lotus.png",
+          "complete": true,
+          "width": 420,
+          "height": 700,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-seitei-flowers.png",
+          "complete": true,
+          "width": 998,
+          "height": 800,
+          "hidden": false
+        },
+        {
+          "src": "evidence/ink/current-ink-after-yun-peonies.png",
+          "complete": true,
+          "width": 420,
+          "height": 700,
+          "hidden": false
+        }
+      ],
+      "local_link_count": 45,
+      "control_targets": [
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 151.5625,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 79.125,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 96.234375,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 120.234375,
+          "height": 44
+        },
+        {
+          "id": "BUTTON",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 108.234375,
+          "height": 44
+        },
+        {
+          "id": "expand-all",
+          "tag": "BUTTON",
+          "targetTag": "BUTTON",
+          "width": 128.125,
+          "height": 45
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        },
+        {
+          "id": "SUMMARY",
+          "tag": "SUMMARY",
+          "targetTag": "SUMMARY",
+          "width": 308,
+          "height": 48
+        }
+      ],
+      "reference": {
+        "source_count": 35,
+        "observed_yes": 24,
+        "observed_no": 11,
+        "control_targets": [
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 151.5625,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 79.125,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 96.234375,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 120.234375,
+            "height": 44
+          },
+          {
+            "id": "BUTTON",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 108.234375,
+            "height": 44
+          },
+          {
+            "id": "expand-all",
+            "tag": "BUTTON",
+            "targetTag": "BUTTON",
+            "width": 128.125,
+            "height": 45
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          },
+          {
+            "id": "SUMMARY",
+            "tag": "SUMMARY",
+            "targetTag": "SUMMARY",
+            "width": 308,
+            "height": 48
+          }
+        ]
+      }
+    }
+  ],
+  "screenshots": [
+    "evidence\\ink\\final-process-desktop-final.png",
+    "evidence\\ink\\final-reference-desktop-final.png",
+    "evidence\\ink\\final-process-mobile-final.png",
+    "evidence\\ink\\final-reference-mobile-final.png"
+  ],
+  "passed": 131,
+  "total": 132,
+  "target_scope": "Visible controls and disclosure summaries; checkbox/radio associated label; ordinary inline text links excluded."
+}

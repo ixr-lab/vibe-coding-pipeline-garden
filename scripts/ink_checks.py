@@ -38,6 +38,28 @@ signatures = {}
 metadata = {}
 
 
+def report_safe(value):
+    """Keep published JSON and console diagnostics free of local absolute paths."""
+    if isinstance(value, dict):
+        return {report_safe(key): report_safe(item) for key, item in value.items()}
+    if isinstance(value, (list, tuple)):
+        return [report_safe(item) for item in value]
+    if isinstance(value, pathlib.Path):
+        value = str(value)
+    if not isinstance(value, str):
+        return value
+    for base in sorted({ROOT, RUNTIME}, key=lambda path: len(str(path)), reverse=True):
+        for prefix in (base.as_uri(), str(base), base.as_posix()):
+            value = re.sub(re.escape(prefix) + r"(?=$|[/\\?#])", ".", value, flags=re.IGNORECASE)
+    if value.startswith(".\\"):
+        value = value.replace("\\", "/")
+    value = re.sub(r"(?i)\bfile://[^\s\"'<>]*", "[local-file]", value)
+    value = re.sub(r"(?i)\b[a-z]:[/\\][^\r\n\t\"'<>|]*", "[local-path]", value)
+    value = re.sub(r"(?<!\\)\\\\[^\\\s]+\\[^\r\n\t\"'<>|]*", "[local-path]", value)
+    value = re.sub(r"(?<![\w:/.])/(?!/)[^\s/\\\"'<>|]+/[^\r\n\t\"'<>|]*", "[local-path]", value)
+    return value
+
+
 def check(name, passed, detail=None):
     item = {"name": name, "pass": bool(passed)}
     if detail is not None:
@@ -273,13 +295,14 @@ except Exception as exc:
 
 result = {
     "recorded_at": datetime.datetime.now(datetime.timezone.utc).isoformat(),
-    "label": LABEL, "runtime": str(RUNTIME), "os": "Windows", "viewport": [1440, 1000],
+    "label": LABEL, "runtime": "./", "os": "Windows", "viewport": [1440, 1000],
     "fixed_settings": FIXED, "checks": checks, "errors": errors, "signatures": signatures,
     "passed": sum(check["pass"] for check in checks), "total": len(checks), **metadata,
 }
+result = report_safe(result)
 target = OUT / (LABEL + "-checks.json")
 target.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
-print(json.dumps({"evidence": str(target.relative_to(ROOT)), "passed": result["passed"],
-                  "total": result["total"], "failed": [item for item in checks if not item["pass"]]},
+print(json.dumps(report_safe({"evidence": str(target.relative_to(ROOT)), "passed": result["passed"],
+                  "total": result["total"], "failed": [item for item in checks if not item["pass"]]}),
                  ensure_ascii=True, indent=2))
 sys.exit(0 if checks and all(check["pass"] for check in checks) else 1)

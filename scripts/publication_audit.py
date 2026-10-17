@@ -327,10 +327,15 @@ def audit(repo: Path, output_rel: str) -> dict:
 
 
 def main() -> int:
+    global CANDIDATE_REFS
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo", type=Path, default=Path(__file__).resolve().parents[1])
     parser.add_argument("--output", default=DEFAULT_OUTPUT, help="Report path relative to repository; must stay inside it.")
+    parser.add_argument("--max-version", type=int, default=11, help="Explicit v0..vN tags to include, alongside main. Other refs stay excluded.")
     args = parser.parse_args()
+    if not 0 <= args.max_version <= 30:
+        parser.error("max-version must be between 0 and 30")
+    CANDIDATE_REFS = ["refs/heads/main"] + [f"refs/tags/v{i}" for i in range(args.max_version + 1)]
     repo = args.repo.resolve()
     output = (repo / args.output).resolve()
     if not output.is_relative_to(repo) or ".git" in output.relative_to(repo).parts:

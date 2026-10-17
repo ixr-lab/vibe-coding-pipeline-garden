@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-17T04:13:05.217118+00:00",
+  "published_boundary_unchanged": "cd38356430bcffd8ae80212641b31bf7ad594a20",
+  "scope": "Only four unpublished commits after the published boundary. Main and new v12/v13/v14 refs; local backup is never published.",
+  "commit_mapping": {
+    "b2db13173a609fe8c9f3bb2acdd0b3b8d3f7d37d": "b2db13173a609fe8c9f3bb2acdd0b3b8d3f7d37d",
+    "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a",
+    "9a5c49ad1ad3ae6899e2a1852cacf54c39f24290": "6dfb85071c6a7d8a4ac7cd9a2d06c0d63abe29bc",
+    "0be865897b39fd49b164f4d304bc421176a9b216": "ff638fae2f156e2551906a3aaff09814ec1d72d0"
+  },
+  "redacted_evidence_blobs": {
+    "evidence/ink/v12-qa-accessibility.json": {
+      "old": "f307dee1d73456b9bc46b7807460e5668b05e1b2",
+      "new": "fe7e9eed2f9eb5daf6039ac78e9e638960d90dc2",
+      "assertion_payload_unchanged": true
+    },
+    "evidence/ink/v12-qa-checks.json": {
+      "old": "aae9c51fdfb9d80579ff20fbfd2201b4d5de402b",
+      "new": "e671d9ea580f0245862bdf2465f2045cc43b7281",
+      "assertion_payload_unchanged": true
+    },
+    "evidence/ink/v12-qa-r2-accessibility.json": {
+      "old": "fba6ca723945368e67887726c98bff1a3505ad0f",
+      "new": "7150523a597c9eb8611f43938d2ab781d011976b",
+      "assertion_payload_unchanged": true
+    },
+    "evidence/ink/v14-final-accessibility.json": {
+      "old": "ea6ab5e00303b119059a6f5d3a429fc842ff5ccb",
+      "new": "cdd4393e3395c58de055129f6af0f6502196cf0d",
+      "assertion_payload_unchanged": true
+    }
+  },
+  "working_files_redacted": [
+    "evidence/ink/final-r2-site-checks.json",
+    "evidence/ink/final-site-checks.json",
+    "evidence/ink/site-checks-before-20261017T040947281972Z.json",
+    "evidence/ink/site-checks.json",
+    "evidence/ink/v12-qa-accessibility.json",
+    "evidence/ink/v12-qa-checks.json",
+    "evidence/ink/v12-qa-r2-accessibility.json",
+    "evidence/ink/v14-final-accessibility.json",
+    "evidence/ink/v14-final-checks.json"
+  ],
+  "assertion_payloads_unchanged": true,
+  "png_and_product_source_bytes_changed_by_history_redaction": false,
+  "author_committer_dates_and_messages_preserved": true,
+  "metadata_change": "Absolute checkout path and local file URL prefixes replaced with relative dots. No test result or execution timestamp changed."
+}
