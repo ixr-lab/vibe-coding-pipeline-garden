@@ -40,7 +40,7 @@ v12 PNG 내보내기는 `996×798`이며 저장 파일을 디코딩해 현재 Ca
 
 캐시가 준비된 poppy/watercolor·담채 청색·두께2.5·질감100·농도100·꽃잎 표현100 장면의120개 RAF 간격은 평균16.669ms, p9516.9ms였다. cold 변경과 warm RAF는 서로 다른 값이다. 단일 draw 시간·입력 지연·GPU 처리시간이나 모든 기기의60FPS를 보장하지 않는다. 한 headless Windows/Chrome 환경의 관찰이며 오류는0이었다.
 
-출처/전체 이력은 [공개 전 감사](publication-audit.md)와 [재감사 JSON](../../evidence/ink/publication-local.json)에서 findings0/errors0을 확인했다. 처음 찾은 로컬 경로 메타데이터와 공개 전 정리도 기록했다. 새 원격 재조회 결과는 실제 push 뒤 전달 기록에 추가한다.
+출처/전체 이력은 [공개 전 감사](publication-audit.md)와 [재감사 JSON](../../evidence/ink/publication-local.json)에서 findings0/errors0을 확인했다. 처음 찾은 로컬 경로 메타데이터와 공개 전 정리도 기록했다. [원격 재조회](../../evidence/ink/remote.json)는 커밋 `89172d8`의 주요 파일29개·태그15개·비인증 파일3개 바이트 일치를 확인했다. 첫 TCP 읽기 시간 초과 뒤 읽기만 재시도했으며 push/가시성 변경을 반복하지 않았다.
 
 설명 페이지 첫 실행은 [131/132](../../evidence/ink/final-site-checks.json)였다. 유일한 실패는 `index.html` 데스크톱의 재료 펼침 대상 높이가32px였던 것이다. 최종 main에서44px로 보정한 뒤 [132/132 재검사](../../evidence/ink/final-r2-site-checks.json)를 통과했다. v14 태그의 모델·렌더와 이 후속 UI 보정을 구분하며 첫 실패 원본은 남긴다. [전달 화면](../../evidence/ink/delivery-desktop.png)·[모바일](../../evidence/ink/delivery-mobile.png)은 보정 후 다시 캡처했다.
 

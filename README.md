@@ -16,7 +16,7 @@ v12의 반복 부채꼴 잎·중앙 과밀을 본 뒤 **v13은 잎군과 구도�
 
 제작자와 [독립 AI 시각 리뷰](docs/ink/visual-review.md)는 전체 식물 연결 I1, 구도 I2, 색 범위 I4를 채택했습니다. 먹과 종이 I3은 부분 채택입니다. 넓은 잎은 평평한 벡터 면에 가깝고 실제 먹의 국소 번짐·우연한 농도 변화는 제한됩니다. 기본 코스모스를 유지했으며 데이지·개양귀비도 고를 수 있습니다.
 
-v14 모델·렌더 소스는 `ff638fa`이며 최종 main에는 설명과 데스크톱 펼침 대상44px 보정을 추가했습니다. 실제 Chrome에서 [기능127/127](evidence/ink/v14-final-checks.json)·[접근 동작17/17](evidence/ink/v14-final-accessibility.json), [전체 식물15조합·근접52/52](evidence/ink/v14-materials.json)·[Node23/23](evidence/ink/unit.tap)·[설명 페이지132/132](evidence/ink/final-r2-site-checks.json)를 확인했습니다. [최대 장면 관찰](evidence/ink/stress.json)에서 선택 변경의 캐시 재생성은 약0.97초까지 걸렸습니다. 단일 기기의 측정이며 모든 기기의 속도를 보장하지 않습니다. [출처/이력 재감사](docs/ink/publication-audit.md)는 findings0/errors0을 확인했습니다. 새 원격 업로드 검증은 기존 v11의 public 검증과 별도로 기록합니다.
+v14 모델·렌더 소스는 `ff638fa`이며 최종 main에는 설명과 데스크톱 펼침 대상44px 보정을 추가했습니다. 실제 Chrome에서 [기능127/127](evidence/ink/v14-final-checks.json)·[접근 동작17/17](evidence/ink/v14-final-accessibility.json), [전체 식물15조합·근접52/52](evidence/ink/v14-materials.json)·[Node23/23](evidence/ink/unit.tap)·[설명 페이지132/132](evidence/ink/final-r2-site-checks.json)를 확인했습니다. [최대 장면 관찰](evidence/ink/stress.json)에서 선택 변경의 캐시 재생성은 약0.97초까지 걸렸습니다. 단일 기기의 측정이며 모든 기기의 속도를 보장하지 않습니다. [출처/이력 재감사](docs/ink/publication-audit.md)는 findings0/errors0을 확인했습니다. [새 원격 검증](evidence/ink/remote.json)은 커밋 `89172d8`의 주요 파일29개·v0~v14 태그15개와 비인증 README/코드/PNG3개 바이트 일치를 확인했습니다. 검증 영수증을 담는 후속 문서 커밋과 원격에서 검증한 커밋은 구분합니다.
 
 [같은 조건 실행](docs/ink/reproduce.md) · [전후 비교와 판정](docs/ink/comparison.md) · [시험과 한계](docs/ink/tests.md) · [8단계](docs/ink/eight-stages.md) · [전달 상태](docs/ink/delivery.md) · [AI와 사람의 경계](docs/ink/ai-boundary.md)
 

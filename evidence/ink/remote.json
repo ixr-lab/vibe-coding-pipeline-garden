@@ -1,0 +1,249 @@
+{
+  "at": "2026-10-17T04:18:45.815520+00:00",
+  "repository_url": "https://github.com/ixr-lab/vibe-coding-pipeline-garden",
+  "visibility": "public",
+  "private": false,
+  "disabled": false,
+  "commit": "89172d87161864a7d687dcf5451aa6ede0cc1f7e",
+  "remote_refs": {
+    "refs/heads/main": "89172d87161864a7d687dcf5451aa6ede0cc1f7e",
+    "refs/tags/v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "refs/tags/v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "refs/tags/v10": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "refs/tags/v11": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+    "refs/tags/v12": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a",
+    "refs/tags/v13": "6dfb85071c6a7d8a4ac7cd9a2d06c0d63abe29bc",
+    "refs/tags/v14": "ff638fae2f156e2551906a3aaff09814ec1d72d0",
+    "refs/tags/v2": "90a835bb1499723045e55aac464965d29e19aa7a",
+    "refs/tags/v3": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+    "refs/tags/v4": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+    "refs/tags/v5": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+    "refs/tags/v6": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+    "refs/tags/v7": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+    "refs/tags/v8": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+    "refs/tags/v9": "21529f0310313906be5d65b637f954fe6ac1b7d3"
+  },
+  "release_count": 0,
+  "tags": {
+    "v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "v2": "90a835bb1499723045e55aac464965d29e19aa7a",
+    "v3": "fe2a481dcda6e23e1b9024a89c144e2bce703def",
+    "v4": "c68c96d633f5597a82480247de33ee0e3f6b809f",
+    "v5": "6f1d1e8a468d77b74040315ff13a04873e583db4",
+    "v6": "f2d687e9977b45e19fd21f185a4bc3dbbbcf4454",
+    "v7": "e1aa152ba62ed30281307010b0ef74c821ac17e5",
+    "v8": "de94619f9ea90be9ad6d4364d7eef39975dbb613",
+    "v9": "21529f0310313906be5d65b637f954fe6ac1b7d3",
+    "v10": "3e0e4948b8c5b3c96fe94932e2799ad9fbd1dd57",
+    "v11": "5967d30ebe8e630cc4c55e263092076986bd2cdd",
+    "v12": "d63b83bdbcb892e6ce5c07bdc5eb14e9b543804a",
+    "v13": "6dfb85071c6a7d8a4ac7cd9a2d06c0d63abe29bc",
+    "v14": "ff638fae2f156e2551906a3aaff09814ec1d72d0"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "blob_sha": "02703cfaad5c87a033e240212808df9f79b4d031",
+      "bytes": 14303,
+      "read_back_equal": true
+    },
+    {
+      "path": "index.html",
+      "blob_sha": "67ea226656a443b9ce84ace104facf15c79d4ccf",
+      "bytes": 6554,
+      "read_back_equal": true
+    },
+    {
+      "path": "styles.css",
+      "blob_sha": "102d738534b9f1b0ca180b084d16ec215c5ef5fc",
+      "bytes": 7340,
+      "read_back_equal": true
+    },
+    {
+      "path": "garden.js",
+      "blob_sha": "21c668f9c5608cd0c8469aad2479098804a4dd7f",
+      "bytes": 9470,
+      "read_back_equal": true
+    },
+    {
+      "path": "engine.js",
+      "blob_sha": "7891577609769440bc991c779c98c945f19f918e",
+      "bytes": 9023,
+      "read_back_equal": true
+    },
+    {
+      "path": "flower-art.js",
+      "blob_sha": "24b30ca69a387ba17dd9fc2f4d3a4f0f9cd4acee",
+      "bytes": 20373,
+      "read_back_equal": true
+    },
+    {
+      "path": "ink-palette.js",
+      "blob_sha": "2413e2b700a23e991174ea8ab5598e6e65c9c57f",
+      "bytes": 4334,
+      "read_back_equal": true
+    },
+    {
+      "path": "plant-renderer.js",
+      "blob_sha": "62a674d1ffcb63b1138447fcd759959235e51692",
+      "bytes": 11234,
+      "read_back_equal": true
+    },
+    {
+      "path": "petal-paint.js",
+      "blob_sha": "de1309786c6852cce556595607f88a321f805b06",
+      "bytes": 19233,
+      "read_back_equal": true
+    },
+    {
+      "path": "brush-art.js",
+      "blob_sha": "aa1380c31936ec03b8a58bc53806a46680f2bbed",
+      "bytes": 13747,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference.html",
+      "blob_sha": "badff8aeb7f8194bbb5698856940588dd5734794",
+      "bytes": 5654,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-page.js",
+      "blob_sha": "cceaf01c5dbe380693c425f3f6f4a41b4ed1cfb0",
+      "bytes": 11312,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-data.js",
+      "blob_sha": "566d09fbb12a94d58415fdcb1c3492a060dcf024",
+      "bytes": 99416,
+      "read_back_equal": true
+    },
+    {
+      "path": "reference-source/ink-paintings.json",
+      "blob_sha": "47eae4e1b4718d0b2fa615fbf3d8fc938ad599b7",
+      "bytes": 22023,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/build_references.py",
+      "blob_sha": "763949a17390d88217c2d8892e540556a6b0efab",
+      "bytes": 11987,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/ink_checks.py",
+      "blob_sha": "cbdecc80f2d8f9fd31dd97b38624c8bb3f6dff87",
+      "bytes": 16614,
+      "read_back_equal": true
+    },
+    {
+      "path": "scripts/ink_accessibility.py",
+      "blob_sha": "6f498bdc68dba1a1ffd192dacecf690298a67adb",
+      "bytes": 10100,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/plan.md",
+      "blob_sha": "ec323c19ef2f628ff11b41acecc13917a60a6cfb",
+      "bytes": 3882,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/log.md",
+      "blob_sha": "5c981c673118b7af72b3bff23e15e233c60c602e",
+      "bytes": 10221,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/comparison.md",
+      "blob_sha": "4604fcdd8ab257a922e191a65ab8b46451e132d8",
+      "bytes": 7924,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/tests.md",
+      "blob_sha": "514d6ce5492526b69628617091810628ccbcc090",
+      "bytes": 8023,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/reproduce.md",
+      "blob_sha": "c41c48e3aedaf8fd456c9639668c087463345c62",
+      "bytes": 6522,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/eight-stages.md",
+      "blob_sha": "9179a3825f2b0b3573a9314a4ab1131b3ca924d9",
+      "bytes": 3106,
+      "read_back_equal": true
+    },
+    {
+      "path": "docs/ink/reference-observations.md",
+      "blob_sha": "3abf7efbe8ef7073e40baa67c5bf8564f81a2c7a",
+      "bytes": 6920,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/ink/v12-capture.json",
+      "blob_sha": "897afa8f0c8ea3e94d1bbe3ff9891636e90b608f",
+      "bytes": 987,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/ink/v13-capture.json",
+      "blob_sha": "dfe57f061367389d8d78e63b12459fc293d73111",
+      "bytes": 1018,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/ink/v14-capture.json",
+      "blob_sha": "7cb1fbcf81fe622d6378353f5e8dacf7a104a1b3",
+      "bytes": 1018,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/ink/v14-garden.png",
+      "blob_sha": "ca78ac53a2fec8db56730856813ecb548b13eb3f",
+      "bytes": 141063,
+      "read_back_equal": true
+    },
+    {
+      "path": "evidence/ink/before-after.png",
+      "blob_sha": "e17dc0d59022e67e0f17e136b4cc3a2706ed2893",
+      "bytes": 301982,
+      "read_back_equal": true
+    }
+  ],
+  "anonymous_fetches": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/89172d87161864a7d687dcf5451aa6ede0cc1f7e/README.md",
+      "http_status": 200,
+      "bytes": 14303,
+      "sha256": "7867f64b92e3b70e94efb1af9d309f5b32731ab8ba3ac9e90b83da57a7be8e50",
+      "matches_commit": true,
+      "authorization_header": false
+    },
+    {
+      "path": "ink-palette.js",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/89172d87161864a7d687dcf5451aa6ede0cc1f7e/ink-palette.js",
+      "http_status": 200,
+      "bytes": 4334,
+      "sha256": "bb92c9c327df651f9e05ca347a2cc3c57cf625b3fb35a8c21b910a166502cca1",
+      "matches_commit": true,
+      "authorization_header": false
+    },
+    {
+      "path": "evidence/ink/v14-garden.png",
+      "url": "https://raw.githubusercontent.com/ixr-lab/vibe-coding-pipeline-garden/89172d87161864a7d687dcf5451aa6ede0cc1f7e/evidence/ink/v14-garden.png",
+      "http_status": 200,
+      "bytes": 141063,
+      "sha256": "6327e08a4b9fdf424c79de17ad6c191969406013001d79b8c3caf8f210e8522f",
+      "matches_commit": true,
+      "authorization_header": false
+    }
+  ]
+}
