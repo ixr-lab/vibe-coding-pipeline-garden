@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ko">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#f3f0e7"><title>여린 정원 — 인터랙티브 생성형 정원</title><link rel="icon" href="data:,"><link rel="stylesheet" href="styles.css"></head>
+<body>
+<a class="skip" href="#garden">정원으로 건너뛰기</a>
+<div class="shell">
+  <header class="topbar"><a class="brand" href="index.html"><span class="brand-icon" aria-hidden="true">✳</span> 여린 정원 <small>GARDEN STUDY / 001</small></a><a href="process.html">만드는 과정 ↗</a></header>
+  <main>
+    <div class="intro"><div><p class="eyebrow">AN EXPERIMENT IN GROWING</p><h1>작은 씨앗, <em>느린 풍경.</em></h1><p class="subtitle">당신의 손끝에서 시작되는 하나뿐인 정원.</p></div><p class="intro-note">어디든 눌러 씨앗을 심어 보세요.<br>가지가 뻗고, 잎 사이로 바람이 흐릅니다.</p></div>
+    <div class="workspace">
+      <section class="garden-panel" aria-label="정원 작품">
+        <div class="canvas-top"><span><i class="live-dot"></i> <span id="mode">자라는 중</span></span><span>CANVAS / <span id="edition">271828</span></span></div>
+        <canvas id="garden" tabindex="0" role="img" aria-label="인터랙티브 정원. 클릭하여 씨앗을 심으세요." aria-describedby="canvas-help">Canvas를 지원하는 브라우저가 필요합니다.</canvas>
+        <div class="canvas-bottom"><span id="count">5 / 32 씨앗</span><span>CLICK TO PLANT · STAY TO WATCH</span></div>
+      </section>
+      <aside class="controls" aria-label="정원 조절">
+        <div class="control-title"><span class="eyebrow">YOUR LITTLE ECOSYSTEM</span><h2>정원을 돌보는 법</h2><p>우연의 모양을 고르고,<br>당신만의 속도로 바라보세요.</p></div>
+        <label class="field" for="seed"><span>정원의 번호 <small>SEED</small></span><input id="seed" type="text" value="271828" maxlength="80" spellcheck="false" autocomplete="off"></label>
+        <button id="regenerate" class="secondary">이 번호로 다시 피우기 <span aria-hidden="true">↗</span></button>
+        <label class="field range-field" for="wind"><span>바람 <output id="wind-value" for="wind">35</output></span><input id="wind" type="range" min="0" max="100" value="35"><span class="range-ends"><small>고요하게</small><small>살랑이게</small></span></label>
+        <label class="field range-field" for="density"><span>잎의 밀도 <output id="density-value" for="density">7</output></span><input id="density" type="range" min="2" max="12" value="7"><span class="range-ends"><small>성기게</small><small>풍성하게</small></span></label>
+        <div class="actions"><button id="pause" class="primary" aria-pressed="false">일시정지</button><button id="reset" class="secondary">비우기</button></div>
+        <button id="save" class="save">정원 이미지 저장 <span aria-hidden="true">↓</span></button>
+        <p id="canvas-help" class="help">정원 안을 클릭해 씨앗을 심으세요. 최대 32개까지 심을 수 있습니다.</p>
+        <p id="status" class="status" role="status" aria-live="polite">다섯 개의 씨앗으로 시작했어요.</p>
+      </aside>
+    </div>
+    <footer class="footer"><span>우연을 심고, 변화를 관찰합니다.</span><span>HTML · CANVAS · NO AI API <span aria-hidden="true">↗</span></span></footer>
+  </main>
+</div><script src="engine.js"></script><script src="garden.js"></script></body></html>
