@@ -1,0 +1,13 @@
+{
+  "at": "2026-10-17T04:02:24.725301+00:00",
+  "source": "v14",
+  "ownership": "All input PNGs are own Canvas output/screenshots. No source artwork pixels included.",
+  "comparison_panels": "Resized with aspect ratio preserved; original linked separately.",
+  "figures": [
+    "before-after.png",
+    "evolution.png",
+    "color-modes.png",
+    "plant-evolution.png"
+  ],
+  "reference_examples": "Analytical examples of adopted features; do not depict the source lotus, wisteria or peonies."
+}

@@ -119,3 +119,20 @@ test('the hero stem changes its sweep through the body rather than remaining a s
   assert.ok(turns.includes(-1)&&turns.includes(1));
   assert.ok(main.some(b=>Math.abs(b.cx-b.x1)>Math.abs(b.y2-b.y1)*.18));
 });
+
+test('intermediate growth keeps every revealed leaf attached to its completed petiole',()=>{
+  const vm=require('node:vm'),fs=require('node:fs'),sandbox={window:{},GardenEngine:E};
+  vm.runInNewContext(fs.readFileSync(require.resolve('../plant-renderer.js'),'utf8'),sandbox);
+  const R=sandbox.window.PlantRenderer;
+  assert.equal(typeof R.foliageGrowth,'function');
+  const p=E.createInkPlant('271828',2,.5,.9,7),group=p.leafGroups.find(g=>g.id==='body-2');
+  const before=R.foliageGrowth(group,2.125);
+  assert.ok(before.petiole>.5&&before.petiole<.6);
+  assert.equal(before.leaves[1],0,'the former floating leaf must wait for its supporting petiole');
+  for(const g of p.leafGroups)for(let age=0;age<=6;age+=.0625){
+    const growth=R.foliageGrowth(g,age);
+    if(growth.leaves.some(v=>v>0))assert.equal(growth.petiole,1);
+  }
+  const mature=R.foliageGrowth(group,6);
+  assert.equal(mature.petiole,1);assert.ok(mature.leaves.every(v=>v===1));
+});

@@ -1,0 +1,109 @@
+{
+  "recorded_at": "2026-10-17T04:01:40.767Z",
+  "source_versions": {
+    "previous": {
+      "version": "v13",
+      "commit": "9a5c49ad1ad3ae6899e2a1852cacf54c39f24290",
+      "engine_sha256": "9972be45d6da2816a0d48f15ebe6b32d7aebcf860bddf45ddcc9baa8080d3a3e",
+      "renderer_sha256": "30308588a3994fdc699b8ce478f5647f1255fbb6daf299cd12e56dbe3a0b72a1"
+    },
+    "current": {
+      "version": "v14",
+      "source": "current workspace files",
+      "engine_sha256": "88940ce9faa23960c8c1e0965acfee45c44d06eb003c4aade4c401f9e04b6c17",
+      "renderer_sha256": "653bcff8866681228585c8c57f9c7ceb329bcd68040341dc3096ad6afc02b96c",
+      "engine_unchanged_from_v13": false
+    }
+  },
+  "method": {
+    "kind": "geometry and actual renderer timing helper",
+    "previous_timing": "v13 renderer expressions evaluated using its Git-tagged engine data",
+    "current_timing": "PlantRenderer.foliageGrowth called from current plant-renderer.js",
+    "distance": "minimum Euclidean distance from the final leaf node to the currently revealed petiole quadratic, multiplied by isotropic layout scale",
+    "curve_sample_intervals": 1000,
+    "curve_sample_points": 1001,
+    "growth_sample_interval_seconds": 0.0625,
+    "growth_sample_range_seconds": [
+      0,
+      6
+    ],
+    "first_visible_age_sampling_hz": 8,
+    "raster_measurement": false
+  },
+  "settings": {
+    "seed": "271828",
+    "index": 2,
+    "density": 7,
+    "x": 0.5,
+    "y": 0.9,
+    "size": 1.16,
+    "width": 1000,
+    "height": 778,
+    "age": 2.125,
+    "group": "body-2",
+    "leaf_index": 1
+  },
+  "previous": {
+    "petiole_growth": 0.5236907365415377,
+    "leaf_growth": 0.3025716628873837,
+    "nearest_gap_pixels": 29.20047834398579
+  },
+  "current": {
+    "at_problem_age": {
+      "petiole": 0.5236907365415377,
+      "leaves": [
+        0,
+        0
+      ]
+    },
+    "leaf_drawn_at_problem_age": false,
+    "nearest_gap_at_problem_age_pixels": null,
+    "first_visible_age": 2.625,
+    "first_visible_growth": {
+      "petiole": 1,
+      "leaves": [
+        0.196321662887384,
+        0.02757166288738372
+      ]
+    },
+    "nearest_gap_at_first_visible_age_pixels": 0.030977227083951252,
+    "mature_growth": {
+      "petiole": 1,
+      "leaves": [
+        1,
+        1
+      ]
+    },
+    "visible_leaf_samples": 673,
+    "unsupported_visible_leaf_samples": 0
+  },
+  "limitations": [
+    "The distance is sampled geometry, not an actual Chrome pixel distance.",
+    "A hidden leaf has no rendered gap; its problem-age gap is recorded as null.",
+    "Nearest-point sampling may leave a small residual when the petiole is complete."
+  ],
+  "checks": [
+    {
+      "name": "v13 reproduces an exposed leaf before its petiole reaches the node",
+      "pass": true
+    },
+    {
+      "name": "v14 hides the former floating leaf at 2.125 seconds",
+      "pass": true
+    },
+    {
+      "name": "the petiole is complete at the first visible 8Hz leaf sample",
+      "pass": true
+    },
+    {
+      "name": "all revealed leaves have a completed petiole throughout sampled growth",
+      "pass": true
+    },
+    {
+      "name": "mature petiole and leaves still reach full growth",
+      "pass": true
+    }
+  ],
+  "passed": 5,
+  "total": 5
+}
