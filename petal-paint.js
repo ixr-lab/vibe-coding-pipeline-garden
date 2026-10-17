@@ -144,11 +144,15 @@
   }
 
   function pen(ctx, shape, m, c, rand) {
-    // Pale tint, continuous contour and sparse even lines are a pen illustration.
+    // Pale tint, occasional contour pieces and sparse even lines are a pen illustration.
     ground(ctx, shape, m, c, 'pen');
     const count = m.small ? (m.species === 'daisy' ? 1 : 3) : (m.species === 'daisy' ? 2 : 5);
     const edgeWidth = Math.max(m.hair * 1.8, (m.small ? 1.22 : .78) / m.pixelRadius) * Math.pow(m.widthScale, .32);
-    outline(ctx, shape, c.dark, edgeWidth, m.alpha * .96);
+    const edgeDash = [m.length * (.035 + rand() * .035), m.length * (.24 + rand() * .20),
+      m.length * (.055 + rand() * .055), m.length * (.35 + rand() * .24)];
+    ctx.lineDashOffset = rand() * m.length * 1.7;
+    outline(ctx, shape, c.dark, edgeWidth * .84, m.alpha * .83, edgeDash);
+    ctx.lineDashOffset = 0;
     for (let i = 0; i < count; i++) {
       const u = (i + .5) / count * 1.72 - .86;
       curve(ctx, m, u, .24 + rand() * .09, .88 + rand() * .07, c.dark,
@@ -166,12 +170,15 @@
   function ink(ctx, shape, m, c, rand) {
     // The original saturated ground carries a few pressure-controlled deposits.
     const count = m.species === 'daisy' ? (m.small ? 1 : 2) : m.small ? 3 : 4;
-    const inkColor = mix(rgb(c.dark, '#90305e'), rgb(c.color, '#d7609d'), .36);
+    const smallDaisy = m.small && m.species === 'daisy';
+    const inkColor = mix(rgb(c.dark, '#90305e'), rgb(c.color, '#d7609d'), smallDaisy ? .12 : .36);
     for (let i = 0; i < count; i++) {
       const u = (i + .5) / count * 1.58 - .79 + (rand() - .5) * .065;
       ribbon(ctx, m, u, .06 + rand() * .12, .92 + rand() * .075,
-        Math.min(m.width * .36, Math.max(m.width * .12, (m.small ? .86 : .50) / m.pixelRadius)) * Math.sqrt(m.widthScale),
-        i % 3 === 1 ? c.middle : inkColor, m.alpha * (.65 + m.texture * .12 + rand() * .10), rand, .05 + m.texture * .10, true);
+        Math.min(m.width * (smallDaisy ? .58 : .36), Math.max(m.width * .12, (smallDaisy ? 1.12 : m.small ? .86 : .50) / m.pixelRadius)) * Math.sqrt(m.widthScale),
+        i % 3 === 1 ? c.middle : inkColor,
+        m.alpha * (smallDaisy ? .89 + m.texture * .06 + rand() * .04 : .65 + m.texture * .12 + rand() * .10),
+        rand, .05 + m.texture * .10, true);
     }
     curve(ctx, m, -.90, .24, .94, inkColor, m.hair * 1.5, m.alpha * .40, .025);
     curve(ctx, m, .90, .56, .96, c.middle, m.hair * 1.1, m.alpha * .28, -.025);
@@ -197,61 +204,98 @@
     curve(ctx, m, .38, .37, .95, c.light, m.hair, m.alpha * .40, -.06);
   }
 
+  function paperSkip(ctx, m, color, u, start, end, width, alpha, rand) {
+    // A short, angular exposure between related bristles, with unequal broken ends.
+    const points = [], steps = 4;
+    for (let i = 0; i <= steps; i++) {
+      const t = start + (end - start) * i / steps, p = frame(m, u, t);
+      const radius = width * (.28 + rand() * .28);
+      points.push({p, radius, drift: (rand() - .5) * width * .20});
+    }
+    ctx.fillStyle = color; ctx.globalAlpha = alpha; ctx.beginPath();
+    for (let side = 1; side >= -1; side -= 2) {
+      for (let i = 0; i < points.length; i++) {
+        const q = points[side === 1 ? i : points.length - 1 - i];
+        const d = q.drift + q.radius * side;
+        const x = q.p.x + q.p.nx * d, y = q.p.y + q.p.ny * d;
+        if (side === 1 && !i) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+    }
+    ctx.closePath(); ctx.fill();
+  }
+
   function dry(ctx, shape, m, c, rand) {
-    const bundles = m.small ? 3 : (m.species === 'daisy' ? 3 : 5), hairs = m.small ? 3 : 5;
+    const bundles = m.small ? 3 : (m.species === 'daisy' ? 3 : 5), hairs = m.small ? 2 : 4;
     for (let i = 0; i < bundles; i++) {
-      const u = (i + .35 + rand() * .3) / bundles * 1.7 - .85;
-      const start = .12 + rand() * .16, end = .87 + rand() * .12;
-      const gap = .39 + rand() * .22, gapEnd = gap + .035 + rand() * m.texture * .12;
+      const u = (i + .08 + rand() * .84) / bundles * 1.8 - .9;
+      const start = .12 + rand() * .22, end = .64 + rand() * .34;
+      const gap = start + (end - start) * (.30 + rand() * .36);
+      const gapEnd = Math.min(end - .04, gap + .025 + rand() * m.texture * .09);
       for (let j = 0; j < hairs; j++) {
-        const lane = u + (j - (hairs - 1) / 2) * (.035 + m.texture * .035);
-        const width = Math.min(m.width * .24, Math.max(m.hair * (.85 + rand() * .50), .35 / m.pixelRadius));
+        const lane = u + (j - (hairs - 1) / 2) * (.025 + rand() * .045);
+        const width = Math.min(m.width * .28, Math.max(m.hair * (.90 + rand() * .75), .42 / m.pixelRadius));
         const color = j % 3 === 0 ? c.middle : c.dark;
-        const alpha = m.alpha * (.66 + rand() * .24);
+        const alpha = m.alpha * (.72 + rand() * .25);
         const sway = (rand() - .5) * .035;
         curve(ctx, m, lane, start + rand() * .035, gap, color, width, alpha, sway);
         curve(ctx, m, lane, gapEnd, end - rand() * .035, color, width * .78, alpha * .92, sway);
       }
     }
-    // Paper slits have a visible pixel footprint at garden size, between pigment bundles.
-    const gaps = m.small ? (m.species === 'daisy' ? 1 : 3) : 7;
+    // Aperiodic paper skips vary in area, location and length; none forms a full rail.
+    const gaps = m.small ? (m.species === 'daisy' ? 2 : 4) : m.species === 'daisy' ? 6 : 10;
     for (let i = 0; i < gaps; i++) {
-      const u = gaps === 1 ? .02 : (i + .3 + rand() * .4) / gaps * 1.5 - .75;
-      const start = .18 + rand() * .16, end = Math.min(.98, start + .45 + rand() * .19);
-      curve(ctx, m, u, start, end, c.tooth,
-        Math.min(m.width * .48, Math.max(.006, (m.small ? .74 : .55) / m.pixelRadius)) * Math.sqrt(m.widthScale),
-        Math.min(1, m.alpha * (1.08 + m.texture * .36)), (rand() - .5) * .035);
+      const u = rand() * 1.96 - .98, start = .20 + rand() * .62;
+      const end = Math.min(.97, start + .055 + rand() * (.10 + m.texture * .11));
+      paperSkip(ctx, m, c.tooth, u, start, end,
+        Math.min(m.width * .42, Math.max(m.width * (.045 + rand() * .075), (m.small ? .60 + rand() * .42 : .90) / m.pixelRadius)) * Math.sqrt(m.widthScale),
+        Math.min(1, m.alpha * (.82 + m.texture * .24 + rand() * .18)), rand);
     }
     outline(ctx, shape, c.middle, m.hair * 1.8, m.alpha * .44,
       [m.length * .11, m.length * .07, m.length * .025, m.length * .09]);
   }
 
-  function wetBand(ctx, m, color, u, start, end, width, alpha, rand) {
-    const p = frame(m, u, (start + end) / 2), half = width * .5;
-    const g = ctx.createLinearGradient(p.x - p.nx * half, p.y - p.ny * half,
-      p.x + p.nx * half, p.y + p.ny * half);
-    g.addColorStop(0, color + '00'); g.addColorStop(.22, color);
-    g.addColorStop(.61, color); g.addColorStop(1, color + '00');
-    ribbon(ctx, m, u, start, end, width, g, alpha, rand, .12 + m.texture * .25, false);
+  function washPatch(ctx, m, color, pass, alpha, rand) {
+    // Unequal top heights across a broad fan keep wet areas from becoming capsules.
+    const scale = Math.sqrt(m.widthScale), center = pass ? .28 : -.26;
+    const span = (pass ? .79 : .91) * scale;
+    const left = center - span, right = center + span, top = [];
+    const rootT = pass ? .22 + rand() * .13 : .035 + rand() * .10;
+    const phase = rand() * TAU, count = 6;
+    for (let i = 0; i <= count; i++) {
+      const u = left + (right - left) * i / count;
+      const t = clamp((pass ? .73 : .84) + Math.sin(i * 1.7 + phase) * (.045 + m.texture * .06) + (rand() - .5) * .13, .57, 1.045);
+      top.push(point(m, u, t));
+    }
+    const rootLeft = point(m, left + .06, rootT), rootRight = point(m, right - .09, rootT + .06 + rand() * .08);
+    const g = ctx.createLinearGradient(-m.width * .65, -m.length * .12, m.width * .55, -m.length);
+    g.addColorStop(0, color + '00'); g.addColorStop(.27, color);
+    g.addColorStop(.79, color); g.addColorStop(1, color + '40');
+    ctx.fillStyle = g; ctx.globalAlpha = alpha; ctx.beginPath();
+    ctx.moveTo(rootLeft.x, rootLeft.y);
+    const sideLeft = point(m, left - .035, (rootT + .55) / 2);
+    ctx.quadraticCurveTo(sideLeft.x, sideLeft.y, top[0].x, top[0].y);
+    for (let i = 1; i < top.length; i++) {
+      const a = top[i - 1], b = top[i];
+      ctx.lineTo((a.x + b.x) / 2, (a.y + b.y) / 2);
+      ctx.lineTo(b.x, b.y);
+    }
+    const sideRight = point(m, right + .045, (rootT + .60) / 2);
+    ctx.quadraticCurveTo(sideRight.x, sideRight.y, rootRight.x, rootRight.y);
+    const rootMiddle = point(m, center + .10, Math.max(.01, rootT - .04));
+    ctx.quadraticCurveTo(rootMiddle.x, rootMiddle.y, rootLeft.x, rootLeft.y);
+    ctx.closePath(); ctx.fill();
   }
 
   function watercolor(ctx, shape, m, c, rand) {
     ground(ctx, shape, m, c, 'watercolor');
-    const count = m.small ? 2 : 3;
     const wetColor = mix(rgb(c.dark, '#90305e'), rgb(c.middle, '#d7609d'), .52);
-    for (let i = 0; i < count; i++) {
-      const u = (i + .28 + rand() * .42) / count * 1.05 - .525;
-      wetBand(ctx, m, i % 3 === 1 ? c.color : wetColor, u,
-        .04 + rand() * .13, .83 + rand() * .16,
-        m.width * (1.03 + rand() * .48) * Math.sqrt(m.widthScale),
-        m.alpha * (.30 + m.texture * .13 + rand() * .08), rand);
-    }
-    // Sparse pigment follows the rim; no radial clouds or bright circular centers.
+    washPatch(ctx, m, wetColor, 0, m.alpha * (.27 + m.texture * .11 + rand() * .05), rand);
+    washPatch(ctx, m, c.color, 1, m.alpha * (.18 + m.texture * .10 + rand() * .05), rand);
+    // Only small local pigment catches remain; there is no full perimeter stroke.
     const side = rand() < .5 ? -1 : 1;
     curve(ctx, m, side * .91, .46 + rand() * .08, .80 + rand() * .10,
-      wetColor, Math.max(m.hair * 1.3, .54 / m.pixelRadius), m.alpha * .39, side * .025);
-    curve(ctx, m, -side * .91, .72, .96, c.middle, m.hair * 1.1, m.alpha * .22, 0);
-    outline(ctx, shape, c.middle, m.hair * 1.1, m.alpha * .08);
+      wetColor, Math.max(m.hair, .40 / m.pixelRadius), m.alpha * .26, side * .025);
+    curve(ctx, m, -side * .91, .75, .89, c.middle, m.hair * .85, m.alpha * .17, 0);
   }
 
   /** Paint a material over an existing petal underdrawing in flower-local units.

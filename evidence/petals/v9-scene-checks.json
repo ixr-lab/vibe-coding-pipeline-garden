@@ -1,0 +1,27 @@
+{
+  "at": "2026-10-17T03:08:30.297203+00:00",
+  "label": "v9",
+  "viewport": [
+    1440,
+    1000
+  ],
+  "DPR": 1,
+  "seed": "271828",
+  "fixed_frame": 360,
+  "native_crop_center": {
+    "x": 47.314541845857555,
+    "y": 421.23912951283694
+  },
+  "crop_resized": false,
+  "checks": [
+    {
+      "name": "15 full garden selections differ",
+      "pass": true
+    },
+    {
+      "name": "no page errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}
