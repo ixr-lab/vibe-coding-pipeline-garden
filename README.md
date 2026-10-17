@@ -2,6 +2,8 @@
 
 씨앗을 심고 바람·잎 밀도·정원의 번호(seed)를 조절하는 Canvas 2D 작품입니다. 현재 **v14는 연결된 줄기·종별 잎과 수묵·담채, 꽃잎 색 선택을 지원**합니다. HTML, CSS, 일반 JavaScript로 만들어 앱 실행에 패키지 설치나 API 키가 필요하지 않습니다. v0~v11의 실제 화면·실패·개선 이력도 보존합니다. 사용자의 직접 미적 승인과 최종 만족은 **확인 대기**입니다.
 
+[제작 작업일지 PDF 보기](docs/journal/ai-collaborative-garden-journal.pdf)
+
 ![수묵·담채 v14와 최종 UI 보정 후 실제 전달 화면](evidence/ink/delivery-desktop.png)
 
 ## 수묵·담채 v14
