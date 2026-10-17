@@ -1,0 +1,62 @@
+{
+  "recorded_at": "2026-10-17T02:09:48.164937+00:00",
+  "repository_url": "https://github.com/ixr-lab/vibe-coding-pipeline-garden",
+  "private": true,
+  "remote_main_commit": "90a835bb1499723045e55aac464965d29e19aa7a",
+  "local_head": "90a835bb1499723045e55aac464965d29e19aa7a",
+  "tags": {
+    "v0": "95283a8a251f7aea096b9dc9be23658575899da0",
+    "v1": "e87cbf82616e6f6fb4b5cfd685276197e344cfa9",
+    "v2": "90a835bb1499723045e55aac464965d29e19aa7a"
+  },
+  "files_read_back": [
+    {
+      "path": "index.html",
+      "blob_sha": "0f6a3592440cae289f10ee5ccb5722870753294a",
+      "bytes": 4103,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "garden.js",
+      "blob_sha": "0cb48563f3e46388f28fa45466ce69d3773609de",
+      "bytes": 9340,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "engine.js",
+      "blob_sha": "4f0fae83857edc30d2797fb8c58c6c2ce629f133",
+      "bytes": 1787,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "README.md",
+      "blob_sha": "00e8f434b95a75503b317d97fe671a66b6ecff20",
+      "bytes": 4766,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "docs/log.md",
+      "blob_sha": "7bce36b82c0e8a06a78470839be327ee5c9d580c",
+      "bytes": 6183,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "docs/experiments.md",
+      "blob_sha": "9ae3c7596d5039b676df5aa3e37579589fd88ed0",
+      "bytes": 6020,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "evidence/v2-desktop.png",
+      "blob_sha": "3cb933fcfdc3db4193d213ed50e8fb69b05a6c90",
+      "bytes": 230367,
+      "remote_content_matches_git_blob": true
+    },
+    {
+      "path": "evidence/comparison.png",
+      "blob_sha": "ca1d7af76d37aa4344d58eeee319d2a3e41580de",
+      "bytes": 284635,
+      "remote_content_matches_git_blob": true
+    }
+  ]
+}

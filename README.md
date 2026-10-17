@@ -26,9 +26,9 @@ python -m http.server 8000
 
 ## 코드 내려받기
 
-비공개 [GitHub 저장소](https://github.com/ixr-lab/vibe-coding-pipeline-garden) 생성은 확인했습니다. 현재 소스 push 검증 전입니다. 업로드 검증 결과: **업로드 검증 후 기입**.
+비공개 [GitHub 저장소](https://github.com/ixr-lab/vibe-coding-pipeline-garden)에 업로드했습니다. 2026-10-17 UTC에 private 상태, 원격 v0/v1/v2 태그, v2 커밋과 주요 파일8개의 바이트 일치를 다시 읽어 확인했습니다. [원격 검증 기록](evidence/remote-initial.json)과 [전달·증거 색인](docs/delivery.md)을 참고하세요. 공개 배포는 하지 않았습니다.
 
-소스 업로드 확인 후, 저장소 접근 권한과 Git이 있다면 터미널에서 다음을 실행하세요.
+저장소 접근 권한과 Git이 있다면 터미널에서 다음을 실행하세요.
 
 ```powershell
 git clone https://github.com/ixr-lab/vibe-coding-pipeline-garden.git
@@ -57,5 +57,6 @@ cd vibe-coding-pipeline-garden
 | [실험](docs/experiments.md) / [작업 로그](docs/log.md) | 가설, 실제 관찰, 채택 판단 |
 | [시험](docs/tests.md) / [재현](docs/reproduce.md) | 통과 항목, 한계, 개발용 실행법 |
 | [AI와 사람의 경계](docs/ai-boundary.md) / [변경 기록](CHANGELOG.md) | 판단 책임과 버전별 변경 |
+| [전달·증거 색인](docs/delivery.md) | 검증된 GitHub 링크, 버전 SHA와 단계별 증거 |
 
 `engine.js`는 결정론적 식물 데이터와 배치, `garden.js`는 Canvas·입력·성장 상태를 담당합니다. `scripts/`와 `tests/`는 개발용이며 `evidence/`는 실제 실행의 PNG·JSON·텍스트 기록입니다.
